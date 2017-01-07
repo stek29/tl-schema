@@ -1,0 +1,32 @@
+.content{
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: Roboto, sans-serif;
+}
+
+pre{
+  overflow-x: auto;
+  background: #ecf3f8;
+  padding: 10px;
+}
+
+table{
+  width: 100%;
+}
+
+th{
+  text-align: left;
+}
+
+td{
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #eee;
+}
+
+th{
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+}
