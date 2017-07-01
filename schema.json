@@ -717,7 +717,7 @@
       "type": "Message"
     },
     {
-      "id": "-913120932",
+      "id": "-1063525281",
       "predicate": "message",
       "params": [
         {
@@ -741,6 +741,14 @@
           "type": "flags.5?true"
         },
         {
+          "name": "silent",
+          "type": "flags.13?true"
+        },
+        {
+          "name": "post",
+          "type": "flags.14?true"
+        },
+        {
           "name": "id",
           "type": "int"
         },
@@ -753,12 +761,8 @@
           "type": "Peer"
         },
         {
-          "name": "fwd_from_id",
-          "type": "flags.2?Peer"
-        },
-        {
-          "name": "fwd_date",
-          "type": "flags.2?int"
+          "name": "fwd_from",
+          "type": "flags.2?MessageFwdHeader"
         },
         {
           "name": "via_bot_id",
@@ -791,6 +795,10 @@
         {
           "name": "views",
           "type": "flags.10?int"
+        },
+        {
+          "name": "edit_date",
+          "type": "flags.15?int"
         }
       ],
       "type": "Message"
@@ -818,6 +826,14 @@
         {
           "name": "media_unread",
           "type": "flags.5?true"
+        },
+        {
+          "name": "silent",
+          "type": "flags.13?true"
+        },
+        {
+          "name": "post",
+          "type": "flags.14?true"
         },
         {
           "name": "id",
@@ -1211,9 +1227,21 @@
       "type": "InputNotifyPeer"
     },
     {
-      "id": "1185074840",
+      "id": "949182130",
       "predicate": "inputPeerNotifySettings",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "show_previews",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "silent",
+          "type": "flags.1?true"
+        },
         {
           "name": "mute_until",
           "type": "int"
@@ -1221,14 +1249,6 @@
         {
           "name": "sound",
           "type": "string"
-        },
-        {
-          "name": "show_previews",
-          "type": "Bool"
-        },
-        {
-          "name": "events_mask",
-          "type": "int"
         }
       ],
       "type": "InputPeerNotifySettings"
@@ -1252,9 +1272,21 @@
       "type": "PeerNotifySettings"
     },
     {
-      "id": "-1923214866",
+      "id": "-1697798976",
       "predicate": "peerNotifySettings",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "show_previews",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "silent",
+          "type": "flags.1?true"
+        },
         {
           "name": "mute_until",
           "type": "int"
@@ -1262,14 +1294,6 @@
         {
           "name": "sound",
           "type": "string"
-        },
-        {
-          "name": "show_previews",
-          "type": "Bool"
-        },
-        {
-          "name": "events_mask",
-          "type": "int"
         }
       ],
       "type": "PeerNotifySettings"
@@ -1992,7 +2016,7 @@
       "type": "Updates"
     },
     {
-      "id": "333766314",
+      "id": "-1857044719",
       "predicate": "updateShortMessage",
       "params": [
         {
@@ -2014,6 +2038,10 @@
         {
           "name": "media_unread",
           "type": "flags.5?true"
+        },
+        {
+          "name": "silent",
+          "type": "flags.13?true"
         },
         {
           "name": "id",
@@ -2040,12 +2068,8 @@
           "type": "int"
         },
         {
-          "name": "fwd_from_id",
-          "type": "flags.2?Peer"
-        },
-        {
-          "name": "fwd_date",
-          "type": "flags.2?int"
+          "name": "fwd_from",
+          "type": "flags.2?MessageFwdHeader"
         },
         {
           "name": "via_bot_id",
@@ -2063,7 +2087,7 @@
       "type": "Updates"
     },
     {
-      "id": "613087842",
+      "id": "377562760",
       "predicate": "updateShortChatMessage",
       "params": [
         {
@@ -2085,6 +2109,10 @@
         {
           "name": "media_unread",
           "type": "flags.5?true"
+        },
+        {
+          "name": "silent",
+          "type": "flags.13?true"
         },
         {
           "name": "id",
@@ -2115,12 +2143,8 @@
           "type": "int"
         },
         {
-          "name": "fwd_from_id",
-          "type": "flags.2?Peer"
-        },
-        {
-          "name": "fwd_date",
-          "type": "flags.2?int"
+          "name": "fwd_from",
+          "type": "flags.2?MessageFwdHeader"
         },
         {
           "name": "via_bot_id",
@@ -2261,6 +2285,10 @@
           "type": "flags.1?true"
         },
         {
+          "name": "tcpo_only",
+          "type": "flags.2?true"
+        },
+        {
           "name": "id",
           "type": "int"
         },
@@ -2276,7 +2304,7 @@
       "type": "DcOption"
     },
     {
-      "id": "112969208",
+      "id": "830271220",
       "predicate": "config",
       "params": [
         {
@@ -2349,6 +2377,10 @@
         },
         {
           "name": "saved_gifs_limit",
+          "type": "int"
+        },
+        {
+          "name": "edit_time_limit",
           "type": "int"
         },
         {
@@ -4393,6 +4425,10 @@
           "type": "flags.18?true"
         },
         {
+          "name": "min",
+          "type": "flags.20?true"
+        },
+        {
           "name": "id",
           "type": "int"
         },
@@ -4910,8 +4946,12 @@
           "type": "flags.9?true"
         },
         {
-          "name": "invites_enabled",
+          "name": "democracy",
           "type": "flags.10?true"
+        },
+        {
+          "name": "signatures",
+          "type": "flags.11?true"
         },
         {
           "name": "id",
@@ -6253,6 +6293,78 @@
       "predicate": "privacyKeyChatInvite",
       "params": [],
       "type": "PrivacyKey"
+    },
+    {
+      "id": "457133559",
+      "predicate": "updateEditChannelMessage",
+      "params": [
+        {
+          "name": "message",
+          "type": "Message"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "524838915",
+      "predicate": "exportedMessageLink",
+      "params": [
+        {
+          "name": "link",
+          "type": "string"
+        }
+      ],
+      "type": "ExportedMessageLink"
+    },
+    {
+      "id": "-947462709",
+      "predicate": "messageFwdHeader",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "from_id",
+          "type": "flags.0?int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "channel_id",
+          "type": "flags.1?int"
+        },
+        {
+          "name": "channel_post",
+          "type": "flags.2?int"
+        }
+      ],
+      "type": "MessageFwdHeader"
+    },
+    {
+      "id": "1742808415",
+      "predicate": "channels.messageEditData",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "caption",
+          "type": "flags.0?true"
+        }
+      ],
+      "type": "channels.MessageEditData"
     }
   ],
   "methods": [
@@ -6880,6 +6992,14 @@
           "type": "flags.4?true"
         },
         {
+          "name": "silent",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "background",
+          "type": "flags.6?true"
+        },
+        {
           "name": "peer",
           "type": "InputPeer"
         },
@@ -6919,6 +7039,14 @@
           "type": "flags.4?true"
         },
         {
+          "name": "silent",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "background",
+          "type": "flags.6?true"
+        },
+        {
           "name": "peer",
           "type": "InputPeer"
         },
@@ -6952,6 +7080,14 @@
         {
           "name": "broadcast",
           "type": "flags.4?true"
+        },
+        {
+          "name": "silent",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "background",
+          "type": "flags.6?true"
         },
         {
           "name": "from_peer",
@@ -8698,6 +8834,14 @@
           "type": "flags.4?true"
         },
         {
+          "name": "silent",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "background",
+          "type": "flags.6?true"
+        },
+        {
           "name": "peer",
           "type": "InputPeer"
         },
@@ -8731,6 +8875,82 @@
         {
           "name": "enabled",
           "type": "Bool"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-934882771",
+      "method": "channels.exportMessageLink",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        }
+      ],
+      "type": "ExportedMessageLink"
+    },
+    {
+      "id": "527021574",
+      "method": "channels.toggleSignatures",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "enabled",
+          "type": "Bool"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "669661736",
+      "method": "channels.getMessageEditData",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        }
+      ],
+      "type": "channels.MessageEditData"
+    },
+    {
+      "id": "-589659923",
+      "method": "channels.editMessage",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "no_webpage",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "entities",
+          "type": "flags.3?Vector<MessageEntity>"
         }
       ],
       "type": "Updates"
