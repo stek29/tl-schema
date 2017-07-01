@@ -506,6 +506,8 @@ phoneCallDiscardReasonMissed#85e42301 = PhoneCallDiscardReason;
 phoneCallDiscardReasonDisconnect#e095c1a0 = PhoneCallDiscardReason;
 phoneCallDiscardReasonHangup#57adc690 = PhoneCallDiscardReason;
 phoneCallDiscardReasonBusy#faf7e8c9 = PhoneCallDiscardReason;
+inputMessagesFilterPhoneCalls#80c99768 flags:# missed:flags.0?true = MessagesFilter;
+messageActionPhoneCall#80e11a7f flags:# call_id:long reason:flags.0?PhoneCallDiscardReason duration:flags.1?int = MessageAction;
 ---functions---
 invokeAfterMsg#cb9f372d msg_id:long query:!X = X;
 invokeAfterMsgs#3dc4b4f0 msg_ids:Vector<long> query:!X = X;
@@ -543,7 +545,7 @@ messages.getHistory#afa92846 peer:InputPeer offset_id:int offset_date:int add_of
 messages.search#d4569248 flags:# peer:InputPeer q:string filter:MessagesFilter min_date:int max_date:int offset:int max_id:int limit:int = messages.Messages;
 messages.readHistory#e306d3a peer:InputPeer max_id:int = messages.AffectedMessages;
 messages.deleteHistory#1c015b09 flags:# just_clear:flags.0?true peer:InputPeer max_id:int = messages.AffectedHistory;
-messages.deleteMessages#a5f18925 id:Vector<int> = messages.AffectedMessages;
+messages.deleteMessages#e58e95d2 flags:# revoke:flags.0?true id:Vector<int> = messages.AffectedMessages;
 messages.receivedMessages#5a954c0 max_id:int = Vector<ReceivedNotifyMessage>;
 messages.setTyping#a3825e50 peer:InputPeer action:SendMessageAction = Bool;
 messages.sendMessage#fa88427a flags:# no_webpage:flags.1?true silent:flags.5?true background:flags.6?true clear_draft:flags.7?true peer:InputPeer reply_to_msg_id:flags.0?int message:string random_id:long reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector<MessageEntity> = Updates;
@@ -703,3 +705,4 @@ phone.requestCall#a41aa5e4 user_id:InputUser random_id:int g_a:bytes protocol:Ph
 phone.acceptCall#220f0b20 peer:InputPhoneCall g_b:bytes key_fingerprint:long protocol:PhoneCallProtocol = phone.PhoneCall;
 phone.discardCall#5dfbcddc peer:InputPhoneCall duration:int reason:PhoneCallDiscardReason connection_id:long = Bool;
 phone.receivedCall#17d54f61 peer:InputPhoneCall = Bool;
+messages.reportEncryptedSpam#4b0c8c0f peer:InputEncryptedChat = Bool;
