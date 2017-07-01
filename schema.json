@@ -121,9 +121,13 @@
       "type": "InputMedia"
     },
     {
-      "id": "-139464256",
+      "id": "1661770481",
       "predicate": "inputMediaUploadedPhoto",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
         {
           "name": "file",
           "type": "InputFile"
@@ -131,6 +135,10 @@
         {
           "name": "caption",
           "type": "string"
+        },
+        {
+          "name": "stickers",
+          "type": "flags.0?Vector<InputDocument>"
         }
       ],
       "type": "InputMedia"
@@ -187,31 +195,23 @@
       "type": "InputChatPhoto"
     },
     {
-      "id": "-1809496270",
+      "id": "-1837345356",
       "predicate": "inputChatUploadedPhoto",
       "params": [
         {
           "name": "file",
           "type": "InputFile"
-        },
-        {
-          "name": "crop",
-          "type": "InputPhotoCrop"
         }
       ],
       "type": "InputChatPhoto"
     },
     {
-      "id": "-1293828344",
+      "id": "-1991004873",
       "predicate": "inputChatPhoto",
       "params": [
         {
           "name": "id",
           "type": "InputPhoto"
-        },
-        {
-          "name": "crop",
-          "type": "InputPhotoCrop"
         }
       ],
       "type": "InputChatPhoto"
@@ -276,31 +276,6 @@
         }
       ],
       "type": "InputFileLocation"
-    },
-    {
-      "id": "-1377390588",
-      "predicate": "inputPhotoCropAuto",
-      "params": [],
-      "type": "InputPhotoCrop"
-    },
-    {
-      "id": "-644787419",
-      "predicate": "inputPhotoCrop",
-      "params": [
-        {
-          "name": "crop_left",
-          "type": "double"
-        },
-        {
-          "name": "crop_top",
-          "type": "double"
-        },
-        {
-          "name": "crop_width",
-          "type": "double"
-        }
-      ],
-      "type": "InputPhotoCrop"
     },
     {
       "id": "1996904104",
@@ -1041,9 +1016,17 @@
       "type": "Photo"
     },
     {
-      "id": "-840088834",
+      "id": "-1836524247",
       "predicate": "photo",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "has_stickers",
+          "type": "flags.0?true"
+        },
         {
           "name": "id",
           "type": "long"
@@ -3068,9 +3051,13 @@
       "type": "Update"
     },
     {
-      "id": "495530093",
+      "id": "-797904407",
       "predicate": "inputMediaUploadedDocument",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
         {
           "name": "file",
           "type": "InputFile"
@@ -3086,14 +3073,22 @@
         {
           "name": "caption",
           "type": "string"
+        },
+        {
+          "name": "stickers",
+          "type": "flags.0?Vector<InputDocument>"
         }
       ],
       "type": "InputMedia"
     },
     {
-      "id": "-1386138479",
+      "id": "1356369070",
       "predicate": "inputMediaUploadedThumbDocument",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
         {
           "name": "file",
           "type": "InputFile"
@@ -3113,6 +3108,10 @@
         {
           "name": "caption",
           "type": "string"
+        },
+        {
+          "name": "stickers",
+          "type": "flags.0?Vector<InputDocument>"
         }
       ],
       "type": "InputMedia"
@@ -3633,9 +3632,17 @@
       "type": "DocumentAttribute"
     },
     {
-      "id": "978674434",
+      "id": "1662637586",
       "predicate": "documentAttributeSticker",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "mask",
+          "type": "flags.1?true"
+        },
         {
           "name": "alt",
           "type": "string"
@@ -3643,6 +3650,10 @@
         {
           "name": "stickerset",
           "type": "InputStickerSet"
+        },
+        {
+          "name": "mask_coords",
+          "type": "flags.0?MaskCoords"
         }
       ],
       "type": "DocumentAttribute"
@@ -4359,6 +4370,10 @@
         {
           "name": "official",
           "type": "flags.2?true"
+        },
+        {
+          "name": "masks",
+          "type": "flags.3?true"
         },
         {
           "name": "id",
@@ -5778,9 +5793,17 @@
       "type": "Update"
     },
     {
-      "id": "-253774767",
+      "id": "196268545",
       "predicate": "updateStickerSetsOrder",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "masks",
+          "type": "flags.0?true"
+        },
         {
           "name": "order",
           "type": "Vector<long>"
@@ -6514,9 +6537,13 @@
       "type": "messages.BotCallbackAnswer"
     },
     {
-      "id": "-1500747636",
+      "id": "1274652832",
       "predicate": "updateBotCallbackQuery",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
         {
           "name": "query_id",
           "type": "long"
@@ -6534,8 +6561,16 @@
           "type": "int"
         },
         {
+          "name": "chat_instance",
+          "type": "long"
+        },
+        {
           "name": "data",
-          "type": "bytes"
+          "type": "flags.0?bytes"
+        },
+        {
+          "name": "game_id",
+          "type": "flags.1?int"
         }
       ],
       "type": "Update"
@@ -6853,9 +6888,13 @@
       "type": "InputBotInlineMessageID"
     },
     {
-      "id": "750622127",
+      "id": "1328498129",
       "predicate": "updateInlineBotCallbackQuery",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
         {
           "name": "query_id",
           "type": "long"
@@ -6869,8 +6908,16 @@
           "type": "InputBotInlineMessageID"
         },
         {
+          "name": "chat_instance",
+          "type": "long"
+        },
+        {
           "name": "data",
-          "type": "bytes"
+          "type": "flags.0?bytes"
+        },
+        {
+          "name": "game_id",
+          "type": "flags.1?int"
         }
       ],
       "type": "Update"
@@ -7269,6 +7316,110 @@
       "predicate": "updatePtsChanged",
       "params": [],
       "type": "Update"
+    },
+    {
+      "id": "974442405",
+      "predicate": "messageActionGameScore",
+      "params": [
+        {
+          "name": "game_id",
+          "type": "int"
+        },
+        {
+          "name": "score",
+          "type": "int"
+        }
+      ],
+      "type": "MessageAction"
+    },
+    {
+      "id": "-1744710921",
+      "predicate": "documentAttributeHasStickers",
+      "params": [],
+      "type": "DocumentAttribute"
+    },
+    {
+      "id": "687616356",
+      "predicate": "keyboardButtonGame",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        },
+        {
+          "name": "game_title",
+          "type": "string"
+        },
+        {
+          "name": "game_id",
+          "type": "int"
+        },
+        {
+          "name": "start_param",
+          "type": "string"
+        }
+      ],
+      "type": "KeyboardButton"
+    },
+    {
+      "id": "872932635",
+      "predicate": "stickerSetMultiCovered",
+      "params": [
+        {
+          "name": "set",
+          "type": "StickerSet"
+        },
+        {
+          "name": "covers",
+          "type": "Vector<Document>"
+        }
+      ],
+      "type": "StickerSetCovered"
+    },
+    {
+      "id": "-1361650766",
+      "predicate": "maskCoords",
+      "params": [
+        {
+          "name": "n",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "double"
+        },
+        {
+          "name": "y",
+          "type": "double"
+        },
+        {
+          "name": "zoom",
+          "type": "double"
+        }
+      ],
+      "type": "MaskCoords"
+    },
+    {
+      "id": "1251549527",
+      "predicate": "inputStickeredMediaPhoto",
+      "params": [
+        {
+          "name": "id",
+          "type": "InputPhoto"
+        }
+      ],
+      "type": "InputStickeredMedia"
+    },
+    {
+      "id": "70813275",
+      "predicate": "inputStickeredMediaDocument",
+      "params": [
+        {
+          "name": "id",
+          "type": "InputDocument"
+        }
+      ],
+      "type": "InputStickeredMedia"
     }
   ],
   "methods": [
@@ -7971,6 +8122,10 @@
           "type": "flags.6?true"
         },
         {
+          "name": "with_my_score",
+          "type": "flags.8?true"
+        },
+        {
           "name": "from_peer",
           "type": "InputPeer"
         },
@@ -8116,39 +8271,23 @@
       "type": "updates.Difference"
     },
     {
-      "id": "-285902432",
+      "id": "-256159406",
       "method": "photos.updateProfilePhoto",
       "params": [
         {
           "name": "id",
           "type": "InputPhoto"
-        },
-        {
-          "name": "crop",
-          "type": "InputPhotoCrop"
         }
       ],
       "type": "UserProfilePhoto"
     },
     {
-      "id": "-720397176",
+      "id": "1328726168",
       "method": "photos.uploadProfilePhoto",
       "params": [
         {
           "name": "file",
           "type": "InputFile"
-        },
-        {
-          "name": "caption",
-          "type": "string"
-        },
-        {
-          "name": "geo_point",
-          "type": "InputGeoPoint"
-        },
-        {
-          "name": "crop",
-          "type": "InputPhotoCrop"
         }
       ],
       "type": "photos.Photo"
@@ -8699,21 +8838,6 @@
         }
       ],
       "type": "User"
-    },
-    {
-      "id": "-1373446075",
-      "method": "messages.getStickers",
-      "params": [
-        {
-          "name": "emoticon",
-          "type": "string"
-        },
-        {
-          "name": "hash",
-          "type": "string"
-        }
-      ],
-      "type": "messages.Stickers"
     },
     {
       "id": "479598769",
@@ -9437,9 +9561,17 @@
       "type": "Bool"
     },
     {
-      "id": "-1613775824",
+      "id": "2016638777",
       "method": "messages.reorderStickerSets",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "masks",
+          "type": "flags.0?true"
+        },
         {
           "name": "order",
           "type": "Vector<long>"
@@ -9828,9 +9960,13 @@
       "type": "Bool"
     },
     {
-      "id": "-1494659324",
+      "id": "1821992216",
       "method": "messages.getBotCallbackAnswer",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
         {
           "name": "peer",
           "type": "InputPeer"
@@ -9841,7 +9977,11 @@
         },
         {
           "name": "data",
-          "type": "bytes"
+          "type": "flags.0?bytes"
+        },
+        {
+          "name": "game_id",
+          "type": "flags.1?int"
         }
       ],
       "type": "messages.BotCallbackAnswer"
@@ -10029,15 +10169,28 @@
       "type": "messages.FeaturedStickers"
     },
     {
-      "id": "14818491",
+      "id": "1527873830",
       "method": "messages.readFeaturedStickers",
-      "params": [],
+      "params": [
+        {
+          "name": "id",
+          "type": "Vector<long>"
+        }
+      ],
       "type": "Bool"
     },
     {
-      "id": "-1726383060",
+      "id": "1587647177",
       "method": "messages.getRecentStickers",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "attached",
+          "type": "flags.0?true"
+        },
         {
           "name": "hash",
           "type": "int"
@@ -10046,9 +10199,17 @@
       "type": "messages.RecentStickers"
     },
     {
-      "id": "881736127",
+      "id": "958863608",
       "method": "messages.saveRecentSticker",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "attached",
+          "type": "flags.0?true"
+        },
         {
           "name": "id",
           "type": "InputDocument"
@@ -10061,26 +10222,32 @@
       "type": "Bool"
     },
     {
-      "id": "-1425873454",
+      "id": "-1986437075",
       "method": "messages.clearRecentStickers",
-      "params": [],
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "attached",
+          "type": "flags.0?true"
+        }
+      ],
       "type": "Bool"
     },
     {
-      "id": "1124718171",
-      "method": "messages.getUnusedStickers",
-      "params": [
-        {
-          "name": "limit",
-          "type": "int"
-        }
-      ],
-      "type": "Vector<StickerSetCovered>"
-    },
-    {
-      "id": "-1871829985",
+      "id": "1475442322",
       "method": "messages.getArchivedStickers",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "masks",
+          "type": "flags.0?true"
+        },
         {
           "name": "offset_id",
           "type": "long"
@@ -10097,6 +10264,105 @@
       "method": "channels.getAdminedPublicChannels",
       "params": [],
       "type": "messages.Chats"
+    },
+    {
+      "id": "-1907842680",
+      "method": "auth.dropTempAuthKeys",
+      "params": [
+        {
+          "name": "except_auth_keys",
+          "type": "Vector<long>"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-541295585",
+      "method": "messages.setGameScore",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "edit_message",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        },
+        {
+          "name": "game_id",
+          "type": "int"
+        },
+        {
+          "name": "score",
+          "type": "int"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "1425572593",
+      "method": "messages.setInlineGameScore",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "edit_message",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "id",
+          "type": "InputBotInlineMessageID"
+        },
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        },
+        {
+          "name": "game_id",
+          "type": "int"
+        },
+        {
+          "name": "score",
+          "type": "int"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "1706608543",
+      "method": "messages.getMaskStickers",
+      "params": [
+        {
+          "name": "hash",
+          "type": "int"
+        }
+      ],
+      "type": "messages.AllStickers"
+    },
+    {
+      "id": "-866424884",
+      "method": "messages.getAttachedStickers",
+      "params": [
+        {
+          "name": "media",
+          "type": "InputStickeredMedia"
+        }
+      ],
+      "type": "Vector<StickerSetCovered>"
     }
   ]
 }
