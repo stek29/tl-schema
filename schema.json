@@ -1333,7 +1333,7 @@
       "type": "WallPaper"
     },
     {
-      "id": "1496513539",
+      "id": "253890367",
       "predicate": "userFull",
       "params": [
         {
@@ -1343,6 +1343,10 @@
         {
           "name": "blocked",
           "type": "flags.0?true"
+        },
+        {
+          "name": "phone_calls_available",
+          "type": "flags.4?true"
         },
         {
           "name": "user",
@@ -1367,6 +1371,10 @@
         {
           "name": "bot_info",
           "type": "flags.3?BotInfo"
+        },
+        {
+          "name": "common_chats_count",
+          "type": "int"
         }
       ],
       "type": "UserFull"
@@ -6183,7 +6191,7 @@
       "type": "BotInlineResult"
     },
     {
-      "id": "627509670",
+      "id": "-858565059",
       "predicate": "messages.botResults",
       "params": [
         {
@@ -6209,6 +6217,10 @@
         {
           "name": "results",
           "type": "Vector<BotInlineResult>"
+        },
+        {
+          "name": "cache_time",
+          "type": "int"
         }
       ],
       "type": "messages.BotResults"
@@ -6510,7 +6522,7 @@
       "type": "ReplyMarkup"
     },
     {
-      "id": "-1324486149",
+      "id": "911761060",
       "predicate": "messages.botCallbackAnswer",
       "params": [
         {
@@ -6532,6 +6544,10 @@
         {
           "name": "url",
           "type": "flags.2?string"
+        },
+        {
+          "name": "cache_time",
+          "type": "int"
         }
       ],
       "type": "messages.BotCallbackAnswer"
@@ -7432,18 +7448,6 @@
       "type": "MessageMedia"
     },
     {
-      "id": "-580219064",
-      "predicate": "sendMessageGamePlayAction",
-      "params": [],
-      "type": "SendMessageAction"
-    },
-    {
-      "id": "365087130",
-      "predicate": "sendMessageGameStopAction",
-      "params": [],
-      "type": "SendMessageAction"
-    },
-    {
       "id": "1262639204",
       "predicate": "inputBotInlineMessageGame",
       "params": [
@@ -7579,6 +7583,59 @@
         }
       ],
       "type": "messages.HighScores"
+    },
+    {
+      "id": "2029424966",
+      "predicate": "messages.chatsSlice",
+      "params": [
+        {
+          "name": "count",
+          "type": "int"
+        },
+        {
+          "name": "chats",
+          "type": "Vector<Chat>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "messages.Chats"
+    },
+    {
+      "id": "1081547008",
+      "predicate": "updateChannelWebPage",
+      "params": [
+        {
+          "name": "channel_id",
+          "type": "int"
+        },
+        {
+          "name": "webpage",
+          "type": "WebPage"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "1258196845",
+      "predicate": "updates.differenceTooLong",
+      "params": [
+        {
+          "name": "pts",
+          "type": "int"
+        }
+      ],
+      "type": "updates.Difference"
     }
   ],
   "methods": [
@@ -8411,12 +8468,20 @@
       "type": "updates.State"
     },
     {
-      "id": "168039573",
+      "id": "630429265",
       "method": "updates.getDifference",
       "params": [
         {
+          "name": "flags",
+          "type": "#"
+        },
+        {
           "name": "pts",
           "type": "int"
+        },
+        {
+          "name": "pts_total_limit",
+          "type": "flags.0?int"
         },
         {
           "name": "date",
@@ -9272,9 +9337,17 @@
       "type": "Vector<int>"
     },
     {
-      "id": "-1154295872",
+      "id": "51854712",
       "method": "updates.getChannelDifference",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "force",
+          "type": "flags.0?true"
+        },
         {
           "name": "channel",
           "type": "InputChannel"
@@ -10146,7 +10219,7 @@
       "type": "messages.BotCallbackAnswer"
     },
     {
-      "id": "-920136629",
+      "id": "-712043766",
       "method": "messages.setBotCallbackAnswer",
       "params": [
         {
@@ -10168,6 +10241,10 @@
         {
           "name": "url",
           "type": "flags.2?string"
+        },
+        {
+          "name": "cache_time",
+          "type": "int"
         }
       ],
       "type": "Bool"
@@ -10548,6 +10625,51 @@
         }
       ],
       "type": "messages.HighScores"
+    },
+    {
+      "id": "218777796",
+      "method": "messages.getCommonChats",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "messages.Chats"
+    },
+    {
+      "id": "-341307408",
+      "method": "messages.getAllChats",
+      "params": [
+        {
+          "name": "except_ids",
+          "type": "Vector<int>"
+        }
+      ],
+      "type": "messages.Chats"
+    },
+    {
+      "id": "-333262899",
+      "method": "help.setBotUpdatesStatus",
+      "params": [
+        {
+          "name": "pending_updates_count",
+          "type": "int"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        }
+      ],
+      "type": "Bool"
     }
   ]
 }
