@@ -1345,10 +1345,6 @@
           "type": "flags.0?true"
         },
         {
-          "name": "phone_calls_available",
-          "type": "flags.4?true"
-        },
-        {
           "name": "user",
           "type": "User"
         },
@@ -3957,7 +3953,7 @@
       "type": "WebPage"
     },
     {
-      "id": "-897446185",
+      "id": "1594340540",
       "predicate": "webPage",
       "params": [
         {
@@ -3975,6 +3971,10 @@
         {
           "name": "display_url",
           "type": "string"
+        },
+        {
+          "name": "hash",
+          "type": "int"
         },
         {
           "name": "type",
@@ -4023,6 +4023,10 @@
         {
           "name": "document",
           "type": "flags.9?Document"
+        },
+        {
+          "name": "cached_page",
+          "type": "flags.10?Page"
         }
       ],
       "type": "WebPage"
@@ -7636,6 +7640,476 @@
         }
       ],
       "type": "updates.Difference"
+    },
+    {
+      "id": "-580219064",
+      "predicate": "sendMessageGamePlayAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "-2054908813",
+      "predicate": "webPageNotModified",
+      "params": [],
+      "type": "WebPage"
+    },
+    {
+      "id": "-599948721",
+      "predicate": "textEmpty",
+      "params": [],
+      "type": "RichText"
+    },
+    {
+      "id": "1950782688",
+      "predicate": "textPlain",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "type": "RichText"
+    },
+    {
+      "id": "1730456516",
+      "predicate": "textBold",
+      "params": [
+        {
+          "name": "text",
+          "type": "RichText"
+        }
+      ],
+      "type": "RichText"
+    },
+    {
+      "id": "-653089380",
+      "predicate": "textItalic",
+      "params": [
+        {
+          "name": "text",
+          "type": "RichText"
+        }
+      ],
+      "type": "RichText"
+    },
+    {
+      "id": "-1054465340",
+      "predicate": "textUnderline",
+      "params": [
+        {
+          "name": "text",
+          "type": "RichText"
+        }
+      ],
+      "type": "RichText"
+    },
+    {
+      "id": "-1678197867",
+      "predicate": "textStrike",
+      "params": [
+        {
+          "name": "text",
+          "type": "RichText"
+        }
+      ],
+      "type": "RichText"
+    },
+    {
+      "id": "1816074681",
+      "predicate": "textFixed",
+      "params": [
+        {
+          "name": "text",
+          "type": "RichText"
+        }
+      ],
+      "type": "RichText"
+    },
+    {
+      "id": "1009288385",
+      "predicate": "textUrl",
+      "params": [
+        {
+          "name": "text",
+          "type": "RichText"
+        },
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "webpage_id",
+          "type": "long"
+        }
+      ],
+      "type": "RichText"
+    },
+    {
+      "id": "-564523562",
+      "predicate": "textEmail",
+      "params": [
+        {
+          "name": "text",
+          "type": "RichText"
+        },
+        {
+          "name": "email",
+          "type": "string"
+        }
+      ],
+      "type": "RichText"
+    },
+    {
+      "id": "2120376535",
+      "predicate": "textConcat",
+      "params": [
+        {
+          "name": "texts",
+          "type": "Vector<RichText>"
+        }
+      ],
+      "type": "RichText"
+    },
+    {
+      "id": "1890305021",
+      "predicate": "pageBlockTitle",
+      "params": [
+        {
+          "name": "text",
+          "type": "RichText"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "-1879401953",
+      "predicate": "pageBlockSubtitle",
+      "params": [
+        {
+          "name": "text",
+          "type": "RichText"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "1029399794",
+      "predicate": "pageBlockAuthorDate",
+      "params": [
+        {
+          "name": "author",
+          "type": "string"
+        },
+        {
+          "name": "published_date",
+          "type": "int"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "-1076861716",
+      "predicate": "pageBlockHeader",
+      "params": [
+        {
+          "name": "text",
+          "type": "RichText"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "-248793375",
+      "predicate": "pageBlockSubheader",
+      "params": [
+        {
+          "name": "text",
+          "type": "RichText"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "1182402406",
+      "predicate": "pageBlockParagraph",
+      "params": [
+        {
+          "name": "text",
+          "type": "RichText"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "-1066346178",
+      "predicate": "pageBlockPreformatted",
+      "params": [
+        {
+          "name": "text",
+          "type": "RichText"
+        },
+        {
+          "name": "language",
+          "type": "string"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "1216809369",
+      "predicate": "pageBlockFooter",
+      "params": [
+        {
+          "name": "text",
+          "type": "RichText"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "-618614392",
+      "predicate": "pageBlockDivider",
+      "params": [],
+      "type": "PageBlock"
+    },
+    {
+      "id": "978896884",
+      "predicate": "pageBlockList",
+      "params": [
+        {
+          "name": "ordered",
+          "type": "Bool"
+        },
+        {
+          "name": "items",
+          "type": "Vector<RichText>"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "641563686",
+      "predicate": "pageBlockBlockquote",
+      "params": [
+        {
+          "name": "text",
+          "type": "RichText"
+        },
+        {
+          "name": "caption",
+          "type": "RichText"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "1329878739",
+      "predicate": "pageBlockPullquote",
+      "params": [
+        {
+          "name": "text",
+          "type": "RichText"
+        },
+        {
+          "name": "caption",
+          "type": "RichText"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "-372860542",
+      "predicate": "pageBlockPhoto",
+      "params": [
+        {
+          "name": "photo_id",
+          "type": "long"
+        },
+        {
+          "name": "caption",
+          "type": "RichText"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "-640214938",
+      "predicate": "pageBlockVideo",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "autoplay",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "loop",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "video_id",
+          "type": "long"
+        },
+        {
+          "name": "caption",
+          "type": "RichText"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "972174080",
+      "predicate": "pageBlockCover",
+      "params": [
+        {
+          "name": "cover",
+          "type": "PageBlock"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "57346070",
+      "predicate": "pageBlockEmbed",
+      "params": [
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "w",
+          "type": "int"
+        },
+        {
+          "name": "h",
+          "type": "int"
+        },
+        {
+          "name": "caption",
+          "type": "RichText"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "2146966967",
+      "predicate": "pageBlockEmbedPost",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "author",
+          "type": "string"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "caption",
+          "type": "RichText"
+        },
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "webpage_id",
+          "type": "long"
+        },
+        {
+          "name": "text",
+          "type": "flags.1?RichText"
+        },
+        {
+          "name": "medias",
+          "type": "flags.2?Vector<EmbedPostMedia>"
+        },
+        {
+          "name": "author_photo_id",
+          "type": "flags.3?long"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "319588707",
+      "predicate": "pageBlockSlideshow",
+      "params": [
+        {
+          "name": "items",
+          "type": "Vector<PageBlock>"
+        },
+        {
+          "name": "caption",
+          "type": "RichText"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "238153335",
+      "predicate": "embedPostPhoto",
+      "params": [
+        {
+          "name": "photo_id",
+          "type": "long"
+        }
+      ],
+      "type": "EmbedPostMedia"
+    },
+    {
+      "id": "-1602278042",
+      "predicate": "embedPostVideo",
+      "params": [
+        {
+          "name": "video_id",
+          "type": "long"
+        }
+      ],
+      "type": "EmbedPostMedia"
+    },
+    {
+      "id": "-1913754556",
+      "predicate": "pagePart",
+      "params": [
+        {
+          "name": "blocks",
+          "type": "Vector<PageBlock>"
+        },
+        {
+          "name": "photos",
+          "type": "Vector<Photo>"
+        },
+        {
+          "name": "videos",
+          "type": "Vector<Document>"
+        }
+      ],
+      "type": "Page"
+    },
+    {
+      "id": "-677274263",
+      "predicate": "pageFull",
+      "params": [
+        {
+          "name": "blocks",
+          "type": "Vector<PageBlock>"
+        },
+        {
+          "name": "photos",
+          "type": "Vector<Photo>"
+        },
+        {
+          "name": "videos",
+          "type": "Vector<Document>"
+        }
+      ],
+      "type": "Page"
     }
   ],
   "methods": [
@@ -10670,6 +11144,21 @@
         }
       ],
       "type": "Bool"
+    },
+    {
+      "id": "101843938",
+      "method": "messages.getWebPage",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "hash",
+          "type": "int"
+        }
+      ],
+      "type": "WebPage"
     }
   ]
 }
