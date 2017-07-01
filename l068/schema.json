@@ -1,0 +1,1030 @@
+{
+  "constructors": [
+    {
+      "id": "98092748",
+      "predicate": "dcOption",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "ipv6",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "media_only",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "tcpo_only",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "cdn",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "static",
+          "type": "flags.4?true"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "ip_address",
+          "type": "string"
+        },
+        {
+          "name": "port",
+          "type": "int"
+        }
+      ],
+      "type": "DcOption"
+    },
+    {
+      "id": "213142300",
+      "predicate": "channel",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "creator",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "left",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "broadcast",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "verified",
+          "type": "flags.7?true"
+        },
+        {
+          "name": "megagroup",
+          "type": "flags.8?true"
+        },
+        {
+          "name": "restricted",
+          "type": "flags.9?true"
+        },
+        {
+          "name": "democracy",
+          "type": "flags.10?true"
+        },
+        {
+          "name": "signatures",
+          "type": "flags.11?true"
+        },
+        {
+          "name": "min",
+          "type": "flags.12?true"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "flags.13?long"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "username",
+          "type": "flags.6?string"
+        },
+        {
+          "name": "photo",
+          "type": "ChatPhoto"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        },
+        {
+          "name": "restriction_reason",
+          "type": "flags.9?string"
+        },
+        {
+          "name": "admin_rights",
+          "type": "flags.14?ChannelAdminRights"
+        },
+        {
+          "name": "banned_rights",
+          "type": "flags.15?ChannelBannedRights"
+        }
+      ],
+      "type": "Chat"
+    },
+    {
+      "id": "681420594",
+      "predicate": "channelForbidden",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "broadcast",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "megagroup",
+          "type": "flags.8?true"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "until_date",
+          "type": "flags.16?int"
+        }
+      ],
+      "type": "Chat"
+    },
+    {
+      "id": "-1781833897",
+      "predicate": "channelFull",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "can_view_participants",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "can_set_username",
+          "type": "flags.6?true"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "about",
+          "type": "string"
+        },
+        {
+          "name": "participants_count",
+          "type": "flags.0?int"
+        },
+        {
+          "name": "admins_count",
+          "type": "flags.1?int"
+        },
+        {
+          "name": "kicked_count",
+          "type": "flags.2?int"
+        },
+        {
+          "name": "banned_count",
+          "type": "flags.2?int"
+        },
+        {
+          "name": "read_inbox_max_id",
+          "type": "int"
+        },
+        {
+          "name": "read_outbox_max_id",
+          "type": "int"
+        },
+        {
+          "name": "unread_count",
+          "type": "int"
+        },
+        {
+          "name": "chat_photo",
+          "type": "Photo"
+        },
+        {
+          "name": "notify_settings",
+          "type": "PeerNotifySettings"
+        },
+        {
+          "name": "exported_invite",
+          "type": "ExportedChatInvite"
+        },
+        {
+          "name": "bot_info",
+          "type": "Vector<BotInfo>"
+        },
+        {
+          "name": "migrated_from_chat_id",
+          "type": "flags.4?int"
+        },
+        {
+          "name": "migrated_from_max_id",
+          "type": "flags.4?int"
+        },
+        {
+          "name": "pinned_msg_id",
+          "type": "flags.5?int"
+        }
+      ],
+      "type": "ChatFull"
+    },
+    {
+      "id": "-1548400251",
+      "predicate": "channelParticipantsKicked",
+      "params": [
+        {
+          "name": "q",
+          "type": "string"
+        }
+      ],
+      "type": "ChannelParticipantsFilter"
+    },
+    {
+      "id": "-1908433218",
+      "predicate": "pagePart",
+      "params": [
+        {
+          "name": "blocks",
+          "type": "Vector<PageBlock>"
+        },
+        {
+          "name": "photos",
+          "type": "Vector<Photo>"
+        },
+        {
+          "name": "documents",
+          "type": "Vector<Document>"
+        }
+      ],
+      "type": "Page"
+    },
+    {
+      "id": "1433323434",
+      "predicate": "pageFull",
+      "params": [
+        {
+          "name": "blocks",
+          "type": "Vector<PageBlock>"
+        },
+        {
+          "name": "photos",
+          "type": "Vector<Photo>"
+        },
+        {
+          "name": "documents",
+          "type": "Vector<Document>"
+        }
+      ],
+      "type": "Page"
+    },
+    {
+      "id": "-1473271656",
+      "predicate": "channelParticipantAdmin",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "can_edit",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "inviter_id",
+          "type": "int"
+        },
+        {
+          "name": "promoted_by",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "admin_rights",
+          "type": "ChannelAdminRights"
+        }
+      ],
+      "type": "ChannelParticipant"
+    },
+    {
+      "id": "573315206",
+      "predicate": "channelParticipantBanned",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "left",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "kicked_by",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "banned_rights",
+          "type": "ChannelBannedRights"
+        }
+      ],
+      "type": "ChannelParticipant"
+    },
+    {
+      "id": "338142689",
+      "predicate": "channelParticipantsBanned",
+      "params": [
+        {
+          "name": "q",
+          "type": "string"
+        }
+      ],
+      "type": "ChannelParticipantsFilter"
+    },
+    {
+      "id": "106343499",
+      "predicate": "channelParticipantsSearch",
+      "params": [
+        {
+          "name": "q",
+          "type": "string"
+        }
+      ],
+      "type": "ChannelParticipantsFilter"
+    },
+    {
+      "id": "511092620",
+      "predicate": "topPeerCategoryPhoneCalls",
+      "params": [],
+      "type": "TopPeerCategory"
+    },
+    {
+      "id": "834148991",
+      "predicate": "pageBlockAudio",
+      "params": [
+        {
+          "name": "audio_id",
+          "type": "long"
+        },
+        {
+          "name": "caption",
+          "type": "RichText"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "1568467877",
+      "predicate": "channelAdminRights",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "change_info",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "post_messages",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "edit_messages",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "delete_messages",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "ban_users",
+          "type": "flags.4?true"
+        },
+        {
+          "name": "invite_users",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "invite_link",
+          "type": "flags.6?true"
+        },
+        {
+          "name": "pin_messages",
+          "type": "flags.7?true"
+        },
+        {
+          "name": "add_admins",
+          "type": "flags.9?true"
+        }
+      ],
+      "type": "ChannelAdminRights"
+    },
+    {
+      "id": "1489977929",
+      "predicate": "channelBannedRights",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "view_messages",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "send_messages",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "send_media",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "send_stickers",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "send_gifs",
+          "type": "flags.4?true"
+        },
+        {
+          "name": "send_games",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "send_inline",
+          "type": "flags.6?true"
+        },
+        {
+          "name": "embed_links",
+          "type": "flags.7?true"
+        },
+        {
+          "name": "until_date",
+          "type": "int"
+        }
+      ],
+      "type": "ChannelBannedRights"
+    },
+    {
+      "id": "-421545947",
+      "predicate": "channelAdminLogEventActionChangeTitle",
+      "params": [
+        {
+          "name": "prev_value",
+          "type": "string"
+        },
+        {
+          "name": "new_value",
+          "type": "string"
+        }
+      ],
+      "type": "ChannelAdminLogEventAction"
+    },
+    {
+      "id": "1427671598",
+      "predicate": "channelAdminLogEventActionChangeAbout",
+      "params": [
+        {
+          "name": "prev_value",
+          "type": "string"
+        },
+        {
+          "name": "new_value",
+          "type": "string"
+        }
+      ],
+      "type": "ChannelAdminLogEventAction"
+    },
+    {
+      "id": "1783299128",
+      "predicate": "channelAdminLogEventActionChangeUsername",
+      "params": [
+        {
+          "name": "prev_value",
+          "type": "string"
+        },
+        {
+          "name": "new_value",
+          "type": "string"
+        }
+      ],
+      "type": "ChannelAdminLogEventAction"
+    },
+    {
+      "id": "-1204857405",
+      "predicate": "channelAdminLogEventActionChangePhoto",
+      "params": [
+        {
+          "name": "prev_photo",
+          "type": "ChatPhoto"
+        },
+        {
+          "name": "new_photo",
+          "type": "ChatPhoto"
+        }
+      ],
+      "type": "ChannelAdminLogEventAction"
+    },
+    {
+      "id": "460916654",
+      "predicate": "channelAdminLogEventActionToggleInvites",
+      "params": [
+        {
+          "name": "new_value",
+          "type": "Bool"
+        }
+      ],
+      "type": "ChannelAdminLogEventAction"
+    },
+    {
+      "id": "648939889",
+      "predicate": "channelAdminLogEventActionToggleSignatures",
+      "params": [
+        {
+          "name": "new_value",
+          "type": "Bool"
+        }
+      ],
+      "type": "ChannelAdminLogEventAction"
+    },
+    {
+      "id": "-370660328",
+      "predicate": "channelAdminLogEventActionUpdatePinned",
+      "params": [
+        {
+          "name": "message",
+          "type": "Message"
+        }
+      ],
+      "type": "ChannelAdminLogEventAction"
+    },
+    {
+      "id": "1889215493",
+      "predicate": "channelAdminLogEventActionEditMessage",
+      "params": [
+        {
+          "name": "prev_message",
+          "type": "Message"
+        },
+        {
+          "name": "new_message",
+          "type": "Message"
+        }
+      ],
+      "type": "ChannelAdminLogEventAction"
+    },
+    {
+      "id": "1121994683",
+      "predicate": "channelAdminLogEventActionDeleteMessage",
+      "params": [
+        {
+          "name": "message",
+          "type": "Message"
+        }
+      ],
+      "type": "ChannelAdminLogEventAction"
+    },
+    {
+      "id": "405815507",
+      "predicate": "channelAdminLogEventActionParticipantJoin",
+      "params": [],
+      "type": "ChannelAdminLogEventAction"
+    },
+    {
+      "id": "-124291086",
+      "predicate": "channelAdminLogEventActionParticipantLeave",
+      "params": [],
+      "type": "ChannelAdminLogEventAction"
+    },
+    {
+      "id": "-484690728",
+      "predicate": "channelAdminLogEventActionParticipantInvite",
+      "params": [
+        {
+          "name": "participant",
+          "type": "ChannelParticipant"
+        }
+      ],
+      "type": "ChannelAdminLogEventAction"
+    },
+    {
+      "id": "-422036098",
+      "predicate": "channelAdminLogEventActionParticipantToggleBan",
+      "params": [
+        {
+          "name": "prev_participant",
+          "type": "ChannelParticipant"
+        },
+        {
+          "name": "new_participant",
+          "type": "ChannelParticipant"
+        }
+      ],
+      "type": "ChannelAdminLogEventAction"
+    },
+    {
+      "id": "-714643696",
+      "predicate": "channelAdminLogEventActionParticipantToggleAdmin",
+      "params": [
+        {
+          "name": "prev_participant",
+          "type": "ChannelParticipant"
+        },
+        {
+          "name": "new_participant",
+          "type": "ChannelParticipant"
+        }
+      ],
+      "type": "ChannelAdminLogEventAction"
+    },
+    {
+      "id": "995769920",
+      "predicate": "channelAdminLogEvent",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "action",
+          "type": "ChannelAdminLogEventAction"
+        }
+      ],
+      "type": "ChannelAdminLogEvent"
+    },
+    {
+      "id": "-309659827",
+      "predicate": "channels.adminLogResults",
+      "params": [
+        {
+          "name": "events",
+          "type": "Vector<ChannelAdminLogEvent>"
+        },
+        {
+          "name": "chats",
+          "type": "Vector<Chat>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "channels.AdminLogResults"
+    },
+    {
+      "id": "-368018716",
+      "predicate": "channelAdminLogEventsFilter",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "join",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "leave",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "invite",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "ban",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "unban",
+          "type": "flags.4?true"
+        },
+        {
+          "name": "kick",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "unkick",
+          "type": "flags.6?true"
+        },
+        {
+          "name": "promote",
+          "type": "flags.7?true"
+        },
+        {
+          "name": "demote",
+          "type": "flags.8?true"
+        },
+        {
+          "name": "info",
+          "type": "flags.9?true"
+        },
+        {
+          "name": "settings",
+          "type": "flags.10?true"
+        },
+        {
+          "name": "pinned",
+          "type": "flags.11?true"
+        },
+        {
+          "name": "edit",
+          "type": "flags.12?true"
+        },
+        {
+          "name": "delete",
+          "type": "flags.13?true"
+        }
+      ],
+      "type": "ChannelAdminLogEventsFilter"
+    }
+  ],
+  "methods": [
+    {
+      "id": "-225926539",
+      "method": "messages.search",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "q",
+          "type": "string"
+        },
+        {
+          "name": "from_id",
+          "type": "flags.0?InputUser"
+        },
+        {
+          "name": "filter",
+          "type": "MessagesFilter"
+        },
+        {
+          "name": "min_date",
+          "type": "int"
+        },
+        {
+          "name": "max_date",
+          "type": "int"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "messages.Messages"
+    },
+    {
+      "id": "548962836",
+      "method": "channels.editAdmin",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        },
+        {
+          "name": "admin_rights",
+          "type": "ChannelAdminRights"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-728224331",
+      "method": "contacts.getTopPeers",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "correspondents",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "bots_pm",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "bots_inline",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "phone_calls",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "groups",
+          "type": "flags.10?true"
+        },
+        {
+          "name": "channels",
+          "type": "flags.15?true"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        },
+        {
+          "name": "hash",
+          "type": "int"
+        }
+      ],
+      "type": "contacts.TopPeers"
+    },
+    {
+      "id": "-1680314774",
+      "method": "stickers.createStickerSet",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "masks",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "short_name",
+          "type": "string"
+        },
+        {
+          "name": "stickers",
+          "type": "Vector<InputStickerSetItem>"
+        }
+      ],
+      "type": "messages.StickerSet"
+    },
+    {
+      "id": "-1076292147",
+      "method": "channels.editBanned",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        },
+        {
+          "name": "banned_rights",
+          "type": "ChannelBannedRights"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "870184064",
+      "method": "channels.getAdminLog",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "q",
+          "type": "string"
+        },
+        {
+          "name": "events_filter",
+          "type": "flags.0?ChannelAdminLogEventsFilter"
+        },
+        {
+          "name": "admins",
+          "type": "flags.1?Vector<InputUser>"
+        },
+        {
+          "name": "max_id",
+          "type": "long"
+        },
+        {
+          "name": "min_id",
+          "type": "long"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "channels.AdminLogResults"
+    },
+    {
+      "id": "69556532",
+      "method": "stickers.removeStickerFromSet",
+      "params": [
+        {
+          "name": "sticker",
+          "type": "InputDocument"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "1322714570",
+      "method": "stickers.changeStickerPosition",
+      "params": [
+        {
+          "name": "sticker",
+          "type": "InputDocument"
+        },
+        {
+          "name": "position",
+          "type": "int"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-2041315650",
+      "method": "stickers.addStickerToSet",
+      "params": [
+        {
+          "name": "stickerset",
+          "type": "InputStickerSet"
+        },
+        {
+          "name": "sticker",
+          "type": "InputStickerSetItem"
+        }
+      ],
+      "type": "messages.StickerSet"
+    }
+  ]
+}
