@@ -173,23 +173,31 @@
       "type": "InputMedia"
     },
     {
-      "id": "767900285",
+      "id": "-139464256",
       "predicate": "inputMediaUploadedPhoto",
       "params": [
         {
           "name": "file",
           "type": "InputFile"
+        },
+        {
+          "name": "caption",
+          "type": "string"
         }
       ],
       "type": "InputMedia"
     },
     {
-      "id": "-1893027092",
+      "id": "-373312269",
       "predicate": "inputMediaPhoto",
       "params": [
         {
           "name": "id",
           "type": "InputPhoto"
+        },
+        {
+          "name": "caption",
+          "type": "string"
         }
       ],
       "type": "InputMedia"
@@ -225,7 +233,7 @@
       "type": "InputMedia"
     },
     {
-      "id": "322623222",
+      "id": "-515910468",
       "predicate": "inputMediaUploadedVideo",
       "params": [
         {
@@ -245,14 +253,14 @@
           "type": "int"
         },
         {
-          "name": "mime_type",
+          "name": "caption",
           "type": "string"
         }
       ],
       "type": "InputMedia"
     },
     {
-      "id": "-1726817601",
+      "id": "-1761896484",
       "predicate": "inputMediaUploadedThumbVideo",
       "params": [
         {
@@ -276,19 +284,23 @@
           "type": "int"
         },
         {
-          "name": "mime_type",
+          "name": "caption",
           "type": "string"
         }
       ],
       "type": "InputMedia"
     },
     {
-      "id": "2130852582",
+      "id": "-1821749571",
       "predicate": "inputMediaVideo",
       "params": [
         {
           "name": "id",
           "type": "InputVideo"
+        },
+        {
+          "name": "caption",
+          "type": "string"
         }
       ],
       "type": "InputMedia"
@@ -893,7 +905,7 @@
       "type": "Chat"
     },
     {
-      "id": "1661886910",
+      "id": "-891418735",
       "predicate": "chatFull",
       "params": [
         {
@@ -911,6 +923,10 @@
         {
           "name": "notify_settings",
           "type": "PeerNotifySettings"
+        },
+        {
+          "name": "exported_invite",
+          "type": "ExportedChatInvite"
         }
       ],
       "type": "ChatFull"
@@ -1085,23 +1101,31 @@
       "type": "MessageMedia"
     },
     {
-      "id": "-926655958",
+      "id": "1032643901",
       "predicate": "messageMediaPhoto",
       "params": [
         {
           "name": "photo",
           "type": "Photo"
+        },
+        {
+          "name": "caption",
+          "type": "string"
         }
       ],
       "type": "MessageMedia"
     },
     {
-      "id": "-1563278704",
+      "id": "1540298357",
       "predicate": "messageMediaVideo",
       "params": [
         {
           "name": "video",
           "type": "Video"
+        },
+        {
+          "name": "caption",
+          "type": "string"
         }
       ],
       "type": "MessageMedia"
@@ -1256,7 +1280,7 @@
       "type": "Photo"
     },
     {
-      "id": "582313809",
+      "id": "-1014792074",
       "predicate": "photo",
       "params": [
         {
@@ -1274,10 +1298,6 @@
         {
           "name": "date",
           "type": "int"
-        },
-        {
-          "name": "caption",
-          "type": "string"
         },
         {
           "name": "geo",
@@ -1367,7 +1387,7 @@
       "type": "Video"
     },
     {
-      "id": "948937617",
+      "id": "-291550643",
       "predicate": "video",
       "params": [
         {
@@ -1387,16 +1407,8 @@
           "type": "int"
         },
         {
-          "name": "caption",
-          "type": "string"
-        },
-        {
           "name": "duration",
           "type": "int"
-        },
-        {
-          "name": "mime_type",
-          "type": "string"
         },
         {
           "name": "size",
@@ -2063,25 +2075,6 @@
       "type": "Update"
     },
     {
-      "id": "777696872",
-      "predicate": "updateReadMessages",
-      "params": [
-        {
-          "name": "messages",
-          "type": "Vector<int>"
-        },
-        {
-          "name": "pts",
-          "type": "int"
-        },
-        {
-          "name": "pts_count",
-          "type": "int"
-        }
-      ],
-      "type": "Update"
-    },
-    {
       "id": "-1576161051",
       "predicate": "updateDeleteMessages",
       "params": [
@@ -2602,7 +2595,7 @@
       "type": "DcOption"
     },
     {
-      "id": "1757069895",
+      "id": "1311946900",
       "predicate": "config",
       "params": [
         {
@@ -2663,6 +2656,14 @@
         },
         {
           "name": "chat_big_size",
+          "type": "int"
+        },
+        {
+          "name": "push_chat_period_ms",
+          "type": "int"
+        },
+        {
+          "name": "push_chat_limit",
           "type": "int"
         },
         {
@@ -3735,9 +3736,14 @@
       "type": "SendMessageAction"
     },
     {
-      "id": "-1845219337",
+      "id": "-378127636",
       "predicate": "sendMessageUploadVideoAction",
-      "params": [],
+      "params": [
+        {
+          "name": "progress",
+          "type": "int"
+        }
+      ],
       "type": "SendMessageAction"
     },
     {
@@ -3747,21 +3753,36 @@
       "type": "SendMessageAction"
     },
     {
-      "id": "-424899985",
+      "id": "-212740181",
       "predicate": "sendMessageUploadAudioAction",
-      "params": [],
+      "params": [
+        {
+          "name": "progress",
+          "type": "int"
+        }
+      ],
       "type": "SendMessageAction"
     },
     {
-      "id": "-1727382502",
+      "id": "-774682074",
       "predicate": "sendMessageUploadPhotoAction",
-      "params": [],
+      "params": [
+        {
+          "name": "progress",
+          "type": "int"
+        }
+      ],
       "type": "SendMessageAction"
     },
     {
-      "id": "-1884362354",
+      "id": "-1441998364",
       "predicate": "sendMessageUploadDocumentAction",
-      "params": [],
+      "params": [
+        {
+          "name": "progress",
+          "type": "int"
+        }
+      ],
       "type": "SendMessageAction"
     },
     {
@@ -4537,6 +4558,144 @@
         }
       ],
       "type": "auth.PasswordRecovery"
+    },
+    {
+      "id": "673687578",
+      "predicate": "inputMediaVenue",
+      "params": [
+        {
+          "name": "geo_point",
+          "type": "InputGeoPoint"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "address",
+          "type": "string"
+        },
+        {
+          "name": "provider",
+          "type": "string"
+        },
+        {
+          "name": "venue_id",
+          "type": "string"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "2031269663",
+      "predicate": "messageMediaVenue",
+      "params": [
+        {
+          "name": "geo",
+          "type": "GeoPoint"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "address",
+          "type": "string"
+        },
+        {
+          "name": "provider",
+          "type": "string"
+        },
+        {
+          "name": "venue_id",
+          "type": "string"
+        }
+      ],
+      "type": "MessageMedia"
+    },
+    {
+      "id": "-1551583367",
+      "predicate": "receivedNotifyMessage",
+      "params": [
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "flags",
+          "type": "int"
+        }
+      ],
+      "type": "ReceivedNotifyMessage"
+    },
+    {
+      "id": "1776236393",
+      "predicate": "chatInviteEmpty",
+      "params": [],
+      "type": "ExportedChatInvite"
+    },
+    {
+      "id": "-64092740",
+      "predicate": "chatInviteExported",
+      "params": [
+        {
+          "name": "link",
+          "type": "string"
+        }
+      ],
+      "type": "ExportedChatInvite"
+    },
+    {
+      "id": "1516793212",
+      "predicate": "chatInviteAlready",
+      "params": [
+        {
+          "name": "chat",
+          "type": "Chat"
+        }
+      ],
+      "type": "ChatInvite"
+    },
+    {
+      "id": "-829325875",
+      "predicate": "chatInvite",
+      "params": [
+        {
+          "name": "title",
+          "type": "string"
+        }
+      ],
+      "type": "ChatInvite"
+    },
+    {
+      "id": "-123931160",
+      "predicate": "messageActionChatJoinedByLink",
+      "params": [
+        {
+          "name": "inviter_id",
+          "type": "int"
+        }
+      ],
+      "type": "MessageAction"
+    },
+    {
+      "id": "1757493555",
+      "predicate": "updateReadMessagesContents",
+      "params": [
+        {
+          "name": "messages",
+          "type": "Vector<int>"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
     }
   ],
   "methods": [
@@ -5102,7 +5261,7 @@
       "type": "messages.AffectedMessages"
     },
     {
-      "id": "682347368",
+      "id": "94983360",
       "method": "messages.receivedMessages",
       "params": [
         {
@@ -5110,7 +5269,7 @@
           "type": "int"
         }
       ],
-      "type": "Vector<int>"
+      "type": "Vector<ReceivedNotifyMessage>"
     },
     {
       "id": "-1551737264",
@@ -6094,6 +6253,50 @@
         }
       ],
       "type": "auth.Authorization"
+    },
+    {
+      "id": "-1080796745",
+      "method": "invokeWithoutUpdates",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    },
+    {
+      "id": "2106086025",
+      "method": "messages.exportChatInvite",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        }
+      ],
+      "type": "ExportedChatInvite"
+    },
+    {
+      "id": "1051570619",
+      "method": "messages.checkChatInvite",
+      "params": [
+        {
+          "name": "hash",
+          "type": "string"
+        }
+      ],
+      "type": "ChatInvite"
+    },
+    {
+      "id": "1817183516",
+      "method": "messages.importChatInvite",
+      "params": [
+        {
+          "name": "hash",
+          "type": "string"
+        }
+      ],
+      "type": "Updates"
     }
   ]
 }
