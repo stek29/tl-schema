@@ -2312,7 +2312,7 @@
       "type": "DcOption"
     },
     {
-      "id": "-882895228",
+      "id": "2146355336",
       "predicate": "config",
       "params": [
         {
@@ -2434,6 +2434,14 @@
         {
           "name": "me_url_prefix",
           "type": "string"
+        },
+        {
+          "name": "suggested_lang_code",
+          "type": "flags.2?string"
+        },
+        {
+          "name": "lang_pack_version",
+          "type": "flags.2?int"
         },
         {
           "name": "disabled_features",
@@ -9330,9 +9338,14 @@
       "type": "SendMessageAction"
     },
     {
-      "id": "-1150187996",
+      "id": "608050278",
       "predicate": "sendMessageUploadRoundAction",
-      "params": [],
+      "params": [
+        {
+          "name": "progress",
+          "type": "int"
+        }
+      ],
       "type": "SendMessageAction"
     },
     {
@@ -9382,6 +9395,164 @@
         }
       ],
       "type": "CdnConfig"
+    },
+    {
+      "id": "281165899",
+      "predicate": "updateLangPackTooLong",
+      "params": [],
+      "type": "Update"
+    },
+    {
+      "id": "1442983757",
+      "predicate": "updateLangPack",
+      "params": [
+        {
+          "name": "difference",
+          "type": "LangPackDifference"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-283684427",
+      "predicate": "pageBlockChannel",
+      "params": [
+        {
+          "name": "channel",
+          "type": "Chat"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "-6249322",
+      "predicate": "inputStickerSetItem",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "document",
+          "type": "InputDocument"
+        },
+        {
+          "name": "emoji",
+          "type": "string"
+        },
+        {
+          "name": "mask_coords",
+          "type": "flags.0?MaskCoords"
+        }
+      ],
+      "type": "InputStickerSetItem"
+    },
+    {
+      "id": "-892239370",
+      "predicate": "langPackString",
+      "params": [
+        {
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "type": "string"
+        }
+      ],
+      "type": "LangPackString"
+    },
+    {
+      "id": "1816636575",
+      "predicate": "langPackStringPluralized",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "name": "zero_value",
+          "type": "flags.0?string"
+        },
+        {
+          "name": "one_value",
+          "type": "flags.1?string"
+        },
+        {
+          "name": "two_value",
+          "type": "flags.2?string"
+        },
+        {
+          "name": "few_value",
+          "type": "flags.3?string"
+        },
+        {
+          "name": "many_value",
+          "type": "flags.4?string"
+        },
+        {
+          "name": "other_value",
+          "type": "string"
+        }
+      ],
+      "type": "LangPackString"
+    },
+    {
+      "id": "695856818",
+      "predicate": "langPackStringDeleted",
+      "params": [
+        {
+          "name": "key",
+          "type": "string"
+        }
+      ],
+      "type": "LangPackString"
+    },
+    {
+      "id": "-209337866",
+      "predicate": "langPackDifference",
+      "params": [
+        {
+          "name": "lang_code",
+          "type": "string"
+        },
+        {
+          "name": "from_version",
+          "type": "int"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        },
+        {
+          "name": "strings",
+          "type": "Vector<LangPackString>"
+        }
+      ],
+      "type": "LangPackDifference"
+    },
+    {
+      "id": "292985073",
+      "predicate": "langPackLanguage",
+      "params": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "native_name",
+          "type": "string"
+        },
+        {
+          "name": "lang_code",
+          "type": "string"
+        }
+      ],
+      "type": "LangPackLanguage"
     }
   ],
   "methods": [
@@ -10594,7 +10765,7 @@
       "type": "Bool"
     },
     {
-      "id": "1769565673",
+      "id": "-951575130",
       "method": "initConnection",
       "params": [
         {
@@ -10611,6 +10782,14 @@
         },
         {
           "name": "app_version",
+          "type": "string"
+        },
+        {
+          "name": "system_lang_code",
+          "type": "string"
+        },
+        {
+          "name": "lang_pack",
           "type": "string"
         },
         {
@@ -12901,6 +13080,95 @@
       "method": "help.getCdnConfig",
       "params": [],
       "type": "CdnConfig"
+    },
+    {
+      "id": "1369162417",
+      "method": "messages.uploadMedia",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "media",
+          "type": "InputMedia"
+        }
+      ],
+      "type": "MessageMedia"
+    },
+    {
+      "id": "1302491916",
+      "method": "stickers.createStickerSet",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "masks",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "short_name",
+          "type": "string"
+        },
+        {
+          "name": "stickers",
+          "type": "Vector<InputStickerSetItem>"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-1699363442",
+      "method": "langpack.getLangPack",
+      "params": [
+        {
+          "name": "lang_code",
+          "type": "string"
+        }
+      ],
+      "type": "LangPackDifference"
+    },
+    {
+      "id": "773776152",
+      "method": "langpack.getStrings",
+      "params": [
+        {
+          "name": "lang_code",
+          "type": "string"
+        },
+        {
+          "name": "keys",
+          "type": "Vector<string>"
+        }
+      ],
+      "type": "Vector<LangPackString>"
+    },
+    {
+      "id": "187583869",
+      "method": "langpack.getDifference",
+      "params": [
+        {
+          "name": "from_version",
+          "type": "int"
+        }
+      ],
+      "type": "LangPackDifference"
+    },
+    {
+      "id": "-2146445955",
+      "method": "langpack.getLanguages",
+      "params": [],
+      "type": "Vector<LangPackLanguage>"
     }
   ]
 }
