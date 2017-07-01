@@ -1,0 +1,29 @@
+---types---
+// updateBotCallbackQuery#4bf9a8a0 flags:# query_id:long user_id:int peer:Peer msg_id:int chat_instance:long data:flags.0?bytes game_id:flags.1?int = Update;
+updateBotCallbackQuery#e73547e1 flags:# query_id:long user_id:int peer:Peer msg_id:int chat_instance:long data:flags.0?bytes game_short_name:flags.1?string = Update;
+// updateInlineBotCallbackQuery#4f2f45d1 flags:# query_id:long user_id:int msg_id:InputBotInlineMessageID chat_instance:long data:flags.0?bytes game_id:flags.1?int = Update;
+updateInlineBotCallbackQuery#f9d27a5a flags:# query_id:long user_id:int msg_id:InputBotInlineMessageID chat_instance:long data:flags.0?bytes game_short_name:flags.1?string = Update;
+// messageActionGameScore#3a14cfa5 game_id:int score:int = MessageAction;
+messageActionGameScore#92a72876 game_id:long score:int = MessageAction;
+// keyboardButtonGame#28fc3164 text:string game_title:string game_id:int start_param:string = KeyboardButton;
+keyboardButtonGame#50f41ccf text:string = KeyboardButton;
+inputMediaGame#d33f43f3 id:InputGame = InputMedia;
+messageMediaGame#fdb19008 game:Game = MessageMedia;
+sendMessageGamePlayAction#dd6a8f48 = SendMessageAction;
+sendMessageGameStopAction#15c2c99a = SendMessageAction;
+inputBotInlineMessageGame#4b425864 flags:# reply_markup:flags.2?ReplyMarkup = InputBotInlineMessage;
+inputBotInlineResultGame#4fa417f2 id:string short_name:string send_message:InputBotInlineMessage = InputBotInlineResult;
+game#bdf9653b flags:# id:long access_hash:long short_name:string title:string description:string photo:Photo document:flags.0?Document = Game;
+inputGameID#32c3e77 id:long access_hash:long = InputGame;
+inputGameShortName#c331e80a bot_id:InputUser short_name:string = InputGame;
+highScore#58fffcd0 pos:int user_id:int score:int = HighScore;
+messages.highScores#9a3bfd99 scores:Vector<HighScore> users:Vector<User> = messages.HighScores;
+---functions---
+// messages.getBotCallbackAnswer#6c996518 flags:# peer:InputPeer msg_id:int data:flags.0?bytes game_id:flags.1?int = messages.BotCallbackAnswer;
+messages.getBotCallbackAnswer#810a9fec flags:# game:flags.1?true peer:InputPeer msg_id:int data:flags.0?bytes = messages.BotCallbackAnswer;
+// messages.setGameScore#dfbc7c1f flags:# edit_message:flags.0?true peer:InputPeer id:int user_id:InputUser game_id:int score:int = Updates;
+messages.setGameScore#8ef8ecc0 flags:# edit_message:flags.0?true peer:InputPeer id:int user_id:InputUser score:int = Updates;
+// messages.setInlineGameScore#54f882f1 flags:# edit_message:flags.0?true id:InputBotInlineMessageID user_id:InputUser game_id:int score:int = Bool;
+messages.setInlineGameScore#15ad9f64 flags:# edit_message:flags.0?true id:InputBotInlineMessageID user_id:InputUser score:int = Bool;
+messages.getGameHighScores#e822649d peer:InputPeer id:int user_id:InputUser = messages.HighScores;
+messages.getInlineGameHighScores#f635e1b id:InputBotInlineMessageID user_id:InputUser = messages.HighScores;
