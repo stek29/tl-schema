@@ -1153,24 +1153,32 @@
       "type": "auth.CheckedPhone"
     },
     {
-      "id": "-269659687",
+      "id": "1577067778",
       "predicate": "auth.sentCode",
       "params": [
         {
+          "name": "flags",
+          "type": "#"
+        },
+        {
           "name": "phone_registered",
-          "type": "Bool"
+          "type": "flags.0?true"
+        },
+        {
+          "name": "type",
+          "type": "auth.SentCodeType"
         },
         {
           "name": "phone_code_hash",
           "type": "string"
         },
         {
-          "name": "send_call_timeout",
-          "type": "int"
+          "name": "next_type",
+          "type": "flags.1?auth.CodeType"
         },
         {
-          "name": "is_password",
-          "type": "Bool"
+          "name": "timeout",
+          "type": "flags.2?int"
         }
       ],
       "type": "auth.SentCode"
@@ -3276,29 +3284,6 @@
       "type": "Update"
     },
     {
-      "id": "-484053553",
-      "predicate": "auth.sentAppCode",
-      "params": [
-        {
-          "name": "phone_registered",
-          "type": "Bool"
-        },
-        {
-          "name": "phone_code_hash",
-          "type": "string"
-        },
-        {
-          "name": "send_call_timeout",
-          "type": "int"
-        },
-        {
-          "name": "is_password",
-          "type": "Bool"
-        }
-      ],
-      "type": "auth.SentCode"
-    },
-    {
       "id": "381645902",
       "predicate": "sendMessageTypingAction",
       "params": [],
@@ -3563,21 +3548,6 @@
         }
       ],
       "type": "AccountDaysTTL"
-    },
-    {
-      "id": "-1527411636",
-      "predicate": "account.sentChangePhoneCode",
-      "params": [
-        {
-          "name": "phone_code_hash",
-          "type": "string"
-        },
-        {
-          "name": "send_call_timeout",
-          "type": "int"
-        }
-      ],
-      "type": "account.SentChangePhoneCode"
     },
     {
       "id": "314130811",
@@ -4596,6 +4566,10 @@
         {
           "name": "selective",
           "type": "flags.2?true"
+        },
+        {
+          "name": "inline",
+          "type": "flags.3?true"
         },
         {
           "name": "rows",
@@ -6419,6 +6393,116 @@
         }
       ],
       "type": "Update"
+    },
+    {
+      "id": "629866245",
+      "predicate": "keyboardButtonUrl",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        },
+        {
+          "name": "url",
+          "type": "string"
+        }
+      ],
+      "type": "KeyboardButton"
+    },
+    {
+      "id": "716063107",
+      "predicate": "keyboardButtonCallback",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "type": "KeyboardButton"
+    },
+    {
+      "id": "-1318425559",
+      "predicate": "keyboardButtonRequestPhone",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "type": "KeyboardButton"
+    },
+    {
+      "id": "-59151553",
+      "predicate": "keyboardButtonRequestGeoLocation",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "type": "KeyboardButton"
+    },
+    {
+      "id": "1923290508",
+      "predicate": "auth.codeTypeSms",
+      "params": [],
+      "type": "auth.CodeType"
+    },
+    {
+      "id": "1948046307",
+      "predicate": "auth.codeTypeCall",
+      "params": [],
+      "type": "auth.CodeType"
+    },
+    {
+      "id": "577556219",
+      "predicate": "auth.codeTypeFlashCall",
+      "params": [],
+      "type": "auth.CodeType"
+    },
+    {
+      "id": "1035688326",
+      "predicate": "auth.sentCodeTypeApp",
+      "params": [
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "type": "auth.SentCodeType"
+    },
+    {
+      "id": "-1073693790",
+      "predicate": "auth.sentCodeTypeSms",
+      "params": [
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "type": "auth.SentCodeType"
+    },
+    {
+      "id": "1398007207",
+      "predicate": "auth.sentCodeTypeCall",
+      "params": [
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "type": "auth.SentCodeType"
+    },
+    {
+      "id": "-1425815847",
+      "predicate": "auth.sentCodeTypeFlashCall",
+      "params": [
+        {
+          "name": "pattern",
+          "type": "string"
+        }
+      ],
+      "type": "auth.SentCodeType"
     }
   ],
   "methods": [
@@ -6464,16 +6548,24 @@
       "type": "auth.CheckedPhone"
     },
     {
-      "id": "1988976461",
+      "id": "-855805745",
       "method": "auth.sendCode",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "allow_flashcall",
+          "type": "flags.0?true"
+        },
         {
           "name": "phone_number",
           "type": "string"
         },
         {
-          "name": "sms_type",
-          "type": "int"
+          "name": "current_number",
+          "type": "flags.0?Bool"
         },
         {
           "name": "api_id",
@@ -6489,21 +6581,6 @@
         }
       ],
       "type": "auth.SentCode"
-    },
-    {
-      "id": "63247716",
-      "method": "auth.sendCall",
-      "params": [
-        {
-          "name": "phone_number",
-          "type": "string"
-        },
-        {
-          "name": "phone_code_hash",
-          "type": "string"
-        }
-      ],
-      "type": "Bool"
     },
     {
       "id": "453408308",
@@ -7749,21 +7826,6 @@
       "type": "User"
     },
     {
-      "id": "229241832",
-      "method": "auth.sendSms",
-      "params": [
-        {
-          "name": "phone_number",
-          "type": "string"
-        },
-        {
-          "name": "phone_code_hash",
-          "type": "string"
-        }
-      ],
-      "type": "Bool"
-    },
-    {
       "id": "916930423",
       "method": "messages.readMessageContents",
       "params": [
@@ -7877,15 +7939,27 @@
       "type": "contacts.ResolvedPeer"
     },
     {
-      "id": "-1543001868",
+      "id": "149257707",
       "method": "account.sendChangePhoneCode",
       "params": [
         {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "allow_flashcall",
+          "type": "flags.0?true"
+        },
+        {
           "name": "phone_number",
           "type": "string"
+        },
+        {
+          "name": "current_number",
+          "type": "flags.0?Bool"
         }
       ],
-      "type": "account.SentChangePhoneCode"
+      "type": "auth.SentCode"
     },
     {
       "id": "1891839707",
@@ -9061,6 +9135,36 @@
         }
       ],
       "type": "Updates"
+    },
+    {
+      "id": "1056025023",
+      "method": "auth.resendCode",
+      "params": [
+        {
+          "name": "phone_number",
+          "type": "string"
+        },
+        {
+          "name": "phone_code_hash",
+          "type": "string"
+        }
+      ],
+      "type": "auth.SentCode"
+    },
+    {
+      "id": "520357240",
+      "method": "auth.cancelCode",
+      "params": [
+        {
+          "name": "phone_number",
+          "type": "string"
+        },
+        {
+          "name": "phone_code_hash",
+          "type": "string"
+        }
+      ],
+      "type": "Bool"
     }
   ]
 }
