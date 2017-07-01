@@ -970,6 +970,10 @@
           "type": "#"
         },
         {
+          "name": "pinned",
+          "type": "flags.2?true"
+        },
+        {
           "name": "peer",
           "type": "Peer"
         },
@@ -1343,6 +1347,10 @@
         {
           "name": "blocked",
           "type": "flags.0?true"
+        },
+        {
+          "name": "phone_calls_available",
+          "type": "flags.4?true"
         },
         {
           "name": "user",
@@ -1906,29 +1914,6 @@
       "type": "Update"
     },
     {
-      "id": "-1895411046",
-      "predicate": "updateNewAuthorization",
-      "params": [
-        {
-          "name": "auth_key_id",
-          "type": "long"
-        },
-        {
-          "name": "date",
-          "type": "int"
-        },
-        {
-          "name": "device",
-          "type": "string"
-        },
-        {
-          "name": "location",
-          "type": "string"
-        }
-      ],
-      "type": "Update"
-    },
-    {
       "id": "-1519637954",
       "predicate": "updates.state",
       "params": [
@@ -2319,12 +2304,16 @@
       "type": "DcOption"
     },
     {
-      "id": "-1704251862",
+      "id": "989264735",
       "predicate": "config",
       "params": [
         {
           "name": "flags",
           "type": "#"
+        },
+        {
+          "name": "phonecalls_enabled",
+          "type": "flags.1?true"
         },
         {
           "name": "date",
@@ -2413,6 +2402,26 @@
         {
           "name": "tmp_sessions",
           "type": "flags.0?int"
+        },
+        {
+          "name": "pinned_dialogs_count_max",
+          "type": "int"
+        },
+        {
+          "name": "call_receive_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "call_ring_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "call_connect_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "call_packet_timeout_ms",
+          "type": "int"
         },
         {
           "name": "disabled_features",
@@ -3399,9 +3408,21 @@
       "type": "SendMessageAction"
     },
     {
-      "id": "942527460",
+      "id": "-337352679",
       "predicate": "updateServiceNotification",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "popup",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "inbox_date",
+          "type": "flags.1?int"
+        },
         {
           "name": "type",
           "type": "string"
@@ -3415,8 +3436,8 @@
           "type": "MessageMedia"
         },
         {
-          "name": "popup",
-          "type": "Bool"
+          "name": "entities",
+          "type": "Vector<MessageEntity>"
         }
       ],
       "type": "Update"
@@ -4692,12 +4713,20 @@
       "type": "help.AppChangelog"
     },
     {
-      "id": "1181279933",
+      "id": "705920636",
       "predicate": "help.appChangelog",
       "params": [
         {
-          "name": "text",
+          "name": "message",
           "type": "string"
+        },
+        {
+          "name": "media",
+          "type": "MessageMedia"
+        },
+        {
+          "name": "entities",
+          "type": "Vector<MessageEntity>"
         }
       ],
       "type": "help.AppChangelog"
@@ -7589,7 +7618,7 @@
       "type": "messages.HighScores"
     },
     {
-      "id": "2029424966",
+      "id": "-1663561404",
       "predicate": "messages.chatsSlice",
       "params": [
         {
@@ -7599,10 +7628,6 @@
         {
           "name": "chats",
           "type": "Vector<Chat>"
-        },
-        {
-          "name": "users",
-          "type": "Vector<User>"
         }
       ],
       "type": "messages.Chats"
@@ -7793,12 +7818,12 @@
       "type": "PageBlock"
     },
     {
-      "id": "1029399794",
+      "id": "-1162877472",
       "predicate": "pageBlockAuthorDate",
       "params": [
         {
           "name": "author",
-          "type": "string"
+          "type": "RichText"
         },
         {
           "name": "published_date",
@@ -7942,11 +7967,11 @@
         },
         {
           "name": "autoplay",
-          "type": "flags.1?true"
+          "type": "flags.0?true"
         },
         {
           "name": "loop",
-          "type": "flags.2?true"
+          "type": "flags.1?true"
         },
         {
           "name": "video_id",
@@ -7971,12 +7996,32 @@
       "type": "PageBlock"
     },
     {
-      "id": "57346070",
+      "id": "-840826671",
       "predicate": "pageBlockEmbed",
       "params": [
         {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "full_width",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "allow_scrolling",
+          "type": "flags.3?true"
+        },
+        {
           "name": "url",
-          "type": "string"
+          "type": "flags.1?string"
+        },
+        {
+          "name": "html",
+          "type": "flags.2?string"
+        },
+        {
+          "name": "poster_photo_id",
+          "type": "flags.4?long"
         },
         {
           "name": "w",
@@ -7994,12 +8039,20 @@
       "type": "PageBlock"
     },
     {
-      "id": "2146966967",
+      "id": "690781161",
       "predicate": "pageBlockEmbedPost",
       "params": [
         {
-          "name": "flags",
-          "type": "#"
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "webpage_id",
+          "type": "long"
+        },
+        {
+          "name": "author_photo_id",
+          "type": "long"
         },
         {
           "name": "author",
@@ -8010,28 +8063,12 @@
           "type": "int"
         },
         {
+          "name": "blocks",
+          "type": "Vector<PageBlock>"
+        },
+        {
           "name": "caption",
           "type": "RichText"
-        },
-        {
-          "name": "url",
-          "type": "string"
-        },
-        {
-          "name": "webpage_id",
-          "type": "long"
-        },
-        {
-          "name": "text",
-          "type": "flags.1?RichText"
-        },
-        {
-          "name": "medias",
-          "type": "flags.2?Vector<EmbedPostMedia>"
-        },
-        {
-          "name": "author_photo_id",
-          "type": "flags.3?long"
         }
       ],
       "type": "PageBlock"
@@ -8050,28 +8087,6 @@
         }
       ],
       "type": "PageBlock"
-    },
-    {
-      "id": "238153335",
-      "predicate": "embedPostPhoto",
-      "params": [
-        {
-          "name": "photo_id",
-          "type": "long"
-        }
-      ],
-      "type": "EmbedPostMedia"
-    },
-    {
-      "id": "-1602278042",
-      "predicate": "embedPostVideo",
-      "params": [
-        {
-          "name": "video_id",
-          "type": "long"
-        }
-      ],
-      "type": "EmbedPostMedia"
     },
     {
       "id": "-1913754556",
@@ -8110,6 +8125,362 @@
         }
       ],
       "type": "Page"
+    },
+    {
+      "id": "-1425052898",
+      "predicate": "updatePhoneCall",
+      "params": [
+        {
+          "name": "phone_call",
+          "type": "PhoneCall"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-686710068",
+      "predicate": "updateDialogPinned",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "pinned",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "peer",
+          "type": "Peer"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-657787251",
+      "predicate": "updatePinnedDialogs",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "order",
+          "type": "flags.0?Vector<Peer>"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-88417185",
+      "predicate": "inputPrivacyKeyPhoneCall",
+      "params": [],
+      "type": "InputPrivacyKey"
+    },
+    {
+      "id": "1030105979",
+      "predicate": "privacyKeyPhoneCall",
+      "params": [],
+      "type": "PrivacyKey"
+    },
+    {
+      "id": "324435594",
+      "predicate": "pageBlockUnsupported",
+      "params": [],
+      "type": "PageBlock"
+    },
+    {
+      "id": "-837994576",
+      "predicate": "pageBlockAnchor",
+      "params": [
+        {
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "145955919",
+      "predicate": "pageBlockCollage",
+      "params": [
+        {
+          "name": "items",
+          "type": "Vector<PageBlock>"
+        },
+        {
+          "name": "caption",
+          "type": "RichText"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "506920429",
+      "predicate": "inputPhoneCall",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        }
+      ],
+      "type": "InputPhoneCall"
+    },
+    {
+      "id": "1399245077",
+      "predicate": "phoneCallEmpty",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        }
+      ],
+      "type": "PhoneCall"
+    },
+    {
+      "id": "462375633",
+      "predicate": "phoneCallWaiting",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "admin_id",
+          "type": "int"
+        },
+        {
+          "name": "participant_id",
+          "type": "int"
+        },
+        {
+          "name": "protocol",
+          "type": "PhoneCallProtocol"
+        },
+        {
+          "name": "receive_date",
+          "type": "flags.0?int"
+        }
+      ],
+      "type": "PhoneCall"
+    },
+    {
+      "id": "1816431336",
+      "predicate": "phoneCallRequested",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "admin_id",
+          "type": "int"
+        },
+        {
+          "name": "participant_id",
+          "type": "int"
+        },
+        {
+          "name": "g_a",
+          "type": "bytes"
+        },
+        {
+          "name": "protocol",
+          "type": "PhoneCallProtocol"
+        }
+      ],
+      "type": "PhoneCall"
+    },
+    {
+      "id": "-1660057",
+      "predicate": "phoneCall",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "admin_id",
+          "type": "int"
+        },
+        {
+          "name": "participant_id",
+          "type": "int"
+        },
+        {
+          "name": "g_a_or_b",
+          "type": "bytes"
+        },
+        {
+          "name": "key_fingerprint",
+          "type": "long"
+        },
+        {
+          "name": "protocol",
+          "type": "PhoneCallProtocol"
+        },
+        {
+          "name": "connection",
+          "type": "PhoneConnection"
+        },
+        {
+          "name": "alternative_connections",
+          "type": "Vector<PhoneConnection>"
+        },
+        {
+          "name": "start_date",
+          "type": "int"
+        }
+      ],
+      "type": "PhoneCall"
+    },
+    {
+      "id": "1355435489",
+      "predicate": "phoneCallDiscarded",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "reason",
+          "type": "flags.0?PhoneCallDiscardReason"
+        },
+        {
+          "name": "duration",
+          "type": "flags.1?int"
+        }
+      ],
+      "type": "PhoneCall"
+    },
+    {
+      "id": "-1655957568",
+      "predicate": "phoneConnection",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "ip",
+          "type": "string"
+        },
+        {
+          "name": "ipv6",
+          "type": "string"
+        },
+        {
+          "name": "port",
+          "type": "int"
+        },
+        {
+          "name": "peer_tag",
+          "type": "bytes"
+        }
+      ],
+      "type": "PhoneConnection"
+    },
+    {
+      "id": "-1564789301",
+      "predicate": "phoneCallProtocol",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "udp_p2p",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "udp_reflector",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "min_layer",
+          "type": "int"
+        },
+        {
+          "name": "max_layer",
+          "type": "int"
+        }
+      ],
+      "type": "PhoneCallProtocol"
+    },
+    {
+      "id": "-326966976",
+      "predicate": "phone.phoneCall",
+      "params": [
+        {
+          "name": "phone_call",
+          "type": "PhoneCall"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "phone.PhoneCall"
+    },
+    {
+      "id": "-2048646399",
+      "predicate": "phoneCallDiscardReasonMissed",
+      "params": [],
+      "type": "PhoneCallDiscardReason"
+    },
+    {
+      "id": "-527056480",
+      "predicate": "phoneCallDiscardReasonDisconnect",
+      "params": [],
+      "type": "PhoneCallDiscardReason"
+    },
+    {
+      "id": "1471006352",
+      "predicate": "phoneCallDiscardReasonHangup",
+      "params": [],
+      "type": "PhoneCallDiscardReason"
+    },
+    {
+      "id": "-84416311",
+      "predicate": "phoneCallDiscardReasonBusy",
+      "params": [],
+      "type": "PhoneCallDiscardReason"
     }
   ],
   "methods": [
@@ -8526,9 +8897,17 @@
       "type": "messages.Messages"
     },
     {
-      "id": "1799878989",
+      "id": "421243333",
       "method": "messages.getDialogs",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "exclude_pinned",
+          "type": "flags.0?true"
+        },
         {
           "name": "offset_date",
           "type": "int"
@@ -10999,6 +11378,10 @@
           "type": "flags.0?true"
         },
         {
+          "name": "force",
+          "type": "flags.1?true"
+        },
+        {
           "name": "peer",
           "type": "InputPeer"
         },
@@ -11028,6 +11411,10 @@
         {
           "name": "edit_message",
           "type": "flags.0?true"
+        },
+        {
+          "name": "force",
+          "type": "flags.1?true"
         },
         {
           "name": "id",
@@ -11146,12 +11533,12 @@
       "type": "Bool"
     },
     {
-      "id": "101843938",
+      "id": "852135825",
       "method": "messages.getWebPage",
       "params": [
         {
-          "name": "id",
-          "type": "long"
+          "name": "url",
+          "type": "string"
         },
         {
           "name": "hash",
@@ -11159,6 +11546,130 @@
         }
       ],
       "type": "WebPage"
+    },
+    {
+      "id": "847887978",
+      "method": "messages.toggleDialogPin",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "pinned",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-1784678844",
+      "method": "messages.reorderPinnedDialogs",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "force",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "order",
+          "type": "Vector<InputPeer>"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-497756594",
+      "method": "messages.getPinnedDialogs",
+      "params": [],
+      "type": "messages.PeerDialogs"
+    },
+    {
+      "id": "-1541757468",
+      "method": "phone.requestCall",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        },
+        {
+          "name": "random_id",
+          "type": "int"
+        },
+        {
+          "name": "g_a",
+          "type": "bytes"
+        },
+        {
+          "name": "protocol",
+          "type": "PhoneCallProtocol"
+        }
+      ],
+      "type": "phone.PhoneCall"
+    },
+    {
+      "id": "571411232",
+      "method": "phone.acceptCall",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPhoneCall"
+        },
+        {
+          "name": "g_b",
+          "type": "bytes"
+        },
+        {
+          "name": "key_fingerprint",
+          "type": "long"
+        },
+        {
+          "name": "protocol",
+          "type": "PhoneCallProtocol"
+        }
+      ],
+      "type": "phone.PhoneCall"
+    },
+    {
+      "id": "1576783324",
+      "method": "phone.discardCall",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPhoneCall"
+        },
+        {
+          "name": "duration",
+          "type": "int"
+        },
+        {
+          "name": "reason",
+          "type": "PhoneCallDiscardReason"
+        },
+        {
+          "name": "connection_id",
+          "type": "long"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "399855457",
+      "method": "phone.receivedCall",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPhoneCall"
+        }
+      ],
+      "type": "Bool"
     }
   ]
 }
