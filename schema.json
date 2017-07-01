@@ -804,7 +804,7 @@
       "type": "Message"
     },
     {
-      "id": "-1066691065",
+      "id": "-1642487306",
       "predicate": "messageService",
       "params": [
         {
@@ -846,6 +846,10 @@
         {
           "name": "to_id",
           "type": "Peer"
+        },
+        {
+          "name": "reply_to_msg_id",
+          "type": "flags.3?int"
         },
         {
           "name": "date",
@@ -1322,12 +1326,24 @@
       "type": "WallPaper"
     },
     {
-      "id": "1518971995",
+      "id": "1496513539",
       "predicate": "userFull",
       "params": [
         {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "blocked",
+          "type": "flags.0?true"
+        },
+        {
           "name": "user",
           "type": "User"
+        },
+        {
+          "name": "about",
+          "type": "flags.1?string"
         },
         {
           "name": "link",
@@ -1335,19 +1351,15 @@
         },
         {
           "name": "profile_photo",
-          "type": "Photo"
+          "type": "flags.2?Photo"
         },
         {
           "name": "notify_settings",
           "type": "PeerNotifySettings"
         },
         {
-          "name": "blocked",
-          "type": "Bool"
-        },
-        {
           "name": "bot_info",
-          "type": "BotInfo"
+          "type": "flags.3?BotInfo"
         }
       ],
       "type": "UserFull"
@@ -4491,26 +4503,12 @@
       "type": "BotCommand"
     },
     {
-      "id": "-1154598962",
-      "predicate": "botInfoEmpty",
-      "params": [],
-      "type": "BotInfo"
-    },
-    {
-      "id": "164583517",
+      "id": "-1729618630",
       "predicate": "botInfo",
       "params": [
         {
           "name": "user_id",
           "type": "int"
-        },
-        {
-          "name": "version",
-          "type": "int"
-        },
-        {
-          "name": "share_text",
-          "type": "string"
         },
         {
           "name": "description",
@@ -4902,7 +4900,7 @@
       "type": "Peer"
     },
     {
-      "id": "1260090630",
+      "id": "-1588737454",
       "predicate": "channel",
       "params": [
         {
@@ -4954,12 +4952,16 @@
           "type": "flags.11?true"
         },
         {
+          "name": "min",
+          "type": "flags.12?true"
+        },
+        {
           "name": "id",
           "type": "int"
         },
         {
           "name": "access_hash",
-          "type": "long"
+          "type": "flags.13?long"
         },
         {
           "name": "title",
@@ -5008,7 +5010,7 @@
       "type": "Chat"
     },
     {
-      "id": "-1640751649",
+      "id": "-1749097118",
       "predicate": "channelFull",
       "params": [
         {
@@ -5018,6 +5020,10 @@
         {
           "name": "can_view_participants",
           "type": "flags.3?true"
+        },
+        {
+          "name": "can_set_username",
+          "type": "flags.6?true"
         },
         {
           "name": "id",
@@ -5074,6 +5080,10 @@
         {
           "name": "migrated_from_max_id",
           "type": "flags.4?int"
+        },
+        {
+          "name": "pinned_msg_id",
+          "type": "flags.5?int"
         }
       ],
       "type": "ChatFull"
@@ -5164,12 +5174,20 @@
       "type": "messages.Messages"
     },
     {
-      "id": "1620337698",
+      "id": "-352032773",
       "predicate": "updateChannelTooLong",
       "params": [
         {
+          "name": "flags",
+          "type": "#"
+        },
+        {
           "name": "channel_id",
           "type": "int"
+        },
+        {
+          "name": "pts",
+          "type": "flags.0?int"
         }
       ],
       "type": "Update"
@@ -6365,6 +6383,42 @@
         }
       ],
       "type": "channels.MessageEditData"
+    },
+    {
+      "id": "-1799538451",
+      "predicate": "messageActionPinMessage",
+      "params": [],
+      "type": "MessageAction"
+    },
+    {
+      "id": "-2122045747",
+      "predicate": "peerSettings",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "report_spam",
+          "type": "flags.0?true"
+        }
+      ],
+      "type": "PeerSettings"
+    },
+    {
+      "id": "-1738988427",
+      "predicate": "updateChannelPinnedMessage",
+      "params": [
+        {
+          "name": "channel_id",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
     }
   ],
   "methods": [
@@ -6633,16 +6687,24 @@
       "type": "Bool"
     },
     {
-      "id": "-259486360",
+      "id": "2018596725",
       "method": "account.updateProfile",
       "params": [
         {
+          "name": "flags",
+          "type": "#"
+        },
+        {
           "name": "first_name",
-          "type": "string"
+          "type": "flags.0?string"
         },
         {
           "name": "last_name",
-          "type": "string"
+          "type": "flags.1?string"
+        },
+        {
+          "name": "about",
+          "type": "flags.2?string"
         }
       ],
       "type": "User"
@@ -8951,6 +9013,51 @@
         {
           "name": "entities",
           "type": "flags.3?Vector<MessageEntity>"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-1460572005",
+      "method": "messages.hideReportSpam",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "913498268",
+      "method": "messages.getPeerSettings",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        }
+      ],
+      "type": "PeerSettings"
+    },
+    {
+      "id": "-1490162350",
+      "method": "channels.updatePinnedMessage",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "silent",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "id",
+          "type": "int"
         }
       ],
       "type": "Updates"
