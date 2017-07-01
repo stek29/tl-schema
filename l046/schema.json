@@ -1,0 +1,275 @@
+{
+  "constructors": [
+    {
+      "id": "-1739392570",
+      "predicate": "documentAttributeAudio",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "voice",
+          "type": "flags.10?true"
+        },
+        {
+          "name": "duration",
+          "type": "int"
+        },
+        {
+          "name": "title",
+          "type": "flags.0?string"
+        },
+        {
+          "name": "performer",
+          "type": "flags.1?string"
+        },
+        {
+          "name": "waveform",
+          "type": "flags.2?bytes"
+        }
+      ],
+      "type": "DocumentAttribute"
+    },
+    {
+      "id": "-2037289493",
+      "predicate": "account.passwordInputSettings",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "new_salt",
+          "type": "flags.0?bytes"
+        },
+        {
+          "name": "new_password_hash",
+          "type": "flags.0?bytes"
+        },
+        {
+          "name": "hint",
+          "type": "flags.0?string"
+        },
+        {
+          "name": "email",
+          "type": "flags.1?string"
+        }
+      ],
+      "type": "account.PasswordInputSettings"
+    },
+    {
+      "id": "1260090630",
+      "predicate": "channel",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "creator",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "kicked",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "left",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "editor",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "moderator",
+          "type": "flags.4?true"
+        },
+        {
+          "name": "broadcast",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "verified",
+          "type": "flags.7?true"
+        },
+        {
+          "name": "megagroup",
+          "type": "flags.8?true"
+        },
+        {
+          "name": "restricted",
+          "type": "flags.9?true"
+        },
+        {
+          "name": "invites_enabled",
+          "type": "flags.10?true"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "username",
+          "type": "flags.6?string"
+        },
+        {
+          "name": "photo",
+          "type": "ChatPhoto"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        },
+        {
+          "name": "restriction_reason",
+          "type": "flags.9?string"
+        }
+      ],
+      "type": "Chat"
+    },
+    {
+      "id": "1358283666",
+      "predicate": "inputMessagesFilterVoice",
+      "params": [],
+      "type": "MessagesFilter"
+    },
+    {
+      "id": "928101534",
+      "predicate": "inputMessagesFilterMusic",
+      "params": [],
+      "type": "MessagesFilter"
+    },
+    {
+      "id": "258597139",
+      "predicate": "updateBotInlineSend",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "query",
+          "type": "string"
+        },
+        {
+          "name": "id",
+          "type": "string"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-1107622874",
+      "predicate": "inputPrivacyKeyChatInvite",
+      "params": [],
+      "type": "InputPrivacyKey"
+    },
+    {
+      "id": "1343122938",
+      "predicate": "privacyKeyChatInvite",
+      "params": [],
+      "type": "PrivacyKey"
+    }
+  ],
+  "methods": [
+    {
+      "id": "-1347868602",
+      "method": "messages.getHistory",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "offset_id",
+          "type": "int"
+        },
+        {
+          "name": "offset_date",
+          "type": "int"
+        },
+        {
+          "name": "add_offset",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        },
+        {
+          "name": "min_id",
+          "type": "int"
+        }
+      ],
+      "type": "messages.Messages"
+    },
+    {
+      "id": "-1891021902",
+      "method": "channels.getImportantHistory",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "offset_id",
+          "type": "int"
+        },
+        {
+          "name": "offset_date",
+          "type": "int"
+        },
+        {
+          "name": "add_offset",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        },
+        {
+          "name": "min_id",
+          "type": "int"
+        }
+      ],
+      "type": "messages.Messages"
+    },
+    {
+      "id": "1231065863",
+      "method": "channels.toggleInvites",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "enabled",
+          "type": "Bool"
+        }
+      ],
+      "type": "Updates"
+    }
+  ]
+}

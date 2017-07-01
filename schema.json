@@ -3113,12 +3113,6 @@
       "type": "storage.FileType"
     },
     {
-      "id": "-808946398",
-      "predicate": "inputMessagesFilterAudio",
-      "params": [],
-      "type": "MessagesFilter"
-    },
-    {
       "id": "-1629621880",
       "predicate": "inputMessagesFilterDocument",
       "params": [],
@@ -3186,36 +3180,6 @@
         }
       ],
       "type": "Update"
-    },
-    {
-      "id": "1313442987",
-      "predicate": "inputMediaUploadedAudio",
-      "params": [
-        {
-          "name": "file",
-          "type": "InputFile"
-        },
-        {
-          "name": "duration",
-          "type": "int"
-        },
-        {
-          "name": "mime_type",
-          "type": "string"
-        }
-      ],
-      "type": "InputMedia"
-    },
-    {
-      "id": "-1986820223",
-      "predicate": "inputMediaAudio",
-      "params": [
-        {
-          "name": "id",
-          "type": "InputAudio"
-        }
-      ],
-      "type": "InputMedia"
     },
     {
       "id": "495530093",
@@ -3298,38 +3262,6 @@
       "type": "MessageMedia"
     },
     {
-      "id": "-961117440",
-      "predicate": "messageMediaAudio",
-      "params": [
-        {
-          "name": "audio",
-          "type": "Audio"
-        }
-      ],
-      "type": "MessageMedia"
-    },
-    {
-      "id": "-648356732",
-      "predicate": "inputAudioEmpty",
-      "params": [],
-      "type": "InputAudio"
-    },
-    {
-      "id": "2010398975",
-      "predicate": "inputAudio",
-      "params": [
-        {
-          "name": "id",
-          "type": "long"
-        },
-        {
-          "name": "access_hash",
-          "type": "long"
-        }
-      ],
-      "type": "InputAudio"
-    },
-    {
       "id": "1928391342",
       "predicate": "inputDocumentEmpty",
       "params": [],
@@ -3351,21 +3283,6 @@
       "type": "InputDocument"
     },
     {
-      "id": "1960591437",
-      "predicate": "inputAudioFileLocation",
-      "params": [
-        {
-          "name": "id",
-          "type": "long"
-        },
-        {
-          "name": "access_hash",
-          "type": "long"
-        }
-      ],
-      "type": "InputFileLocation"
-    },
-    {
       "id": "1313188841",
       "predicate": "inputDocumentFileLocation",
       "params": [
@@ -3379,52 +3296,6 @@
         }
       ],
       "type": "InputFileLocation"
-    },
-    {
-      "id": "1483311320",
-      "predicate": "audioEmpty",
-      "params": [
-        {
-          "name": "id",
-          "type": "long"
-        }
-      ],
-      "type": "Audio"
-    },
-    {
-      "id": "-102543275",
-      "predicate": "audio",
-      "params": [
-        {
-          "name": "id",
-          "type": "long"
-        },
-        {
-          "name": "access_hash",
-          "type": "long"
-        },
-        {
-          "name": "date",
-          "type": "int"
-        },
-        {
-          "name": "duration",
-          "type": "int"
-        },
-        {
-          "name": "mime_type",
-          "type": "string"
-        },
-        {
-          "name": "size",
-          "type": "int"
-        },
-        {
-          "name": "dc_id",
-          "type": "int"
-        }
-      ],
-      "type": "Audio"
     },
     {
       "id": "922273905",
@@ -3940,20 +3811,32 @@
       "type": "DocumentAttribute"
     },
     {
-      "id": "-556656416",
+      "id": "-1739392570",
       "predicate": "documentAttributeAudio",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "voice",
+          "type": "flags.10?true"
+        },
         {
           "name": "duration",
           "type": "int"
         },
         {
           "name": "title",
-          "type": "string"
+          "type": "flags.0?string"
         },
         {
           "name": "performer",
-          "type": "string"
+          "type": "flags.1?string"
+        },
+        {
+          "name": "waveform",
+          "type": "flags.2?bytes"
         }
       ],
       "type": "DocumentAttribute"
@@ -4067,36 +3950,6 @@
         }
       ],
       "type": "account.Password"
-    },
-    {
-      "id": "1038193057",
-      "predicate": "contactSuggested",
-      "params": [
-        {
-          "name": "user_id",
-          "type": "int"
-        },
-        {
-          "name": "mutual_contacts",
-          "type": "int"
-        }
-      ],
-      "type": "ContactSuggested"
-    },
-    {
-      "id": "1447681221",
-      "predicate": "contacts.suggested",
-      "params": [
-        {
-          "name": "results",
-          "type": "Vector<ContactSuggested>"
-        },
-        {
-          "name": "users",
-          "type": "Vector<User>"
-        }
-      ],
-      "type": "contacts.Suggested"
     },
     {
       "id": "-1721631396",
@@ -4392,7 +4245,7 @@
       "type": "account.PasswordSettings"
     },
     {
-      "id": "-1124314324",
+      "id": "-2037289493",
       "predicate": "account.passwordInputSettings",
       "params": [
         {
@@ -4684,12 +4537,6 @@
         }
       ],
       "type": "messages.StickerSet"
-    },
-    {
-      "id": "1526462308",
-      "predicate": "inputMessagesFilterAudioDocuments",
-      "params": [],
-      "type": "MessagesFilter"
     },
     {
       "id": "-787638374",
@@ -5251,6 +5098,10 @@
         {
           "name": "restricted",
           "type": "flags.9?true"
+        },
+        {
+          "name": "invites_enabled",
+          "type": "flags.10?true"
         },
         {
           "name": "id",
@@ -6549,6 +6400,49 @@
         }
       ],
       "type": "messages.BotResults"
+    },
+    {
+      "id": "1358283666",
+      "predicate": "inputMessagesFilterVoice",
+      "params": [],
+      "type": "MessagesFilter"
+    },
+    {
+      "id": "928101534",
+      "predicate": "inputMessagesFilterMusic",
+      "params": [],
+      "type": "MessagesFilter"
+    },
+    {
+      "id": "258597139",
+      "predicate": "updateBotInlineSend",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "query",
+          "type": "string"
+        },
+        {
+          "name": "id",
+          "type": "string"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-1107622874",
+      "predicate": "inputPrivacyKeyChatInvite",
+      "params": [],
+      "type": "InputPrivacyKey"
+    },
+    {
+      "id": "1343122938",
+      "predicate": "privacyKeyChatInvite",
+      "params": [],
+      "type": "PrivacyKey"
     }
   ],
   "methods": [
@@ -7011,7 +6905,7 @@
       "type": "messages.Dialogs"
     },
     {
-      "id": "-1970355494",
+      "id": "-1347868602",
       "method": "messages.getHistory",
       "params": [
         {
@@ -7020,6 +6914,10 @@
         },
         {
           "name": "offset_id",
+          "type": "int"
+        },
+        {
+          "name": "offset_date",
           "type": "int"
         },
         {
@@ -8055,17 +7953,6 @@
       "type": "auth.Authorization"
     },
     {
-      "id": "-847825880",
-      "method": "contacts.getSuggested",
-      "params": [
-        {
-          "name": "limit",
-          "type": "int"
-        }
-      ],
-      "type": "contacts.Suggested"
-    },
-    {
       "id": "-1082919718",
       "method": "messages.sendBroadcast",
       "params": [
@@ -8378,7 +8265,7 @@
       "type": "messages.Dialogs"
     },
     {
-      "id": "-575067701",
+      "id": "-1891021902",
       "method": "channels.getImportantHistory",
       "params": [
         {
@@ -8387,6 +8274,10 @@
         },
         {
           "name": "offset_id",
+          "type": "int"
+        },
+        {
+          "name": "offset_date",
           "type": "int"
         },
         {
@@ -9015,6 +8906,21 @@
         {
           "name": "id",
           "type": "string"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "1231065863",
+      "method": "channels.toggleInvites",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "enabled",
+          "type": "Bool"
         }
       ],
       "type": "Updates"
