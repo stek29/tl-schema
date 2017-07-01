@@ -1,0 +1,323 @@
+{
+  "constructors": [
+    {
+      "id": "-1633205504",
+      "predicate": "invoiceAmount",
+      "params": [
+        {
+          "name": "label",
+          "type": "string"
+        },
+        {
+          "name": "amount",
+          "type": "int"
+        }
+      ],
+      "type": "InvoiceAmount"
+    },
+    {
+      "id": "970449612",
+      "predicate": "invoice",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "test",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "name_requested",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "phone_requested",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "email_requested",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "shipping_address_requested",
+          "type": "flags.4?true"
+        },
+        {
+          "name": "currency",
+          "type": "string"
+        },
+        {
+          "name": "amounts",
+          "type": "Vector<InvoiceAmount>"
+        }
+      ],
+      "type": "Invoice"
+    },
+    {
+      "id": "5390619",
+      "predicate": "inputMediaInvoice",
+      "params": [
+        {
+          "name": "invoice",
+          "type": "Invoice"
+        },
+        {
+          "name": "payload",
+          "type": "bytes"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "193336472",
+      "predicate": "paymentChargeStripe",
+      "params": [
+        {
+          "name": "id",
+          "type": "string"
+        },
+        {
+          "name": "stripe_charge_id",
+          "type": "string"
+        }
+      ],
+      "type": "PaymentCharge"
+    },
+    {
+      "id": "741982121",
+      "predicate": "messageActionPaymentSentMe",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "currency",
+          "type": "string"
+        },
+        {
+          "name": "total_amount",
+          "type": "int"
+        },
+        {
+          "name": "payload",
+          "type": "bytes"
+        },
+        {
+          "name": "add_info",
+          "type": "PaymentRequestedInfo"
+        },
+        {
+          "name": "charge",
+          "type": "PaymentCharge"
+        }
+      ],
+      "type": "MessageAction"
+    },
+    {
+      "id": "1411986785",
+      "predicate": "messageMediaInvoice",
+      "params": [
+        {
+          "name": "currency",
+          "type": "string"
+        },
+        {
+          "name": "total_amount",
+          "type": "int"
+        }
+      ],
+      "type": "MessageMedia"
+    },
+    {
+      "id": "-1344716869",
+      "predicate": "keyboardButtonBuy",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "type": "KeyboardButton"
+    },
+    {
+      "id": "-355627904",
+      "predicate": "messageActionPaymentSent",
+      "params": [
+        {
+          "name": "currency",
+          "type": "string"
+        },
+        {
+          "name": "total_amount",
+          "type": "int"
+        }
+      ],
+      "type": "MessageAction"
+    },
+    {
+      "id": "-1521748531",
+      "predicate": "messageActionPaymentReceipt",
+      "params": [],
+      "type": "MessageAction"
+    },
+    {
+      "id": "950641644",
+      "predicate": "paymentProviderStripe",
+      "params": [],
+      "type": "PaymentProvider"
+    },
+    {
+      "id": "941961843",
+      "predicate": "payments.paymentForm",
+      "params": [
+        {
+          "name": "bot_id",
+          "type": "int"
+        },
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "invoice",
+          "type": "Invoice"
+        },
+        {
+          "name": "provider",
+          "type": "PaymentProvider"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "payments.PaymentForm"
+    },
+    {
+      "id": "-1989095115",
+      "predicate": "paymentCredentialsToken",
+      "params": [
+        {
+          "name": "token",
+          "type": "string"
+        },
+        {
+          "name": "token_type",
+          "type": "string"
+        }
+      ],
+      "type": "PaymentCredentials"
+    },
+    {
+      "id": "512535275",
+      "predicate": "postAddress",
+      "params": [
+        {
+          "name": "street_line1",
+          "type": "string"
+        },
+        {
+          "name": "street_line2",
+          "type": "string"
+        },
+        {
+          "name": "city",
+          "type": "string"
+        },
+        {
+          "name": "state",
+          "type": "string"
+        },
+        {
+          "name": "country_iso2",
+          "type": "string"
+        },
+        {
+          "name": "post_code",
+          "type": "string"
+        }
+      ],
+      "type": "PostAddress"
+    },
+    {
+      "id": "-1868808300",
+      "predicate": "paymentRequestedInfo",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "name",
+          "type": "flags.0?string"
+        },
+        {
+          "name": "phone",
+          "type": "flags.1?string"
+        },
+        {
+          "name": "email",
+          "type": "flags.2?string"
+        },
+        {
+          "name": "shipping_address",
+          "type": "flags.3?PostAddress"
+        }
+      ],
+      "type": "PaymentRequestedInfo"
+    }
+  ],
+  "methods": [
+    {
+      "id": "-1712285883",
+      "method": "payments.getPaymentForm",
+      "params": [
+        {
+          "name": "msg_id",
+          "type": "int"
+        }
+      ],
+      "type": "payments.PaymentForm"
+    },
+    {
+      "id": "690149718",
+      "method": "payments.sendPaymentForm",
+      "params": [
+        {
+          "name": "msg_id",
+          "type": "int"
+        },
+        {
+          "name": "credentials",
+          "type": "PaymentCredentials"
+        },
+        {
+          "name": "info",
+          "type": "PaymentRequestedInfo"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "923401109",
+      "method": "payments.confirmBuy",
+      "params": [
+        {
+          "name": "msg_id",
+          "type": "int"
+        },
+        {
+          "name": "currency",
+          "type": "string"
+        },
+        {
+          "name": "total_amount",
+          "type": "int"
+        }
+      ],
+      "type": "Updates"
+    }
+  ]
+}
