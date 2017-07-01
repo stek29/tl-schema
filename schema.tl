@@ -139,7 +139,7 @@ updates#74ae4240 updates:Vector<Update> users:Vector<User> chats:Vector<Chat> da
 photos.photo#20212ca8 photo:Photo users:Vector<User> = photos.Photo;
 upload.file#96a18d5 type:storage.FileType mtime:int bytes:bytes = upload.File;
 dcOption#5d8c6cc flags:# ipv6:flags.0?true media_only:flags.1?true tcpo_only:flags.2?true id:int ip_address:string port:int = DcOption;
-config#317ceef4 date:int expires:int test_mode:Bool this_dc:int dc_options:Vector<DcOption> chat_size_max:int megagroup_size_max:int forwarded_count_max:int online_update_period_ms:int offline_blur_timeout_ms:int offline_idle_timeout_ms:int online_cloud_timeout_ms:int notify_cloud_delay_ms:int notify_default_delay_ms:int chat_big_size:int push_chat_period_ms:int push_chat_limit:int saved_gifs_limit:int edit_time_limit:int disabled_features:Vector<DisabledFeature> = Config;
+config#c9411388 date:int expires:int test_mode:Bool this_dc:int dc_options:Vector<DcOption> chat_size_max:int megagroup_size_max:int forwarded_count_max:int online_update_period_ms:int offline_blur_timeout_ms:int offline_idle_timeout_ms:int online_cloud_timeout_ms:int notify_cloud_delay_ms:int notify_default_delay_ms:int chat_big_size:int push_chat_period_ms:int push_chat_limit:int saved_gifs_limit:int edit_time_limit:int rating_e_decay:int disabled_features:Vector<DisabledFeature> = Config;
 nearestDc#8e1a1775 country:string this_dc:int nearest_dc:int = NearestDc;
 help.appUpdate#8987f311 id:int critical:Bool url:string text:string = help.AppUpdate;
 help.noAppUpdate#c45a6536 = help.AppUpdate;
@@ -409,6 +409,18 @@ botInlineMediaResult#17db940b flags:# id:string type:string photo:flags.0?Photo 
 inputBotInlineMessageID#890c3d89 dc_id:int id:long access_hash:long = InputBotInlineMessageID;
 updateInlineBotCallbackQuery#2cbd95af query_id:long user_id:int msg_id:InputBotInlineMessageID data:bytes = Update;
 inlineBotSwitchPM#3c20629f text:string start_param:string = InlineBotSwitchPM;
+messageEntityMentionName#352dca58 offset:int length:int user_id:int = MessageEntity;
+inputMessageEntityMentionName#208e68c9 offset:int length:int user_id:InputUser = MessageEntity;
+messages.peerDialogs#3371c354 dialogs:Vector<Dialog> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> state:updates.State = messages.PeerDialogs;
+topPeer#edcdc05b peer:Peer rating:double = TopPeer;
+topPeerCategoryBotsPM#ab661b5b = TopPeerCategory;
+topPeerCategoryBotsInline#148677e2 = TopPeerCategory;
+topPeerCategoryCorrespondents#637b7ed = TopPeerCategory;
+topPeerCategoryGroups#bd17a14a = TopPeerCategory;
+topPeerCategoryChannels#161d9628 = TopPeerCategory;
+topPeerCategoryPeers#fb834291 category:TopPeerCategory count:int peers:Vector<TopPeer> = TopPeerCategoryPeers;
+contacts.topPeersNotModified#de266ef5 = contacts.TopPeers;
+contacts.topPeers#70b772a8 categories:Vector<TopPeerCategoryPeers> chats:Vector<Chat> users:Vector<User> = contacts.TopPeers;
 ---functions---
 invokeAfterMsg#cb9f372d msg_id:long query:!X = X;
 invokeAfterMsgs#3dc4b4f0 msg_ids:Vector<long> query:!X = X;
@@ -579,3 +591,6 @@ messages.editMessage#ce91e4ca flags:# no_webpage:flags.1?true peer:InputPeer id:
 messages.editInlineBotMessage#130c2c85 flags:# no_webpage:flags.1?true id:InputBotInlineMessageID message:flags.11?string reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector<MessageEntity> = Bool;
 messages.getBotCallbackAnswer#a6e94f04 peer:InputPeer msg_id:int data:bytes = messages.BotCallbackAnswer;
 messages.setBotCallbackAnswer#481c591a flags:# alert:flags.1?true query_id:long message:flags.0?string = Bool;
+contacts.getTopPeers#d4982db5 flags:# correspondents:flags.0?true bots_pm:flags.1?true bots_inline:flags.2?true groups:flags.10?true channels:flags.15?true offset:int limit:int hash:int = contacts.TopPeers;
+contacts.resetTopPeerRating#1ae373ac category:TopPeerCategory peer:InputPeer = Bool;
+messages.getPeerDialogs#19250887 peer:Vector<InputPeer> = messages.PeerDialogs;

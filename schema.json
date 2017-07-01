@@ -2324,7 +2324,7 @@
       "type": "DcOption"
     },
     {
-      "id": "830271220",
+      "id": "-918482040",
       "predicate": "config",
       "params": [
         {
@@ -2401,6 +2401,10 @@
         },
         {
           "name": "edit_time_limit",
+          "type": "int"
+        },
+        {
+          "name": "rating_e_decay",
           "type": "int"
         },
         {
@@ -6916,6 +6920,160 @@
         }
       ],
       "type": "InlineBotSwitchPM"
+    },
+    {
+      "id": "892193368",
+      "predicate": "messageEntityMentionName",
+      "params": [
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        },
+        {
+          "name": "user_id",
+          "type": "int"
+        }
+      ],
+      "type": "MessageEntity"
+    },
+    {
+      "id": "546203849",
+      "predicate": "inputMessageEntityMentionName",
+      "params": [
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        },
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        }
+      ],
+      "type": "MessageEntity"
+    },
+    {
+      "id": "863093588",
+      "predicate": "messages.peerDialogs",
+      "params": [
+        {
+          "name": "dialogs",
+          "type": "Vector<Dialog>"
+        },
+        {
+          "name": "messages",
+          "type": "Vector<Message>"
+        },
+        {
+          "name": "chats",
+          "type": "Vector<Chat>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        },
+        {
+          "name": "state",
+          "type": "updates.State"
+        }
+      ],
+      "type": "messages.PeerDialogs"
+    },
+    {
+      "id": "-305282981",
+      "predicate": "topPeer",
+      "params": [
+        {
+          "name": "peer",
+          "type": "Peer"
+        },
+        {
+          "name": "rating",
+          "type": "double"
+        }
+      ],
+      "type": "TopPeer"
+    },
+    {
+      "id": "-1419371685",
+      "predicate": "topPeerCategoryBotsPM",
+      "params": [],
+      "type": "TopPeerCategory"
+    },
+    {
+      "id": "344356834",
+      "predicate": "topPeerCategoryBotsInline",
+      "params": [],
+      "type": "TopPeerCategory"
+    },
+    {
+      "id": "104314861",
+      "predicate": "topPeerCategoryCorrespondents",
+      "params": [],
+      "type": "TopPeerCategory"
+    },
+    {
+      "id": "-1122524854",
+      "predicate": "topPeerCategoryGroups",
+      "params": [],
+      "type": "TopPeerCategory"
+    },
+    {
+      "id": "371037736",
+      "predicate": "topPeerCategoryChannels",
+      "params": [],
+      "type": "TopPeerCategory"
+    },
+    {
+      "id": "-75283823",
+      "predicate": "topPeerCategoryPeers",
+      "params": [
+        {
+          "name": "category",
+          "type": "TopPeerCategory"
+        },
+        {
+          "name": "count",
+          "type": "int"
+        },
+        {
+          "name": "peers",
+          "type": "Vector<TopPeer>"
+        }
+      ],
+      "type": "TopPeerCategoryPeers"
+    },
+    {
+      "id": "-567906571",
+      "predicate": "contacts.topPeersNotModified",
+      "params": [],
+      "type": "contacts.TopPeers"
+    },
+    {
+      "id": "1891070632",
+      "predicate": "contacts.topPeers",
+      "params": [
+        {
+          "name": "categories",
+          "type": "Vector<TopPeerCategoryPeers>"
+        },
+        {
+          "name": "chats",
+          "type": "Vector<Chat>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "contacts.TopPeers"
     }
   ],
   "methods": [
@@ -9671,6 +9829,75 @@
         }
       ],
       "type": "Bool"
+    },
+    {
+      "id": "-728224331",
+      "method": "contacts.getTopPeers",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "correspondents",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "bots_pm",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "bots_inline",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "groups",
+          "type": "flags.10?true"
+        },
+        {
+          "name": "channels",
+          "type": "flags.15?true"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        },
+        {
+          "name": "hash",
+          "type": "int"
+        }
+      ],
+      "type": "contacts.TopPeers"
+    },
+    {
+      "id": "451113900",
+      "method": "contacts.resetTopPeerRating",
+      "params": [
+        {
+          "name": "category",
+          "type": "TopPeerCategory"
+        },
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "421857415",
+      "method": "messages.getPeerDialogs",
+      "params": [
+        {
+          "name": "peer",
+          "type": "Vector<InputPeer>"
+        }
+      ],
+      "type": "messages.PeerDialogs"
     }
   ]
 }
