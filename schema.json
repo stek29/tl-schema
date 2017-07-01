@@ -46,32 +46,6 @@
       "type": "InputPeer"
     },
     {
-      "id": "270785512",
-      "predicate": "inputPeerContact",
-      "params": [
-        {
-          "name": "user_id",
-          "type": "int"
-        }
-      ],
-      "type": "InputPeer"
-    },
-    {
-      "id": "-1690012891",
-      "predicate": "inputPeerForeign",
-      "params": [
-        {
-          "name": "user_id",
-          "type": "int"
-        },
-        {
-          "name": "access_hash",
-          "type": "long"
-        }
-      ],
-      "type": "InputPeer"
-    },
-    {
       "id": "396093539",
       "predicate": "inputPeerChat",
       "params": [
@@ -92,32 +66,6 @@
       "id": "-138301121",
       "predicate": "inputUserSelf",
       "params": [],
-      "type": "InputUser"
-    },
-    {
-      "id": "-2031530139",
-      "predicate": "inputUserContact",
-      "params": [
-        {
-          "name": "user_id",
-          "type": "int"
-        }
-      ],
-      "type": "InputUser"
-    },
-    {
-      "id": "1700689151",
-      "predicate": "inputUserForeign",
-      "params": [
-        {
-          "name": "user_id",
-          "type": "int"
-        },
-        {
-          "name": "access_hash",
-          "type": "long"
-        }
-      ],
       "type": "InputUser"
     },
     {
@@ -1117,7 +1065,7 @@
       "type": "Photo"
     },
     {
-      "id": "-1014792074",
+      "id": "-840088834",
       "predicate": "photo",
       "params": [
         {
@@ -1129,16 +1077,8 @@
           "type": "long"
         },
         {
-          "name": "user_id",
-          "type": "int"
-        },
-        {
           "name": "date",
           "type": "int"
-        },
-        {
-          "name": "geo",
-          "type": "GeoPoint"
         },
         {
           "name": "sizes",
@@ -1224,7 +1164,7 @@
       "type": "Video"
     },
     {
-      "id": "-291550643",
+      "id": "-148338733",
       "predicate": "video",
       "params": [
         {
@@ -1236,16 +1176,16 @@
           "type": "long"
         },
         {
-          "name": "user_id",
-          "type": "int"
-        },
-        {
           "name": "date",
           "type": "int"
         },
         {
           "name": "duration",
           "type": "int"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
         },
         {
           "name": "size",
@@ -3361,7 +3301,7 @@
       "type": "Audio"
     },
     {
-      "id": "-945003370",
+      "id": "-102543275",
       "predicate": "audio",
       "params": [
         {
@@ -3371,10 +3311,6 @@
         {
           "name": "access_hash",
           "type": "long"
-        },
-        {
-          "name": "user_id",
-          "type": "int"
         },
         {
           "name": "date",
@@ -4779,6 +4715,59 @@
         }
       ],
       "type": "ReplyMarkup"
+    },
+    {
+      "id": "2129714567",
+      "predicate": "inputMessagesFilterUrl",
+      "params": [],
+      "type": "MessagesFilter"
+    },
+    {
+      "id": "2072935910",
+      "predicate": "inputPeerUser",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        }
+      ],
+      "type": "InputPeer"
+    },
+    {
+      "id": "-668391402",
+      "predicate": "inputUser",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        }
+      ],
+      "type": "InputUser"
+    },
+    {
+      "id": "-1350696044",
+      "predicate": "help.appChangelogEmpty",
+      "params": [],
+      "type": "help.AppChangelog"
+    },
+    {
+      "id": "1181279933",
+      "predicate": "help.appChangelog",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "type": "help.AppChangelog"
     }
   ],
   "methods": [
@@ -5721,7 +5710,7 @@
       "type": "Vector<long>"
     },
     {
-      "id": "-1209117380",
+      "id": "-1848823128",
       "method": "photos.getUserPhotos",
       "params": [
         {
@@ -5734,7 +5723,7 @@
         },
         {
           "name": "max_id",
-          "type": "int"
+          "type": "long"
         },
         {
           "name": "limit",
@@ -6471,6 +6460,29 @@
         }
       ],
       "type": "Updates"
+    },
+    {
+      "id": "1537966002",
+      "method": "help.getAppChangelog",
+      "params": [
+        {
+          "name": "device_model",
+          "type": "string"
+        },
+        {
+          "name": "system_version",
+          "type": "string"
+        },
+        {
+          "name": "app_version",
+          "type": "string"
+        },
+        {
+          "name": "lang_code",
+          "type": "string"
+        }
+      ],
+      "type": "help.AppChangelog"
     }
   ]
 }

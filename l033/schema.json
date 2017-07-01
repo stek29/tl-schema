@@ -1,0 +1,210 @@
+{
+  "constructors": [
+    {
+      "id": "-840088834",
+      "predicate": "photo",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "sizes",
+          "type": "Vector<PhotoSize>"
+        }
+      ],
+      "type": "Photo"
+    },
+    {
+      "id": "-148338733",
+      "predicate": "video",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "duration",
+          "type": "int"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        },
+        {
+          "name": "thumb",
+          "type": "PhotoSize"
+        },
+        {
+          "name": "dc_id",
+          "type": "int"
+        },
+        {
+          "name": "w",
+          "type": "int"
+        },
+        {
+          "name": "h",
+          "type": "int"
+        }
+      ],
+      "type": "Video"
+    },
+    {
+      "id": "-102543275",
+      "predicate": "audio",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "duration",
+          "type": "int"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        },
+        {
+          "name": "dc_id",
+          "type": "int"
+        }
+      ],
+      "type": "Audio"
+    },
+    {
+      "id": "2129714567",
+      "predicate": "inputMessagesFilterUrl",
+      "params": [],
+      "type": "MessagesFilter"
+    },
+    {
+      "id": "2072935910",
+      "predicate": "inputPeerUser",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        }
+      ],
+      "type": "InputPeer"
+    },
+    {
+      "id": "-668391402",
+      "predicate": "inputUser",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        }
+      ],
+      "type": "InputUser"
+    },
+    {
+      "id": "-1350696044",
+      "predicate": "help.appChangelogEmpty",
+      "params": [],
+      "type": "help.AppChangelog"
+    },
+    {
+      "id": "1181279933",
+      "predicate": "help.appChangelog",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "type": "help.AppChangelog"
+    }
+  ],
+  "methods": [
+    {
+      "id": "-1848823128",
+      "method": "photos.getUserPhotos",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "max_id",
+          "type": "long"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "photos.Photos"
+    },
+    {
+      "id": "1537966002",
+      "method": "help.getAppChangelog",
+      "params": [
+        {
+          "name": "device_model",
+          "type": "string"
+        },
+        {
+          "name": "system_version",
+          "type": "string"
+        },
+        {
+          "name": "app_version",
+          "type": "string"
+        },
+        {
+          "name": "lang_code",
+          "type": "string"
+        }
+      ],
+      "type": "help.AppChangelog"
+    }
+  ]
+}
