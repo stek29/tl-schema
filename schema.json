@@ -4660,7 +4660,7 @@
       "type": "MessagesFilter"
     },
     {
-      "id": "585404530",
+      "id": "847885712",
       "predicate": "user",
       "params": [
         {
@@ -4700,6 +4700,10 @@
           "type": "flags.17?true"
         },
         {
+          "name": "restricted",
+          "type": "flags.18?true"
+        },
+        {
           "name": "id",
           "type": "int"
         },
@@ -4734,6 +4738,10 @@
         {
           "name": "bot_info_version",
           "type": "flags.14?int"
+        },
+        {
+          "name": "restiction_reason",
+          "type": "flags.18?string"
         }
       ],
       "type": "User"
@@ -5165,7 +5173,7 @@
       "type": "Peer"
     },
     {
-      "id": "1737397639",
+      "id": "-399192472",
       "predicate": "channel",
       "params": [
         {
@@ -5205,6 +5213,10 @@
           "type": "flags.8?true"
         },
         {
+          "name": "restricted",
+          "type": "flags.9?true"
+        },
+        {
           "name": "id",
           "type": "int"
         },
@@ -5231,6 +5243,10 @@
         {
           "name": "version",
           "type": "int"
+        },
+        {
+          "name": "restiction_reason",
+          "type": "flags.9?string"
         }
       ],
       "type": "Chat"
@@ -6102,6 +6118,98 @@
         }
       ],
       "type": "help.TermsOfService"
+    },
+    {
+      "id": "-814484985",
+      "predicate": "webPageExternal",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "display_url",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "type": "flags.0?string"
+        },
+        {
+          "name": "title",
+          "type": "flags.1?string"
+        },
+        {
+          "name": "description",
+          "type": "flags.2?string"
+        },
+        {
+          "name": "thumb_url",
+          "type": "flags.3?string"
+        },
+        {
+          "name": "content_url",
+          "type": "flags.4?string"
+        },
+        {
+          "name": "w",
+          "type": "flags.5?int"
+        },
+        {
+          "name": "h",
+          "type": "flags.5?int"
+        },
+        {
+          "name": "duration",
+          "type": "flags.6?int"
+        }
+      ],
+      "type": "WebPage"
+    },
+    {
+      "id": "-713438005",
+      "predicate": "foundGif",
+      "params": [
+        {
+          "name": "webpage",
+          "type": "WebPage"
+        }
+      ],
+      "type": "FoundGif"
+    },
+    {
+      "id": "1212395773",
+      "predicate": "inputMediaGifExternal",
+      "params": [
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "q",
+          "type": "string"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "1158290442",
+      "predicate": "messages.foundGifs",
+      "params": [
+        {
+          "name": "next_offset",
+          "type": "int"
+        },
+        {
+          "name": "results",
+          "type": "Vector<FoundGif>"
+        }
+      ],
+      "type": "messages.FoundGifs"
     }
   ],
   "methods": [
@@ -8422,6 +8530,40 @@
         }
       ],
       "type": "help.TermsOfService"
+    },
+    {
+      "id": "864953444",
+      "method": "messages.getDocumentByHash",
+      "params": [
+        {
+          "name": "sha256",
+          "type": "bytes"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
+        }
+      ],
+      "type": "Document"
+    },
+    {
+      "id": "-1080395925",
+      "method": "messages.searchGifs",
+      "params": [
+        {
+          "name": "q",
+          "type": "string"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        }
+      ],
+      "type": "messages.FoundGifs"
     }
   ]
 }
