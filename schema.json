@@ -225,7 +225,7 @@
       "type": "InputMedia"
     },
     {
-      "id": "1212668202",
+      "id": "322623222",
       "predicate": "inputMediaUploadedVideo",
       "params": [
         {
@@ -243,12 +243,16 @@
         {
           "name": "h",
           "type": "int"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
         }
       ],
       "type": "InputMedia"
     },
     {
-      "id": "-433544891",
+      "id": "-1726817601",
       "predicate": "inputMediaUploadedThumbVideo",
       "params": [
         {
@@ -270,6 +274,10 @@
         {
           "name": "h",
           "type": "int"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
         }
       ],
       "type": "InputMedia"
@@ -1383,7 +1391,7 @@
       "type": "Video"
     },
     {
-      "id": "1510253727",
+      "id": "948937617",
       "predicate": "video",
       "params": [
         {
@@ -1409,6 +1417,10 @@
         {
           "name": "duration",
           "type": "int"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
         },
         {
           "name": "size",
@@ -1846,12 +1858,16 @@
       "type": "contacts.Contacts"
     },
     {
-      "id": "-775091636",
+      "id": "-1387117803",
       "predicate": "contacts.importedContacts",
       "params": [
         {
           "name": "imported",
           "type": "Vector<ImportedContact>"
+        },
+        {
+          "name": "retry_contacts",
+          "type": "Vector<long>"
         },
         {
           "name": "users",
@@ -3794,7 +3810,7 @@
       "type": "Update"
     },
     {
-      "id": "1638323254",
+      "id": "1313442987",
       "predicate": "inputMediaUploadedAudio",
       "params": [
         {
@@ -3804,6 +3820,10 @@
         {
           "name": "duration",
           "type": "int"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
         }
       ],
       "type": "InputMedia"
@@ -3978,7 +3998,7 @@
       "type": "Audio"
     },
     {
-      "id": "1114908135",
+      "id": "-945003370",
       "predicate": "audio",
       "params": [
         {
@@ -4000,6 +4020,10 @@
         {
           "name": "duration",
           "type": "int"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
         },
         {
           "name": "size",
@@ -5654,6 +5678,17 @@
     {
       "id": "-576320196",
       "method": "invokeWithLayer12",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    },
+    {
+      "id": "1115459234",
+      "method": "invokeWithLayer13",
       "params": [
         {
           "name": "query",
