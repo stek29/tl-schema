@@ -1,0 +1,253 @@
+{
+  "constructors": [
+    {
+      "id": "-748155807",
+      "predicate": "contactStatus",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "status",
+          "type": "UserStatus"
+        }
+      ],
+      "type": "ContactStatus"
+    },
+    {
+      "id": "-496024847",
+      "predicate": "userStatusRecently",
+      "params": [],
+      "type": "UserStatus"
+    },
+    {
+      "id": "129960444",
+      "predicate": "userStatusLastWeek",
+      "params": [],
+      "type": "UserStatus"
+    },
+    {
+      "id": "2011940674",
+      "predicate": "userStatusLastMonth",
+      "params": [],
+      "type": "UserStatus"
+    },
+    {
+      "id": "-298113238",
+      "predicate": "updatePrivacy",
+      "params": [
+        {
+          "name": "key",
+          "type": "PrivacyKey"
+        },
+        {
+          "name": "rules",
+          "type": "Vector<PrivacyRule>"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "1335282456",
+      "predicate": "inputPrivacyKeyStatusTimestamp",
+      "params": [],
+      "type": "InputPrivacyKey"
+    },
+    {
+      "id": "-1137792208",
+      "predicate": "privacyKeyStatusTimestamp",
+      "params": [],
+      "type": "PrivacyKey"
+    },
+    {
+      "id": "218751099",
+      "predicate": "inputPrivacyValueAllowContacts",
+      "params": [],
+      "type": "InputPrivacyRule"
+    },
+    {
+      "id": "407582158",
+      "predicate": "inputPrivacyValueAllowAll",
+      "params": [],
+      "type": "InputPrivacyRule"
+    },
+    {
+      "id": "320652927",
+      "predicate": "inputPrivacyValueAllowUsers",
+      "params": [
+        {
+          "name": "users",
+          "type": "Vector<InputUser>"
+        }
+      ],
+      "type": "InputPrivacyRule"
+    },
+    {
+      "id": "195371015",
+      "predicate": "inputPrivacyValueDisallowContacts",
+      "params": [],
+      "type": "InputPrivacyRule"
+    },
+    {
+      "id": "-697604407",
+      "predicate": "inputPrivacyValueDisallowAll",
+      "params": [],
+      "type": "InputPrivacyRule"
+    },
+    {
+      "id": "-1877932953",
+      "predicate": "inputPrivacyValueDisallowUsers",
+      "params": [
+        {
+          "name": "users",
+          "type": "Vector<InputUser>"
+        }
+      ],
+      "type": "InputPrivacyRule"
+    },
+    {
+      "id": "-123988",
+      "predicate": "privacyValueAllowContacts",
+      "params": [],
+      "type": "PrivacyRule"
+    },
+    {
+      "id": "1698855810",
+      "predicate": "privacyValueAllowAll",
+      "params": [],
+      "type": "PrivacyRule"
+    },
+    {
+      "id": "1297858060",
+      "predicate": "privacyValueAllowUsers",
+      "params": [
+        {
+          "name": "users",
+          "type": "Vector<int>"
+        }
+      ],
+      "type": "PrivacyRule"
+    },
+    {
+      "id": "-125240806",
+      "predicate": "privacyValueDisallowContacts",
+      "params": [],
+      "type": "PrivacyRule"
+    },
+    {
+      "id": "-1955338397",
+      "predicate": "privacyValueDisallowAll",
+      "params": [],
+      "type": "PrivacyRule"
+    },
+    {
+      "id": "209668535",
+      "predicate": "privacyValueDisallowUsers",
+      "params": [
+        {
+          "name": "users",
+          "type": "Vector<int>"
+        }
+      ],
+      "type": "PrivacyRule"
+    },
+    {
+      "id": "1430961007",
+      "predicate": "account.privacyRules",
+      "params": [
+        {
+          "name": "rules",
+          "type": "Vector<PrivacyRule>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "account.PrivacyRules"
+    },
+    {
+      "id": "-1194283041",
+      "predicate": "accountDaysTTL",
+      "params": [
+        {
+          "name": "days",
+          "type": "int"
+        }
+      ],
+      "type": "AccountDaysTTL"
+    }
+  ],
+  "methods": [
+    {
+      "id": "-623130288",
+      "method": "account.getPrivacy",
+      "params": [
+        {
+          "name": "key",
+          "type": "InputPrivacyKey"
+        }
+      ],
+      "type": "account.PrivacyRules"
+    },
+    {
+      "id": "-906486552",
+      "method": "account.setPrivacy",
+      "params": [
+        {
+          "name": "key",
+          "type": "InputPrivacyKey"
+        },
+        {
+          "name": "rules",
+          "type": "Vector<InputPrivacyRule>"
+        }
+      ],
+      "type": "account.PrivacyRules"
+    },
+    {
+      "id": "1099779595",
+      "method": "account.deleteAccount",
+      "params": [
+        {
+          "name": "reason",
+          "type": "string"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "150761757",
+      "method": "account.getAccountTTL",
+      "params": [],
+      "type": "AccountDaysTTL"
+    },
+    {
+      "id": "608323678",
+      "method": "account.setAccountTTL",
+      "params": [
+        {
+          "name": "ttl",
+          "type": "AccountDaysTTL"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-627372787",
+      "method": "invokeWithLayer",
+      "params": [
+        {
+          "name": "layer",
+          "type": "int"
+        },
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    }
+  ]
+}
