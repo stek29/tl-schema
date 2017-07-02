@@ -86,7 +86,7 @@ messageActionChatEditPhoto#7fcb13a8 photo:Photo = MessageAction;
 messageActionChatDeletePhoto#95e3fbef = MessageAction;
 messageActionChatAddUser#5e3cfc4b user_id:int = MessageAction;
 messageActionChatDeleteUser#b2ae9b0c user_id:int = MessageAction;
-dialog#214a8cdf peer:Peer top_message:int unread_count:int = Dialog;
+dialog#ab3a99ac peer:Peer top_message:int unread_count:int notify_settings:PeerNotifySettings = Dialog;
 photoEmpty#2331b22d id:long = Photo;
 photo#22b56751 id:long access_hash:long user_id:int date:int caption:string geo:GeoPoint sizes:Vector<PhotoSize> = Photo;
 photoSizeEmpty#e17e23c type:string = PhotoSize;
@@ -252,6 +252,12 @@ audio#c7ac6496 id:long access_hash:long user_id:int date:int duration:int mime_t
 documentEmpty#36f8c871 id:long = Document;
 document#9efc6326 id:long access_hash:long user_id:int date:int file_name:string mime_type:string size:int thumb:PhotoSize dc_id:int = Document;
 help.support#17c6b5f6 phone_number:string user:User = help.Support;
+notifyAll#74d07c60 = NotifyPeer;
+notifyChats#c007cec3 = NotifyPeer;
+notifyPeer#9fd40bd8 peer:Peer = NotifyPeer;
+notifyUsers#b4c83b4c = NotifyPeer;
+updateUserBlocked#80ece81a user_id:int blocked:Bool = Update;
+updateNotifySettings#bec268ef peer:NotifyPeer notify_settings:PeerNotifySettings = Update;
 ---functions---
 invokeAfterMsg#cb9f372d msg_id:long query:!X = X;
 invokeAfterMsgs#3dc4b4f0 msg_ids:Vector<long> query:!X = X;
@@ -358,3 +364,4 @@ invokeWithLayer11#a6b88fdf query:!X = X;
 help.getSupport#9cdf08cd = help.Support;
 invokeWithLayer12#dda60d3c query:!X = X;
 invokeWithLayer13#427c8ea2 query:!X = X;
+invokeWithLayer14#2b9b08fa query:!X = X;

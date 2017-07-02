@@ -1250,7 +1250,7 @@
       "type": "MessageAction"
     },
     {
-      "id": "558533855",
+      "id": "-1422222932",
       "predicate": "dialog",
       "params": [
         {
@@ -1264,6 +1264,10 @@
         {
           "name": "unread_count",
           "type": "int"
+        },
+        {
+          "name": "notify_settings",
+          "type": "PeerNotifySettings"
         }
       ],
       "type": "Dialog"
@@ -4104,6 +4108,65 @@
         }
       ],
       "type": "help.Support"
+    },
+    {
+      "id": "1959820384",
+      "predicate": "notifyAll",
+      "params": [],
+      "type": "NotifyPeer"
+    },
+    {
+      "id": "-1073230141",
+      "predicate": "notifyChats",
+      "params": [],
+      "type": "NotifyPeer"
+    },
+    {
+      "id": "-1613493288",
+      "predicate": "notifyPeer",
+      "params": [
+        {
+          "name": "peer",
+          "type": "Peer"
+        }
+      ],
+      "type": "NotifyPeer"
+    },
+    {
+      "id": "-1261946036",
+      "predicate": "notifyUsers",
+      "params": [],
+      "type": "NotifyPeer"
+    },
+    {
+      "id": "-2131957734",
+      "predicate": "updateUserBlocked",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "blocked",
+          "type": "Bool"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-1094555409",
+      "predicate": "updateNotifySettings",
+      "params": [
+        {
+          "name": "peer",
+          "type": "NotifyPeer"
+        },
+        {
+          "name": "notify_settings",
+          "type": "PeerNotifySettings"
+        }
+      ],
+      "type": "Update"
     }
   ],
   "methods": [
@@ -5689,6 +5752,17 @@
     {
       "id": "1115459234",
       "method": "invokeWithLayer13",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    },
+    {
+      "id": "731580666",
+      "method": "invokeWithLayer14",
       "params": [
         {
           "name": "query",
