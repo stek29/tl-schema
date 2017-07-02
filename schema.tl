@@ -202,6 +202,7 @@ geochats.messagesSlice#bc5863e8 count:int messages:Vector<GeoChatMessage> chats:
 messageActionGeoChatCreate#6f038ebc title:string address:string = MessageAction;
 messageActionGeoChatCheckin#c7d53de = MessageAction;
 updateNewGeoChatMessage#5a68e3f7 message:GeoChatMessage = Update;
+wallPaperSolid#63117f24 id:int title:string bg_color:int color:int = WallPaper;
 ---functions---
 invokeAfterMsg#cb9f372d msg_id:long query:!X = X;
 invokeAfterMsgs#3dc4b4f0 msg_ids:Vector<long> query:!X = X;
@@ -288,3 +289,4 @@ geochats.createGeoChat#e092e16 title:string geo_point:InputGeoPoint address:stri
 invokeWithLayer4#dea0d430 query:!X = X;
 invokeWithLayer5#417a57ae query:!X = X;
 invokeWithLayer6#3a64d54d query:!X = X;
+invokeWithLayer7#a5be56d3 query:!X = X;
