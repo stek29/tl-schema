@@ -2440,11 +2440,15 @@
       "type": "Update"
     },
     {
-      "id": "534882570",
+      "id": "-1519637954",
       "predicate": "updates.state",
       "params": [
         {
           "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "qts",
           "type": "int"
         },
         {
@@ -2457,10 +2461,6 @@
         },
         {
           "name": "unread_count",
-          "type": "int"
-        },
-        {
-          "name": "friends_unread_count",
           "type": "int"
         }
       ],
@@ -2482,12 +2482,16 @@
       "type": "updates.Difference"
     },
     {
-      "id": "-1965358985",
+      "id": "16030880",
       "predicate": "updates.difference",
       "params": [
         {
           "name": "new_messages",
           "type": "Vector<Message>"
+        },
+        {
+          "name": "new_encrypted_messages",
+          "type": "Vector<EncryptedMessage>"
         },
         {
           "name": "other_updates",
@@ -2509,12 +2513,16 @@
       "type": "updates.Difference"
     },
     {
-      "id": "-974636620",
+      "id": "-1459938943",
       "predicate": "updates.differenceSlice",
       "params": [
         {
           "name": "new_messages",
           "type": "Vector<Message>"
+        },
+        {
+          "name": "new_encrypted_messages",
+          "type": "Vector<EncryptedMessage>"
         },
         {
           "name": "other_updates",
@@ -3265,6 +3273,406 @@
         }
       ],
       "type": "WallPaper"
+    },
+    {
+      "id": "314359194",
+      "predicate": "updateNewEncryptedMessage",
+      "params": [
+        {
+          "name": "message",
+          "type": "EncryptedMessage"
+        },
+        {
+          "name": "qts",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "386986326",
+      "predicate": "updateEncryptedChatTyping",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-1264392051",
+      "predicate": "updateEncryption",
+      "params": [
+        {
+          "name": "chat",
+          "type": "EncryptedChat"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "956179895",
+      "predicate": "updateEncryptedMessagesRead",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "max_date",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-1417756512",
+      "predicate": "encryptedChatEmpty",
+      "params": [
+        {
+          "name": "id",
+          "type": "int"
+        }
+      ],
+      "type": "EncryptedChat"
+    },
+    {
+      "id": "1006044124",
+      "predicate": "encryptedChatWaiting",
+      "params": [
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "admin_id",
+          "type": "int"
+        },
+        {
+          "name": "participant_id",
+          "type": "int"
+        }
+      ],
+      "type": "EncryptedChat"
+    },
+    {
+      "id": "-39213129",
+      "predicate": "encryptedChatRequested",
+      "params": [
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "admin_id",
+          "type": "int"
+        },
+        {
+          "name": "participant_id",
+          "type": "int"
+        },
+        {
+          "name": "g_a",
+          "type": "bytes"
+        },
+        {
+          "name": "nonce",
+          "type": "bytes"
+        }
+      ],
+      "type": "EncryptedChat"
+    },
+    {
+      "id": "1711395151",
+      "predicate": "encryptedChat",
+      "params": [
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "admin_id",
+          "type": "int"
+        },
+        {
+          "name": "participant_id",
+          "type": "int"
+        },
+        {
+          "name": "g_a_or_b",
+          "type": "bytes"
+        },
+        {
+          "name": "nonce",
+          "type": "bytes"
+        },
+        {
+          "name": "key_fingerprint",
+          "type": "long"
+        }
+      ],
+      "type": "EncryptedChat"
+    },
+    {
+      "id": "332848423",
+      "predicate": "encryptedChatDiscarded",
+      "params": [
+        {
+          "name": "id",
+          "type": "int"
+        }
+      ],
+      "type": "EncryptedChat"
+    },
+    {
+      "id": "-247351839",
+      "predicate": "inputEncryptedChat",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        }
+      ],
+      "type": "InputEncryptedChat"
+    },
+    {
+      "id": "-1038136962",
+      "predicate": "encryptedFileEmpty",
+      "params": [],
+      "type": "EncryptedFile"
+    },
+    {
+      "id": "1248893260",
+      "predicate": "encryptedFile",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        },
+        {
+          "name": "dc_id",
+          "type": "int"
+        },
+        {
+          "name": "key_fingerprint",
+          "type": "int"
+        }
+      ],
+      "type": "EncryptedFile"
+    },
+    {
+      "id": "406307684",
+      "predicate": "inputEncryptedFileEmpty",
+      "params": [],
+      "type": "InputEncryptedFile"
+    },
+    {
+      "id": "1690108678",
+      "predicate": "inputEncryptedFileUploaded",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "parts",
+          "type": "int"
+        },
+        {
+          "name": "md5_checksum",
+          "type": "string"
+        },
+        {
+          "name": "key_fingerprint",
+          "type": "int"
+        }
+      ],
+      "type": "InputEncryptedFile"
+    },
+    {
+      "id": "1511503333",
+      "predicate": "inputEncryptedFile",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        }
+      ],
+      "type": "InputEncryptedFile"
+    },
+    {
+      "id": "-182231723",
+      "predicate": "inputEncryptedFileLocation",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        }
+      ],
+      "type": "InputFileLocation"
+    },
+    {
+      "id": "-317144808",
+      "predicate": "encryptedMessage",
+      "params": [
+        {
+          "name": "random_id",
+          "type": "long"
+        },
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "bytes",
+          "type": "bytes"
+        },
+        {
+          "name": "file",
+          "type": "EncryptedFile"
+        }
+      ],
+      "type": "EncryptedMessage"
+    },
+    {
+      "id": "594758406",
+      "predicate": "encryptedMessageService",
+      "params": [
+        {
+          "name": "random_id",
+          "type": "long"
+        },
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "bytes",
+          "type": "bytes"
+        }
+      ],
+      "type": "EncryptedMessage"
+    },
+    {
+      "id": "-1058912715",
+      "predicate": "messages.dhConfigNotModified",
+      "params": [
+        {
+          "name": "random",
+          "type": "bytes"
+        }
+      ],
+      "type": "messages.DhConfig"
+    },
+    {
+      "id": "740433629",
+      "predicate": "messages.dhConfig",
+      "params": [
+        {
+          "name": "g",
+          "type": "int"
+        },
+        {
+          "name": "p",
+          "type": "bytes"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        },
+        {
+          "name": "random",
+          "type": "bytes"
+        }
+      ],
+      "type": "messages.DhConfig"
+    },
+    {
+      "id": "1443858741",
+      "predicate": "messages.sentEncryptedMessage",
+      "params": [
+        {
+          "name": "date",
+          "type": "int"
+        }
+      ],
+      "type": "messages.SentEncryptedMessage"
+    },
+    {
+      "id": "-1802240206",
+      "predicate": "messages.sentEncryptedFile",
+      "params": [
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "file",
+          "type": "EncryptedFile"
+        }
+      ],
+      "type": "messages.SentEncryptedMessage"
     }
   ],
   "methods": [
@@ -4049,7 +4457,7 @@
       "type": "updates.State"
     },
     {
-      "id": "1530299738",
+      "id": "168039573",
       "method": "updates.getDifference",
       "params": [
         {
@@ -4058,6 +4466,10 @@
         },
         {
           "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "qts",
           "type": "int"
         }
       ],
@@ -4554,6 +4966,183 @@
     {
       "id": "-1514252589",
       "method": "invokeWithLayer7",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    },
+    {
+      "id": "651135312",
+      "method": "messages.getDhConfig",
+      "params": [
+        {
+          "name": "version",
+          "type": "int"
+        },
+        {
+          "name": "random_length",
+          "type": "int"
+        }
+      ],
+      "type": "messages.DhConfig"
+    },
+    {
+      "id": "-162681021",
+      "method": "messages.requestEncryption",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        },
+        {
+          "name": "random_id",
+          "type": "int"
+        },
+        {
+          "name": "g_a",
+          "type": "bytes"
+        }
+      ],
+      "type": "EncryptedChat"
+    },
+    {
+      "id": "1035731989",
+      "method": "messages.acceptEncryption",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputEncryptedChat"
+        },
+        {
+          "name": "g_b",
+          "type": "bytes"
+        },
+        {
+          "name": "key_fingerprint",
+          "type": "long"
+        }
+      ],
+      "type": "EncryptedChat"
+    },
+    {
+      "id": "-304536635",
+      "method": "messages.discardEncryption",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "2031374829",
+      "method": "messages.setEncryptedTyping",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputEncryptedChat"
+        },
+        {
+          "name": "typing",
+          "type": "Bool"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "2135648522",
+      "method": "messages.readEncryptedHistory",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputEncryptedChat"
+        },
+        {
+          "name": "max_date",
+          "type": "int"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-1451792525",
+      "method": "messages.sendEncrypted",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputEncryptedChat"
+        },
+        {
+          "name": "random_id",
+          "type": "long"
+        },
+        {
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "type": "messages.SentEncryptedMessage"
+    },
+    {
+      "id": "-1701831834",
+      "method": "messages.sendEncryptedFile",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputEncryptedChat"
+        },
+        {
+          "name": "random_id",
+          "type": "long"
+        },
+        {
+          "name": "data",
+          "type": "bytes"
+        },
+        {
+          "name": "file",
+          "type": "InputEncryptedFile"
+        }
+      ],
+      "type": "messages.SentEncryptedMessage"
+    },
+    {
+      "id": "852769188",
+      "method": "messages.sendEncryptedService",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputEncryptedChat"
+        },
+        {
+          "name": "random_id",
+          "type": "long"
+        },
+        {
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "type": "messages.SentEncryptedMessage"
+    },
+    {
+      "id": "1436924774",
+      "method": "messages.receivedQueue",
+      "params": [
+        {
+          "name": "max_qts",
+          "type": "int"
+        }
+      ],
+      "type": "Vector<long>"
+    },
+    {
+      "id": "-374613507",
+      "method": "invokeWithLayer8",
       "params": [
         {
           "name": "query",
