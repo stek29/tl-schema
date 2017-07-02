@@ -636,7 +636,7 @@
       "type": "Chat"
     },
     {
-      "id": "1930607688",
+      "id": "-652419756",
       "predicate": "chat",
       "params": [
         {
@@ -664,6 +664,10 @@
           "type": "flags.4?true"
         },
         {
+          "name": "deactivated",
+          "type": "flags.5?true"
+        },
+        {
           "name": "id",
           "type": "int"
         },
@@ -686,6 +690,10 @@
         {
           "name": "version",
           "type": "int"
+        },
+        {
+          "name": "migrated_to",
+          "type": "flags.6?InputChannel"
         }
       ],
       "type": "Chat"
@@ -1073,12 +1081,12 @@
       "type": "MessageAction"
     },
     {
-      "id": "1581055051",
+      "id": "1217033015",
       "predicate": "messageActionChatAddUser",
       "params": [
         {
-          "name": "user_id",
-          "type": "int"
+          "name": "users",
+          "type": "Vector<int>"
         }
       ],
       "type": "MessageAction"
@@ -2446,7 +2454,7 @@
       "type": "DcOption"
     },
     {
-      "id": "1311946900",
+      "id": "1823925854",
       "predicate": "config",
       "params": [
         {
@@ -2474,7 +2482,7 @@
           "type": "int"
         },
         {
-          "name": "broadcast_size_max",
+          "name": "megagroup_size_max",
           "type": "int"
         },
         {
@@ -4507,6 +4515,10 @@
           "type": "flags.2?true"
         },
         {
+          "name": "megagroup",
+          "type": "flags.3?true"
+        },
+        {
           "name": "title",
           "type": "string"
         }
@@ -5189,6 +5201,10 @@
           "type": "flags.7?true"
         },
         {
+          "name": "megagroup",
+          "type": "flags.8?true"
+        },
+        {
           "name": "id",
           "type": "int"
         },
@@ -5239,7 +5255,7 @@
       "type": "Chat"
     },
     {
-      "id": "-88925533",
+      "id": "-1640751649",
       "predicate": "channelFull",
       "params": [
         {
@@ -5293,6 +5309,18 @@
         {
           "name": "exported_invite",
           "type": "ExportedChatInvite"
+        },
+        {
+          "name": "bot_info",
+          "type": "Vector<BotInfo>"
+        },
+        {
+          "name": "migrated_from_chat_id",
+          "type": "flags.4?int"
+        },
+        {
+          "name": "migrated_from_max_id",
+          "type": "flags.4?int"
         }
       ],
       "type": "ChatFull"
@@ -5970,6 +5998,38 @@
         }
       ],
       "type": "Update"
+    },
+    {
+      "id": "1371385889",
+      "predicate": "messageActionChatMigrateTo",
+      "params": [
+        {
+          "name": "channel_id",
+          "type": "int"
+        }
+      ],
+      "type": "MessageAction"
+    },
+    {
+      "id": "-1336546578",
+      "predicate": "messageActionChannelMigrateFrom",
+      "params": [
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "chat_id",
+          "type": "int"
+        }
+      ],
+      "type": "MessageAction"
+    },
+    {
+      "id": "-1328445861",
+      "predicate": "channelParticipantsBots",
+      "params": [],
+      "type": "ChannelParticipantsFilter"
     }
   ],
   "methods": [
@@ -7677,7 +7737,7 @@
       "type": "auth.Authorization"
     },
     {
-      "id": "457052156",
+      "id": "-421563528",
       "method": "messages.startBot",
       "params": [
         {
@@ -7685,8 +7745,8 @@
           "type": "InputUser"
         },
         {
-          "name": "chat_id",
-          "type": "int"
+          "name": "peer",
+          "type": "InputPeer"
         },
         {
           "name": "random_id",
@@ -7961,7 +8021,7 @@
       "type": "messages.ChatFull"
     },
     {
-      "id": "1428281412",
+      "id": "-192332417",
       "method": "channels.createChannel",
       "params": [
         {
@@ -7973,16 +8033,16 @@
           "type": "flags.0?true"
         },
         {
+          "name": "megagroup",
+          "type": "flags.1?true"
+        },
+        {
           "name": "title",
           "type": "string"
         },
         {
           "name": "about",
           "type": "string"
-        },
-        {
-          "name": "users",
-          "type": "Vector<InputUser>"
         }
       ],
       "type": "Updates"
@@ -8207,6 +8267,44 @@
         }
       ],
       "type": "Bool"
+    },
+    {
+      "id": "363051235",
+      "method": "messages.migrateChat",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-1640190800",
+      "method": "messages.searchGlobal",
+      "params": [
+        {
+          "name": "q",
+          "type": "string"
+        },
+        {
+          "name": "offset_date",
+          "type": "int"
+        },
+        {
+          "name": "offset_peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "offset_id",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "messages.Messages"
     }
   ]
 }
