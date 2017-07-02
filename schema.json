@@ -798,7 +798,7 @@
       "type": "Message"
     },
     {
-      "id": "-1023016155",
+      "id": "-260565816",
       "predicate": "message",
       "params": [
         {
@@ -844,6 +844,10 @@
         {
           "name": "reply_markup",
           "type": "flags.6?ReplyMarkup"
+        },
+        {
+          "name": "entities",
+          "type": "flags.7?Vector<MessageEntity>"
         }
       ],
       "type": "Message"
@@ -1710,7 +1714,7 @@
       "type": "messages.Messages"
     },
     {
-      "id": "1279084531",
+      "id": "-1969628960",
       "predicate": "messages.sentMessage",
       "params": [
         {
@@ -1724,6 +1728,10 @@
         {
           "name": "media",
           "type": "MessageMedia"
+        },
+        {
+          "name": "entities",
+          "type": "Vector<MessageEntity>"
         },
         {
           "name": "pts",
@@ -2136,7 +2144,7 @@
       "type": "Updates"
     },
     {
-      "id": "-312729305",
+      "id": "1060296792",
       "predicate": "updateShortMessage",
       "params": [
         {
@@ -2178,12 +2186,16 @@
         {
           "name": "reply_to_msg_id",
           "type": "flags.3?int"
+        },
+        {
+          "name": "entities",
+          "type": "flags.7?Vector<MessageEntity>"
         }
       ],
       "type": "Updates"
     },
     {
-      "id": "1378061116",
+      "id": "-113206467",
       "predicate": "updateShortChatMessage",
       "params": [
         {
@@ -2229,6 +2241,10 @@
         {
           "name": "reply_to_msg_id",
           "type": "flags.3?int"
+        },
+        {
+          "name": "entities",
+          "type": "flags.7?Vector<MessageEntity>"
         }
       ],
       "type": "Updates"
@@ -4008,12 +4024,6 @@
       "type": "contacts.Suggested"
     },
     {
-      "id": "1062078024",
-      "predicate": "messages.messageEmpty",
-      "params": [],
-      "type": "messages.Message"
-    },
-    {
       "id": "-1721631396",
       "predicate": "updateReadHistoryInbox",
       "params": [
@@ -4768,6 +4778,179 @@
         }
       ],
       "type": "help.AppChangelog"
+    },
+    {
+      "id": "-1148011883",
+      "predicate": "messageEntityUnknown",
+      "params": [
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "type": "MessageEntity"
+    },
+    {
+      "id": "-100378723",
+      "predicate": "messageEntityMention",
+      "params": [
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "type": "MessageEntity"
+    },
+    {
+      "id": "1868782349",
+      "predicate": "messageEntityHashtag",
+      "params": [
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "type": "MessageEntity"
+    },
+    {
+      "id": "1827637959",
+      "predicate": "messageEntityBotCommand",
+      "params": [
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "type": "MessageEntity"
+    },
+    {
+      "id": "1859134776",
+      "predicate": "messageEntityUrl",
+      "params": [
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "type": "MessageEntity"
+    },
+    {
+      "id": "1692693954",
+      "predicate": "messageEntityEmail",
+      "params": [
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "type": "MessageEntity"
+    },
+    {
+      "id": "-1117713463",
+      "predicate": "messageEntityBold",
+      "params": [
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "type": "MessageEntity"
+    },
+    {
+      "id": "-2106619040",
+      "predicate": "messageEntityItalic",
+      "params": [
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "type": "MessageEntity"
+    },
+    {
+      "id": "681706865",
+      "predicate": "messageEntityCode",
+      "params": [
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "type": "MessageEntity"
+    },
+    {
+      "id": "1938967520",
+      "predicate": "messageEntityPre",
+      "params": [
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        },
+        {
+          "name": "language",
+          "type": "string"
+        }
+      ],
+      "type": "MessageEntity"
+    },
+    {
+      "id": "1990644519",
+      "predicate": "messageEntityTextUrl",
+      "params": [
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        },
+        {
+          "name": "url",
+          "type": "string"
+        }
+      ],
+      "type": "MessageEntity"
     }
   ],
   "methods": [
@@ -5359,7 +5542,7 @@
       "type": "Bool"
     },
     {
-      "id": "-61479243",
+      "id": "233907088",
       "method": "messages.sendMessage",
       "params": [
         {
@@ -5385,6 +5568,10 @@
         {
           "name": "reply_markup",
           "type": "flags.2?ReplyMarkup"
+        },
+        {
+          "name": "entities",
+          "type": "flags.3?Vector<MessageEntity>"
         }
       ],
       "type": "messages.SentMessage"
