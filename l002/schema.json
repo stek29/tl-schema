@@ -1,0 +1,185 @@
+{
+  "constructors": [
+    {
+      "id": "-715532088",
+      "predicate": "userProfilePhoto",
+      "params": [
+        {
+          "name": "photo_id",
+          "type": "long"
+        },
+        {
+          "name": "photo_small",
+          "type": "FileLocation"
+        },
+        {
+          "name": "photo_big",
+          "type": "FileLocation"
+        }
+      ],
+      "type": "UserProfilePhoto"
+    },
+    {
+      "id": "1185074840",
+      "predicate": "inputPeerNotifySettings",
+      "params": [
+        {
+          "name": "mute_until",
+          "type": "int"
+        },
+        {
+          "name": "sound",
+          "type": "string"
+        },
+        {
+          "name": "show_previews",
+          "type": "Bool"
+        },
+        {
+          "name": "events_mask",
+          "type": "int"
+        }
+      ],
+      "type": "InputPeerNotifySettings"
+    },
+    {
+      "id": "-1923214866",
+      "predicate": "peerNotifySettings",
+      "params": [
+        {
+          "name": "mute_until",
+          "type": "int"
+        },
+        {
+          "name": "sound",
+          "type": "string"
+        },
+        {
+          "name": "show_previews",
+          "type": "Bool"
+        },
+        {
+          "name": "events_mask",
+          "type": "int"
+        }
+      ],
+      "type": "PeerNotifySettings"
+    },
+    {
+      "id": "-1791935732",
+      "predicate": "updateUserPhoto",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "photo",
+          "type": "UserProfilePhoto"
+        },
+        {
+          "name": "previous",
+          "type": "Bool"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-265263912",
+      "predicate": "inputPeerNotifyEventsEmpty",
+      "params": [],
+      "type": "InputPeerNotifyEvents"
+    },
+    {
+      "id": "-395694988",
+      "predicate": "inputPeerNotifyEventsAll",
+      "params": [],
+      "type": "InputPeerNotifyEvents"
+    },
+    {
+      "id": "-1916114267",
+      "predicate": "photos.photos",
+      "params": [
+        {
+          "name": "photos",
+          "type": "Vector<Photo>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "photos.Photos"
+    },
+    {
+      "id": "352657236",
+      "predicate": "photos.photosSlice",
+      "params": [
+        {
+          "name": "count",
+          "type": "int"
+        },
+        {
+          "name": "photos",
+          "type": "Vector<Photo>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "photos.Photos"
+    }
+  ],
+  "methods": [
+    {
+      "id": "-2016444625",
+      "method": "photos.deletePhotos",
+      "params": [
+        {
+          "name": "id",
+          "type": "Vector<InputPhoto>"
+        }
+      ],
+      "type": "Vector<long>"
+    },
+    {
+      "id": "-1209117380",
+      "method": "photos.getUserPhotos",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "photos.Photos"
+    },
+    {
+      "id": "681431542",
+      "method": "invokeWithLayer2",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    }
+  ]
+}
