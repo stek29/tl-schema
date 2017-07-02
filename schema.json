@@ -3711,6 +3711,356 @@
         }
       ],
       "type": "InputEncryptedFile"
+    },
+    {
+      "id": "-1373745011",
+      "predicate": "storage.filePdf",
+      "params": [],
+      "type": "storage.FileType"
+    },
+    {
+      "id": "-808946398",
+      "predicate": "inputMessagesFilterAudio",
+      "params": [],
+      "type": "MessagesFilter"
+    },
+    {
+      "id": "-1629621880",
+      "predicate": "inputMessagesFilterDocument",
+      "params": [],
+      "type": "MessagesFilter"
+    },
+    {
+      "id": "-648121413",
+      "predicate": "inputMessagesFilterPhotoVideoDocuments",
+      "params": [],
+      "type": "MessagesFilter"
+    },
+    {
+      "id": "974056226",
+      "predicate": "updateChatParticipantAdd",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "inviter_id",
+          "type": "int"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "1851755554",
+      "predicate": "updateChatParticipantDelete",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-1906403213",
+      "predicate": "updateDcOptions",
+      "params": [
+        {
+          "name": "dc_options",
+          "type": "Vector<DcOption>"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "1638323254",
+      "predicate": "inputMediaUploadedAudio",
+      "params": [
+        {
+          "name": "file",
+          "type": "InputFile"
+        },
+        {
+          "name": "duration",
+          "type": "int"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "-1986820223",
+      "predicate": "inputMediaAudio",
+      "params": [
+        {
+          "name": "id",
+          "type": "InputAudio"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "887592125",
+      "predicate": "inputMediaUploadedDocument",
+      "params": [
+        {
+          "name": "file",
+          "type": "InputFile"
+        },
+        {
+          "name": "file_name",
+          "type": "string"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "1044831837",
+      "predicate": "inputMediaUploadedThumbDocument",
+      "params": [
+        {
+          "name": "file",
+          "type": "InputFile"
+        },
+        {
+          "name": "thumb",
+          "type": "InputFile"
+        },
+        {
+          "name": "file_name",
+          "type": "string"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "-779818943",
+      "predicate": "inputMediaDocument",
+      "params": [
+        {
+          "name": "id",
+          "type": "InputDocument"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "802824708",
+      "predicate": "messageMediaDocument",
+      "params": [
+        {
+          "name": "document",
+          "type": "Document"
+        }
+      ],
+      "type": "MessageMedia"
+    },
+    {
+      "id": "-961117440",
+      "predicate": "messageMediaAudio",
+      "params": [
+        {
+          "name": "audio",
+          "type": "Audio"
+        }
+      ],
+      "type": "MessageMedia"
+    },
+    {
+      "id": "-648356732",
+      "predicate": "inputAudioEmpty",
+      "params": [],
+      "type": "InputAudio"
+    },
+    {
+      "id": "2010398975",
+      "predicate": "inputAudio",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        }
+      ],
+      "type": "InputAudio"
+    },
+    {
+      "id": "1928391342",
+      "predicate": "inputDocumentEmpty",
+      "params": [],
+      "type": "InputDocument"
+    },
+    {
+      "id": "410618194",
+      "predicate": "inputDocument",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        }
+      ],
+      "type": "InputDocument"
+    },
+    {
+      "id": "1960591437",
+      "predicate": "inputAudioFileLocation",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        }
+      ],
+      "type": "InputFileLocation"
+    },
+    {
+      "id": "1313188841",
+      "predicate": "inputDocumentFileLocation",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        }
+      ],
+      "type": "InputFileLocation"
+    },
+    {
+      "id": "1483311320",
+      "predicate": "audioEmpty",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        }
+      ],
+      "type": "Audio"
+    },
+    {
+      "id": "1114908135",
+      "predicate": "audio",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "duration",
+          "type": "int"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        },
+        {
+          "name": "dc_id",
+          "type": "int"
+        }
+      ],
+      "type": "Audio"
+    },
+    {
+      "id": "922273905",
+      "predicate": "documentEmpty",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        }
+      ],
+      "type": "Document"
+    },
+    {
+      "id": "-1627626714",
+      "predicate": "document",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "file_name",
+          "type": "string"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        },
+        {
+          "name": "thumb",
+          "type": "PhotoSize"
+        },
+        {
+          "name": "dc_id",
+          "type": "int"
+        }
+      ],
+      "type": "Document"
     }
   ],
   "methods": [
@@ -5246,6 +5596,17 @@
     {
       "id": "1987140195",
       "method": "invokeWithLayer9",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    },
+    {
+      "id": "962726977",
+      "method": "invokeWithLayer10",
       "params": [
         {
           "name": "query",
