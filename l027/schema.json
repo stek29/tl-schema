@@ -1,0 +1,680 @@
+{
+  "constructors": [
+    {
+      "id": "1279084531",
+      "predicate": "messages.sentMessage",
+      "params": [
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "media",
+          "type": "MessageMedia"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
+        }
+      ],
+      "type": "messages.SentMessage"
+    },
+    {
+      "id": "1757069895",
+      "predicate": "config",
+      "params": [
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "expires",
+          "type": "int"
+        },
+        {
+          "name": "test_mode",
+          "type": "Bool"
+        },
+        {
+          "name": "this_dc",
+          "type": "int"
+        },
+        {
+          "name": "dc_options",
+          "type": "Vector<DcOption>"
+        },
+        {
+          "name": "chat_size_max",
+          "type": "int"
+        },
+        {
+          "name": "broadcast_size_max",
+          "type": "int"
+        },
+        {
+          "name": "forwarded_count_max",
+          "type": "int"
+        },
+        {
+          "name": "online_update_period_ms",
+          "type": "int"
+        },
+        {
+          "name": "offline_blur_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "offline_idle_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "online_cloud_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "notify_cloud_delay_ms",
+          "type": "int"
+        },
+        {
+          "name": "notify_default_delay_ms",
+          "type": "int"
+        },
+        {
+          "name": "chat_big_size",
+          "type": "int"
+        },
+        {
+          "name": "disabled_features",
+          "type": "Vector<DisabledFeature>"
+        }
+      ],
+      "type": "Config"
+    },
+    {
+      "id": "899786339",
+      "predicate": "messages.sentMessageLink",
+      "params": [
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "media",
+          "type": "MessageMedia"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
+        },
+        {
+          "name": "links",
+          "type": "Vector<contacts.Link>"
+        },
+        {
+          "name": "seq",
+          "type": "int"
+        }
+      ],
+      "type": "messages.SentMessage"
+    },
+    {
+      "id": "-1764049896",
+      "predicate": "account.noPassword",
+      "params": [
+        {
+          "name": "new_salt",
+          "type": "bytes"
+        },
+        {
+          "name": "email_unconfirmed_pattern",
+          "type": "string"
+        }
+      ],
+      "type": "account.Password"
+    },
+    {
+      "id": "2081952796",
+      "predicate": "account.password",
+      "params": [
+        {
+          "name": "current_salt",
+          "type": "bytes"
+        },
+        {
+          "name": "new_salt",
+          "type": "bytes"
+        },
+        {
+          "name": "hint",
+          "type": "string"
+        },
+        {
+          "name": "has_recovery",
+          "type": "Bool"
+        },
+        {
+          "name": "email_unconfirmed_pattern",
+          "type": "string"
+        }
+      ],
+      "type": "account.Password"
+    },
+    {
+      "id": "751004017",
+      "predicate": "updateWebPage",
+      "params": [
+        {
+          "name": "webpage",
+          "type": "WebPage"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-350980120",
+      "predicate": "webPageEmpty",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        }
+      ],
+      "type": "WebPage"
+    },
+    {
+      "id": "-981018084",
+      "predicate": "webPagePending",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        }
+      ],
+      "type": "WebPage"
+    },
+    {
+      "id": "-1558273867",
+      "predicate": "webPage",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "display_url",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "type": "flags.0?string"
+        },
+        {
+          "name": "site_name",
+          "type": "flags.1?string"
+        },
+        {
+          "name": "title",
+          "type": "flags.2?string"
+        },
+        {
+          "name": "description",
+          "type": "flags.3?string"
+        },
+        {
+          "name": "photo",
+          "type": "flags.4?Photo"
+        },
+        {
+          "name": "embed_url",
+          "type": "flags.5?string"
+        },
+        {
+          "name": "embed_type",
+          "type": "flags.5?string"
+        },
+        {
+          "name": "embed_width",
+          "type": "flags.6?int"
+        },
+        {
+          "name": "embed_height",
+          "type": "flags.6?int"
+        },
+        {
+          "name": "duration",
+          "type": "flags.7?int"
+        },
+        {
+          "name": "author",
+          "type": "flags.8?string"
+        }
+      ],
+      "type": "WebPage"
+    },
+    {
+      "id": "-1557277184",
+      "predicate": "messageMediaWebPage",
+      "params": [
+        {
+          "name": "webpage",
+          "type": "WebPage"
+        }
+      ],
+      "type": "MessageMedia"
+    },
+    {
+      "id": "2079516406",
+      "predicate": "authorization",
+      "params": [
+        {
+          "name": "hash",
+          "type": "long"
+        },
+        {
+          "name": "flags",
+          "type": "int"
+        },
+        {
+          "name": "device_model",
+          "type": "string"
+        },
+        {
+          "name": "platform",
+          "type": "string"
+        },
+        {
+          "name": "system_version",
+          "type": "string"
+        },
+        {
+          "name": "api_id",
+          "type": "int"
+        },
+        {
+          "name": "app_name",
+          "type": "string"
+        },
+        {
+          "name": "app_version",
+          "type": "string"
+        },
+        {
+          "name": "date_created",
+          "type": "int"
+        },
+        {
+          "name": "date_active",
+          "type": "int"
+        },
+        {
+          "name": "ip",
+          "type": "string"
+        },
+        {
+          "name": "country",
+          "type": "string"
+        },
+        {
+          "name": "region",
+          "type": "string"
+        }
+      ],
+      "type": "Authorization"
+    },
+    {
+      "id": "307276766",
+      "predicate": "account.authorizations",
+      "params": [
+        {
+          "name": "authorizations",
+          "type": "Vector<Authorization>"
+        }
+      ],
+      "type": "account.Authorizations"
+    },
+    {
+      "id": "-1212732749",
+      "predicate": "account.passwordSettings",
+      "params": [
+        {
+          "name": "email",
+          "type": "string"
+        }
+      ],
+      "type": "account.PasswordSettings"
+    },
+    {
+      "id": "-1124314324",
+      "predicate": "account.passwordInputSettings",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "new_salt",
+          "type": "flags.0?bytes"
+        },
+        {
+          "name": "new_password_hash",
+          "type": "flags.0?bytes"
+        },
+        {
+          "name": "hint",
+          "type": "flags.0?string"
+        },
+        {
+          "name": "email",
+          "type": "flags.1?string"
+        }
+      ],
+      "type": "account.PasswordInputSettings"
+    },
+    {
+      "id": "326715557",
+      "predicate": "auth.passwordRecovery",
+      "params": [
+        {
+          "name": "email_pattern",
+          "type": "string"
+        }
+      ],
+      "type": "auth.PasswordRecovery"
+    }
+  ],
+  "methods": [
+    {
+      "id": "-1696755930",
+      "method": "messages.sendMessage",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "reply_to_msg_id",
+          "type": "flags.0?int"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "random_id",
+          "type": "long"
+        }
+      ],
+      "type": "messages.SentMessage"
+    },
+    {
+      "id": "762913713",
+      "method": "messages.sendMedia",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "reply_to_msg_id",
+          "type": "flags.0?int"
+        },
+        {
+          "name": "media",
+          "type": "InputMedia"
+        },
+        {
+          "name": "random_id",
+          "type": "long"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "1440838285",
+      "method": "messages.forwardMessages",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "id",
+          "type": "Vector<int>"
+        },
+        {
+          "name": "random_id",
+          "type": "Vector<long>"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-599447467",
+      "method": "messages.editChatTitle",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-900957736",
+      "method": "messages.editChatPhoto",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "photo",
+          "type": "InputChatPhoto"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-106911223",
+      "method": "messages.addChatUser",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        },
+        {
+          "name": "fwd_limit",
+          "type": "int"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-530505962",
+      "method": "messages.deleteChatUser",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "164303470",
+      "method": "messages.createChat",
+      "params": [
+        {
+          "name": "users",
+          "type": "Vector<InputUser>"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "865483769",
+      "method": "messages.forwardMessage",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "random_id",
+          "type": "long"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-1082919718",
+      "method": "messages.sendBroadcast",
+      "params": [
+        {
+          "name": "contacts",
+          "type": "Vector<InputUser>"
+        },
+        {
+          "name": "random_id",
+          "type": "Vector<long>"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "media",
+          "type": "InputMedia"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "623001124",
+      "method": "messages.getWebPagePreview",
+      "params": [
+        {
+          "name": "message",
+          "type": "string"
+        }
+      ],
+      "type": "MessageMedia"
+    },
+    {
+      "id": "-484392616",
+      "method": "account.getAuthorizations",
+      "params": [],
+      "type": "account.Authorizations"
+    },
+    {
+      "id": "-545786948",
+      "method": "account.resetAuthorization",
+      "params": [
+        {
+          "name": "hash",
+          "type": "long"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-1131605573",
+      "method": "account.getPasswordSettings",
+      "params": [
+        {
+          "name": "current_password_hash",
+          "type": "bytes"
+        }
+      ],
+      "type": "account.PasswordSettings"
+    },
+    {
+      "id": "-92517498",
+      "method": "account.updatePasswordSettings",
+      "params": [
+        {
+          "name": "current_password_hash",
+          "type": "bytes"
+        },
+        {
+          "name": "new_settings",
+          "type": "account.PasswordInputSettings"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-661144474",
+      "method": "auth.requestPasswordRecovery",
+      "params": [],
+      "type": "auth.PasswordRecovery"
+    },
+    {
+      "id": "1319464594",
+      "method": "auth.recoverPassword",
+      "params": [
+        {
+          "name": "code",
+          "type": "string"
+        }
+      ],
+      "type": "auth.Authorization"
+    }
+  ]
+}

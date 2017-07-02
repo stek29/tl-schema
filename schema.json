@@ -1929,61 +1929,7 @@
       "type": "messages.Messages"
     },
     {
-      "id": "131615560",
-      "predicate": "messages.statedMessages",
-      "params": [
-        {
-          "name": "messages",
-          "type": "Vector<Message>"
-        },
-        {
-          "name": "chats",
-          "type": "Vector<Chat>"
-        },
-        {
-          "name": "users",
-          "type": "Vector<User>"
-        },
-        {
-          "name": "pts",
-          "type": "int"
-        },
-        {
-          "name": "pts_count",
-          "type": "int"
-        }
-      ],
-      "type": "messages.StatedMessages"
-    },
-    {
-      "id": "-1776022422",
-      "predicate": "messages.statedMessage",
-      "params": [
-        {
-          "name": "message",
-          "type": "Message"
-        },
-        {
-          "name": "chats",
-          "type": "Vector<Chat>"
-        },
-        {
-          "name": "users",
-          "type": "Vector<User>"
-        },
-        {
-          "name": "pts",
-          "type": "int"
-        },
-        {
-          "name": "pts_count",
-          "type": "int"
-        }
-      ],
-      "type": "messages.StatedMessage"
-    },
-    {
-      "id": "-1878086592",
+      "id": "1279084531",
       "predicate": "messages.sentMessage",
       "params": [
         {
@@ -1993,6 +1939,10 @@
         {
           "name": "date",
           "type": "int"
+        },
+        {
+          "name": "media",
+          "type": "MessageMedia"
         },
         {
           "name": "pts",
@@ -2652,7 +2602,7 @@
       "type": "DcOption"
     },
     {
-      "id": "1047491370",
+      "id": "1757069895",
       "predicate": "config",
       "params": [
         {
@@ -2681,6 +2631,10 @@
         },
         {
           "name": "broadcast_size_max",
+          "type": "int"
+        },
+        {
+          "name": "forwarded_count_max",
           "type": "int"
         },
         {
@@ -2824,77 +2778,7 @@
       "type": "photos.Photos"
     },
     {
-      "id": "1371430169",
-      "predicate": "messages.statedMessagesLinks",
-      "params": [
-        {
-          "name": "messages",
-          "type": "Vector<Message>"
-        },
-        {
-          "name": "chats",
-          "type": "Vector<Chat>"
-        },
-        {
-          "name": "users",
-          "type": "Vector<User>"
-        },
-        {
-          "name": "pts",
-          "type": "int"
-        },
-        {
-          "name": "pts_count",
-          "type": "int"
-        },
-        {
-          "name": "links",
-          "type": "Vector<contacts.Link>"
-        },
-        {
-          "name": "seq",
-          "type": "int"
-        }
-      ],
-      "type": "messages.StatedMessages"
-    },
-    {
-      "id": "155755144",
-      "predicate": "messages.statedMessageLink",
-      "params": [
-        {
-          "name": "message",
-          "type": "Message"
-        },
-        {
-          "name": "chats",
-          "type": "Vector<Chat>"
-        },
-        {
-          "name": "users",
-          "type": "Vector<User>"
-        },
-        {
-          "name": "pts",
-          "type": "int"
-        },
-        {
-          "name": "pts_count",
-          "type": "int"
-        },
-        {
-          "name": "links",
-          "type": "Vector<contacts.Link>"
-        },
-        {
-          "name": "seq",
-          "type": "int"
-        }
-      ],
-      "type": "messages.StatedMessage"
-    },
-    {
-      "id": "-383565811",
+      "id": "899786339",
       "predicate": "messages.sentMessageLink",
       "params": [
         {
@@ -2904,6 +2788,10 @@
         {
           "name": "date",
           "type": "int"
+        },
+        {
+          "name": "media",
+          "type": "MessageMedia"
         },
         {
           "name": "pts",
@@ -4254,18 +4142,22 @@
       "type": "messages.AllStickers"
     },
     {
-      "id": "1467017129",
+      "id": "-1764049896",
       "predicate": "account.noPassword",
       "params": [
         {
           "name": "new_salt",
           "type": "bytes"
+        },
+        {
+          "name": "email_unconfirmed_pattern",
+          "type": "string"
         }
       ],
       "type": "account.Password"
     },
     {
-      "id": "1939758962",
+      "id": "2081952796",
       "predicate": "account.password",
       "params": [
         {
@@ -4278,6 +4170,14 @@
         },
         {
           "name": "hint",
+          "type": "string"
+        },
+        {
+          "name": "has_recovery",
+          "type": "Bool"
+        },
+        {
+          "name": "email_unconfirmed_pattern",
           "type": "string"
         }
       ],
@@ -4403,6 +4303,240 @@
       "predicate": "contactLinkContact",
       "params": [],
       "type": "ContactLink"
+    },
+    {
+      "id": "751004017",
+      "predicate": "updateWebPage",
+      "params": [
+        {
+          "name": "webpage",
+          "type": "WebPage"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-350980120",
+      "predicate": "webPageEmpty",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        }
+      ],
+      "type": "WebPage"
+    },
+    {
+      "id": "-981018084",
+      "predicate": "webPagePending",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        }
+      ],
+      "type": "WebPage"
+    },
+    {
+      "id": "-1558273867",
+      "predicate": "webPage",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "display_url",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "type": "flags.0?string"
+        },
+        {
+          "name": "site_name",
+          "type": "flags.1?string"
+        },
+        {
+          "name": "title",
+          "type": "flags.2?string"
+        },
+        {
+          "name": "description",
+          "type": "flags.3?string"
+        },
+        {
+          "name": "photo",
+          "type": "flags.4?Photo"
+        },
+        {
+          "name": "embed_url",
+          "type": "flags.5?string"
+        },
+        {
+          "name": "embed_type",
+          "type": "flags.5?string"
+        },
+        {
+          "name": "embed_width",
+          "type": "flags.6?int"
+        },
+        {
+          "name": "embed_height",
+          "type": "flags.6?int"
+        },
+        {
+          "name": "duration",
+          "type": "flags.7?int"
+        },
+        {
+          "name": "author",
+          "type": "flags.8?string"
+        }
+      ],
+      "type": "WebPage"
+    },
+    {
+      "id": "-1557277184",
+      "predicate": "messageMediaWebPage",
+      "params": [
+        {
+          "name": "webpage",
+          "type": "WebPage"
+        }
+      ],
+      "type": "MessageMedia"
+    },
+    {
+      "id": "2079516406",
+      "predicate": "authorization",
+      "params": [
+        {
+          "name": "hash",
+          "type": "long"
+        },
+        {
+          "name": "flags",
+          "type": "int"
+        },
+        {
+          "name": "device_model",
+          "type": "string"
+        },
+        {
+          "name": "platform",
+          "type": "string"
+        },
+        {
+          "name": "system_version",
+          "type": "string"
+        },
+        {
+          "name": "api_id",
+          "type": "int"
+        },
+        {
+          "name": "app_name",
+          "type": "string"
+        },
+        {
+          "name": "app_version",
+          "type": "string"
+        },
+        {
+          "name": "date_created",
+          "type": "int"
+        },
+        {
+          "name": "date_active",
+          "type": "int"
+        },
+        {
+          "name": "ip",
+          "type": "string"
+        },
+        {
+          "name": "country",
+          "type": "string"
+        },
+        {
+          "name": "region",
+          "type": "string"
+        }
+      ],
+      "type": "Authorization"
+    },
+    {
+      "id": "307276766",
+      "predicate": "account.authorizations",
+      "params": [
+        {
+          "name": "authorizations",
+          "type": "Vector<Authorization>"
+        }
+      ],
+      "type": "account.Authorizations"
+    },
+    {
+      "id": "-1212732749",
+      "predicate": "account.passwordSettings",
+      "params": [
+        {
+          "name": "email",
+          "type": "string"
+        }
+      ],
+      "type": "account.PasswordSettings"
+    },
+    {
+      "id": "-1124314324",
+      "predicate": "account.passwordInputSettings",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "new_salt",
+          "type": "flags.0?bytes"
+        },
+        {
+          "name": "new_password_hash",
+          "type": "flags.0?bytes"
+        },
+        {
+          "name": "hint",
+          "type": "flags.0?string"
+        },
+        {
+          "name": "email",
+          "type": "flags.1?string"
+        }
+      ],
+      "type": "account.PasswordInputSettings"
+    },
+    {
+      "id": "326715557",
+      "predicate": "auth.passwordRecovery",
+      "params": [
+        {
+          "name": "email_pattern",
+          "type": "string"
+        }
+      ],
+      "type": "auth.PasswordRecovery"
     }
   ],
   "methods": [
@@ -4994,16 +5128,20 @@
       "type": "Bool"
     },
     {
-      "id": "480793249",
+      "id": "-1696755930",
       "method": "messages.sendMessage",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
         {
           "name": "peer",
           "type": "InputPeer"
         },
         {
           "name": "reply_to_msg_id",
-          "type": "int"
+          "type": "flags.0?int"
         },
         {
           "name": "message",
@@ -5017,16 +5155,20 @@
       "type": "messages.SentMessage"
     },
     {
-      "id": "-51478592",
+      "id": "762913713",
       "method": "messages.sendMedia",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
         {
           "name": "peer",
           "type": "InputPeer"
         },
         {
           "name": "reply_to_msg_id",
-          "type": "int"
+          "type": "flags.0?int"
         },
         {
           "name": "media",
@@ -5037,10 +5179,10 @@
           "type": "long"
         }
       ],
-      "type": "messages.StatedMessage"
+      "type": "Updates"
     },
     {
-      "id": "-556523451",
+      "id": "1440838285",
       "method": "messages.forwardMessages",
       "params": [
         {
@@ -5056,7 +5198,7 @@
           "type": "Vector<long>"
         }
       ],
-      "type": "messages.StatedMessages"
+      "type": "Updates"
     },
     {
       "id": "1013621127",
@@ -5081,7 +5223,7 @@
       "type": "messages.ChatFull"
     },
     {
-      "id": "-1262720843",
+      "id": "-599447467",
       "method": "messages.editChatTitle",
       "params": [
         {
@@ -5093,10 +5235,10 @@
           "type": "string"
         }
       ],
-      "type": "messages.StatedMessage"
+      "type": "Updates"
     },
     {
-      "id": "-662601187",
+      "id": "-900957736",
       "method": "messages.editChatPhoto",
       "params": [
         {
@@ -5108,10 +5250,10 @@
           "type": "InputChatPhoto"
         }
       ],
-      "type": "messages.StatedMessage"
+      "type": "Updates"
     },
     {
-      "id": "787082910",
+      "id": "-106911223",
       "method": "messages.addChatUser",
       "params": [
         {
@@ -5127,10 +5269,10 @@
           "type": "int"
         }
       ],
-      "type": "messages.StatedMessage"
+      "type": "Updates"
     },
     {
-      "id": "-1010447069",
+      "id": "-530505962",
       "method": "messages.deleteChatUser",
       "params": [
         {
@@ -5142,10 +5284,10 @@
           "type": "InputUser"
         }
       ],
-      "type": "messages.StatedMessage"
+      "type": "Updates"
     },
     {
-      "id": "1100847854",
+      "id": "164303470",
       "method": "messages.createChat",
       "params": [
         {
@@ -5157,7 +5299,7 @@
           "type": "string"
         }
       ],
-      "type": "messages.StatedMessage"
+      "type": "Updates"
     },
     {
       "id": "-304838614",
@@ -5352,7 +5494,7 @@
       "type": "photos.Photos"
     },
     {
-      "id": "66319602",
+      "id": "865483769",
       "method": "messages.forwardMessage",
       "params": [
         {
@@ -5368,7 +5510,7 @@
           "type": "long"
         }
       ],
-      "type": "messages.StatedMessage"
+      "type": "Updates"
     },
     {
       "id": "651135312",
@@ -5838,29 +5980,6 @@
       "type": "account.Password"
     },
     {
-      "id": "-584430193",
-      "method": "account.setPassword",
-      "params": [
-        {
-          "name": "current_password_hash",
-          "type": "bytes"
-        },
-        {
-          "name": "new_salt",
-          "type": "bytes"
-        },
-        {
-          "name": "new_password_hash",
-          "type": "bytes"
-        },
-        {
-          "name": "hint",
-          "type": "string"
-        }
-      ],
-      "type": "Bool"
-    },
-    {
       "id": "174260510",
       "method": "auth.checkPassword",
       "params": [
@@ -5883,12 +6002,16 @@
       "type": "contacts.Suggested"
     },
     {
-      "id": "1102776690",
+      "id": "-1082919718",
       "method": "messages.sendBroadcast",
       "params": [
         {
           "name": "contacts",
           "type": "Vector<InputUser>"
+        },
+        {
+          "name": "random_id",
+          "type": "Vector<long>"
         },
         {
           "name": "message",
@@ -5899,7 +6022,78 @@
           "type": "InputMedia"
         }
       ],
-      "type": "messages.StatedMessages"
+      "type": "Updates"
+    },
+    {
+      "id": "623001124",
+      "method": "messages.getWebPagePreview",
+      "params": [
+        {
+          "name": "message",
+          "type": "string"
+        }
+      ],
+      "type": "MessageMedia"
+    },
+    {
+      "id": "-484392616",
+      "method": "account.getAuthorizations",
+      "params": [],
+      "type": "account.Authorizations"
+    },
+    {
+      "id": "-545786948",
+      "method": "account.resetAuthorization",
+      "params": [
+        {
+          "name": "hash",
+          "type": "long"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-1131605573",
+      "method": "account.getPasswordSettings",
+      "params": [
+        {
+          "name": "current_password_hash",
+          "type": "bytes"
+        }
+      ],
+      "type": "account.PasswordSettings"
+    },
+    {
+      "id": "-92517498",
+      "method": "account.updatePasswordSettings",
+      "params": [
+        {
+          "name": "current_password_hash",
+          "type": "bytes"
+        },
+        {
+          "name": "new_settings",
+          "type": "account.PasswordInputSettings"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-661144474",
+      "method": "auth.requestPasswordRecovery",
+      "params": [],
+      "type": "auth.PasswordRecovery"
+    },
+    {
+      "id": "1319464594",
+      "method": "auth.recoverPassword",
+      "params": [
+        {
+          "name": "code",
+          "type": "string"
+        }
+      ],
+      "type": "auth.Authorization"
     }
   ]
 }
