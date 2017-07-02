@@ -181,87 +181,6 @@
       "type": "InputMedia"
     },
     {
-      "id": "-2106507297",
-      "predicate": "inputMediaUploadedVideo",
-      "params": [
-        {
-          "name": "file",
-          "type": "InputFile"
-        },
-        {
-          "name": "duration",
-          "type": "int"
-        },
-        {
-          "name": "w",
-          "type": "int"
-        },
-        {
-          "name": "h",
-          "type": "int"
-        },
-        {
-          "name": "mime_type",
-          "type": "string"
-        },
-        {
-          "name": "caption",
-          "type": "string"
-        }
-      ],
-      "type": "InputMedia"
-    },
-    {
-      "id": "2004934137",
-      "predicate": "inputMediaUploadedThumbVideo",
-      "params": [
-        {
-          "name": "file",
-          "type": "InputFile"
-        },
-        {
-          "name": "thumb",
-          "type": "InputFile"
-        },
-        {
-          "name": "duration",
-          "type": "int"
-        },
-        {
-          "name": "w",
-          "type": "int"
-        },
-        {
-          "name": "h",
-          "type": "int"
-        },
-        {
-          "name": "mime_type",
-          "type": "string"
-        },
-        {
-          "name": "caption",
-          "type": "string"
-        }
-      ],
-      "type": "InputMedia"
-    },
-    {
-      "id": "-1821749571",
-      "predicate": "inputMediaVideo",
-      "params": [
-        {
-          "name": "id",
-          "type": "InputVideo"
-        },
-        {
-          "name": "caption",
-          "type": "string"
-        }
-      ],
-      "type": "InputMedia"
-    },
-    {
       "id": "480546647",
       "predicate": "inputChatPhotoEmpty",
       "params": [],
@@ -340,27 +259,6 @@
       "type": "InputPhoto"
     },
     {
-      "id": "1426648181",
-      "predicate": "inputVideoEmpty",
-      "params": [],
-      "type": "InputVideo"
-    },
-    {
-      "id": "-296249774",
-      "predicate": "inputVideo",
-      "params": [
-        {
-          "name": "id",
-          "type": "long"
-        },
-        {
-          "name": "access_hash",
-          "type": "long"
-        }
-      ],
-      "type": "InputVideo"
-    },
-    {
       "id": "342061462",
       "predicate": "inputFileLocation",
       "params": [
@@ -374,21 +272,6 @@
         },
         {
           "name": "secret",
-          "type": "long"
-        }
-      ],
-      "type": "InputFileLocation"
-    },
-    {
-      "id": "1023632620",
-      "predicate": "inputVideoFileLocation",
-      "params": [
-        {
-          "name": "id",
-          "type": "long"
-        },
-        {
-          "name": "access_hash",
           "type": "long"
         }
       ],
@@ -981,21 +864,6 @@
       "type": "MessageMedia"
     },
     {
-      "id": "1540298357",
-      "predicate": "messageMediaVideo",
-      "params": [
-        {
-          "name": "video",
-          "type": "Video"
-        },
-        {
-          "name": "caption",
-          "type": "string"
-        }
-      ],
-      "type": "MessageMedia"
-    },
-    {
       "id": "1457575028",
       "predicate": "messageMediaGeo",
       "params": [
@@ -1231,64 +1099,6 @@
         }
       ],
       "type": "PhotoSize"
-    },
-    {
-      "id": "-1056548696",
-      "predicate": "videoEmpty",
-      "params": [
-        {
-          "name": "id",
-          "type": "long"
-        }
-      ],
-      "type": "Video"
-    },
-    {
-      "id": "-148338733",
-      "predicate": "video",
-      "params": [
-        {
-          "name": "id",
-          "type": "long"
-        },
-        {
-          "name": "access_hash",
-          "type": "long"
-        },
-        {
-          "name": "date",
-          "type": "int"
-        },
-        {
-          "name": "duration",
-          "type": "int"
-        },
-        {
-          "name": "mime_type",
-          "type": "string"
-        },
-        {
-          "name": "size",
-          "type": "int"
-        },
-        {
-          "name": "thumb",
-          "type": "PhotoSize"
-        },
-        {
-          "name": "dc_id",
-          "type": "int"
-        },
-        {
-          "name": "w",
-          "type": "int"
-        },
-        {
-          "name": "h",
-          "type": "int"
-        }
-      ],
-      "type": "Video"
     },
     {
       "id": "286776671",
