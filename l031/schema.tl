@@ -1,0 +1,33 @@
+---types---
+// userSelf#1c60e608 id:int first_name:string last_name:string username:string phone:string photo:UserProfilePhoto status:UserStatus = User;
+// userContact#cab35e18 id:int first_name:string last_name:string username:string access_hash:long phone:string photo:UserProfilePhoto status:UserStatus = User;
+// userRequest#d9ccc4ef id:int first_name:string last_name:string username:string access_hash:long phone:string photo:UserProfilePhoto status:UserStatus = User;
+// userForeign#75cf7a8 id:int first_name:string last_name:string username:string access_hash:long photo:UserProfilePhoto status:UserStatus = User;
+// userDeleted#d6016d7a id:int first_name:string last_name:string username:string = User;
+// chatFull#cade0791 id:int participants:ChatParticipants chat_photo:Photo notify_settings:PeerNotifySettings exported_invite:ExportedChatInvite = ChatFull;
+chatFull#2e02a614 id:int participants:ChatParticipants chat_photo:Photo notify_settings:PeerNotifySettings exported_invite:ExportedChatInvite bot_info:Vector<BotInfo> = ChatFull;
+// message#a7ab1991 flags:# id:int from_id:int to_id:Peer fwd_from_id:flags.2?int fwd_date:flags.2?int reply_to_msg_id:flags.3?int date:int message:string media:MessageMedia = Message;
+message#c3060325 flags:# id:int from_id:int to_id:Peer fwd_from_id:flags.2?int fwd_date:flags.2?int reply_to_msg_id:flags.3?int date:int message:string media:MessageMedia reply_markup:flags.6?ReplyMarkup = Message;
+// auth.authorization#f6b673a4 expires:int user:User = auth.Authorization;
+auth.authorization#ff036af1 user:User = auth.Authorization;
+// userFull#771095da user:User link:contacts.Link profile_photo:Photo notify_settings:PeerNotifySettings blocked:Bool real_first_name:string real_last_name:string = UserFull;
+userFull#5a89ac5b user:User link:contacts.Link profile_photo:Photo notify_settings:PeerNotifySettings blocked:Bool bot_info:BotInfo = UserFull;
+// dcOption#2ec2a43c id:int hostname:string ip_address:string port:int = DcOption;
+dcOption#5d8c6cc flags:# id:int ip_address:string port:int = DcOption;
+inputMessagesFilterAudioDocuments#5afbf764 = MessagesFilter;
+user#22e49072 flags:# id:int access_hash:flags.0?long first_name:flags.1?string last_name:flags.2?string username:flags.3?string phone:flags.4?string photo:flags.5?UserProfilePhoto status:flags.6?UserStatus bot_info_version:flags.14?int = User;
+botCommand#c27ac8c7 command:string description:string = BotCommand;
+botInfoEmpty#bb2e37ce = BotInfo;
+botInfo#9cf585d user_id:int version:int share_text:string description:string commands:Vector<BotCommand> = BotInfo;
+keyboardButton#a2fa4880 text:string = KeyboardButton;
+keyboardButtonRow#77608b83 buttons:Vector<KeyboardButton> = KeyboardButtonRow;
+replyKeyboardHide#a03e5b85 flags:# = ReplyMarkup;
+replyKeyboardForceReply#f4108aa0 flags:# = ReplyMarkup;
+replyKeyboardMarkup#3502758c flags:# rows:Vector<KeyboardButtonRow> = ReplyMarkup;
+---functions---
+// messages.sendMessage#9add8f26 flags:# peer:InputPeer reply_to_msg_id:flags.0?int message:string random_id:long = messages.SentMessage;
+messages.sendMessage#fc55e6b5 flags:# peer:InputPeer reply_to_msg_id:flags.0?int message:string random_id:long reply_markup:flags.2?ReplyMarkup = messages.SentMessage;
+// messages.sendMedia#2d7923b1 flags:# peer:InputPeer reply_to_msg_id:flags.0?int media:InputMedia random_id:long = Updates;
+messages.sendMedia#c8f16791 flags:# peer:InputPeer reply_to_msg_id:flags.0?int media:InputMedia random_id:long reply_markup:flags.2?ReplyMarkup = Updates;
+auth.importBotAuthorization#67a3ff2c flags:int api_id:int api_hash:string bot_auth_token:string = auth.Authorization;
+messages.startBot#1b3e0ffc bot:InputUser chat_id:int random_id:long start_param:string = Updates;

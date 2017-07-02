@@ -616,177 +616,6 @@
       "type": "User"
     },
     {
-      "id": "476112392",
-      "predicate": "userSelf",
-      "params": [
-        {
-          "name": "id",
-          "type": "int"
-        },
-        {
-          "name": "first_name",
-          "type": "string"
-        },
-        {
-          "name": "last_name",
-          "type": "string"
-        },
-        {
-          "name": "username",
-          "type": "string"
-        },
-        {
-          "name": "phone",
-          "type": "string"
-        },
-        {
-          "name": "photo",
-          "type": "UserProfilePhoto"
-        },
-        {
-          "name": "status",
-          "type": "UserStatus"
-        }
-      ],
-      "type": "User"
-    },
-    {
-      "id": "-894214632",
-      "predicate": "userContact",
-      "params": [
-        {
-          "name": "id",
-          "type": "int"
-        },
-        {
-          "name": "first_name",
-          "type": "string"
-        },
-        {
-          "name": "last_name",
-          "type": "string"
-        },
-        {
-          "name": "username",
-          "type": "string"
-        },
-        {
-          "name": "access_hash",
-          "type": "long"
-        },
-        {
-          "name": "phone",
-          "type": "string"
-        },
-        {
-          "name": "photo",
-          "type": "UserProfilePhoto"
-        },
-        {
-          "name": "status",
-          "type": "UserStatus"
-        }
-      ],
-      "type": "User"
-    },
-    {
-      "id": "-640891665",
-      "predicate": "userRequest",
-      "params": [
-        {
-          "name": "id",
-          "type": "int"
-        },
-        {
-          "name": "first_name",
-          "type": "string"
-        },
-        {
-          "name": "last_name",
-          "type": "string"
-        },
-        {
-          "name": "username",
-          "type": "string"
-        },
-        {
-          "name": "access_hash",
-          "type": "long"
-        },
-        {
-          "name": "phone",
-          "type": "string"
-        },
-        {
-          "name": "photo",
-          "type": "UserProfilePhoto"
-        },
-        {
-          "name": "status",
-          "type": "UserStatus"
-        }
-      ],
-      "type": "User"
-    },
-    {
-      "id": "123533224",
-      "predicate": "userForeign",
-      "params": [
-        {
-          "name": "id",
-          "type": "int"
-        },
-        {
-          "name": "first_name",
-          "type": "string"
-        },
-        {
-          "name": "last_name",
-          "type": "string"
-        },
-        {
-          "name": "username",
-          "type": "string"
-        },
-        {
-          "name": "access_hash",
-          "type": "long"
-        },
-        {
-          "name": "photo",
-          "type": "UserProfilePhoto"
-        },
-        {
-          "name": "status",
-          "type": "UserStatus"
-        }
-      ],
-      "type": "User"
-    },
-    {
-      "id": "-704549510",
-      "predicate": "userDeleted",
-      "params": [
-        {
-          "name": "id",
-          "type": "int"
-        },
-        {
-          "name": "first_name",
-          "type": "string"
-        },
-        {
-          "name": "last_name",
-          "type": "string"
-        },
-        {
-          "name": "username",
-          "type": "string"
-        }
-      ],
-      "type": "User"
-    },
-    {
       "id": "1326562017",
       "predicate": "userProfilePhotoEmpty",
       "params": [],
@@ -905,7 +734,7 @@
       "type": "Chat"
     },
     {
-      "id": "-891418735",
+      "id": "771925524",
       "predicate": "chatFull",
       "params": [
         {
@@ -927,6 +756,10 @@
         {
           "name": "exported_invite",
           "type": "ExportedChatInvite"
+        },
+        {
+          "name": "bot_info",
+          "type": "Vector<BotInfo>"
         }
       ],
       "type": "ChatFull"
@@ -1017,7 +850,7 @@
       "type": "Message"
     },
     {
-      "id": "-1481959023",
+      "id": "-1023016155",
       "predicate": "message",
       "params": [
         {
@@ -1059,6 +892,10 @@
         {
           "name": "media",
           "type": "MessageMedia"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.6?ReplyMarkup"
         }
       ],
       "type": "Message"
@@ -1489,13 +1326,9 @@
       "type": "auth.SentCode"
     },
     {
-      "id": "-155815004",
+      "id": "-16553231",
       "predicate": "auth.authorization",
       "params": [
-        {
-          "name": "expires",
-          "type": "int"
-        },
         {
           "name": "user",
           "type": "User"
@@ -1635,7 +1468,7 @@
       "type": "WallPaper"
     },
     {
-      "id": "1997575642",
+      "id": "1518971995",
       "predicate": "userFull",
       "params": [
         {
@@ -1659,12 +1492,8 @@
           "type": "Bool"
         },
         {
-          "name": "real_first_name",
-          "type": "string"
-        },
-        {
-          "name": "real_last_name",
-          "type": "string"
+          "name": "bot_info",
+          "type": "BotInfo"
         }
       ],
       "type": "UserFull"
@@ -2572,16 +2401,16 @@
       "type": "upload.File"
     },
     {
-      "id": "784507964",
+      "id": "98092748",
       "predicate": "dcOption",
       "params": [
         {
-          "name": "id",
-          "type": "int"
+          "name": "flags",
+          "type": "#"
         },
         {
-          "name": "hostname",
-          "type": "string"
+          "name": "id",
+          "type": "int"
         },
         {
           "name": "ip_address",
@@ -4778,6 +4607,166 @@
         }
       ],
       "type": "messages.StickerSet"
+    },
+    {
+      "id": "1526462308",
+      "predicate": "inputMessagesFilterAudioDocuments",
+      "params": [],
+      "type": "MessagesFilter"
+    },
+    {
+      "id": "585404530",
+      "predicate": "user",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "flags.0?long"
+        },
+        {
+          "name": "first_name",
+          "type": "flags.1?string"
+        },
+        {
+          "name": "last_name",
+          "type": "flags.2?string"
+        },
+        {
+          "name": "username",
+          "type": "flags.3?string"
+        },
+        {
+          "name": "phone",
+          "type": "flags.4?string"
+        },
+        {
+          "name": "photo",
+          "type": "flags.5?UserProfilePhoto"
+        },
+        {
+          "name": "status",
+          "type": "flags.6?UserStatus"
+        },
+        {
+          "name": "bot_info_version",
+          "type": "flags.14?int"
+        }
+      ],
+      "type": "User"
+    },
+    {
+      "id": "-1032140601",
+      "predicate": "botCommand",
+      "params": [
+        {
+          "name": "command",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        }
+      ],
+      "type": "BotCommand"
+    },
+    {
+      "id": "-1154598962",
+      "predicate": "botInfoEmpty",
+      "params": [],
+      "type": "BotInfo"
+    },
+    {
+      "id": "164583517",
+      "predicate": "botInfo",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        },
+        {
+          "name": "share_text",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "name": "commands",
+          "type": "Vector<BotCommand>"
+        }
+      ],
+      "type": "BotInfo"
+    },
+    {
+      "id": "-1560655744",
+      "predicate": "keyboardButton",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "type": "KeyboardButton"
+    },
+    {
+      "id": "2002815875",
+      "predicate": "keyboardButtonRow",
+      "params": [
+        {
+          "name": "buttons",
+          "type": "Vector<KeyboardButton>"
+        }
+      ],
+      "type": "KeyboardButtonRow"
+    },
+    {
+      "id": "-1606526075",
+      "predicate": "replyKeyboardHide",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        }
+      ],
+      "type": "ReplyMarkup"
+    },
+    {
+      "id": "-200242528",
+      "predicate": "replyKeyboardForceReply",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        }
+      ],
+      "type": "ReplyMarkup"
+    },
+    {
+      "id": "889353612",
+      "predicate": "replyKeyboardMarkup",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "rows",
+          "type": "Vector<KeyboardButtonRow>"
+        }
+      ],
+      "type": "ReplyMarkup"
     }
   ],
   "methods": [
@@ -5369,7 +5358,7 @@
       "type": "Bool"
     },
     {
-      "id": "-1696755930",
+      "id": "-61479243",
       "method": "messages.sendMessage",
       "params": [
         {
@@ -5391,12 +5380,16 @@
         {
           "name": "random_id",
           "type": "long"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.2?ReplyMarkup"
         }
       ],
       "type": "messages.SentMessage"
     },
     {
-      "id": "762913713",
+      "id": "-923703407",
       "method": "messages.sendMedia",
       "params": [
         {
@@ -5418,6 +5411,10 @@
         {
           "name": "random_id",
           "type": "long"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.2?ReplyMarkup"
         }
       ],
       "type": "Updates"
@@ -6412,6 +6409,52 @@
         }
       ],
       "type": "Bool"
+    },
+    {
+      "id": "1738800940",
+      "method": "auth.importBotAuthorization",
+      "params": [
+        {
+          "name": "flags",
+          "type": "int"
+        },
+        {
+          "name": "api_id",
+          "type": "int"
+        },
+        {
+          "name": "api_hash",
+          "type": "string"
+        },
+        {
+          "name": "bot_auth_token",
+          "type": "string"
+        }
+      ],
+      "type": "auth.Authorization"
+    },
+    {
+      "id": "457052156",
+      "method": "messages.startBot",
+      "params": [
+        {
+          "name": "bot",
+          "type": "InputUser"
+        },
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "random_id",
+          "type": "long"
+        },
+        {
+          "name": "start_param",
+          "type": "string"
+        }
+      ],
+      "type": "Updates"
     }
   ]
 }
