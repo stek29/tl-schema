@@ -1,0 +1,78 @@
+{
+  "constructors": [],
+  "methods": [
+    {
+      "id": "1988976461",
+      "method": "auth.sendCode",
+      "params": [
+        {
+          "name": "phone_number",
+          "type": "string"
+        },
+        {
+          "name": "sms_type",
+          "type": "int"
+        },
+        {
+          "name": "api_id",
+          "type": "int"
+        },
+        {
+          "name": "api_hash",
+          "type": "string"
+        },
+        {
+          "name": "lang_code",
+          "type": "string"
+        }
+      ],
+      "type": "auth.SentCode"
+    },
+    {
+      "id": "1147957548",
+      "method": "account.registerDevice",
+      "params": [
+        {
+          "name": "token_type",
+          "type": "int"
+        },
+        {
+          "name": "token",
+          "type": "string"
+        },
+        {
+          "name": "device_model",
+          "type": "string"
+        },
+        {
+          "name": "system_version",
+          "type": "string"
+        },
+        {
+          "name": "app_version",
+          "type": "string"
+        },
+        {
+          "name": "app_sandbox",
+          "type": "Bool"
+        },
+        {
+          "name": "lang_code",
+          "type": "string"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "1098536878",
+      "method": "invokeWithLayer5",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    }
+  ]
+}

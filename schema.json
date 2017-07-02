@@ -3294,7 +3294,7 @@
       "type": "auth.CheckedPhone"
     },
     {
-      "id": "-781192334",
+      "id": "1988976461",
       "method": "auth.sendCode",
       "params": [
         {
@@ -3311,6 +3311,10 @@
         },
         {
           "name": "api_hash",
+          "type": "string"
+        },
+        {
+          "name": "lang_code",
           "type": "string"
         }
       ],
@@ -3431,7 +3435,7 @@
       "type": "auth.Authorization"
     },
     {
-      "id": "-1568319572",
+      "id": "1147957548",
       "method": "account.registerDevice",
       "params": [
         {
@@ -3457,6 +3461,10 @@
         {
           "name": "app_sandbox",
           "type": "Bool"
+        },
+        {
+          "name": "lang_code",
+          "type": "string"
         }
       ],
       "type": "Bool"
@@ -4482,6 +4490,17 @@
     {
       "id": "-559885264",
       "method": "invokeWithLayer4",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    },
+    {
+      "id": "1098536878",
+      "method": "invokeWithLayer5",
       "params": [
         {
           "name": "query",
