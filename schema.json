@@ -3980,12 +3980,12 @@
       "type": "messages.AllStickers"
     },
     {
-      "id": "-719474725",
+      "id": "-302170017",
       "predicate": "messages.allStickers",
       "params": [
         {
           "name": "hash",
-          "type": "string"
+          "type": "int"
         },
         {
           "name": "sets",
@@ -6034,6 +6034,74 @@
       "predicate": "channelParticipantsBots",
       "params": [],
       "type": "ChannelParticipantsFilter"
+    },
+    {
+      "id": "1490799288",
+      "predicate": "inputReportReasonSpam",
+      "params": [],
+      "type": "ReportReason"
+    },
+    {
+      "id": "505595789",
+      "predicate": "inputReportReasonViolence",
+      "params": [],
+      "type": "ReportReason"
+    },
+    {
+      "id": "777640226",
+      "predicate": "inputReportReasonPornography",
+      "params": [],
+      "type": "ReportReason"
+    },
+    {
+      "id": "-512463606",
+      "predicate": "inputReportReasonOther",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "type": "ReportReason"
+    },
+    {
+      "id": "1753886890",
+      "predicate": "updateNewStickerSet",
+      "params": [
+        {
+          "name": "stickerset",
+          "type": "messages.StickerSet"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-253774767",
+      "predicate": "updateStickerSetsOrder",
+      "params": [
+        {
+          "name": "order",
+          "type": "Vector<long>"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "1135492588",
+      "predicate": "updateStickerSets",
+      "params": [],
+      "type": "Update"
+    },
+    {
+      "id": "-236044656",
+      "predicate": "help.termsOfService",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "type": "help.TermsOfService"
     }
   ],
   "methods": [
@@ -7501,12 +7569,12 @@
       "type": "messages.Stickers"
     },
     {
-      "id": "-1438922648",
+      "id": "479598769",
       "method": "messages.getAllStickers",
       "params": [
         {
           "name": "hash",
-          "type": "string"
+          "type": "int"
         }
       ],
       "type": "messages.AllStickers"
@@ -8317,6 +8385,43 @@
         }
       ],
       "type": "messages.Messages"
+    },
+    {
+      "id": "-1374118561",
+      "method": "account.reportPeer",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "reason",
+          "type": "ReportReason"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-1613775824",
+      "method": "messages.reorderStickerSets",
+      "params": [
+        {
+          "name": "order",
+          "type": "Vector<long>"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "936873859",
+      "method": "help.getTermsOfService",
+      "params": [
+        {
+          "name": "lang_code",
+          "type": "string"
+        }
+      ],
+      "type": "help.TermsOfService"
     }
   ]
 }
