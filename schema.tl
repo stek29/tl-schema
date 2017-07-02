@@ -225,6 +225,8 @@ messages.dhConfigNotModified#c0e24635 random:bytes = messages.DhConfig;
 messages.dhConfig#2c221edd g:int p:bytes version:int random:bytes = messages.DhConfig;
 messages.sentEncryptedMessage#560f8935 date:int = messages.SentEncryptedMessage;
 messages.sentEncryptedFile#9493ff32 date:int file:EncryptedFile = messages.SentEncryptedMessage;
+inputFileBig#fa4f0bb5 id:long parts:int name:string = InputFile;
+inputEncryptedFileBigUploaded#2dc173c8 id:long parts:int key_fingerprint:int = InputEncryptedFile;
 ---functions---
 invokeAfterMsg#cb9f372d msg_id:long query:!X = X;
 invokeAfterMsgs#3dc4b4f0 msg_ids:Vector<long> query:!X = X;
@@ -323,3 +325,6 @@ messages.sendEncryptedFile#9a901b66 peer:InputEncryptedChat random_id:long data:
 messages.sendEncryptedService#32d439a4 peer:InputEncryptedChat random_id:long data:bytes = messages.SentEncryptedMessage;
 messages.receivedQueue#55a5bb66 max_qts:int = Vector<long>;
 invokeWithLayer8#e9abd9fd query:!X = X;
+upload.saveBigFilePart#de7b673d file_id:long file_part:int file_total_parts:int bytes:bytes = Bool;
+initConnection#69796de9 api_id:int device_model:string system_version:string app_version:string lang_code:string query:!X = X;
+invokeWithLayer9#76715a63 query:!X = X;

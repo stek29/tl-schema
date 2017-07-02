@@ -3673,6 +3673,44 @@
         }
       ],
       "type": "messages.SentEncryptedMessage"
+    },
+    {
+      "id": "-95482955",
+      "predicate": "inputFileBig",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "parts",
+          "type": "int"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "type": "InputFile"
+    },
+    {
+      "id": "767652808",
+      "predicate": "inputEncryptedFileBigUploaded",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "parts",
+          "type": "int"
+        },
+        {
+          "name": "key_fingerprint",
+          "type": "int"
+        }
+      ],
+      "type": "InputEncryptedFile"
     }
   ],
   "methods": [
@@ -5143,6 +5181,71 @@
     {
       "id": "-374613507",
       "method": "invokeWithLayer8",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    },
+    {
+      "id": "-562337987",
+      "method": "upload.saveBigFilePart",
+      "params": [
+        {
+          "name": "file_id",
+          "type": "long"
+        },
+        {
+          "name": "file_part",
+          "type": "int"
+        },
+        {
+          "name": "file_total_parts",
+          "type": "int"
+        },
+        {
+          "name": "bytes",
+          "type": "bytes"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "1769565673",
+      "method": "initConnection",
+      "params": [
+        {
+          "name": "api_id",
+          "type": "int"
+        },
+        {
+          "name": "device_model",
+          "type": "string"
+        },
+        {
+          "name": "system_version",
+          "type": "string"
+        },
+        {
+          "name": "app_version",
+          "type": "string"
+        },
+        {
+          "name": "lang_code",
+          "type": "string"
+        },
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    },
+    {
+      "id": "1987140195",
+      "method": "invokeWithLayer9",
       "params": [
         {
           "name": "query",
