@@ -1192,9 +1192,17 @@
       "type": "auth.SentCode"
     },
     {
-      "id": "-16553231",
+      "id": "-855308010",
       "predicate": "auth.authorization",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "tmp_sessions",
+          "type": "flags.0?int"
+        },
         {
           "name": "user",
           "type": "User"
@@ -2324,9 +2332,13 @@
       "type": "DcOption"
     },
     {
-      "id": "-201218881",
+      "id": "-1704251862",
       "predicate": "config",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
         {
           "name": "date",
           "type": "int"
@@ -2410,6 +2422,10 @@
         {
           "name": "stickers_recent_limit",
           "type": "int"
+        },
+        {
+          "name": "tmp_sessions",
+          "type": "flags.0?int"
         },
         {
           "name": "disabled_features",
@@ -6437,9 +6453,17 @@
       "type": "auth.SentCodeType"
     },
     {
-      "id": "-367298028",
+      "id": "90744648",
       "predicate": "keyboardButtonSwitchInline",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "same_peer",
+          "type": "flags.0?true"
+        },
         {
           "name": "text",
           "type": "string"
@@ -6473,6 +6497,10 @@
         {
           "name": "alert",
           "type": "flags.1?true"
+        },
+        {
+          "name": "has_url",
+          "type": "flags.3?true"
         },
         {
           "name": "message",
@@ -7199,6 +7227,48 @@
         }
       ],
       "type": "StickerSetCovered"
+    },
+    {
+      "id": "-1252045032",
+      "predicate": "inputMediaPhotoExternal",
+      "params": [
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "caption",
+          "type": "string"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "-437690244",
+      "predicate": "inputMediaDocumentExternal",
+      "params": [
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "caption",
+          "type": "string"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "-1574314746",
+      "predicate": "updateConfig",
+      "params": [],
+      "type": "Update"
+    },
+    {
+      "id": "861169551",
+      "predicate": "updatePtsChanged",
+      "params": [],
+      "type": "Update"
     }
   ],
   "methods": [
@@ -8685,29 +8755,6 @@
       "type": "auth.Authorization"
     },
     {
-      "id": "-1082919718",
-      "method": "messages.sendBroadcast",
-      "params": [
-        {
-          "name": "contacts",
-          "type": "Vector<InputUser>"
-        },
-        {
-          "name": "random_id",
-          "type": "Vector<long>"
-        },
-        {
-          "name": "message",
-          "type": "string"
-        },
-        {
-          "name": "media",
-          "type": "InputMedia"
-        }
-      ],
-      "type": "Updates"
-    },
-    {
       "id": "623001124",
       "method": "messages.getWebPagePreview",
       "params": [
@@ -10044,6 +10091,12 @@
         }
       ],
       "type": "messages.ArchivedStickers"
+    },
+    {
+      "id": "-1920105769",
+      "method": "channels.getAdminedPublicChannels",
+      "params": [],
+      "type": "messages.Chats"
     }
   ]
 }
