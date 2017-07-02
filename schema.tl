@@ -290,6 +290,8 @@ privacyValueDisallowAll#8b73e763 = PrivacyRule;
 privacyValueDisallowUsers#c7f49b7 users:Vector<int> = PrivacyRule;
 account.privacyRules#554abb6f rules:Vector<PrivacyRule> users:Vector<User> = account.PrivacyRules;
 accountDaysTTL#b8d0afdf days:int = AccountDaysTTL;
+account.sentChangePhoneCode#a4f58c4c phone_code_hash:string send_call_timeout:int = account.SentChangePhoneCode;
+updateUserPhone#12b9417b user_id:int phone:string = Update;
 ---functions---
 invokeAfterMsg#cb9f372d msg_id:long query:!X = X;
 invokeAfterMsgs#3dc4b4f0 msg_ids:Vector<long> query:!X = X;
@@ -396,3 +398,6 @@ account.deleteAccount#418d4e0b reason:string = Bool;
 account.getAccountTTL#8fc711d = AccountDaysTTL;
 account.setAccountTTL#2442485e ttl:AccountDaysTTL = Bool;
 invokeWithLayer#da9b0d0d layer:int query:!X = X;
+contacts.resolveUsername#bf0131c username:string = User;
+account.sendChangePhoneCode#a407a8f4 phone_number:string = account.SentChangePhoneCode;
+account.changePhone#70c32edb phone_number:string phone_code_hash:string phone_code:string = User;
