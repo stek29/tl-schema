@@ -604,7 +604,7 @@
       "type": "User"
     },
     {
-      "id": "1879553105",
+      "id": "476112392",
       "predicate": "userSelf",
       "params": [
         {
@@ -634,10 +634,6 @@
         {
           "name": "status",
           "type": "UserStatus"
-        },
-        {
-          "name": "inactive",
-          "type": "Bool"
         }
       ],
       "type": "User"
@@ -1005,12 +1001,12 @@
       "type": "Message"
     },
     {
-      "id": "1450613171",
+      "id": "-1481959023",
       "predicate": "message",
       "params": [
         {
           "name": "flags",
-          "type": "int"
+          "type": "#"
         },
         {
           "name": "id",
@@ -1023,49 +1019,18 @@
         {
           "name": "to_id",
           "type": "Peer"
-        },
-        {
-          "name": "date",
-          "type": "int"
-        },
-        {
-          "name": "message",
-          "type": "string"
-        },
-        {
-          "name": "media",
-          "type": "MessageMedia"
-        }
-      ],
-      "type": "Message"
-    },
-    {
-      "id": "-1553471722",
-      "predicate": "messageForwarded",
-      "params": [
-        {
-          "name": "flags",
-          "type": "int"
-        },
-        {
-          "name": "id",
-          "type": "int"
         },
         {
           "name": "fwd_from_id",
-          "type": "int"
+          "type": "flags.2?int"
         },
         {
           "name": "fwd_date",
-          "type": "int"
+          "type": "flags.2?int"
         },
         {
-          "name": "from_id",
-          "type": "int"
-        },
-        {
-          "name": "to_id",
-          "type": "Peer"
+          "name": "reply_to_msg_id",
+          "type": "flags.3?int"
         },
         {
           "name": "date",
@@ -1253,7 +1218,7 @@
       "type": "MessageAction"
     },
     {
-      "id": "-1422222932",
+      "id": "-1042448310",
       "predicate": "dialog",
       "params": [
         {
@@ -1262,6 +1227,10 @@
         },
         {
           "name": "top_message",
+          "type": "int"
+        },
+        {
+          "name": "read_inbox_max_id",
           "type": "int"
         },
         {
@@ -1474,15 +1443,11 @@
       "type": "GeoPoint"
     },
     {
-      "id": "-486486981",
+      "id": "-2128698738",
       "predicate": "auth.checkedPhone",
       "params": [
         {
           "name": "phone_registered",
-          "type": "Bool"
-        },
-        {
-          "name": "phone_invited",
           "type": "Bool"
         }
       ],
@@ -1764,62 +1729,16 @@
       "type": "ContactStatus"
     },
     {
-      "id": "322183672",
-      "predicate": "contacts.foreignLinkUnknown",
-      "params": [],
-      "type": "contacts.ForeignLink"
-    },
-    {
-      "id": "-1484775609",
-      "predicate": "contacts.foreignLinkRequested",
-      "params": [
-        {
-          "name": "has_phone",
-          "type": "Bool"
-        }
-      ],
-      "type": "contacts.ForeignLink"
-    },
-    {
-      "id": "468356321",
-      "predicate": "contacts.foreignLinkMutual",
-      "params": [],
-      "type": "contacts.ForeignLink"
-    },
-    {
-      "id": "-768992160",
-      "predicate": "contacts.myLinkEmpty",
-      "params": [],
-      "type": "contacts.MyLink"
-    },
-    {
-      "id": "1818882030",
-      "predicate": "contacts.myLinkRequested",
-      "params": [
-        {
-          "name": "contact",
-          "type": "Bool"
-        }
-      ],
-      "type": "contacts.MyLink"
-    },
-    {
-      "id": "-1035932711",
-      "predicate": "contacts.myLinkContact",
-      "params": [],
-      "type": "contacts.MyLink"
-    },
-    {
-      "id": "-322001931",
+      "id": "986597452",
       "predicate": "contacts.link",
       "params": [
         {
           "name": "my_link",
-          "type": "contacts.MyLink"
+          "type": "ContactLink"
         },
         {
           "name": "foreign_link",
-          "type": "contacts.ForeignLink"
+          "type": "ContactLink"
         },
         {
           "name": "user",
@@ -2010,7 +1929,7 @@
       "type": "messages.Messages"
     },
     {
-      "id": "-1768654661",
+      "id": "131615560",
       "predicate": "messages.statedMessages",
       "params": [
         {
@@ -2030,14 +1949,14 @@
           "type": "int"
         },
         {
-          "name": "seq",
+          "name": "pts_count",
           "type": "int"
         }
       ],
       "type": "messages.StatedMessages"
     },
     {
-      "id": "-797251802",
+      "id": "-1776022422",
       "predicate": "messages.statedMessage",
       "params": [
         {
@@ -2057,14 +1976,14 @@
           "type": "int"
         },
         {
-          "name": "seq",
+          "name": "pts_count",
           "type": "int"
         }
       ],
       "type": "messages.StatedMessage"
     },
     {
-      "id": "-772484260",
+      "id": "-1878086592",
       "predicate": "messages.sentMessage",
       "params": [
         {
@@ -2080,23 +1999,19 @@
           "type": "int"
         },
         {
-          "name": "seq",
+          "name": "pts_count",
           "type": "int"
         }
       ],
       "type": "messages.SentMessage"
     },
     {
-      "id": "-2125411368",
+      "id": "1694474197",
       "predicate": "messages.chats",
       "params": [
         {
           "name": "chats",
           "type": "Vector<Chat>"
-        },
-        {
-          "name": "users",
-          "type": "Vector<User>"
         }
       ],
       "type": "messages.Chats"
@@ -2121,7 +2036,7 @@
       "type": "messages.ChatFull"
     },
     {
-      "id": "-1210173710",
+      "id": "-1269012015",
       "predicate": "messages.affectedHistory",
       "params": [
         {
@@ -2129,7 +2044,7 @@
           "type": "int"
         },
         {
-          "name": "seq",
+          "name": "pts_count",
           "type": "int"
         },
         {
@@ -2164,7 +2079,7 @@
       "type": "MessagesFilter"
     },
     {
-      "id": "20626867",
+      "id": "522914557",
       "predicate": "updateNewMessage",
       "params": [
         {
@@ -2173,6 +2088,10 @@
         },
         {
           "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "pts_count",
           "type": "int"
         }
       ],
@@ -2194,7 +2113,7 @@
       "type": "Update"
     },
     {
-      "id": "-966484431",
+      "id": "777696872",
       "predicate": "updateReadMessages",
       "params": [
         {
@@ -2204,12 +2123,16 @@
         {
           "name": "pts",
           "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
         }
       ],
       "type": "Update"
     },
     {
-      "id": "-1456734682",
+      "id": "-1576161051",
       "predicate": "updateDeleteMessages",
       "params": [
         {
@@ -2218,6 +2141,10 @@
         },
         {
           "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "pts_count",
           "type": "int"
         }
       ],
@@ -2345,7 +2272,7 @@
       "type": "Update"
     },
     {
-      "id": "1369737882",
+      "id": "-1657903163",
       "predicate": "updateContactLink",
       "params": [
         {
@@ -2354,11 +2281,11 @@
         },
         {
           "name": "my_link",
-          "type": "contacts.MyLink"
+          "type": "ContactLink"
         },
         {
           "name": "foreign_link",
-          "type": "contacts.ForeignLink"
+          "type": "ContactLink"
         }
       ],
       "type": "Update"
@@ -2497,15 +2424,19 @@
       "type": "Updates"
     },
     {
-      "id": "-738961532",
+      "id": "-312729305",
       "predicate": "updateShortMessage",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
         {
           "name": "id",
           "type": "int"
         },
         {
-          "name": "from_id",
+          "name": "user_id",
           "type": "int"
         },
         {
@@ -2517,20 +2448,36 @@
           "type": "int"
         },
         {
+          "name": "pts_count",
+          "type": "int"
+        },
+        {
           "name": "date",
           "type": "int"
         },
         {
-          "name": "seq",
-          "type": "int"
+          "name": "fwd_from_id",
+          "type": "flags.2?int"
+        },
+        {
+          "name": "fwd_date",
+          "type": "flags.2?int"
+        },
+        {
+          "name": "reply_to_msg_id",
+          "type": "flags.3?int"
         }
       ],
       "type": "Updates"
     },
     {
-      "id": "724548942",
+      "id": "1378061116",
       "predicate": "updateShortChatMessage",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
         {
           "name": "id",
           "type": "int"
@@ -2552,12 +2499,24 @@
           "type": "int"
         },
         {
+          "name": "pts_count",
+          "type": "int"
+        },
+        {
           "name": "date",
           "type": "int"
         },
         {
-          "name": "seq",
-          "type": "int"
+          "name": "fwd_from_id",
+          "type": "flags.2?int"
+        },
+        {
+          "name": "fwd_date",
+          "type": "flags.2?int"
+        },
+        {
+          "name": "reply_to_msg_id",
+          "type": "flags.3?int"
         }
       ],
       "type": "Updates"
@@ -2693,7 +2652,7 @@
       "type": "DcOption"
     },
     {
-      "id": "2108568544",
+      "id": "1047491370",
       "predicate": "config",
       "params": [
         {
@@ -2717,15 +2676,39 @@
           "type": "Vector<DcOption>"
         },
         {
-          "name": "chat_big_size",
-          "type": "int"
-        },
-        {
           "name": "chat_size_max",
           "type": "int"
         },
         {
           "name": "broadcast_size_max",
+          "type": "int"
+        },
+        {
+          "name": "online_update_period_ms",
+          "type": "int"
+        },
+        {
+          "name": "offline_blur_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "offline_idle_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "online_cloud_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "notify_cloud_delay_ms",
+          "type": "int"
+        },
+        {
+          "name": "notify_default_delay_ms",
+          "type": "int"
+        },
+        {
+          "name": "chat_big_size",
           "type": "int"
         },
         {
@@ -2841,7 +2824,7 @@
       "type": "photos.Photos"
     },
     {
-      "id": "1047852486",
+      "id": "1371430169",
       "predicate": "messages.statedMessagesLinks",
       "params": [
         {
@@ -2857,12 +2840,16 @@
           "type": "Vector<User>"
         },
         {
-          "name": "links",
-          "type": "Vector<contacts.Link>"
-        },
-        {
           "name": "pts",
           "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
+        },
+        {
+          "name": "links",
+          "type": "Vector<contacts.Link>"
         },
         {
           "name": "seq",
@@ -2872,7 +2859,7 @@
       "type": "messages.StatedMessages"
     },
     {
-      "id": "-1448138623",
+      "id": "155755144",
       "predicate": "messages.statedMessageLink",
       "params": [
         {
@@ -2888,12 +2875,16 @@
           "type": "Vector<User>"
         },
         {
-          "name": "links",
-          "type": "Vector<contacts.Link>"
-        },
-        {
           "name": "pts",
           "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
+        },
+        {
+          "name": "links",
+          "type": "Vector<contacts.Link>"
         },
         {
           "name": "seq",
@@ -2903,7 +2894,7 @@
       "type": "messages.StatedMessage"
     },
     {
-      "id": "-371504577",
+      "id": "-383565811",
       "predicate": "messages.sentMessageLink",
       "params": [
         {
@@ -2919,12 +2910,16 @@
           "type": "int"
         },
         {
-          "name": "seq",
+          "name": "pts_count",
           "type": "int"
         },
         {
           "name": "links",
           "type": "Vector<contacts.Link>"
+        },
+        {
+          "name": "seq",
+          "type": "int"
         }
       ],
       "type": "messages.SentMessage"
@@ -4146,9 +4141,14 @@
       "type": "DocumentAttribute"
     },
     {
-      "id": "-83208409",
+      "id": "-1723033470",
       "predicate": "documentAttributeSticker",
-      "params": [],
+      "params": [
+        {
+          "name": "alt",
+          "type": "string"
+        }
+      ],
       "type": "DocumentAttribute"
     },
     {
@@ -4282,6 +4282,127 @@
         }
       ],
       "type": "account.Password"
+    },
+    {
+      "id": "1038193057",
+      "predicate": "contactSuggested",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "mutual_contacts",
+          "type": "int"
+        }
+      ],
+      "type": "ContactSuggested"
+    },
+    {
+      "id": "1447681221",
+      "predicate": "contacts.suggested",
+      "params": [
+        {
+          "name": "results",
+          "type": "Vector<ContactSuggested>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "contacts.Suggested"
+    },
+    {
+      "id": "1062078024",
+      "predicate": "messages.messageEmpty",
+      "params": [],
+      "type": "messages.Message"
+    },
+    {
+      "id": "-1721631396",
+      "predicate": "updateReadHistoryInbox",
+      "params": [
+        {
+          "name": "peer",
+          "type": "Peer"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "791617983",
+      "predicate": "updateReadHistoryOutbox",
+      "params": [
+        {
+          "name": "peer",
+          "type": "Peer"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-2066640507",
+      "predicate": "messages.affectedMessages",
+      "params": [
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
+        }
+      ],
+      "type": "messages.AffectedMessages"
+    },
+    {
+      "id": "1599050311",
+      "predicate": "contactLinkUnknown",
+      "params": [],
+      "type": "ContactLink"
+    },
+    {
+      "id": "-17968211",
+      "predicate": "contactLinkNone",
+      "params": [],
+      "type": "ContactLink"
+    },
+    {
+      "id": "646922073",
+      "predicate": "contactLinkHasPhone",
+      "params": [],
+      "type": "ContactLink"
+    },
+    {
+      "id": "-721239344",
+      "predicate": "contactLinkContact",
+      "params": [],
+      "type": "ContactLink"
     }
   ],
   "methods": [
@@ -4802,7 +4923,7 @@
       "type": "messages.Messages"
     },
     {
-      "id": "-287800122",
+      "id": "-1336990448",
       "method": "messages.readHistory",
       "params": [
         {
@@ -4816,10 +4937,6 @@
         {
           "name": "offset",
           "type": "int"
-        },
-        {
-          "name": "read_contents",
-          "type": "Bool"
         }
       ],
       "type": "messages.AffectedHistory"
@@ -4840,7 +4957,7 @@
       "type": "messages.AffectedHistory"
     },
     {
-      "id": "351460618",
+      "id": "-1510897371",
       "method": "messages.deleteMessages",
       "params": [
         {
@@ -4848,7 +4965,7 @@
           "type": "Vector<int>"
         }
       ],
-      "type": "Vector<int>"
+      "type": "messages.AffectedMessages"
     },
     {
       "id": "682347368",
@@ -4877,12 +4994,16 @@
       "type": "Bool"
     },
     {
-      "id": "1289620139",
+      "id": "480793249",
       "method": "messages.sendMessage",
       "params": [
         {
           "name": "peer",
           "type": "InputPeer"
+        },
+        {
+          "name": "reply_to_msg_id",
+          "type": "int"
         },
         {
           "name": "message",
@@ -4896,12 +5017,16 @@
       "type": "messages.SentMessage"
     },
     {
-      "id": "-1547149962",
+      "id": "-51478592",
       "method": "messages.sendMedia",
       "params": [
         {
           "name": "peer",
           "type": "InputPeer"
+        },
+        {
+          "name": "reply_to_msg_id",
+          "type": "int"
         },
         {
           "name": "media",
@@ -4915,7 +5040,7 @@
       "type": "messages.StatedMessage"
     },
     {
-      "id": "1363988751",
+      "id": "-556523451",
       "method": "messages.forwardMessages",
       "params": [
         {
@@ -4925,6 +5050,10 @@
         {
           "name": "id",
           "type": "Vector<int>"
+        },
+        {
+          "name": "random_id",
+          "type": "Vector<long>"
         }
       ],
       "type": "messages.StatedMessages"
@@ -5523,7 +5652,7 @@
       "type": "Bool"
     },
     {
-      "id": "894131138",
+      "id": "916930423",
       "method": "messages.readMessageContents",
       "params": [
         {
@@ -5531,7 +5660,7 @@
           "type": "Vector<int>"
         }
       ],
-      "type": "Vector<int>"
+      "type": "messages.AffectedMessages"
     },
     {
       "id": "655677548",
@@ -5741,6 +5870,36 @@
         }
       ],
       "type": "auth.Authorization"
+    },
+    {
+      "id": "-847825880",
+      "method": "contacts.getSuggested",
+      "params": [
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "contacts.Suggested"
+    },
+    {
+      "id": "1102776690",
+      "method": "messages.sendBroadcast",
+      "params": [
+        {
+          "name": "contacts",
+          "type": "Vector<InputUser>"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "media",
+          "type": "InputMedia"
+        }
+      ],
+      "type": "messages.StatedMessages"
     }
   ]
 }
