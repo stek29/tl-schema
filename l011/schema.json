@@ -1,0 +1,83 @@
+{
+  "constructors": [
+    {
+      "id": "-931638658",
+      "predicate": "encryptedChatRequested",
+      "params": [
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "admin_id",
+          "type": "int"
+        },
+        {
+          "name": "participant_id",
+          "type": "int"
+        },
+        {
+          "name": "g_a",
+          "type": "bytes"
+        }
+      ],
+      "type": "EncryptedChat"
+    },
+    {
+      "id": "-94974410",
+      "predicate": "encryptedChat",
+      "params": [
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "admin_id",
+          "type": "int"
+        },
+        {
+          "name": "participant_id",
+          "type": "int"
+        },
+        {
+          "name": "g_a_or_b",
+          "type": "bytes"
+        },
+        {
+          "name": "key_fingerprint",
+          "type": "long"
+        }
+      ],
+      "type": "EncryptedChat"
+    }
+  ],
+  "methods": [
+    {
+      "id": "-1497853985",
+      "method": "invokeWithLayer11",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    }
+  ]
+}

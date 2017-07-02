@@ -209,8 +209,8 @@ updateEncryption#b4a2e88d chat:EncryptedChat date:int = Update;
 updateEncryptedMessagesRead#38fe25b7 chat_id:int max_date:int date:int = Update;
 encryptedChatEmpty#ab7ec0a0 id:int = EncryptedChat;
 encryptedChatWaiting#3bf703dc id:int access_hash:long date:int admin_id:int participant_id:int = EncryptedChat;
-encryptedChatRequested#fda9a7b7 id:int access_hash:long date:int admin_id:int participant_id:int g_a:bytes nonce:bytes = EncryptedChat;
-encryptedChat#6601d14f id:int access_hash:long date:int admin_id:int participant_id:int g_a_or_b:bytes nonce:bytes key_fingerprint:long = EncryptedChat;
+encryptedChatRequested#c878527e id:int access_hash:long date:int admin_id:int participant_id:int g_a:bytes = EncryptedChat;
+encryptedChat#fa56ce36 id:int access_hash:long date:int admin_id:int participant_id:int g_a_or_b:bytes key_fingerprint:long = EncryptedChat;
 encryptedChatDiscarded#13d6dd27 id:int = EncryptedChat;
 inputEncryptedChat#f141b5e1 chat_id:int access_hash:long = InputEncryptedChat;
 encryptedFileEmpty#c21f497e = EncryptedFile;
@@ -353,3 +353,4 @@ upload.saveBigFilePart#de7b673d file_id:long file_part:int file_total_parts:int 
 initConnection#69796de9 api_id:int device_model:string system_version:string app_version:string lang_code:string query:!X = X;
 invokeWithLayer9#76715a63 query:!X = X;
 invokeWithLayer10#39620c41 query:!X = X;
+invokeWithLayer11#a6b88fdf query:!X = X;

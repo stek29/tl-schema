@@ -3373,7 +3373,7 @@
       "type": "EncryptedChat"
     },
     {
-      "id": "-39213129",
+      "id": "-931638658",
       "predicate": "encryptedChatRequested",
       "params": [
         {
@@ -3399,16 +3399,12 @@
         {
           "name": "g_a",
           "type": "bytes"
-        },
-        {
-          "name": "nonce",
-          "type": "bytes"
         }
       ],
       "type": "EncryptedChat"
     },
     {
-      "id": "1711395151",
+      "id": "-94974410",
       "predicate": "encryptedChat",
       "params": [
         {
@@ -3433,10 +3429,6 @@
         },
         {
           "name": "g_a_or_b",
-          "type": "bytes"
-        },
-        {
-          "name": "nonce",
           "type": "bytes"
         },
         {
@@ -5607,6 +5599,17 @@
     {
       "id": "962726977",
       "method": "invokeWithLayer10",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    },
+    {
+      "id": "-1497853985",
+      "method": "invokeWithLayer11",
       "params": [
         {
           "name": "query",
