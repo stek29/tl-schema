@@ -604,7 +604,7 @@
       "type": "User"
     },
     {
-      "id": "1912944108",
+      "id": "1879553105",
       "predicate": "userSelf",
       "params": [
         {
@@ -617,6 +617,10 @@
         },
         {
           "name": "last_name",
+          "type": "string"
+        },
+        {
+          "name": "username",
           "type": "string"
         },
         {
@@ -639,7 +643,7 @@
       "type": "User"
     },
     {
-      "id": "-218397927",
+      "id": "-894214632",
       "predicate": "userContact",
       "params": [
         {
@@ -655,6 +659,10 @@
           "type": "string"
         },
         {
+          "name": "username",
+          "type": "string"
+        },
+        {
           "name": "access_hash",
           "type": "long"
         },
@@ -674,7 +682,7 @@
       "type": "User"
     },
     {
-      "id": "585682608",
+      "id": "-640891665",
       "predicate": "userRequest",
       "params": [
         {
@@ -690,6 +698,10 @@
           "type": "string"
         },
         {
+          "name": "username",
+          "type": "string"
+        },
+        {
           "name": "access_hash",
           "type": "long"
         },
@@ -709,7 +721,7 @@
       "type": "User"
     },
     {
-      "id": "1377093789",
+      "id": "123533224",
       "predicate": "userForeign",
       "params": [
         {
@@ -722,6 +734,10 @@
         },
         {
           "name": "last_name",
+          "type": "string"
+        },
+        {
+          "name": "username",
           "type": "string"
         },
         {
@@ -740,7 +756,7 @@
       "type": "User"
     },
     {
-      "id": "-1298475060",
+      "id": "-704549510",
       "predicate": "userDeleted",
       "params": [
         {
@@ -753,6 +769,10 @@
         },
         {
           "name": "last_name",
+          "type": "string"
+        },
+        {
+          "name": "username",
           "type": "string"
         }
       ],
@@ -2354,7 +2374,7 @@
       "type": "Update"
     },
     {
-      "id": "-635250259",
+      "id": "-1489818765",
       "predicate": "updateUserName",
       "params": [
         {
@@ -2367,6 +2387,10 @@
         },
         {
           "name": "last_name",
+          "type": "string"
+        },
+        {
+          "name": "username",
           "type": "string"
         }
       ],
@@ -4246,6 +4270,29 @@
       "predicate": "sendMessageChooseContactAction",
       "params": [],
       "type": "SendMessageAction"
+    },
+    {
+      "id": "942527460",
+      "predicate": "updateServiceNotification",
+      "params": [
+        {
+          "name": "type",
+          "type": "string"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "media",
+          "type": "MessageMedia"
+        },
+        {
+          "name": "popup",
+          "type": "Bool"
+        }
+      ],
+      "type": "Update"
     }
   ],
   "methods": [
@@ -5945,6 +5992,39 @@
     {
       "id": "1350928921",
       "method": "invokeWithLayer17",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    },
+    {
+      "id": "655677548",
+      "method": "account.checkUsername",
+      "params": [
+        {
+          "name": "username",
+          "type": "string"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "1040964988",
+      "method": "account.updateUsername",
+      "params": [
+        {
+          "name": "username",
+          "type": "string"
+        }
+      ],
+      "type": "User"
+    },
+    {
+      "id": "479200567",
+      "method": "invokeWithLayer18",
       "params": [
         {
           "name": "query",
