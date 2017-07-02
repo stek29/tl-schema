@@ -97,7 +97,7 @@ video#5a04a49f id:long access_hash:long user_id:int date:int caption:string dura
 geoPointEmpty#1117dd5f = GeoPoint;
 geoPoint#2049d70c long:double lat:double = GeoPoint;
 auth.checkedPhone#e300cc3b phone_registered:Bool phone_invited:Bool = auth.CheckedPhone;
-auth.sentCode#2215bcbd phone_registered:Bool phone_code_hash:string = auth.SentCode;
+auth.sentCode#efed51d9 phone_registered:Bool phone_code_hash:string send_call_timeout:int is_password:Bool = auth.SentCode;
 auth.authorization#f6b673a4 expires:int user:User = auth.Authorization;
 auth.exportedAuthorization#df969c2d id:int bytes:bytes = auth.ExportedAuthorization;
 inputNotifyPeer#b8bc5b0c peer:InputPeer = InputNotifyPeer;
@@ -176,7 +176,7 @@ updates#74ae4240 updates:Vector<Update> users:Vector<User> chats:Vector<Chat> da
 photos.photo#20212ca8 photo:Photo users:Vector<User> = photos.Photo;
 upload.file#96a18d5 type:storage.FileType mtime:int bytes:bytes = upload.File;
 dcOption#2ec2a43c id:int hostname:string ip_address:string port:int = DcOption;
-config#232d5905 date:int test_mode:Bool this_dc:int dc_options:Vector<DcOption> chat_size_max:int = Config;
+config#2e54dd74 date:int test_mode:Bool this_dc:int dc_options:Vector<DcOption> chat_size_max:int broadcast_size_max:int = Config;
 nearestDc#8e1a1775 country:string this_dc:int nearest_dc:int = NearestDc;
 help.appUpdate#8987f311 id:int critical:Bool url:string text:string = help.AppUpdate;
 help.noAppUpdate#c45a6536 = help.AppUpdate;
@@ -251,6 +251,7 @@ audioEmpty#586988d8 id:long = Audio;
 audio#427425e7 id:long access_hash:long user_id:int date:int duration:int size:int dc_id:int = Audio;
 documentEmpty#36f8c871 id:long = Document;
 document#9efc6326 id:long access_hash:long user_id:int date:int file_name:string mime_type:string size:int thumb:PhotoSize dc_id:int = Document;
+help.support#17c6b5f6 phone_number:string user:User = help.Support;
 ---functions---
 invokeAfterMsg#cb9f372d msg_id:long query:!X = X;
 invokeAfterMsgs#3dc4b4f0 msg_ids:Vector<long> query:!X = X;
@@ -354,3 +355,5 @@ initConnection#69796de9 api_id:int device_model:string system_version:string app
 invokeWithLayer9#76715a63 query:!X = X;
 invokeWithLayer10#39620c41 query:!X = X;
 invokeWithLayer11#a6b88fdf query:!X = X;
+help.getSupport#9cdf08cd = help.Support;
+invokeWithLayer12#dda60d3c query:!X = X;

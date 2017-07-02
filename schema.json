@@ -1470,7 +1470,7 @@
       "type": "auth.CheckedPhone"
     },
     {
-      "id": "571849917",
+      "id": "-269659687",
       "predicate": "auth.sentCode",
       "params": [
         {
@@ -1480,6 +1480,14 @@
         {
           "name": "phone_code_hash",
           "type": "string"
+        },
+        {
+          "name": "send_call_timeout",
+          "type": "int"
+        },
+        {
+          "name": "is_password",
+          "type": "Bool"
         }
       ],
       "type": "auth.SentCode"
@@ -2746,7 +2754,7 @@
       "type": "DcOption"
     },
     {
-      "id": "590174469",
+      "id": "777313652",
       "predicate": "config",
       "params": [
         {
@@ -2767,6 +2775,10 @@
         },
         {
           "name": "chat_size_max",
+          "type": "int"
+        },
+        {
+          "name": "broadcast_size_max",
           "type": "int"
         }
       ],
@@ -4053,6 +4065,21 @@
         }
       ],
       "type": "Document"
+    },
+    {
+      "id": "398898678",
+      "predicate": "help.support",
+      "params": [
+        {
+          "name": "phone_number",
+          "type": "string"
+        },
+        {
+          "name": "user",
+          "type": "User"
+        }
+      ],
+      "type": "help.Support"
     }
   ],
   "methods": [
@@ -5610,6 +5637,23 @@
     {
       "id": "-1497853985",
       "method": "invokeWithLayer11",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    },
+    {
+      "id": "-1663104819",
+      "method": "help.getSupport",
+      "params": [],
+      "type": "help.Support"
+    },
+    {
+      "id": "-576320196",
+      "method": "invokeWithLayer12",
       "params": [
         {
           "name": "query",
