@@ -3913,12 +3913,20 @@
       "type": "DocumentAttribute"
     },
     {
-      "id": "85215461",
+      "id": "-556656416",
       "predicate": "documentAttributeAudio",
       "params": [
         {
           "name": "duration",
           "type": "int"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "performer",
+          "type": "string"
         }
       ],
       "type": "DocumentAttribute"
@@ -3977,7 +3985,7 @@
       "type": "messages.AllStickers"
     },
     {
-      "id": "1558401772",
+      "id": "-719474725",
       "predicate": "messages.allStickers",
       "params": [
         {
@@ -3985,16 +3993,8 @@
           "type": "string"
         },
         {
-          "name": "packs",
-          "type": "Vector<StickerPack>"
-        },
-        {
           "name": "sets",
           "type": "Vector<StickerSet>"
-        },
-        {
-          "name": "documents",
-          "type": "Vector<Document>"
         }
       ],
       "type": "messages.AllStickers"
@@ -4567,9 +4567,13 @@
       "type": "InputStickerSet"
     },
     {
-      "id": "-1482409193",
+      "id": "-852477119",
       "predicate": "stickerSet",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
         {
           "name": "id",
           "type": "long"
@@ -4585,6 +4589,14 @@
         {
           "name": "short_name",
           "type": "string"
+        },
+        {
+          "name": "count",
+          "type": "int"
+        },
+        {
+          "name": "hash",
+          "type": "int"
         }
       ],
       "type": "StickerSet"
@@ -6389,12 +6401,16 @@
       "type": "messages.StickerSet"
     },
     {
-      "id": "-272893207",
+      "id": "2066793382",
       "method": "messages.installStickerSet",
       "params": [
         {
           "name": "stickerset",
           "type": "InputStickerSet"
+        },
+        {
+          "name": "disabled",
+          "type": "Bool"
         }
       ],
       "type": "Bool"
