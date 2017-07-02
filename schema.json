@@ -3000,7 +3000,7 @@
       "type": "InputNotifyPeer"
     },
     {
-      "id": "-498854411",
+      "id": "1978329690",
       "predicate": "geoChat",
       "params": [
         {
@@ -3017,6 +3017,10 @@
         },
         {
           "name": "address",
+          "type": "string"
+        },
+        {
+          "name": "venue",
           "type": "string"
         },
         {
@@ -4469,7 +4473,7 @@
       "type": "geochats.StatedMessage"
     },
     {
-      "id": "1952391883",
+      "id": "235482646",
       "method": "geochats.createGeoChat",
       "params": [
         {
@@ -4482,6 +4486,10 @@
         },
         {
           "name": "address",
+          "type": "string"
+        },
+        {
+          "name": "venue",
           "type": "string"
         }
       ],
@@ -4501,6 +4509,17 @@
     {
       "id": "1098536878",
       "method": "invokeWithLayer5",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    },
+    {
+      "id": "979686733",
+      "method": "invokeWithLayer6",
       "params": [
         {
           "name": "query",
