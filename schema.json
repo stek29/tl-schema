@@ -985,9 +985,13 @@
       "type": "Message"
     },
     {
-      "id": "585853626",
+      "id": "1450613171",
       "predicate": "message",
       "params": [
+        {
+          "name": "flags",
+          "type": "int"
+        },
         {
           "name": "id",
           "type": "int"
@@ -999,14 +1003,6 @@
         {
           "name": "to_id",
           "type": "Peer"
-        },
-        {
-          "name": "out",
-          "type": "Bool"
-        },
-        {
-          "name": "unread",
-          "type": "Bool"
         },
         {
           "name": "date",
@@ -1024,9 +1020,13 @@
       "type": "Message"
     },
     {
-      "id": "99903492",
+      "id": "-1553471722",
       "predicate": "messageForwarded",
       "params": [
+        {
+          "name": "flags",
+          "type": "int"
+        },
         {
           "name": "id",
           "type": "int"
@@ -1048,14 +1048,6 @@
           "type": "Peer"
         },
         {
-          "name": "out",
-          "type": "Bool"
-        },
-        {
-          "name": "unread",
-          "type": "Bool"
-        },
-        {
           "name": "date",
           "type": "int"
         },
@@ -1071,9 +1063,13 @@
       "type": "Message"
     },
     {
-      "id": "-1618124613",
+      "id": "495384334",
       "predicate": "messageService",
       "params": [
+        {
+          "name": "flags",
+          "type": "int"
+        },
         {
           "name": "id",
           "type": "int"
@@ -1085,14 +1081,6 @@
         {
           "name": "to_id",
           "type": "Peer"
-        },
-        {
-          "name": "out",
-          "type": "Bool"
-        },
-        {
-          "name": "unread",
-          "type": "Bool"
         },
         {
           "name": "date",
@@ -2306,18 +2294,22 @@
       "type": "Update"
     },
     {
-      "id": "1806337288",
+      "id": "1548249383",
       "predicate": "updateUserTyping",
       "params": [
         {
           "name": "user_id",
           "type": "int"
+        },
+        {
+          "name": "action",
+          "type": "SendMessageAction"
         }
       ],
       "type": "Update"
     },
     {
-      "id": "1011273702",
+      "id": "-1704596961",
       "predicate": "updateChatUserTyping",
       "params": [
         {
@@ -2327,6 +2319,10 @@
         {
           "name": "user_id",
           "type": "int"
+        },
+        {
+          "name": "action",
+          "type": "SendMessageAction"
         }
       ],
       "type": "Update"
@@ -4190,6 +4186,66 @@
         }
       ],
       "type": "auth.SentCode"
+    },
+    {
+      "id": "381645902",
+      "predicate": "sendMessageTypingAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "-44119819",
+      "predicate": "sendMessageCancelAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "-1584933265",
+      "predicate": "sendMessageRecordVideoAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "-1845219337",
+      "predicate": "sendMessageUploadVideoAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "-718310409",
+      "predicate": "sendMessageRecordAudioAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "-424899985",
+      "predicate": "sendMessageUploadAudioAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "-1727382502",
+      "predicate": "sendMessageUploadPhotoAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "-1884362354",
+      "predicate": "sendMessageUploadDocumentAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "393186209",
+      "predicate": "sendMessageGeoLocationAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "1653390447",
+      "predicate": "sendMessageChooseContactAction",
+      "params": [],
+      "type": "SendMessageAction"
     }
   ],
   "methods": [
@@ -4732,7 +4788,7 @@
       "type": "messages.Messages"
     },
     {
-      "id": "-1336990448",
+      "id": "-287800122",
       "method": "messages.readHistory",
       "params": [
         {
@@ -4746,6 +4802,10 @@
         {
           "name": "offset",
           "type": "int"
+        },
+        {
+          "name": "read_contents",
+          "type": "Bool"
         }
       ],
       "type": "messages.AffectedHistory"
@@ -4799,7 +4859,7 @@
       "type": "Vector<int>"
     },
     {
-      "id": "1905801705",
+      "id": "-1551737264",
       "method": "messages.setTyping",
       "params": [
         {
@@ -4807,8 +4867,8 @@
           "type": "InputPeer"
         },
         {
-          "name": "typing",
-          "type": "Bool"
+          "name": "action",
+          "type": "SendMessageAction"
         }
       ],
       "type": "Bool"
@@ -5863,6 +5923,28 @@
     {
       "id": "-815855225",
       "method": "invokeWithLayer16",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    },
+    {
+      "id": "894131138",
+      "method": "messages.readMessageContents",
+      "params": [
+        {
+          "name": "id",
+          "type": "Vector<int>"
+        }
+      ],
+      "type": "Vector<int>"
+    },
+    {
+      "id": "1350928921",
+      "method": "invokeWithLayer17",
       "params": [
         {
           "name": "query",

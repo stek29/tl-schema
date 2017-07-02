@@ -1,0 +1,269 @@
+{
+  "constructors": [
+    {
+      "id": "1450613171",
+      "predicate": "message",
+      "params": [
+        {
+          "name": "flags",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "from_id",
+          "type": "int"
+        },
+        {
+          "name": "to_id",
+          "type": "Peer"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "media",
+          "type": "MessageMedia"
+        }
+      ],
+      "type": "Message"
+    },
+    {
+      "id": "-1553471722",
+      "predicate": "messageForwarded",
+      "params": [
+        {
+          "name": "flags",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "fwd_from_id",
+          "type": "int"
+        },
+        {
+          "name": "fwd_date",
+          "type": "int"
+        },
+        {
+          "name": "from_id",
+          "type": "int"
+        },
+        {
+          "name": "to_id",
+          "type": "Peer"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "media",
+          "type": "MessageMedia"
+        }
+      ],
+      "type": "Message"
+    },
+    {
+      "id": "495384334",
+      "predicate": "messageService",
+      "params": [
+        {
+          "name": "flags",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "from_id",
+          "type": "int"
+        },
+        {
+          "name": "to_id",
+          "type": "Peer"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "action",
+          "type": "MessageAction"
+        }
+      ],
+      "type": "Message"
+    },
+    {
+      "id": "1548249383",
+      "predicate": "updateUserTyping",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "action",
+          "type": "SendMessageAction"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-1704596961",
+      "predicate": "updateChatUserTyping",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "action",
+          "type": "SendMessageAction"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "381645902",
+      "predicate": "sendMessageTypingAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "-44119819",
+      "predicate": "sendMessageCancelAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "-1584933265",
+      "predicate": "sendMessageRecordVideoAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "-1845219337",
+      "predicate": "sendMessageUploadVideoAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "-718310409",
+      "predicate": "sendMessageRecordAudioAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "-424899985",
+      "predicate": "sendMessageUploadAudioAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "-1727382502",
+      "predicate": "sendMessageUploadPhotoAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "-1884362354",
+      "predicate": "sendMessageUploadDocumentAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "393186209",
+      "predicate": "sendMessageGeoLocationAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "1653390447",
+      "predicate": "sendMessageChooseContactAction",
+      "params": [],
+      "type": "SendMessageAction"
+    }
+  ],
+  "methods": [
+    {
+      "id": "-287800122",
+      "method": "messages.readHistory",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "read_contents",
+          "type": "Bool"
+        }
+      ],
+      "type": "messages.AffectedHistory"
+    },
+    {
+      "id": "-1551737264",
+      "method": "messages.setTyping",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "action",
+          "type": "SendMessageAction"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "894131138",
+      "method": "messages.readMessageContents",
+      "params": [
+        {
+          "name": "id",
+          "type": "Vector<int>"
+        }
+      ],
+      "type": "Vector<int>"
+    },
+    {
+      "id": "1350928921",
+      "method": "invokeWithLayer17",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    }
+  ]
+}
