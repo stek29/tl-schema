@@ -1,0 +1,31 @@
+---types---
+// inputMessagesFilterAudio#cfc87522 = MessagesFilter;
+// inputMediaUploadedAudio#4e498cab file:InputFile duration:int mime_type:string = InputMedia;
+// inputMediaAudio#89938781 id:InputAudio = InputMedia;
+// messageMediaAudio#c6b68300 audio:Audio = MessageMedia;
+// inputAudioEmpty#d95adc84 = InputAudio;
+// inputAudio#77d440ff id:long access_hash:long = InputAudio;
+// inputAudioFileLocation#74dc404d id:long access_hash:long = InputFileLocation;
+// audioEmpty#586988d8 id:long = Audio;
+// audio#f9e35055 id:long access_hash:long date:int duration:int mime_type:string size:int dc_id:int = Audio;
+// documentAttributeAudio#ded218e0 duration:int title:string performer:string = DocumentAttribute;
+// contactSuggested#3de191a1 user_id:int mutual_contacts:int = ContactSuggested;
+// contacts.suggested#5649dcc5 results:Vector<ContactSuggested> users:Vector<User> = contacts.Suggested;
+// account.passwordInputSettings#bcfc532c flags:# new_salt:flags.0?bytes new_password_hash:flags.0?bytes hint:flags.0?string email:flags.1?string = account.PasswordInputSettings;
+// inputMessagesFilterAudioDocuments#5afbf764 = MessagesFilter;
+// channel#4b1b7506 flags:# creator:flags.0?true kicked:flags.1?true left:flags.2?true editor:flags.3?true moderator:flags.4?true broadcast:flags.5?true verified:flags.7?true megagroup:flags.8?true restricted:flags.9?true id:int access_hash:long title:string username:flags.6?string photo:ChatPhoto date:int version:int restriction_reason:flags.9?string = Chat;
+channel#4b1b7506 flags:# creator:flags.0?true kicked:flags.1?true left:flags.2?true editor:flags.3?true moderator:flags.4?true broadcast:flags.5?true verified:flags.7?true megagroup:flags.8?true restricted:flags.9?true invites_enabled:flags.10?true id:int access_hash:long title:string username:flags.6?string photo:ChatPhoto date:int version:int restriction_reason:flags.9?string = Chat;
+inputMessagesFilterVoice#50f5c392 = MessagesFilter;
+inputMessagesFilterMusic#3751b49e = MessagesFilter;
+updateBotInlineSend#f69e113 user_id:int query:string id:string = Update;
+inputPrivacyKeyChatInvite#bdfb0426 = InputPrivacyKey;
+privacyKeyChatInvite#500e6dfa = PrivacyKey;
+documentAttributeAudio#9852f9c6 flags:# voice:flags.10?true duration:int title:flags.0?string performer:flags.1?string waveform:flags.2?bytes = DocumentAttribute;
+account.passwordInputSettings#86916deb flags:# new_salt:flags.0?bytes new_password_hash:flags.0?bytes hint:flags.0?string email:flags.1?string = account.PasswordInputSettings;
+---functions---
+// messages.getHistory#8a8ec2da peer:InputPeer offset_id:int add_offset:int limit:int max_id:int min_id:int = messages.Messages;
+// contacts.getSuggested#cd773428 limit:int = contacts.Suggested;
+// channels.getImportantHistory#ddb929cb channel:InputChannel offset_id:int add_offset:int limit:int max_id:int min_id:int = messages.Messages;
+messages.getHistory#afa92846 peer:InputPeer offset_id:int offset_date:int add_offset:int limit:int max_id:int min_id:int = messages.Messages;
+channels.getImportantHistory#8f494bb2 channel:InputChannel offset_id:int offset_date:int add_offset:int limit:int max_id:int min_id:int = messages.Messages;
+channels.toggleInvites#49609307 channel:InputChannel enabled:Bool = Updates;
