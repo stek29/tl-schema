@@ -1,0 +1,947 @@
+{
+  "constructors": [
+    {
+      "id": "-787638374",
+      "predicate": "user",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "self",
+          "type": "flags.10?true"
+        },
+        {
+          "name": "contact",
+          "type": "flags.11?true"
+        },
+        {
+          "name": "mutual_contact",
+          "type": "flags.12?true"
+        },
+        {
+          "name": "deleted",
+          "type": "flags.13?true"
+        },
+        {
+          "name": "bot",
+          "type": "flags.14?true"
+        },
+        {
+          "name": "bot_chat_history",
+          "type": "flags.15?true"
+        },
+        {
+          "name": "bot_nochats",
+          "type": "flags.16?true"
+        },
+        {
+          "name": "verified",
+          "type": "flags.17?true"
+        },
+        {
+          "name": "restricted",
+          "type": "flags.18?true"
+        },
+        {
+          "name": "min",
+          "type": "flags.20?true"
+        },
+        {
+          "name": "bot_inline_geo",
+          "type": "flags.21?true"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "flags.0?long"
+        },
+        {
+          "name": "first_name",
+          "type": "flags.1?string"
+        },
+        {
+          "name": "last_name",
+          "type": "flags.2?string"
+        },
+        {
+          "name": "username",
+          "type": "flags.3?string"
+        },
+        {
+          "name": "phone",
+          "type": "flags.4?string"
+        },
+        {
+          "name": "photo",
+          "type": "flags.5?UserProfilePhoto"
+        },
+        {
+          "name": "status",
+          "type": "flags.6?UserStatus"
+        },
+        {
+          "name": "bot_info_version",
+          "type": "flags.14?int"
+        },
+        {
+          "name": "restriction_reason",
+          "type": "flags.18?string"
+        },
+        {
+          "name": "bot_inline_placeholder",
+          "type": "flags.19?string"
+        }
+      ],
+      "type": "User"
+    },
+    {
+      "id": "889353612",
+      "predicate": "replyKeyboardMarkup",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "resize",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "single_use",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "selective",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "rows",
+          "type": "Vector<KeyboardButtonRow>"
+        }
+      ],
+      "type": "ReplyMarkup"
+    },
+    {
+      "id": "691006739",
+      "predicate": "inputBotInlineMessageMediaAuto",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "caption",
+          "type": "string"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.2?ReplyMarkup"
+        }
+      ],
+      "type": "InputBotInlineMessage"
+    },
+    {
+      "id": "1036876423",
+      "predicate": "inputBotInlineMessageText",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "no_webpage",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "entities",
+          "type": "flags.1?Vector<MessageEntity>"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.2?ReplyMarkup"
+        }
+      ],
+      "type": "InputBotInlineMessage"
+    },
+    {
+      "id": "175419739",
+      "predicate": "botInlineMessageMediaAuto",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "caption",
+          "type": "string"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.2?ReplyMarkup"
+        }
+      ],
+      "type": "BotInlineMessage"
+    },
+    {
+      "id": "-1937807902",
+      "predicate": "botInlineMessageText",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "no_webpage",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "entities",
+          "type": "flags.1?Vector<MessageEntity>"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.2?ReplyMarkup"
+        }
+      ],
+      "type": "BotInlineMessage"
+    },
+    {
+      "id": "627509670",
+      "predicate": "messages.botResults",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "gallery",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "query_id",
+          "type": "long"
+        },
+        {
+          "name": "next_offset",
+          "type": "flags.1?string"
+        },
+        {
+          "name": "switch_pm",
+          "type": "flags.2?InlineBotSwitchPM"
+        },
+        {
+          "name": "results",
+          "type": "Vector<BotInlineResult>"
+        }
+      ],
+      "type": "messages.BotResults"
+    },
+    {
+      "id": "1417832080",
+      "predicate": "updateBotInlineQuery",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "query_id",
+          "type": "long"
+        },
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "query",
+          "type": "string"
+        },
+        {
+          "name": "geo",
+          "type": "flags.0?GeoPoint"
+        },
+        {
+          "name": "offset",
+          "type": "string"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "239663460",
+      "predicate": "updateBotInlineSend",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "query",
+          "type": "string"
+        },
+        {
+          "name": "geo",
+          "type": "flags.0?GeoPoint"
+        },
+        {
+          "name": "id",
+          "type": "string"
+        },
+        {
+          "name": "msg_id",
+          "type": "flags.1?InputBotInlineMessageID"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "1748655686",
+      "predicate": "keyboardButtonCallback",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        },
+        {
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "type": "KeyboardButton"
+    },
+    {
+      "id": "-367298028",
+      "predicate": "keyboardButtonSwitchInline",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        },
+        {
+          "name": "query",
+          "type": "string"
+        }
+      ],
+      "type": "KeyboardButton"
+    },
+    {
+      "id": "1218642516",
+      "predicate": "replyInlineMarkup",
+      "params": [
+        {
+          "name": "rows",
+          "type": "Vector<KeyboardButtonRow>"
+        }
+      ],
+      "type": "ReplyMarkup"
+    },
+    {
+      "id": "308605382",
+      "predicate": "messages.botCallbackAnswer",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "alert",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "message",
+          "type": "flags.0?string"
+        }
+      ],
+      "type": "messages.BotCallbackAnswer"
+    },
+    {
+      "id": "-1500747636",
+      "predicate": "updateBotCallbackQuery",
+      "params": [
+        {
+          "name": "query_id",
+          "type": "long"
+        },
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "peer",
+          "type": "Peer"
+        },
+        {
+          "name": "msg_id",
+          "type": "int"
+        },
+        {
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "649453030",
+      "predicate": "messages.messageEditData",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "caption",
+          "type": "flags.0?true"
+        }
+      ],
+      "type": "messages.MessageEditData"
+    },
+    {
+      "id": "-469536605",
+      "predicate": "updateEditMessage",
+      "params": [
+        {
+          "name": "message",
+          "type": "Message"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-190472735",
+      "predicate": "inputBotInlineMessageMediaGeo",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "geo_point",
+          "type": "InputGeoPoint"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.2?ReplyMarkup"
+        }
+      ],
+      "type": "InputBotInlineMessage"
+    },
+    {
+      "id": "-1431327288",
+      "predicate": "inputBotInlineMessageMediaVenue",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "geo_point",
+          "type": "InputGeoPoint"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "address",
+          "type": "string"
+        },
+        {
+          "name": "provider",
+          "type": "string"
+        },
+        {
+          "name": "venue_id",
+          "type": "string"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.2?ReplyMarkup"
+        }
+      ],
+      "type": "InputBotInlineMessage"
+    },
+    {
+      "id": "766443943",
+      "predicate": "inputBotInlineMessageMediaContact",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "phone_number",
+          "type": "string"
+        },
+        {
+          "name": "first_name",
+          "type": "string"
+        },
+        {
+          "name": "last_name",
+          "type": "string"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.2?ReplyMarkup"
+        }
+      ],
+      "type": "InputBotInlineMessage"
+    },
+    {
+      "id": "982505656",
+      "predicate": "botInlineMessageMediaGeo",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "geo",
+          "type": "GeoPoint"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.2?ReplyMarkup"
+        }
+      ],
+      "type": "BotInlineMessage"
+    },
+    {
+      "id": "1130767150",
+      "predicate": "botInlineMessageMediaVenue",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "geo",
+          "type": "GeoPoint"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "address",
+          "type": "string"
+        },
+        {
+          "name": "provider",
+          "type": "string"
+        },
+        {
+          "name": "venue_id",
+          "type": "string"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.2?ReplyMarkup"
+        }
+      ],
+      "type": "BotInlineMessage"
+    },
+    {
+      "id": "904770772",
+      "predicate": "botInlineMessageMediaContact",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "phone_number",
+          "type": "string"
+        },
+        {
+          "name": "first_name",
+          "type": "string"
+        },
+        {
+          "name": "last_name",
+          "type": "string"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.2?ReplyMarkup"
+        }
+      ],
+      "type": "BotInlineMessage"
+    },
+    {
+      "id": "-1462213465",
+      "predicate": "inputBotInlineResultPhoto",
+      "params": [
+        {
+          "name": "id",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "type": "string"
+        },
+        {
+          "name": "photo",
+          "type": "InputPhoto"
+        },
+        {
+          "name": "send_message",
+          "type": "InputBotInlineMessage"
+        }
+      ],
+      "type": "InputBotInlineResult"
+    },
+    {
+      "id": "-459324",
+      "predicate": "inputBotInlineResultDocument",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "type": "string"
+        },
+        {
+          "name": "title",
+          "type": "flags.1?string"
+        },
+        {
+          "name": "description",
+          "type": "flags.2?string"
+        },
+        {
+          "name": "document",
+          "type": "InputDocument"
+        },
+        {
+          "name": "send_message",
+          "type": "InputBotInlineMessage"
+        }
+      ],
+      "type": "InputBotInlineResult"
+    },
+    {
+      "id": "400266251",
+      "predicate": "botInlineMediaResult",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "type": "string"
+        },
+        {
+          "name": "photo",
+          "type": "flags.0?Photo"
+        },
+        {
+          "name": "document",
+          "type": "flags.1?Document"
+        },
+        {
+          "name": "title",
+          "type": "flags.2?string"
+        },
+        {
+          "name": "description",
+          "type": "flags.3?string"
+        },
+        {
+          "name": "send_message",
+          "type": "BotInlineMessage"
+        }
+      ],
+      "type": "BotInlineResult"
+    },
+    {
+      "id": "-1995686519",
+      "predicate": "inputBotInlineMessageID",
+      "params": [
+        {
+          "name": "dc_id",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        }
+      ],
+      "type": "InputBotInlineMessageID"
+    },
+    {
+      "id": "750622127",
+      "predicate": "updateInlineBotCallbackQuery",
+      "params": [
+        {
+          "name": "query_id",
+          "type": "long"
+        },
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "msg_id",
+          "type": "InputBotInlineMessageID"
+        },
+        {
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "1008755359",
+      "predicate": "inlineBotSwitchPM",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        },
+        {
+          "name": "start_param",
+          "type": "string"
+        }
+      ],
+      "type": "InlineBotSwitchPM"
+    }
+  ],
+  "methods": [
+    {
+      "id": "1364105629",
+      "method": "messages.getInlineBotResults",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "bot",
+          "type": "InputUser"
+        },
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "geo_point",
+          "type": "flags.0?InputGeoPoint"
+        },
+        {
+          "name": "query",
+          "type": "string"
+        },
+        {
+          "name": "offset",
+          "type": "string"
+        }
+      ],
+      "type": "messages.BotResults"
+    },
+    {
+      "id": "-346119674",
+      "method": "messages.setInlineBotResults",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "gallery",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "private",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "query_id",
+          "type": "long"
+        },
+        {
+          "name": "results",
+          "type": "Vector<InputBotInlineResult>"
+        },
+        {
+          "name": "cache_time",
+          "type": "int"
+        },
+        {
+          "name": "next_offset",
+          "type": "flags.2?string"
+        },
+        {
+          "name": "switch_pm",
+          "type": "flags.3?InlineBotSwitchPM"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-39416522",
+      "method": "messages.getMessageEditData",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        }
+      ],
+      "type": "messages.MessageEditData"
+    },
+    {
+      "id": "-829299510",
+      "method": "messages.editMessage",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "no_webpage",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "message",
+          "type": "flags.11?string"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.2?ReplyMarkup"
+        },
+        {
+          "name": "entities",
+          "type": "flags.3?Vector<MessageEntity>"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "319564933",
+      "method": "messages.editInlineBotMessage",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "no_webpage",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "id",
+          "type": "InputBotInlineMessageID"
+        },
+        {
+          "name": "message",
+          "type": "flags.11?string"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.2?ReplyMarkup"
+        },
+        {
+          "name": "entities",
+          "type": "flags.3?Vector<MessageEntity>"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-1494659324",
+      "method": "messages.getBotCallbackAnswer",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "msg_id",
+          "type": "int"
+        },
+        {
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "type": "messages.BotCallbackAnswer"
+    },
+    {
+      "id": "1209817370",
+      "method": "messages.setBotCallbackAnswer",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "alert",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "query_id",
+          "type": "long"
+        },
+        {
+          "name": "message",
+          "type": "flags.0?string"
+        }
+      ],
+      "type": "Bool"
+    }
+  ]
+}
