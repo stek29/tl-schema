@@ -1,0 +1,266 @@
+{
+  "constructors": [
+    {
+      "id": "1577067778",
+      "predicate": "auth.sentCode",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "phone_registered",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "type",
+          "type": "auth.SentCodeType"
+        },
+        {
+          "name": "phone_code_hash",
+          "type": "string"
+        },
+        {
+          "name": "next_type",
+          "type": "flags.1?auth.CodeType"
+        },
+        {
+          "name": "timeout",
+          "type": "flags.2?int"
+        }
+      ],
+      "type": "auth.SentCode"
+    },
+    {
+      "id": "629866245",
+      "predicate": "keyboardButtonUrl",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        },
+        {
+          "name": "url",
+          "type": "string"
+        }
+      ],
+      "type": "KeyboardButton"
+    },
+    {
+      "id": "716063107",
+      "predicate": "keyboardButtonCallback",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "type": "KeyboardButton"
+    },
+    {
+      "id": "-1318425559",
+      "predicate": "keyboardButtonRequestPhone",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "type": "KeyboardButton"
+    },
+    {
+      "id": "-59151553",
+      "predicate": "keyboardButtonRequestGeoLocation",
+      "params": [
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "type": "KeyboardButton"
+    },
+    {
+      "id": "889353612",
+      "predicate": "replyKeyboardMarkup",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "resize",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "single_use",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "selective",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "inline",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "rows",
+          "type": "Vector<KeyboardButtonRow>"
+        }
+      ],
+      "type": "ReplyMarkup"
+    },
+    {
+      "id": "1923290508",
+      "predicate": "auth.codeTypeSms",
+      "params": [],
+      "type": "auth.CodeType"
+    },
+    {
+      "id": "1948046307",
+      "predicate": "auth.codeTypeCall",
+      "params": [],
+      "type": "auth.CodeType"
+    },
+    {
+      "id": "577556219",
+      "predicate": "auth.codeTypeFlashCall",
+      "params": [],
+      "type": "auth.CodeType"
+    },
+    {
+      "id": "1035688326",
+      "predicate": "auth.sentCodeTypeApp",
+      "params": [
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "type": "auth.SentCodeType"
+    },
+    {
+      "id": "-1073693790",
+      "predicate": "auth.sentCodeTypeSms",
+      "params": [
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "type": "auth.SentCodeType"
+    },
+    {
+      "id": "1398007207",
+      "predicate": "auth.sentCodeTypeCall",
+      "params": [
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "type": "auth.SentCodeType"
+    },
+    {
+      "id": "-1425815847",
+      "predicate": "auth.sentCodeTypeFlashCall",
+      "params": [
+        {
+          "name": "pattern",
+          "type": "string"
+        }
+      ],
+      "type": "auth.SentCodeType"
+    }
+  ],
+  "methods": [
+    {
+      "id": "-855805745",
+      "method": "auth.sendCode",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "allow_flashcall",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "phone_number",
+          "type": "string"
+        },
+        {
+          "name": "current_number",
+          "type": "flags.0?Bool"
+        },
+        {
+          "name": "api_id",
+          "type": "int"
+        },
+        {
+          "name": "api_hash",
+          "type": "string"
+        },
+        {
+          "name": "lang_code",
+          "type": "string"
+        }
+      ],
+      "type": "auth.SentCode"
+    },
+    {
+      "id": "1056025023",
+      "method": "auth.resendCode",
+      "params": [
+        {
+          "name": "phone_number",
+          "type": "string"
+        },
+        {
+          "name": "phone_code_hash",
+          "type": "string"
+        }
+      ],
+      "type": "auth.SentCode"
+    },
+    {
+      "id": "520357240",
+      "method": "auth.cancelCode",
+      "params": [
+        {
+          "name": "phone_number",
+          "type": "string"
+        },
+        {
+          "name": "phone_code_hash",
+          "type": "string"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "149257707",
+      "method": "account.sendChangePhoneCode",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "allow_flashcall",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "phone_number",
+          "type": "string"
+        },
+        {
+          "name": "current_number",
+          "type": "flags.0?Bool"
+        }
+      ],
+      "type": "auth.SentCode"
+    }
+  ]
+}
