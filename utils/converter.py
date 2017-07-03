@@ -94,18 +94,16 @@ class TLTokenTL(TLToken):
 
     @staticmethod
     def dump(inst):
-        """
-        Prints prepending zeroes in crc
-        and two spaces in case of empty params
-        so output is slightly different from telegram's schemas
-        but still correct
-        """
         return '{name}#{crc} {params} = {result};'.format(
             name=inst.name,
-            crc=str(binascii.b2a_hex(struct.pack('>i', inst.crc)), encoding='ascii'),
+            crc=TLTokenTL.crc2hex(inst.crc),
             params=' '.join('{name}:{type}'.format(**param) for param in inst.params),
             result=inst.result
-        )
+        ).replace('  ', ' ')
+
+    @staticmethod
+    def crc2hex(crc: int):
+        return str(binascii.b2a_hex(struct.pack('>i', crc)), encoding='ascii').lstrip('0')
 
     def __repr__(self):
         return self.dump(self)
