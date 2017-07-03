@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TL-Schema</title>
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+  </head>
+  <body>
+    <div class="content">
+      <h1>TL-Schema for Telegram API - Layer 45</h1>
+
+      <a href="#functions">Jump to functions</a>
+
+<pre>
+
+<a id="constructor-boolFalse" href="constructor/boolFalse">boolFalse</a>#bc799737 = <a href="type/Bool">Bool</a>;
+
+<a id="constructor-boolTrue" href="constructor/boolTrue">boolTrue</a>#997275b5 = <a href="type/Bool">Bool</a>;
+
+<a id="constructor-error" href="constructor/error">error</a>#c4b9f9bb code:<a href="type/int">int</a> text:<a href="type/string">string</a> = <a href="type/Error">Error</a>;
+
+<a id="constructor-null" href="constructor/null">null</a>#56730bcc = <a href="type/Null">Null</a>;
+
+<a id="constructor-inputPeerEmpty" href="constructor/inputPeerEmpty">inputPeerEmpty</a>#7f3b18ea = <a href="type/InputPeer">InputPeer</a>;
+
+<a id="constructor-inputPeerSelf" href="constructor/inputPeerSelf">inputPeerSelf</a>#7da07ec9 = <a href="type/InputPeer">InputPeer</a>;
+
+<a id="constructor-inputPeerChat" href="constructor/inputPeerChat">inputPeerChat</a>#179be863 chat_id:<a href="type/int">int</a> = <a href="type/InputPeer">InputPeer</a>;
+
+<a id="constructor-inputUserEmpty" href="constructor/inputUserEmpty">inputUserEmpty</a>#b98886cf = <a href="type/InputUser">InputUser</a>;
+
+<a id="constructor-inputUserSelf" href="constructor/inputUserSelf">inputUserSelf</a>#f7c1b13f = <a href="type/InputUser">InputUser</a>;
+
+<a id="constructor-inputPhoneContact" href="constructor/inputPhoneContact">inputPhoneContact</a>#f392b7f4 client_id:<a href="type/long">long</a> phone:<a href="type/string">string</a> first_name:<a href="type/string">string</a> last_name:<a href="type/string">string</a> = <a href="type/InputContact">InputContact</a>;
+
+<a id="constructor-inputFile" href="constructor/inputFile">inputFile</a>#f52ff27f id:<a href="type/long">long</a> parts:<a href="type/int">int</a> name:<a href="type/string">string</a> md5_checksum:<a href="type/string">string</a> = <a href="type/InputFile">InputFile</a>;
+
+<a id="constructor-inputMediaEmpty" href="constructor/inputMediaEmpty">inputMediaEmpty</a>#9664f57f = <a href="type/InputMedia">InputMedia</a>;
+
+<a id="constructor-inputMediaUploadedPhoto" href="constructor/inputMediaUploadedPhoto">inputMediaUploadedPhoto</a>#f7aff1c0 file:<a href="type/InputFile">InputFile</a> caption:<a href="type/string">string</a> = <a href="type/InputMedia">InputMedia</a>;
+
+<a id="constructor-inputMediaPhoto" href="constructor/inputMediaPhoto">inputMediaPhoto</a>#e9bfb4f3 id:<a href="type/InputPhoto">InputPhoto</a> caption:<a href="type/string">string</a> = <a href="type/InputMedia">InputMedia</a>;
+
+<a id="constructor-inputMediaGeoPoint" href="constructor/inputMediaGeoPoint">inputMediaGeoPoint</a>#f9c44144 geo_point:<a href="type/InputGeoPoint">InputGeoPoint</a> = <a href="type/InputMedia">InputMedia</a>;
+
+<a id="constructor-inputMediaContact" href="constructor/inputMediaContact">inputMediaContact</a>#a6e45987 phone_number:<a href="type/string">string</a> first_name:<a href="type/string">string</a> last_name:<a href="type/string">string</a> = <a href="type/InputMedia">InputMedia</a>;
+
+<a id="constructor-inputMediaUploadedVideo" href="constructor/inputMediaUploadedVideo">inputMediaUploadedVideo</a>#82713fdf file:<a href="type/InputFile">InputFile</a> duration:<a href="type/int">int</a> w:<a href="type/int">int</a> h:<a href="type/int">int</a> mime_type:<a href="type/string">string</a> caption:<a href="type/string">string</a> = <a href="type/InputMedia">InputMedia</a>;
+
+<a id="constructor-inputMediaUploadedThumbVideo" href="constructor/inputMediaUploadedThumbVideo">inputMediaUploadedThumbVideo</a>#7780ddf9 file:<a href="type/InputFile">InputFile</a> thumb:<a href="type/InputFile">InputFile</a> duration:<a href="type/int">int</a> w:<a href="type/int">int</a> h:<a href="type/int">int</a> mime_type:<a href="type/string">string</a> caption:<a href="type/string">string</a> = <a href="type/InputMedia">InputMedia</a>;
+
+<a id="constructor-inputMediaVideo" href="constructor/inputMediaVideo">inputMediaVideo</a>#936a4ebd id:<a href="type/InputVideo">InputVideo</a> caption:<a href="type/string">string</a> = <a href="type/InputMedia">InputMedia</a>;
+
+<a id="constructor-inputChatPhotoEmpty" href="constructor/inputChatPhotoEmpty">inputChatPhotoEmpty</a>#1ca48f57 = <a href="type/InputChatPhoto">InputChatPhoto</a>;
+
+<a id="constructor-inputChatUploadedPhoto" href="constructor/inputChatUploadedPhoto">inputChatUploadedPhoto</a>#94254732 file:<a href="type/InputFile">InputFile</a> crop:<a href="type/InputPhotoCrop">InputPhotoCrop</a> = <a href="type/InputChatPhoto">InputChatPhoto</a>;
+
+<a id="constructor-inputChatPhoto" href="constructor/inputChatPhoto">inputChatPhoto</a>#b2e1bf08 id:<a href="type/InputPhoto">InputPhoto</a> crop:<a href="type/InputPhotoCrop">InputPhotoCrop</a> = <a href="type/InputChatPhoto">InputChatPhoto</a>;
+
+<a id="constructor-inputGeoPointEmpty" href="constructor/inputGeoPointEmpty">inputGeoPointEmpty</a>#e4c123d6 = <a href="type/InputGeoPoint">InputGeoPoint</a>;
+
+<a id="constructor-inputGeoPoint" href="constructor/inputGeoPoint">inputGeoPoint</a>#f3b7acc9 lat:<a href="type/double">double</a> long:<a href="type/double">double</a> = <a href="type/InputGeoPoint">InputGeoPoint</a>;
+
+<a id="constructor-inputPhotoEmpty" href="constructor/inputPhotoEmpty">inputPhotoEmpty</a>#1cd7bf0d = <a href="type/InputPhoto">InputPhoto</a>;
+
+<a id="constructor-inputPhoto" href="constructor/inputPhoto">inputPhoto</a>#fb95c6c4 id:<a href="type/long">long</a> access_hash:<a href="type/long">long</a> = <a href="type/InputPhoto">InputPhoto</a>;
+
+<a id="constructor-inputVideoEmpty" href="constructor/inputVideoEmpty">inputVideoEmpty</a>#5508ec75 = <a href="type/InputVideo">InputVideo</a>;
+
+<a id="constructor-inputVideo" href="constructor/inputVideo">inputVideo</a>#ee579652 id:<a href="type/long">long</a> access_hash:<a href="type/long">long</a> = <a href="type/InputVideo">InputVideo</a>;
+
+<a id="constructor-inputFileLocation" href="constructor/inputFileLocation">inputFileLocation</a>#14637196 volume_id:<a href="type/long">long</a> local_id:<a href="type/int">int</a> secret:<a href="type/long">long</a> = <a href="type/InputFileLocation">InputFileLocation</a>;
+
+<a id="constructor-inputVideoFileLocation" href="constructor/inputVideoFileLocation">inputVideoFileLocation</a>#3d0364ec id:<a href="type/long">long</a> access_hash:<a href="type/long">long</a> = <a href="type/InputFileLocation">InputFileLocation</a>;
+
+<a id="constructor-inputPhotoCropAuto" href="constructor/inputPhotoCropAuto">inputPhotoCropAuto</a>#ade6b004 = <a href="type/InputPhotoCrop">InputPhotoCrop</a>;
+
+<a id="constructor-inputPhotoCrop" href="constructor/inputPhotoCrop">inputPhotoCrop</a>#d9915325 crop_left:<a href="type/double">double</a> crop_top:<a href="type/double">double</a> crop_width:<a href="type/double">double</a> = <a href="type/InputPhotoCrop">InputPhotoCrop</a>;
+
+<a id="constructor-inputAppEvent" href="constructor/inputAppEvent">inputAppEvent</a>#770656a8 time:<a href="type/double">double</a> type:<a href="type/string">string</a> peer:<a href="type/long">long</a> data:<a href="type/string">string</a> = <a href="type/InputAppEvent">InputAppEvent</a>;
+
+<a id="constructor-peerUser" href="constructor/peerUser">peerUser</a>#9db1bc6d user_id:<a href="type/int">int</a> = <a href="type/Peer">Peer</a>;
+
+<a id="constructor-peerChat" href="constructor/peerChat">peerChat</a>#bad0e5bb chat_id:<a href="type/int">int</a> = <a href="type/Peer">Peer</a>;
+
+<a id="constructor-storage.fileUnknown" href="constructor/storage.fileUnknown">storage.fileUnknown</a>#aa963b05 = <a href="type/storage.FileType">storage.FileType</a>;
+
+<a id="constructor-storage.fileJpeg" href="constructor/storage.fileJpeg">storage.fileJpeg</a>#7efe0e = <a href="type/storage.FileType">storage.FileType</a>;
+
+<a id="constructor-storage.fileGif" href="constructor/storage.fileGif">storage.fileGif</a>#cae1aadf = <a href="type/storage.FileType">storage.FileType</a>;
+
+<a id="constructor-storage.filePng" href="constructor/storage.filePng">storage.filePng</a>#a4f63c0 = <a href="type/storage.FileType">storage.FileType</a>;
+
+<a id="constructor-storage.fileMp3" href="constructor/storage.fileMp3">storage.fileMp3</a>#528a0677 = <a href="type/storage.FileType">storage.FileType</a>;
+
+<a id="constructor-storage.fileMov" href="constructor/storage.fileMov">storage.fileMov</a>#4b09ebbc = <a href="type/storage.FileType">storage.FileType</a>;
+
+<a id="constructor-storage.filePartial" href="constructor/storage.filePartial">storage.filePartial</a>#40bc6f52 = <a href="type/storage.FileType">storage.FileType</a>;
+
+<a id="constructor-storage.fileMp4" href="constructor/storage.fileMp4">storage.fileMp4</a>#b3cea0e4 = <a href="type/storage.FileType">storage.FileType</a>;
+
+<a id="constructor-storage.fileWebp" href="constructor/storage.fileWebp">storage.fileWebp</a>#1081464c = <a href="type/storage.FileType">storage.FileType</a>;
+
+<a id="constructor-fileLocationUnavailable" href="constructor/fileLocationUnavailable">fileLocationUnavailable</a>#7c596b46 volume_id:<a href="type/long">long</a> local_id:<a href="type/int">int</a> secret:<a href="type/long">long</a> = <a href="type/FileLocation">FileLocation</a>;
+
+<a id="constructor-fileLocation" href="constructor/fileLocation">fileLocation</a>#53d69076 dc_id:<a href="type/int">int</a> volume_id:<a href="type/long">long</a> local_id:<a href="type/int">int</a> secret:<a href="type/long">long</a> = <a href="type/FileLocation">FileLocation</a>;
+
+<a id="constructor-userEmpty" href="constructor/userEmpty">userEmpty</a>#200250ba id:<a href="type/int">int</a> = <a href="type/User">User</a>;
+
+<a id="constructor-userProfilePhotoEmpty" href="constructor/userProfilePhotoEmpty">userProfilePhotoEmpty</a>#4f11bae1 = <a href="type/UserProfilePhoto">UserProfilePhoto</a>;
+
+<a id="constructor-userProfilePhoto" href="constructor/userProfilePhoto">userProfilePhoto</a>#d559d8c8 photo_id:<a href="type/long">long</a> photo_small:<a href="type/FileLocation">FileLocation</a> photo_big:<a href="type/FileLocation">FileLocation</a> = <a href="type/UserProfilePhoto">UserProfilePhoto</a>;
+
+<a id="constructor-userStatusEmpty" href="constructor/userStatusEmpty">userStatusEmpty</a>#9d05049 = <a href="type/UserStatus">UserStatus</a>;
+
+<a id="constructor-userStatusOnline" href="constructor/userStatusOnline">userStatusOnline</a>#edb93949 expires:<a href="type/int">int</a> = <a href="type/UserStatus">UserStatus</a>;
+
+<a id="constructor-userStatusOffline" href="constructor/userStatusOffline">userStatusOffline</a>#8c703f was_online:<a href="type/int">int</a> = <a href="type/UserStatus">UserStatus</a>;
+
+<a id="constructor-chatEmpty" href="constructor/chatEmpty">chatEmpty</a>#9ba2d800 id:<a href="type/int">int</a> = <a href="type/Chat">Chat</a>;
+
+<a id="constructor-chat" href="constructor/chat">chat</a>#d91cdd54 creator:<a href="type/true">true</a> kicked:<a href="type/true">true</a> left:<a href="type/true">true</a> admins_enabled:<a href="type/true">true</a> admin:<a href="type/true">true</a> deactivated:<a href="type/true">true</a> id:<a href="type/int">int</a> title:<a href="type/string">string</a> photo:<a href="type/ChatPhoto">ChatPhoto</a> participants_count:<a href="type/int">int</a> date:<a href="type/int">int</a> version:<a href="type/int">int</a> migrated_to:<a href="type/InputChannel">InputChannel</a> = <a href="type/Chat">Chat</a>;
+
+<a id="constructor-chatForbidden" href="constructor/chatForbidden">chatForbidden</a>#7328bdb id:<a href="type/int">int</a> title:<a href="type/string">string</a> = <a href="type/Chat">Chat</a>;
+
+<a id="constructor-chatFull" href="constructor/chatFull">chatFull</a>#2e02a614 id:<a href="type/int">int</a> participants:<a href="type/ChatParticipants">ChatParticipants</a> chat_photo:<a href="type/Photo">Photo</a> notify_settings:<a href="type/PeerNotifySettings">PeerNotifySettings</a> exported_invite:<a href="type/ExportedChatInvite">ExportedChatInvite</a> bot_info:<a href="type/BotInfo">Vector&lt;BotInfo&gt;</a> = <a href="type/ChatFull">ChatFull</a>;
+
+<a id="constructor-chatParticipant" href="constructor/chatParticipant">chatParticipant</a>#c8d7493e user_id:<a href="type/int">int</a> inviter_id:<a href="type/int">int</a> date:<a href="type/int">int</a> = <a href="type/ChatParticipant">ChatParticipant</a>;
+
+<a id="constructor-chatParticipantsForbidden" href="constructor/chatParticipantsForbidden">chatParticipantsForbidden</a>#fc900c2b chat_id:<a href="type/int">int</a> self_participant:<a href="type/ChatParticipant">ChatParticipant</a> = <a href="type/ChatParticipants">ChatParticipants</a>;
+
+<a id="constructor-chatParticipants" href="constructor/chatParticipants">chatParticipants</a>#3f460fed chat_id:<a href="type/int">int</a> participants:<a href="type/ChatParticipant">Vector&lt;ChatParticipant&gt;</a> version:<a href="type/int">int</a> = <a href="type/ChatParticipants">ChatParticipants</a>;
+
+<a id="constructor-chatPhotoEmpty" href="constructor/chatPhotoEmpty">chatPhotoEmpty</a>#37c1011c = <a href="type/ChatPhoto">ChatPhoto</a>;
+
+<a id="constructor-chatPhoto" href="constructor/chatPhoto">chatPhoto</a>#6153276a photo_small:<a href="type/FileLocation">FileLocation</a> photo_big:<a href="type/FileLocation">FileLocation</a> = <a href="type/ChatPhoto">ChatPhoto</a>;
+
+<a id="constructor-messageEmpty" href="constructor/messageEmpty">messageEmpty</a>#83e5de54 id:<a href="type/int">int</a> = <a href="type/Message">Message</a>;
+
+<a id="constructor-message" href="constructor/message">message</a>#c992e15c unread:<a href="type/true">true</a> out:<a href="type/true">true</a> mentioned:<a href="type/true">true</a> media_unread:<a href="type/true">true</a> id:<a href="type/int">int</a> from_id:<a href="type/int">int</a> to_id:<a href="type/Peer">Peer</a> fwd_from_id:<a href="type/Peer">Peer</a> fwd_date:<a href="type/int">int</a> via_bot_id:<a href="type/int">int</a> reply_to_msg_id:<a href="type/int">int</a> date:<a href="type/int">int</a> message:<a href="type/string">string</a> media:<a href="type/MessageMedia">MessageMedia</a> reply_markup:<a href="type/ReplyMarkup">ReplyMarkup</a> entities:<a href="type/MessageEntity">Vector&lt;MessageEntity&gt;</a> views:<a href="type/int">int</a> = <a href="type/Message">Message</a>;
+
+<a id="constructor-messageService" href="constructor/messageService">messageService</a>#c06b9607 unread:<a href="type/true">true</a> out:<a href="type/true">true</a> mentioned:<a href="type/true">true</a> media_unread:<a href="type/true">true</a> id:<a href="type/int">int</a> from_id:<a href="type/int">int</a> to_id:<a href="type/Peer">Peer</a> date:<a href="type/int">int</a> action:<a href="type/MessageAction">MessageAction</a> = <a href="type/Message">Message</a>;
+
+<a id="constructor-messageMediaEmpty" href="constructor/messageMediaEmpty">messageMediaEmpty</a>#3ded6320 = <a href="type/MessageMedia">MessageMedia</a>;
+
+<a id="constructor-messageMediaPhoto" href="constructor/messageMediaPhoto">messageMediaPhoto</a>#3d8ce53d photo:<a href="type/Photo">Photo</a> caption:<a href="type/string">string</a> = <a href="type/MessageMedia">MessageMedia</a>;
+
+<a id="constructor-messageMediaVideo" href="constructor/messageMediaVideo">messageMediaVideo</a>#5bcf1675 video:<a href="type/Video">Video</a> caption:<a href="type/string">string</a> = <a href="type/MessageMedia">MessageMedia</a>;
+
+<a id="constructor-messageMediaGeo" href="constructor/messageMediaGeo">messageMediaGeo</a>#56e0d474 geo:<a href="type/GeoPoint">GeoPoint</a> = <a href="type/MessageMedia">MessageMedia</a>;
+
+<a id="constructor-messageMediaContact" href="constructor/messageMediaContact">messageMediaContact</a>#5e7d2f39 phone_number:<a href="type/string">string</a> first_name:<a href="type/string">string</a> last_name:<a href="type/string">string</a> user_id:<a href="type/int">int</a> = <a href="type/MessageMedia">MessageMedia</a>;
+
+<a id="constructor-messageMediaUnsupported" href="constructor/messageMediaUnsupported">messageMediaUnsupported</a>#9f84f49e = <a href="type/MessageMedia">MessageMedia</a>;
+
+<a id="constructor-messageActionEmpty" href="constructor/messageActionEmpty">messageActionEmpty</a>#b6aef7b0 = <a href="type/MessageAction">MessageAction</a>;
+
+<a id="constructor-messageActionChatCreate" href="constructor/messageActionChatCreate">messageActionChatCreate</a>#a6638b9a title:<a href="type/string">string</a> users:<a href="type/int">Vector&lt;int&gt;</a> = <a href="type/MessageAction">MessageAction</a>;
+
+<a id="constructor-messageActionChatEditTitle" href="constructor/messageActionChatEditTitle">messageActionChatEditTitle</a>#b5a1ce5a title:<a href="type/string">string</a> = <a href="type/MessageAction">MessageAction</a>;
+
+<a id="constructor-messageActionChatEditPhoto" href="constructor/messageActionChatEditPhoto">messageActionChatEditPhoto</a>#7fcb13a8 photo:<a href="type/Photo">Photo</a> = <a href="type/MessageAction">MessageAction</a>;
+
+<a id="constructor-messageActionChatDeletePhoto" href="constructor/messageActionChatDeletePhoto">messageActionChatDeletePhoto</a>#95e3fbef = <a href="type/MessageAction">MessageAction</a>;
+
+<a id="constructor-messageActionChatAddUser" href="constructor/messageActionChatAddUser">messageActionChatAddUser</a>#488a7337 users:<a href="type/int">Vector&lt;int&gt;</a> = <a href="type/MessageAction">MessageAction</a>;
+
+<a id="constructor-messageActionChatDeleteUser" href="constructor/messageActionChatDeleteUser">messageActionChatDeleteUser</a>#b2ae9b0c user_id:<a href="type/int">int</a> = <a href="type/MessageAction">MessageAction</a>;
+
+<a id="constructor-dialog" href="constructor/dialog">dialog</a>#c1dd804a peer:<a href="type/Peer">Peer</a> top_message:<a href="type/int">int</a> read_inbox_max_id:<a href="type/int">int</a> unread_count:<a href="type/int">int</a> notify_settings:<a href="type/PeerNotifySettings">PeerNotifySettings</a> = <a href="type/Dialog">Dialog</a>;
+
+<a id="constructor-photoEmpty" href="constructor/photoEmpty">photoEmpty</a>#2331b22d id:<a href="type/long">long</a> = <a href="type/Photo">Photo</a>;
+
+<a id="constructor-photo" href="constructor/photo">photo</a>#cded42fe id:<a href="type/long">long</a> access_hash:<a href="type/long">long</a> date:<a href="type/int">int</a> sizes:<a href="type/PhotoSize">Vector&lt;PhotoSize&gt;</a> = <a href="type/Photo">Photo</a>;
+
+<a id="constructor-photoSizeEmpty" href="constructor/photoSizeEmpty">photoSizeEmpty</a>#e17e23c type:<a href="type/string">string</a> = <a href="type/PhotoSize">PhotoSize</a>;
+
+<a id="constructor-photoSize" href="constructor/photoSize">photoSize</a>#77bfb61b type:<a href="type/string">string</a> location:<a href="type/FileLocation">FileLocation</a> w:<a href="type/int">int</a> h:<a href="type/int">int</a> size:<a href="type/int">int</a> = <a href="type/PhotoSize">PhotoSize</a>;
+
+<a id="constructor-photoCachedSize" href="constructor/photoCachedSize">photoCachedSize</a>#e9a734fa type:<a href="type/string">string</a> location:<a href="type/FileLocation">FileLocation</a> w:<a href="type/int">int</a> h:<a href="type/int">int</a> bytes:<a href="type/bytes">bytes</a> = <a href="type/PhotoSize">PhotoSize</a>;
+
+<a id="constructor-videoEmpty" href="constructor/videoEmpty">videoEmpty</a>#c10658a8 id:<a href="type/long">long</a> = <a href="type/Video">Video</a>;
+
+<a id="constructor-video" href="constructor/video">video</a>#f72887d3 id:<a href="type/long">long</a> access_hash:<a href="type/long">long</a> date:<a href="type/int">int</a> duration:<a href="type/int">int</a> mime_type:<a href="type/string">string</a> size:<a href="type/int">int</a> thumb:<a href="type/PhotoSize">PhotoSize</a> dc_id:<a href="type/int">int</a> w:<a href="type/int">int</a> h:<a href="type/int">int</a> = <a href="type/Video">Video</a>;
+
+<a id="constructor-geoPointEmpty" href="constructor/geoPointEmpty">geoPointEmpty</a>#1117dd5f = <a href="type/GeoPoint">GeoPoint</a>;
+
+<a id="constructor-geoPoint" href="constructor/geoPoint">geoPoint</a>#2049d70c long:<a href="type/double">double</a> lat:<a href="type/double">double</a> = <a href="type/GeoPoint">GeoPoint</a>;
+
+<a id="constructor-auth.checkedPhone" href="constructor/auth.checkedPhone">auth.checkedPhone</a>#811ea28e phone_registered:<a href="type/Bool">Bool</a> = <a href="type/auth.CheckedPhone">auth.CheckedPhone</a>;
+
+<a id="constructor-auth.sentCode" href="constructor/auth.sentCode">auth.sentCode</a>#efed51d9 phone_registered:<a href="type/Bool">Bool</a> phone_code_hash:<a href="type/string">string</a> send_call_timeout:<a href="type/int">int</a> is_password:<a href="type/Bool">Bool</a> = <a href="type/auth.SentCode">auth.SentCode</a>;
+
+<a id="constructor-auth.authorization" href="constructor/auth.authorization">auth.authorization</a>#ff036af1 user:<a href="type/User">User</a> = <a href="type/auth.Authorization">auth.Authorization</a>;
+
+<a id="constructor-auth.exportedAuthorization" href="constructor/auth.exportedAuthorization">auth.exportedAuthorization</a>#df969c2d id:<a href="type/int">int</a> bytes:<a href="type/bytes">bytes</a> = <a href="type/auth.ExportedAuthorization">auth.ExportedAuthorization</a>;
+
+<a id="constructor-inputNotifyPeer" href="constructor/inputNotifyPeer">inputNotifyPeer</a>#b8bc5b0c peer:<a href="type/InputPeer">InputPeer</a> = <a href="type/InputNotifyPeer">InputNotifyPeer</a>;
+
+<a id="constructor-inputNotifyUsers" href="constructor/inputNotifyUsers">inputNotifyUsers</a>#193b4417 = <a href="type/InputNotifyPeer">InputNotifyPeer</a>;
+
+<a id="constructor-inputNotifyChats" href="constructor/inputNotifyChats">inputNotifyChats</a>#4a95e84e = <a href="type/InputNotifyPeer">InputNotifyPeer</a>;
+
+<a id="constructor-inputNotifyAll" href="constructor/inputNotifyAll">inputNotifyAll</a>#a429b886 = <a href="type/InputNotifyPeer">InputNotifyPeer</a>;
+
+<a id="constructor-inputPeerNotifySettings" href="constructor/inputPeerNotifySettings">inputPeerNotifySettings</a>#46a2ce98 mute_until:<a href="type/int">int</a> sound:<a href="type/string">string</a> show_previews:<a href="type/Bool">Bool</a> events_mask:<a href="type/int">int</a> = <a href="type/InputPeerNotifySettings">InputPeerNotifySettings</a>;
+
+<a id="constructor-peerNotifyEventsEmpty" href="constructor/peerNotifyEventsEmpty">peerNotifyEventsEmpty</a>#add53cb3 = <a href="type/PeerNotifyEvents">PeerNotifyEvents</a>;
+
+<a id="constructor-peerNotifyEventsAll" href="constructor/peerNotifyEventsAll">peerNotifyEventsAll</a>#6d1ded88 = <a href="type/PeerNotifyEvents">PeerNotifyEvents</a>;
+
+<a id="constructor-peerNotifySettingsEmpty" href="constructor/peerNotifySettingsEmpty">peerNotifySettingsEmpty</a>#70a68512 = <a href="type/PeerNotifySettings">PeerNotifySettings</a>;
+
+<a id="constructor-peerNotifySettings" href="constructor/peerNotifySettings">peerNotifySettings</a>#8d5e11ee mute_until:<a href="type/int">int</a> sound:<a href="type/string">string</a> show_previews:<a href="type/Bool">Bool</a> events_mask:<a href="type/int">int</a> = <a href="type/PeerNotifySettings">PeerNotifySettings</a>;
+
+<a id="constructor-wallPaper" href="constructor/wallPaper">wallPaper</a>#ccb03657 id:<a href="type/int">int</a> title:<a href="type/string">string</a> sizes:<a href="type/PhotoSize">Vector&lt;PhotoSize&gt;</a> color:<a href="type/int">int</a> = <a href="type/WallPaper">WallPaper</a>;
+
+<a id="constructor-userFull" href="constructor/userFull">userFull</a>#5a89ac5b user:<a href="type/User">User</a> link:<a href="type/contacts.Link">contacts.Link</a> profile_photo:<a href="type/Photo">Photo</a> notify_settings:<a href="type/PeerNotifySettings">PeerNotifySettings</a> blocked:<a href="type/Bool">Bool</a> bot_info:<a href="type/BotInfo">BotInfo</a> = <a href="type/UserFull">UserFull</a>;
+
+<a id="constructor-contact" href="constructor/contact">contact</a>#f911c994 user_id:<a href="type/int">int</a> mutual:<a href="type/Bool">Bool</a> = <a href="type/Contact">Contact</a>;
+
+<a id="constructor-importedContact" href="constructor/importedContact">importedContact</a>#d0028438 user_id:<a href="type/int">int</a> client_id:<a href="type/long">long</a> = <a href="type/ImportedContact">ImportedContact</a>;
+
+<a id="constructor-contactBlocked" href="constructor/contactBlocked">contactBlocked</a>#561bc879 user_id:<a href="type/int">int</a> date:<a href="type/int">int</a> = <a href="type/ContactBlocked">ContactBlocked</a>;
+
+<a id="constructor-contactStatus" href="constructor/contactStatus">contactStatus</a>#d3680c61 user_id:<a href="type/int">int</a> status:<a href="type/UserStatus">UserStatus</a> = <a href="type/ContactStatus">ContactStatus</a>;
+
+<a id="constructor-contacts.link" href="constructor/contacts.link">contacts.link</a>#3ace484c my_link:<a href="type/ContactLink">ContactLink</a> foreign_link:<a href="type/ContactLink">ContactLink</a> user:<a href="type/User">User</a> = <a href="type/contacts.Link">contacts.Link</a>;
+
+<a id="constructor-contacts.contacts" href="constructor/contacts.contacts">contacts.contacts</a>#6f8b8cb2 contacts:<a href="type/Contact">Vector&lt;Contact&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/contacts.Contacts">contacts.Contacts</a>;
+
+<a id="constructor-contacts.contactsNotModified" href="constructor/contacts.contactsNotModified">contacts.contactsNotModified</a>#b74ba9d2 = <a href="type/contacts.Contacts">contacts.Contacts</a>;
+
+<a id="constructor-contacts.importedContacts" href="constructor/contacts.importedContacts">contacts.importedContacts</a>#ad524315 imported:<a href="type/ImportedContact">Vector&lt;ImportedContact&gt;</a> retry_contacts:<a href="type/long">Vector&lt;long&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/contacts.ImportedContacts">contacts.ImportedContacts</a>;
+
+<a id="constructor-contacts.blocked" href="constructor/contacts.blocked">contacts.blocked</a>#1c138d15 blocked:<a href="type/ContactBlocked">Vector&lt;ContactBlocked&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/contacts.Blocked">contacts.Blocked</a>;
+
+<a id="constructor-contacts.blockedSlice" href="constructor/contacts.blockedSlice">contacts.blockedSlice</a>#900802a1 count:<a href="type/int">int</a> blocked:<a href="type/ContactBlocked">Vector&lt;ContactBlocked&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/contacts.Blocked">contacts.Blocked</a>;
+
+<a id="constructor-contacts.found" href="constructor/contacts.found">contacts.found</a>#1aa1f784 results:<a href="type/Peer">Vector&lt;Peer&gt;</a> chats:<a href="type/Chat">Vector&lt;Chat&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/contacts.Found">contacts.Found</a>;
+
+<a id="constructor-messages.dialogs" href="constructor/messages.dialogs">messages.dialogs</a>#15ba6c40 dialogs:<a href="type/Dialog">Vector&lt;Dialog&gt;</a> messages:<a href="type/Message">Vector&lt;Message&gt;</a> chats:<a href="type/Chat">Vector&lt;Chat&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/messages.Dialogs">messages.Dialogs</a>;
+
+<a id="constructor-messages.dialogsSlice" href="constructor/messages.dialogsSlice">messages.dialogsSlice</a>#71e094f3 count:<a href="type/int">int</a> dialogs:<a href="type/Dialog">Vector&lt;Dialog&gt;</a> messages:<a href="type/Message">Vector&lt;Message&gt;</a> chats:<a href="type/Chat">Vector&lt;Chat&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/messages.Dialogs">messages.Dialogs</a>;
+
+<a id="constructor-messages.messages" href="constructor/messages.messages">messages.messages</a>#8c718e87 messages:<a href="type/Message">Vector&lt;Message&gt;</a> chats:<a href="type/Chat">Vector&lt;Chat&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/messages.Messages">messages.Messages</a>;
+
+<a id="constructor-messages.messagesSlice" href="constructor/messages.messagesSlice">messages.messagesSlice</a>#b446ae3 count:<a href="type/int">int</a> messages:<a href="type/Message">Vector&lt;Message&gt;</a> chats:<a href="type/Chat">Vector&lt;Chat&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/messages.Messages">messages.Messages</a>;
+
+<a id="constructor-messages.chats" href="constructor/messages.chats">messages.chats</a>#64ff9fd5 chats:<a href="type/Chat">Vector&lt;Chat&gt;</a> = <a href="type/messages.Chats">messages.Chats</a>;
+
+<a id="constructor-messages.chatFull" href="constructor/messages.chatFull">messages.chatFull</a>#e5d7d19c full_chat:<a href="type/ChatFull">ChatFull</a> chats:<a href="type/Chat">Vector&lt;Chat&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/messages.ChatFull">messages.ChatFull</a>;
+
+<a id="constructor-messages.affectedHistory" href="constructor/messages.affectedHistory">messages.affectedHistory</a>#b45c69d1 pts:<a href="type/int">int</a> pts_count:<a href="type/int">int</a> offset:<a href="type/int">int</a> = <a href="type/messages.AffectedHistory">messages.AffectedHistory</a>;
+
+<a id="constructor-inputMessagesFilterEmpty" href="constructor/inputMessagesFilterEmpty">inputMessagesFilterEmpty</a>#57e2f66c = <a href="type/MessagesFilter">MessagesFilter</a>;
+
+<a id="constructor-inputMessagesFilterPhotos" href="constructor/inputMessagesFilterPhotos">inputMessagesFilterPhotos</a>#9609a51c = <a href="type/MessagesFilter">MessagesFilter</a>;
+
+<a id="constructor-inputMessagesFilterVideo" href="constructor/inputMessagesFilterVideo">inputMessagesFilterVideo</a>#9fc00e65 = <a href="type/MessagesFilter">MessagesFilter</a>;
+
+<a id="constructor-inputMessagesFilterPhotoVideo" href="constructor/inputMessagesFilterPhotoVideo">inputMessagesFilterPhotoVideo</a>#56e9f0e4 = <a href="type/MessagesFilter">MessagesFilter</a>;
+
+<a id="constructor-updateNewMessage" href="constructor/updateNewMessage">updateNewMessage</a>#1f2b0afd message:<a href="type/Message">Message</a> pts:<a href="type/int">int</a> pts_count:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateMessageID" href="constructor/updateMessageID">updateMessageID</a>#4e90bfd6 id:<a href="type/int">int</a> random_id:<a href="type/long">long</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateDeleteMessages" href="constructor/updateDeleteMessages">updateDeleteMessages</a>#a20db0e5 messages:<a href="type/int">Vector&lt;int&gt;</a> pts:<a href="type/int">int</a> pts_count:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateUserTyping" href="constructor/updateUserTyping">updateUserTyping</a>#5c486927 user_id:<a href="type/int">int</a> action:<a href="type/SendMessageAction">SendMessageAction</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateChatUserTyping" href="constructor/updateChatUserTyping">updateChatUserTyping</a>#9a65ea1f chat_id:<a href="type/int">int</a> user_id:<a href="type/int">int</a> action:<a href="type/SendMessageAction">SendMessageAction</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateChatParticipants" href="constructor/updateChatParticipants">updateChatParticipants</a>#7761198 participants:<a href="type/ChatParticipants">ChatParticipants</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateUserStatus" href="constructor/updateUserStatus">updateUserStatus</a>#1bfbd823 user_id:<a href="type/int">int</a> status:<a href="type/UserStatus">UserStatus</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateUserName" href="constructor/updateUserName">updateUserName</a>#a7332b73 user_id:<a href="type/int">int</a> first_name:<a href="type/string">string</a> last_name:<a href="type/string">string</a> username:<a href="type/string">string</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateUserPhoto" href="constructor/updateUserPhoto">updateUserPhoto</a>#95313b0c user_id:<a href="type/int">int</a> date:<a href="type/int">int</a> photo:<a href="type/UserProfilePhoto">UserProfilePhoto</a> previous:<a href="type/Bool">Bool</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateContactRegistered" href="constructor/updateContactRegistered">updateContactRegistered</a>#2575bbb9 user_id:<a href="type/int">int</a> date:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateContactLink" href="constructor/updateContactLink">updateContactLink</a>#9d2e67c5 user_id:<a href="type/int">int</a> my_link:<a href="type/ContactLink">ContactLink</a> foreign_link:<a href="type/ContactLink">ContactLink</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateNewAuthorization" href="constructor/updateNewAuthorization">updateNewAuthorization</a>#8f06529a auth_key_id:<a href="type/long">long</a> date:<a href="type/int">int</a> device:<a href="type/string">string</a> location:<a href="type/string">string</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updates.state" href="constructor/updates.state">updates.state</a>#a56c2a3e pts:<a href="type/int">int</a> qts:<a href="type/int">int</a> date:<a href="type/int">int</a> seq:<a href="type/int">int</a> unread_count:<a href="type/int">int</a> = <a href="type/updates.State">updates.State</a>;
+
+<a id="constructor-updates.differenceEmpty" href="constructor/updates.differenceEmpty">updates.differenceEmpty</a>#5d75a138 date:<a href="type/int">int</a> seq:<a href="type/int">int</a> = <a href="type/updates.Difference">updates.Difference</a>;
+
+<a id="constructor-updates.difference" href="constructor/updates.difference">updates.difference</a>#f49ca0 new_messages:<a href="type/Message">Vector&lt;Message&gt;</a> new_encrypted_messages:<a href="type/EncryptedMessage">Vector&lt;EncryptedMessage&gt;</a> other_updates:<a href="type/Update">Vector&lt;Update&gt;</a> chats:<a href="type/Chat">Vector&lt;Chat&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> state:<a href="type/updates.State">updates.State</a> = <a href="type/updates.Difference">updates.Difference</a>;
+
+<a id="constructor-updates.differenceSlice" href="constructor/updates.differenceSlice">updates.differenceSlice</a>#a8fb1981 new_messages:<a href="type/Message">Vector&lt;Message&gt;</a> new_encrypted_messages:<a href="type/EncryptedMessage">Vector&lt;EncryptedMessage&gt;</a> other_updates:<a href="type/Update">Vector&lt;Update&gt;</a> chats:<a href="type/Chat">Vector&lt;Chat&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> intermediate_state:<a href="type/updates.State">updates.State</a> = <a href="type/updates.Difference">updates.Difference</a>;
+
+<a id="constructor-updatesTooLong" href="constructor/updatesTooLong">updatesTooLong</a>#e317af7e = <a href="type/Updates">Updates</a>;
+
+<a id="constructor-updateShortMessage" href="constructor/updateShortMessage">updateShortMessage</a>#13e4deaa unread:<a href="type/true">true</a> out:<a href="type/true">true</a> mentioned:<a href="type/true">true</a> media_unread:<a href="type/true">true</a> id:<a href="type/int">int</a> user_id:<a href="type/int">int</a> message:<a href="type/string">string</a> pts:<a href="type/int">int</a> pts_count:<a href="type/int">int</a> date:<a href="type/int">int</a> fwd_from_id:<a href="type/Peer">Peer</a> fwd_date:<a href="type/int">int</a> via_bot_id:<a href="type/int">int</a> reply_to_msg_id:<a href="type/int">int</a> entities:<a href="type/MessageEntity">Vector&lt;MessageEntity&gt;</a> = <a href="type/Updates">Updates</a>;
+
+<a id="constructor-updateShortChatMessage" href="constructor/updateShortChatMessage">updateShortChatMessage</a>#248afa62 unread:<a href="type/true">true</a> out:<a href="type/true">true</a> mentioned:<a href="type/true">true</a> media_unread:<a href="type/true">true</a> id:<a href="type/int">int</a> from_id:<a href="type/int">int</a> chat_id:<a href="type/int">int</a> message:<a href="type/string">string</a> pts:<a href="type/int">int</a> pts_count:<a href="type/int">int</a> date:<a href="type/int">int</a> fwd_from_id:<a href="type/Peer">Peer</a> fwd_date:<a href="type/int">int</a> via_bot_id:<a href="type/int">int</a> reply_to_msg_id:<a href="type/int">int</a> entities:<a href="type/MessageEntity">Vector&lt;MessageEntity&gt;</a> = <a href="type/Updates">Updates</a>;
+
+<a id="constructor-updateShort" href="constructor/updateShort">updateShort</a>#78d4dec1 update:<a href="type/Update">Update</a> date:<a href="type/int">int</a> = <a href="type/Updates">Updates</a>;
+
+<a id="constructor-updatesCombined" href="constructor/updatesCombined">updatesCombined</a>#725b04c3 updates:<a href="type/Update">Vector&lt;Update&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> chats:<a href="type/Chat">Vector&lt;Chat&gt;</a> date:<a href="type/int">int</a> seq_start:<a href="type/int">int</a> seq:<a href="type/int">int</a> = <a href="type/Updates">Updates</a>;
+
+<a id="constructor-updates" href="constructor/updates">updates</a>#74ae4240 updates:<a href="type/Update">Vector&lt;Update&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> chats:<a href="type/Chat">Vector&lt;Chat&gt;</a> date:<a href="type/int">int</a> seq:<a href="type/int">int</a> = <a href="type/Updates">Updates</a>;
+
+<a id="constructor-photos.photo" href="constructor/photos.photo">photos.photo</a>#20212ca8 photo:<a href="type/Photo">Photo</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/photos.Photo">photos.Photo</a>;
+
+<a id="constructor-upload.file" href="constructor/upload.file">upload.file</a>#96a18d5 type:<a href="type/storage.FileType">storage.FileType</a> mtime:<a href="type/int">int</a> bytes:<a href="type/bytes">bytes</a> = <a href="type/upload.File">upload.File</a>;
+
+<a id="constructor-dcOption" href="constructor/dcOption">dcOption</a>#5d8c6cc ipv6:<a href="type/true">true</a> media_only:<a href="type/true">true</a> id:<a href="type/int">int</a> ip_address:<a href="type/string">string</a> port:<a href="type/int">int</a> = <a href="type/DcOption">DcOption</a>;
+
+<a id="constructor-config" href="constructor/config">config</a>#6bbc5f8 date:<a href="type/int">int</a> expires:<a href="type/int">int</a> test_mode:<a href="type/Bool">Bool</a> this_dc:<a href="type/int">int</a> dc_options:<a href="type/DcOption">Vector&lt;DcOption&gt;</a> chat_size_max:<a href="type/int">int</a> megagroup_size_max:<a href="type/int">int</a> forwarded_count_max:<a href="type/int">int</a> online_update_period_ms:<a href="type/int">int</a> offline_blur_timeout_ms:<a href="type/int">int</a> offline_idle_timeout_ms:<a href="type/int">int</a> online_cloud_timeout_ms:<a href="type/int">int</a> notify_cloud_delay_ms:<a href="type/int">int</a> notify_default_delay_ms:<a href="type/int">int</a> chat_big_size:<a href="type/int">int</a> push_chat_period_ms:<a href="type/int">int</a> push_chat_limit:<a href="type/int">int</a> saved_gifs_limit:<a href="type/int">int</a> disabled_features:<a href="type/DisabledFeature">Vector&lt;DisabledFeature&gt;</a> = <a href="type/Config">Config</a>;
+
+<a id="constructor-nearestDc" href="constructor/nearestDc">nearestDc</a>#8e1a1775 country:<a href="type/string">string</a> this_dc:<a href="type/int">int</a> nearest_dc:<a href="type/int">int</a> = <a href="type/NearestDc">NearestDc</a>;
+
+<a id="constructor-help.appUpdate" href="constructor/help.appUpdate">help.appUpdate</a>#8987f311 id:<a href="type/int">int</a> critical:<a href="type/Bool">Bool</a> url:<a href="type/string">string</a> text:<a href="type/string">string</a> = <a href="type/help.AppUpdate">help.AppUpdate</a>;
+
+<a id="constructor-help.noAppUpdate" href="constructor/help.noAppUpdate">help.noAppUpdate</a>#c45a6536 = <a href="type/help.AppUpdate">help.AppUpdate</a>;
+
+<a id="constructor-help.inviteText" href="constructor/help.inviteText">help.inviteText</a>#18cb9f78 message:<a href="type/string">string</a> = <a href="type/help.InviteText">help.InviteText</a>;
+
+<a id="constructor-inputPeerNotifyEventsEmpty" href="constructor/inputPeerNotifyEventsEmpty">inputPeerNotifyEventsEmpty</a>#f03064d8 = <a href="type/InputPeerNotifyEvents">InputPeerNotifyEvents</a>;
+
+<a id="constructor-inputPeerNotifyEventsAll" href="constructor/inputPeerNotifyEventsAll">inputPeerNotifyEventsAll</a>#e86a2c74 = <a href="type/InputPeerNotifyEvents">InputPeerNotifyEvents</a>;
+
+<a id="constructor-photos.photos" href="constructor/photos.photos">photos.photos</a>#8dca6aa5 photos:<a href="type/Photo">Vector&lt;Photo&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/photos.Photos">photos.Photos</a>;
+
+<a id="constructor-photos.photosSlice" href="constructor/photos.photosSlice">photos.photosSlice</a>#15051f54 count:<a href="type/int">int</a> photos:<a href="type/Photo">Vector&lt;Photo&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/photos.Photos">photos.Photos</a>;
+
+<a id="constructor-wallPaperSolid" href="constructor/wallPaperSolid">wallPaperSolid</a>#63117f24 id:<a href="type/int">int</a> title:<a href="type/string">string</a> bg_color:<a href="type/int">int</a> color:<a href="type/int">int</a> = <a href="type/WallPaper">WallPaper</a>;
+
+<a id="constructor-updateNewEncryptedMessage" href="constructor/updateNewEncryptedMessage">updateNewEncryptedMessage</a>#12bcbd9a message:<a href="type/EncryptedMessage">EncryptedMessage</a> qts:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateEncryptedChatTyping" href="constructor/updateEncryptedChatTyping">updateEncryptedChatTyping</a>#1710f156 chat_id:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateEncryption" href="constructor/updateEncryption">updateEncryption</a>#b4a2e88d chat:<a href="type/EncryptedChat">EncryptedChat</a> date:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateEncryptedMessagesRead" href="constructor/updateEncryptedMessagesRead">updateEncryptedMessagesRead</a>#38fe25b7 chat_id:<a href="type/int">int</a> max_date:<a href="type/int">int</a> date:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-encryptedChatEmpty" href="constructor/encryptedChatEmpty">encryptedChatEmpty</a>#ab7ec0a0 id:<a href="type/int">int</a> = <a href="type/EncryptedChat">EncryptedChat</a>;
+
+<a id="constructor-encryptedChatWaiting" href="constructor/encryptedChatWaiting">encryptedChatWaiting</a>#3bf703dc id:<a href="type/int">int</a> access_hash:<a href="type/long">long</a> date:<a href="type/int">int</a> admin_id:<a href="type/int">int</a> participant_id:<a href="type/int">int</a> = <a href="type/EncryptedChat">EncryptedChat</a>;
+
+<a id="constructor-encryptedChatRequested" href="constructor/encryptedChatRequested">encryptedChatRequested</a>#c878527e id:<a href="type/int">int</a> access_hash:<a href="type/long">long</a> date:<a href="type/int">int</a> admin_id:<a href="type/int">int</a> participant_id:<a href="type/int">int</a> g_a:<a href="type/bytes">bytes</a> = <a href="type/EncryptedChat">EncryptedChat</a>;
+
+<a id="constructor-encryptedChat" href="constructor/encryptedChat">encryptedChat</a>#fa56ce36 id:<a href="type/int">int</a> access_hash:<a href="type/long">long</a> date:<a href="type/int">int</a> admin_id:<a href="type/int">int</a> participant_id:<a href="type/int">int</a> g_a_or_b:<a href="type/bytes">bytes</a> key_fingerprint:<a href="type/long">long</a> = <a href="type/EncryptedChat">EncryptedChat</a>;
+
+<a id="constructor-encryptedChatDiscarded" href="constructor/encryptedChatDiscarded">encryptedChatDiscarded</a>#13d6dd27 id:<a href="type/int">int</a> = <a href="type/EncryptedChat">EncryptedChat</a>;
+
+<a id="constructor-inputEncryptedChat" href="constructor/inputEncryptedChat">inputEncryptedChat</a>#f141b5e1 chat_id:<a href="type/int">int</a> access_hash:<a href="type/long">long</a> = <a href="type/InputEncryptedChat">InputEncryptedChat</a>;
+
+<a id="constructor-encryptedFileEmpty" href="constructor/encryptedFileEmpty">encryptedFileEmpty</a>#c21f497e = <a href="type/EncryptedFile">EncryptedFile</a>;
+
+<a id="constructor-encryptedFile" href="constructor/encryptedFile">encryptedFile</a>#4a70994c id:<a href="type/long">long</a> access_hash:<a href="type/long">long</a> size:<a href="type/int">int</a> dc_id:<a href="type/int">int</a> key_fingerprint:<a href="type/int">int</a> = <a href="type/EncryptedFile">EncryptedFile</a>;
+
+<a id="constructor-inputEncryptedFileEmpty" href="constructor/inputEncryptedFileEmpty">inputEncryptedFileEmpty</a>#1837c364 = <a href="type/InputEncryptedFile">InputEncryptedFile</a>;
+
+<a id="constructor-inputEncryptedFileUploaded" href="constructor/inputEncryptedFileUploaded">inputEncryptedFileUploaded</a>#64bd0306 id:<a href="type/long">long</a> parts:<a href="type/int">int</a> md5_checksum:<a href="type/string">string</a> key_fingerprint:<a href="type/int">int</a> = <a href="type/InputEncryptedFile">InputEncryptedFile</a>;
+
+<a id="constructor-inputEncryptedFile" href="constructor/inputEncryptedFile">inputEncryptedFile</a>#5a17b5e5 id:<a href="type/long">long</a> access_hash:<a href="type/long">long</a> = <a href="type/InputEncryptedFile">InputEncryptedFile</a>;
+
+<a id="constructor-inputEncryptedFileLocation" href="constructor/inputEncryptedFileLocation">inputEncryptedFileLocation</a>#f5235d55 id:<a href="type/long">long</a> access_hash:<a href="type/long">long</a> = <a href="type/InputFileLocation">InputFileLocation</a>;
+
+<a id="constructor-encryptedMessage" href="constructor/encryptedMessage">encryptedMessage</a>#ed18c118 random_id:<a href="type/long">long</a> chat_id:<a href="type/int">int</a> date:<a href="type/int">int</a> bytes:<a href="type/bytes">bytes</a> file:<a href="type/EncryptedFile">EncryptedFile</a> = <a href="type/EncryptedMessage">EncryptedMessage</a>;
+
+<a id="constructor-encryptedMessageService" href="constructor/encryptedMessageService">encryptedMessageService</a>#23734b06 random_id:<a href="type/long">long</a> chat_id:<a href="type/int">int</a> date:<a href="type/int">int</a> bytes:<a href="type/bytes">bytes</a> = <a href="type/EncryptedMessage">EncryptedMessage</a>;
+
+<a id="constructor-messages.dhConfigNotModified" href="constructor/messages.dhConfigNotModified">messages.dhConfigNotModified</a>#c0e24635 random:<a href="type/bytes">bytes</a> = <a href="type/messages.DhConfig">messages.DhConfig</a>;
+
+<a id="constructor-messages.dhConfig" href="constructor/messages.dhConfig">messages.dhConfig</a>#2c221edd g:<a href="type/int">int</a> p:<a href="type/bytes">bytes</a> version:<a href="type/int">int</a> random:<a href="type/bytes">bytes</a> = <a href="type/messages.DhConfig">messages.DhConfig</a>;
+
+<a id="constructor-messages.sentEncryptedMessage" href="constructor/messages.sentEncryptedMessage">messages.sentEncryptedMessage</a>#560f8935 date:<a href="type/int">int</a> = <a href="type/messages.SentEncryptedMessage">messages.SentEncryptedMessage</a>;
+
+<a id="constructor-messages.sentEncryptedFile" href="constructor/messages.sentEncryptedFile">messages.sentEncryptedFile</a>#9493ff32 date:<a href="type/int">int</a> file:<a href="type/EncryptedFile">EncryptedFile</a> = <a href="type/messages.SentEncryptedMessage">messages.SentEncryptedMessage</a>;
+
+<a id="constructor-inputFileBig" href="constructor/inputFileBig">inputFileBig</a>#fa4f0bb5 id:<a href="type/long">long</a> parts:<a href="type/int">int</a> name:<a href="type/string">string</a> = <a href="type/InputFile">InputFile</a>;
+
+<a id="constructor-inputEncryptedFileBigUploaded" href="constructor/inputEncryptedFileBigUploaded">inputEncryptedFileBigUploaded</a>#2dc173c8 id:<a href="type/long">long</a> parts:<a href="type/int">int</a> key_fingerprint:<a href="type/int">int</a> = <a href="type/InputEncryptedFile">InputEncryptedFile</a>;
+
+<a id="constructor-storage.filePdf" href="constructor/storage.filePdf">storage.filePdf</a>#ae1e508d = <a href="type/storage.FileType">storage.FileType</a>;
+
+<a id="constructor-inputMessagesFilterAudio" href="constructor/inputMessagesFilterAudio">inputMessagesFilterAudio</a>#cfc87522 = <a href="type/MessagesFilter">MessagesFilter</a>;
+
+<a id="constructor-inputMessagesFilterDocument" href="constructor/inputMessagesFilterDocument">inputMessagesFilterDocument</a>#9eddf188 = <a href="type/MessagesFilter">MessagesFilter</a>;
+
+<a id="constructor-inputMessagesFilterPhotoVideoDocuments" href="constructor/inputMessagesFilterPhotoVideoDocuments">inputMessagesFilterPhotoVideoDocuments</a>#d95e73bb = <a href="type/MessagesFilter">MessagesFilter</a>;
+
+<a id="constructor-updateChatParticipantAdd" href="constructor/updateChatParticipantAdd">updateChatParticipantAdd</a>#ea4b0e5c chat_id:<a href="type/int">int</a> user_id:<a href="type/int">int</a> inviter_id:<a href="type/int">int</a> date:<a href="type/int">int</a> version:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateChatParticipantDelete" href="constructor/updateChatParticipantDelete">updateChatParticipantDelete</a>#6e5f8c22 chat_id:<a href="type/int">int</a> user_id:<a href="type/int">int</a> version:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateDcOptions" href="constructor/updateDcOptions">updateDcOptions</a>#8e5e9873 dc_options:<a href="type/DcOption">Vector&lt;DcOption&gt;</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-inputMediaUploadedAudio" href="constructor/inputMediaUploadedAudio">inputMediaUploadedAudio</a>#4e498cab file:<a href="type/InputFile">InputFile</a> duration:<a href="type/int">int</a> mime_type:<a href="type/string">string</a> = <a href="type/InputMedia">InputMedia</a>;
+
+<a id="constructor-inputMediaAudio" href="constructor/inputMediaAudio">inputMediaAudio</a>#89938781 id:<a href="type/InputAudio">InputAudio</a> = <a href="type/InputMedia">InputMedia</a>;
+
+<a id="constructor-inputMediaUploadedDocument" href="constructor/inputMediaUploadedDocument">inputMediaUploadedDocument</a>#1d89306d file:<a href="type/InputFile">InputFile</a> mime_type:<a href="type/string">string</a> attributes:<a href="type/DocumentAttribute">Vector&lt;DocumentAttribute&gt;</a> caption:<a href="type/string">string</a> = <a href="type/InputMedia">InputMedia</a>;
+
+<a id="constructor-inputMediaUploadedThumbDocument" href="constructor/inputMediaUploadedThumbDocument">inputMediaUploadedThumbDocument</a>#ad613491 file:<a href="type/InputFile">InputFile</a> thumb:<a href="type/InputFile">InputFile</a> mime_type:<a href="type/string">string</a> attributes:<a href="type/DocumentAttribute">Vector&lt;DocumentAttribute&gt;</a> caption:<a href="type/string">string</a> = <a href="type/InputMedia">InputMedia</a>;
+
+<a id="constructor-inputMediaDocument" href="constructor/inputMediaDocument">inputMediaDocument</a>#1a77f29c id:<a href="type/InputDocument">InputDocument</a> caption:<a href="type/string">string</a> = <a href="type/InputMedia">InputMedia</a>;
+
+<a id="constructor-messageMediaDocument" href="constructor/messageMediaDocument">messageMediaDocument</a>#f3e02ea8 document:<a href="type/Document">Document</a> caption:<a href="type/string">string</a> = <a href="type/MessageMedia">MessageMedia</a>;
+
+<a id="constructor-messageMediaAudio" href="constructor/messageMediaAudio">messageMediaAudio</a>#c6b68300 audio:<a href="type/Audio">Audio</a> = <a href="type/MessageMedia">MessageMedia</a>;
+
+<a id="constructor-inputAudioEmpty" href="constructor/inputAudioEmpty">inputAudioEmpty</a>#d95adc84 = <a href="type/InputAudio">InputAudio</a>;
+
+<a id="constructor-inputAudio" href="constructor/inputAudio">inputAudio</a>#77d440ff id:<a href="type/long">long</a> access_hash:<a href="type/long">long</a> = <a href="type/InputAudio">InputAudio</a>;
+
+<a id="constructor-inputDocumentEmpty" href="constructor/inputDocumentEmpty">inputDocumentEmpty</a>#72f0eaae = <a href="type/InputDocument">InputDocument</a>;
+
+<a id="constructor-inputDocument" href="constructor/inputDocument">inputDocument</a>#18798952 id:<a href="type/long">long</a> access_hash:<a href="type/long">long</a> = <a href="type/InputDocument">InputDocument</a>;
+
+<a id="constructor-inputAudioFileLocation" href="constructor/inputAudioFileLocation">inputAudioFileLocation</a>#74dc404d id:<a href="type/long">long</a> access_hash:<a href="type/long">long</a> = <a href="type/InputFileLocation">InputFileLocation</a>;
+
+<a id="constructor-inputDocumentFileLocation" href="constructor/inputDocumentFileLocation">inputDocumentFileLocation</a>#4e45abe9 id:<a href="type/long">long</a> access_hash:<a href="type/long">long</a> = <a href="type/InputFileLocation">InputFileLocation</a>;
+
+<a id="constructor-audioEmpty" href="constructor/audioEmpty">audioEmpty</a>#586988d8 id:<a href="type/long">long</a> = <a href="type/Audio">Audio</a>;
+
+<a id="constructor-audio" href="constructor/audio">audio</a>#f9e35055 id:<a href="type/long">long</a> access_hash:<a href="type/long">long</a> date:<a href="type/int">int</a> duration:<a href="type/int">int</a> mime_type:<a href="type/string">string</a> size:<a href="type/int">int</a> dc_id:<a href="type/int">int</a> = <a href="type/Audio">Audio</a>;
+
+<a id="constructor-documentEmpty" href="constructor/documentEmpty">documentEmpty</a>#36f8c871 id:<a href="type/long">long</a> = <a href="type/Document">Document</a>;
+
+<a id="constructor-document" href="constructor/document">document</a>#f9a39f4f id:<a href="type/long">long</a> access_hash:<a href="type/long">long</a> date:<a href="type/int">int</a> mime_type:<a href="type/string">string</a> size:<a href="type/int">int</a> thumb:<a href="type/PhotoSize">PhotoSize</a> dc_id:<a href="type/int">int</a> attributes:<a href="type/DocumentAttribute">Vector&lt;DocumentAttribute&gt;</a> = <a href="type/Document">Document</a>;
+
+<a id="constructor-help.support" href="constructor/help.support">help.support</a>#17c6b5f6 phone_number:<a href="type/string">string</a> user:<a href="type/User">User</a> = <a href="type/help.Support">help.Support</a>;
+
+<a id="constructor-notifyAll" href="constructor/notifyAll">notifyAll</a>#74d07c60 = <a href="type/NotifyPeer">NotifyPeer</a>;
+
+<a id="constructor-notifyChats" href="constructor/notifyChats">notifyChats</a>#c007cec3 = <a href="type/NotifyPeer">NotifyPeer</a>;
+
+<a id="constructor-notifyPeer" href="constructor/notifyPeer">notifyPeer</a>#9fd40bd8 peer:<a href="type/Peer">Peer</a> = <a href="type/NotifyPeer">NotifyPeer</a>;
+
+<a id="constructor-notifyUsers" href="constructor/notifyUsers">notifyUsers</a>#b4c83b4c = <a href="type/NotifyPeer">NotifyPeer</a>;
+
+<a id="constructor-updateUserBlocked" href="constructor/updateUserBlocked">updateUserBlocked</a>#80ece81a user_id:<a href="type/int">int</a> blocked:<a href="type/Bool">Bool</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateNotifySettings" href="constructor/updateNotifySettings">updateNotifySettings</a>#bec268ef peer:<a href="type/NotifyPeer">NotifyPeer</a> notify_settings:<a href="type/PeerNotifySettings">PeerNotifySettings</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-auth.sentAppCode" href="constructor/auth.sentAppCode">auth.sentAppCode</a>#e325edcf phone_registered:<a href="type/Bool">Bool</a> phone_code_hash:<a href="type/string">string</a> send_call_timeout:<a href="type/int">int</a> is_password:<a href="type/Bool">Bool</a> = <a href="type/auth.SentCode">auth.SentCode</a>;
+
+<a id="constructor-sendMessageTypingAction" href="constructor/sendMessageTypingAction">sendMessageTypingAction</a>#16bf744e = <a href="type/SendMessageAction">SendMessageAction</a>;
+
+<a id="constructor-sendMessageCancelAction" href="constructor/sendMessageCancelAction">sendMessageCancelAction</a>#fd5ec8f5 = <a href="type/SendMessageAction">SendMessageAction</a>;
+
+<a id="constructor-sendMessageRecordVideoAction" href="constructor/sendMessageRecordVideoAction">sendMessageRecordVideoAction</a>#a187d66f = <a href="type/SendMessageAction">SendMessageAction</a>;
+
+<a id="constructor-sendMessageUploadVideoAction" href="constructor/sendMessageUploadVideoAction">sendMessageUploadVideoAction</a>#e9763aec progress:<a href="type/int">int</a> = <a href="type/SendMessageAction">SendMessageAction</a>;
+
+<a id="constructor-sendMessageRecordAudioAction" href="constructor/sendMessageRecordAudioAction">sendMessageRecordAudioAction</a>#d52f73f7 = <a href="type/SendMessageAction">SendMessageAction</a>;
+
+<a id="constructor-sendMessageUploadAudioAction" href="constructor/sendMessageUploadAudioAction">sendMessageUploadAudioAction</a>#f351d7ab progress:<a href="type/int">int</a> = <a href="type/SendMessageAction">SendMessageAction</a>;
+
+<a id="constructor-sendMessageUploadPhotoAction" href="constructor/sendMessageUploadPhotoAction">sendMessageUploadPhotoAction</a>#d1d34a26 progress:<a href="type/int">int</a> = <a href="type/SendMessageAction">SendMessageAction</a>;
+
+<a id="constructor-sendMessageUploadDocumentAction" href="constructor/sendMessageUploadDocumentAction">sendMessageUploadDocumentAction</a>#aa0cd9e4 progress:<a href="type/int">int</a> = <a href="type/SendMessageAction">SendMessageAction</a>;
+
+<a id="constructor-sendMessageGeoLocationAction" href="constructor/sendMessageGeoLocationAction">sendMessageGeoLocationAction</a>#176f8ba1 = <a href="type/SendMessageAction">SendMessageAction</a>;
+
+<a id="constructor-sendMessageChooseContactAction" href="constructor/sendMessageChooseContactAction">sendMessageChooseContactAction</a>#628cbc6f = <a href="type/SendMessageAction">SendMessageAction</a>;
+
+<a id="constructor-updateServiceNotification" href="constructor/updateServiceNotification">updateServiceNotification</a>#382dd3e4 type:<a href="type/string">string</a> message:<a href="type/string">string</a> media:<a href="type/MessageMedia">MessageMedia</a> popup:<a href="type/Bool">Bool</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-userStatusRecently" href="constructor/userStatusRecently">userStatusRecently</a>#e26f42f1 = <a href="type/UserStatus">UserStatus</a>;
+
+<a id="constructor-userStatusLastWeek" href="constructor/userStatusLastWeek">userStatusLastWeek</a>#7bf09fc = <a href="type/UserStatus">UserStatus</a>;
+
+<a id="constructor-userStatusLastMonth" href="constructor/userStatusLastMonth">userStatusLastMonth</a>#77ebc742 = <a href="type/UserStatus">UserStatus</a>;
+
+<a id="constructor-updatePrivacy" href="constructor/updatePrivacy">updatePrivacy</a>#ee3b272a key:<a href="type/PrivacyKey">PrivacyKey</a> rules:<a href="type/PrivacyRule">Vector&lt;PrivacyRule&gt;</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-inputPrivacyKeyStatusTimestamp" href="constructor/inputPrivacyKeyStatusTimestamp">inputPrivacyKeyStatusTimestamp</a>#4f96cb18 = <a href="type/InputPrivacyKey">InputPrivacyKey</a>;
+
+<a id="constructor-privacyKeyStatusTimestamp" href="constructor/privacyKeyStatusTimestamp">privacyKeyStatusTimestamp</a>#bc2eab30 = <a href="type/PrivacyKey">PrivacyKey</a>;
+
+<a id="constructor-inputPrivacyValueAllowContacts" href="constructor/inputPrivacyValueAllowContacts">inputPrivacyValueAllowContacts</a>#d09e07b = <a href="type/InputPrivacyRule">InputPrivacyRule</a>;
+
+<a id="constructor-inputPrivacyValueAllowAll" href="constructor/inputPrivacyValueAllowAll">inputPrivacyValueAllowAll</a>#184b35ce = <a href="type/InputPrivacyRule">InputPrivacyRule</a>;
+
+<a id="constructor-inputPrivacyValueAllowUsers" href="constructor/inputPrivacyValueAllowUsers">inputPrivacyValueAllowUsers</a>#131cc67f users:<a href="type/InputUser">Vector&lt;InputUser&gt;</a> = <a href="type/InputPrivacyRule">InputPrivacyRule</a>;
+
+<a id="constructor-inputPrivacyValueDisallowContacts" href="constructor/inputPrivacyValueDisallowContacts">inputPrivacyValueDisallowContacts</a>#ba52007 = <a href="type/InputPrivacyRule">InputPrivacyRule</a>;
+
+<a id="constructor-inputPrivacyValueDisallowAll" href="constructor/inputPrivacyValueDisallowAll">inputPrivacyValueDisallowAll</a>#d66b66c9 = <a href="type/InputPrivacyRule">InputPrivacyRule</a>;
+
+<a id="constructor-inputPrivacyValueDisallowUsers" href="constructor/inputPrivacyValueDisallowUsers">inputPrivacyValueDisallowUsers</a>#90110467 users:<a href="type/InputUser">Vector&lt;InputUser&gt;</a> = <a href="type/InputPrivacyRule">InputPrivacyRule</a>;
+
+<a id="constructor-privacyValueAllowContacts" href="constructor/privacyValueAllowContacts">privacyValueAllowContacts</a>#fffe1bac = <a href="type/PrivacyRule">PrivacyRule</a>;
+
+<a id="constructor-privacyValueAllowAll" href="constructor/privacyValueAllowAll">privacyValueAllowAll</a>#65427b82 = <a href="type/PrivacyRule">PrivacyRule</a>;
+
+<a id="constructor-privacyValueAllowUsers" href="constructor/privacyValueAllowUsers">privacyValueAllowUsers</a>#4d5bbe0c users:<a href="type/int">Vector&lt;int&gt;</a> = <a href="type/PrivacyRule">PrivacyRule</a>;
+
+<a id="constructor-privacyValueDisallowContacts" href="constructor/privacyValueDisallowContacts">privacyValueDisallowContacts</a>#f888fa1a = <a href="type/PrivacyRule">PrivacyRule</a>;
+
+<a id="constructor-privacyValueDisallowAll" href="constructor/privacyValueDisallowAll">privacyValueDisallowAll</a>#8b73e763 = <a href="type/PrivacyRule">PrivacyRule</a>;
+
+<a id="constructor-privacyValueDisallowUsers" href="constructor/privacyValueDisallowUsers">privacyValueDisallowUsers</a>#c7f49b7 users:<a href="type/int">Vector&lt;int&gt;</a> = <a href="type/PrivacyRule">PrivacyRule</a>;
+
+<a id="constructor-account.privacyRules" href="constructor/account.privacyRules">account.privacyRules</a>#554abb6f rules:<a href="type/PrivacyRule">Vector&lt;PrivacyRule&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/account.PrivacyRules">account.PrivacyRules</a>;
+
+<a id="constructor-accountDaysTTL" href="constructor/accountDaysTTL">accountDaysTTL</a>#b8d0afdf days:<a href="type/int">int</a> = <a href="type/AccountDaysTTL">AccountDaysTTL</a>;
+
+<a id="constructor-account.sentChangePhoneCode" href="constructor/account.sentChangePhoneCode">account.sentChangePhoneCode</a>#a4f58c4c phone_code_hash:<a href="type/string">string</a> send_call_timeout:<a href="type/int">int</a> = <a href="type/account.SentChangePhoneCode">account.SentChangePhoneCode</a>;
+
+<a id="constructor-updateUserPhone" href="constructor/updateUserPhone">updateUserPhone</a>#12b9417b user_id:<a href="type/int">int</a> phone:<a href="type/string">string</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-disabledFeature" href="constructor/disabledFeature">disabledFeature</a>#ae636f24 feature:<a href="type/string">string</a> description:<a href="type/string">string</a> = <a href="type/DisabledFeature">DisabledFeature</a>;
+
+<a id="constructor-documentAttributeImageSize" href="constructor/documentAttributeImageSize">documentAttributeImageSize</a>#6c37c15c w:<a href="type/int">int</a> h:<a href="type/int">int</a> = <a href="type/DocumentAttribute">DocumentAttribute</a>;
+
+<a id="constructor-documentAttributeAnimated" href="constructor/documentAttributeAnimated">documentAttributeAnimated</a>#11b58939 = <a href="type/DocumentAttribute">DocumentAttribute</a>;
+
+<a id="constructor-documentAttributeSticker" href="constructor/documentAttributeSticker">documentAttributeSticker</a>#3a556302 alt:<a href="type/string">string</a> stickerset:<a href="type/InputStickerSet">InputStickerSet</a> = <a href="type/DocumentAttribute">DocumentAttribute</a>;
+
+<a id="constructor-documentAttributeVideo" href="constructor/documentAttributeVideo">documentAttributeVideo</a>#5910cccb duration:<a href="type/int">int</a> w:<a href="type/int">int</a> h:<a href="type/int">int</a> = <a href="type/DocumentAttribute">DocumentAttribute</a>;
+
+<a id="constructor-documentAttributeAudio" href="constructor/documentAttributeAudio">documentAttributeAudio</a>#ded218e0 duration:<a href="type/int">int</a> title:<a href="type/string">string</a> performer:<a href="type/string">string</a> = <a href="type/DocumentAttribute">DocumentAttribute</a>;
+
+<a id="constructor-documentAttributeFilename" href="constructor/documentAttributeFilename">documentAttributeFilename</a>#15590068 file_name:<a href="type/string">string</a> = <a href="type/DocumentAttribute">DocumentAttribute</a>;
+
+<a id="constructor-messages.stickersNotModified" href="constructor/messages.stickersNotModified">messages.stickersNotModified</a>#f1749a22 = <a href="type/messages.Stickers">messages.Stickers</a>;
+
+<a id="constructor-messages.stickers" href="constructor/messages.stickers">messages.stickers</a>#8a8ecd32 hash:<a href="type/string">string</a> stickers:<a href="type/Document">Vector&lt;Document&gt;</a> = <a href="type/messages.Stickers">messages.Stickers</a>;
+
+<a id="constructor-stickerPack" href="constructor/stickerPack">stickerPack</a>#12b299d4 emoticon:<a href="type/string">string</a> documents:<a href="type/long">Vector&lt;long&gt;</a> = <a href="type/StickerPack">StickerPack</a>;
+
+<a id="constructor-messages.allStickersNotModified" href="constructor/messages.allStickersNotModified">messages.allStickersNotModified</a>#e86602c3 = <a href="type/messages.AllStickers">messages.AllStickers</a>;
+
+<a id="constructor-messages.allStickers" href="constructor/messages.allStickers">messages.allStickers</a>#edfd405f hash:<a href="type/int">int</a> sets:<a href="type/StickerSet">Vector&lt;StickerSet&gt;</a> = <a href="type/messages.AllStickers">messages.AllStickers</a>;
+
+<a id="constructor-account.noPassword" href="constructor/account.noPassword">account.noPassword</a>#96dabc18 new_salt:<a href="type/bytes">bytes</a> email_unconfirmed_pattern:<a href="type/string">string</a> = <a href="type/account.Password">account.Password</a>;
+
+<a id="constructor-account.password" href="constructor/account.password">account.password</a>#7c18141c current_salt:<a href="type/bytes">bytes</a> new_salt:<a href="type/bytes">bytes</a> hint:<a href="type/string">string</a> has_recovery:<a href="type/Bool">Bool</a> email_unconfirmed_pattern:<a href="type/string">string</a> = <a href="type/account.Password">account.Password</a>;
+
+<a id="constructor-contactSuggested" href="constructor/contactSuggested">contactSuggested</a>#3de191a1 user_id:<a href="type/int">int</a> mutual_contacts:<a href="type/int">int</a> = <a href="type/ContactSuggested">ContactSuggested</a>;
+
+<a id="constructor-contacts.suggested" href="constructor/contacts.suggested">contacts.suggested</a>#5649dcc5 results:<a href="type/ContactSuggested">Vector&lt;ContactSuggested&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/contacts.Suggested">contacts.Suggested</a>;
+
+<a id="constructor-inputMessagesFilterPhotoVideoDocuments" href="constructor/inputMessagesFilterPhotoVideoDocuments">inputMessagesFilterPhotoVideoDocuments</a>#d95e73bb = <a href="type/MessagesFilter">MessagesFilter</a>;
+
+<a id="constructor-updateReadHistoryInbox" href="constructor/updateReadHistoryInbox">updateReadHistoryInbox</a>#9961fd5c peer:<a href="type/Peer">Peer</a> max_id:<a href="type/int">int</a> pts:<a href="type/int">int</a> pts_count:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateReadHistoryOutbox" href="constructor/updateReadHistoryOutbox">updateReadHistoryOutbox</a>#2f2f21bf peer:<a href="type/Peer">Peer</a> max_id:<a href="type/int">int</a> pts:<a href="type/int">int</a> pts_count:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-messages.affectedMessages" href="constructor/messages.affectedMessages">messages.affectedMessages</a>#84d19185 pts:<a href="type/int">int</a> pts_count:<a href="type/int">int</a> = <a href="type/messages.AffectedMessages">messages.AffectedMessages</a>;
+
+<a id="constructor-contactLinkUnknown" href="constructor/contactLinkUnknown">contactLinkUnknown</a>#5f4f9247 = <a href="type/ContactLink">ContactLink</a>;
+
+<a id="constructor-contactLinkNone" href="constructor/contactLinkNone">contactLinkNone</a>#feedd3ad = <a href="type/ContactLink">ContactLink</a>;
+
+<a id="constructor-contactLinkHasPhone" href="constructor/contactLinkHasPhone">contactLinkHasPhone</a>#268f3f59 = <a href="type/ContactLink">ContactLink</a>;
+
+<a id="constructor-contactLinkContact" href="constructor/contactLinkContact">contactLinkContact</a>#d502c2d0 = <a href="type/ContactLink">ContactLink</a>;
+
+<a id="constructor-updateWebPage" href="constructor/updateWebPage">updateWebPage</a>#7f891213 webpage:<a href="type/WebPage">WebPage</a> pts:<a href="type/int">int</a> pts_count:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-webPageEmpty" href="constructor/webPageEmpty">webPageEmpty</a>#eb1477e8 id:<a href="type/long">long</a> = <a href="type/WebPage">WebPage</a>;
+
+<a id="constructor-webPagePending" href="constructor/webPagePending">webPagePending</a>#c586da1c id:<a href="type/long">long</a> date:<a href="type/int">int</a> = <a href="type/WebPage">WebPage</a>;
+
+<a id="constructor-webPage" href="constructor/webPage">webPage</a>#ca820ed7 id:<a href="type/long">long</a> url:<a href="type/string">string</a> display_url:<a href="type/string">string</a> type:<a href="type/string">string</a> site_name:<a href="type/string">string</a> title:<a href="type/string">string</a> description:<a href="type/string">string</a> photo:<a href="type/Photo">Photo</a> embed_url:<a href="type/string">string</a> embed_type:<a href="type/string">string</a> embed_width:<a href="type/int">int</a> embed_height:<a href="type/int">int</a> duration:<a href="type/int">int</a> author:<a href="type/string">string</a> document:<a href="type/Document">Document</a> = <a href="type/WebPage">WebPage</a>;
+
+<a id="constructor-messageMediaWebPage" href="constructor/messageMediaWebPage">messageMediaWebPage</a>#a32dd600 webpage:<a href="type/WebPage">WebPage</a> = <a href="type/MessageMedia">MessageMedia</a>;
+
+<a id="constructor-authorization" href="constructor/authorization">authorization</a>#7bf2e6f6 hash:<a href="type/long">long</a> device_model:<a href="type/string">string</a> platform:<a href="type/string">string</a> system_version:<a href="type/string">string</a> api_id:<a href="type/int">int</a> app_name:<a href="type/string">string</a> app_version:<a href="type/string">string</a> date_created:<a href="type/int">int</a> date_active:<a href="type/int">int</a> ip:<a href="type/string">string</a> country:<a href="type/string">string</a> region:<a href="type/string">string</a> = <a href="type/Authorization">Authorization</a>;
+
+<a id="constructor-account.authorizations" href="constructor/account.authorizations">account.authorizations</a>#1250abde authorizations:<a href="type/Authorization">Vector&lt;Authorization&gt;</a> = <a href="type/account.Authorizations">account.Authorizations</a>;
+
+<a id="constructor-account.passwordSettings" href="constructor/account.passwordSettings">account.passwordSettings</a>#b7b72ab3 email:<a href="type/string">string</a> = <a href="type/account.PasswordSettings">account.PasswordSettings</a>;
+
+<a id="constructor-account.passwordInputSettings" href="constructor/account.passwordInputSettings">account.passwordInputSettings</a>#bcfc532c new_salt:<a href="type/bytes">bytes</a> new_password_hash:<a href="type/bytes">bytes</a> hint:<a href="type/string">string</a> email:<a href="type/string">string</a> = <a href="type/account.PasswordInputSettings">account.PasswordInputSettings</a>;
+
+<a id="constructor-auth.passwordRecovery" href="constructor/auth.passwordRecovery">auth.passwordRecovery</a>#137948a5 email_pattern:<a href="type/string">string</a> = <a href="type/auth.PasswordRecovery">auth.PasswordRecovery</a>;
+
+<a id="constructor-inputMediaVenue" href="constructor/inputMediaVenue">inputMediaVenue</a>#2827a81a geo_point:<a href="type/InputGeoPoint">InputGeoPoint</a> title:<a href="type/string">string</a> address:<a href="type/string">string</a> provider:<a href="type/string">string</a> venue_id:<a href="type/string">string</a> = <a href="type/InputMedia">InputMedia</a>;
+
+<a id="constructor-messageMediaVenue" href="constructor/messageMediaVenue">messageMediaVenue</a>#7912b71f geo:<a href="type/GeoPoint">GeoPoint</a> title:<a href="type/string">string</a> address:<a href="type/string">string</a> provider:<a href="type/string">string</a> venue_id:<a href="type/string">string</a> = <a href="type/MessageMedia">MessageMedia</a>;
+
+<a id="constructor-receivedNotifyMessage" href="constructor/receivedNotifyMessage">receivedNotifyMessage</a>#a384b779 id:<a href="type/int">int</a> = <a href="type/ReceivedNotifyMessage">ReceivedNotifyMessage</a>;
+
+<a id="constructor-chatInviteEmpty" href="constructor/chatInviteEmpty">chatInviteEmpty</a>#69df3769 = <a href="type/ExportedChatInvite">ExportedChatInvite</a>;
+
+<a id="constructor-chatInviteExported" href="constructor/chatInviteExported">chatInviteExported</a>#fc2e05bc link:<a href="type/string">string</a> = <a href="type/ExportedChatInvite">ExportedChatInvite</a>;
+
+<a id="constructor-chatInviteAlready" href="constructor/chatInviteAlready">chatInviteAlready</a>#5a686d7c chat:<a href="type/Chat">Chat</a> = <a href="type/ChatInvite">ChatInvite</a>;
+
+<a id="constructor-chatInvite" href="constructor/chatInvite">chatInvite</a>#93e99b60 channel:<a href="type/true">true</a> broadcast:<a href="type/true">true</a> public:<a href="type/true">true</a> megagroup:<a href="type/true">true</a> title:<a href="type/string">string</a> = <a href="type/ChatInvite">ChatInvite</a>;
+
+<a id="constructor-messageActionChatJoinedByLink" href="constructor/messageActionChatJoinedByLink">messageActionChatJoinedByLink</a>#f89cf5e8 inviter_id:<a href="type/int">int</a> = <a href="type/MessageAction">MessageAction</a>;
+
+<a id="constructor-updateReadMessagesContents" href="constructor/updateReadMessagesContents">updateReadMessagesContents</a>#68c13933 messages:<a href="type/int">Vector&lt;int&gt;</a> pts:<a href="type/int">int</a> pts_count:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-inputStickerSetEmpty" href="constructor/inputStickerSetEmpty">inputStickerSetEmpty</a>#ffb62b95 = <a href="type/InputStickerSet">InputStickerSet</a>;
+
+<a id="constructor-inputStickerSetID" href="constructor/inputStickerSetID">inputStickerSetID</a>#9de7a269 id:<a href="type/long">long</a> access_hash:<a href="type/long">long</a> = <a href="type/InputStickerSet">InputStickerSet</a>;
+
+<a id="constructor-inputStickerSetShortName" href="constructor/inputStickerSetShortName">inputStickerSetShortName</a>#861cc8a0 short_name:<a href="type/string">string</a> = <a href="type/InputStickerSet">InputStickerSet</a>;
+
+<a id="constructor-stickerSet" href="constructor/stickerSet">stickerSet</a>#cd303b41 installed:<a href="type/true">true</a> disabled:<a href="type/true">true</a> official:<a href="type/true">true</a> id:<a href="type/long">long</a> access_hash:<a href="type/long">long</a> title:<a href="type/string">string</a> short_name:<a href="type/string">string</a> count:<a href="type/int">int</a> hash:<a href="type/int">int</a> = <a href="type/StickerSet">StickerSet</a>;
+
+<a id="constructor-messages.stickerSet" href="constructor/messages.stickerSet">messages.stickerSet</a>#b60a24a6 set:<a href="type/StickerSet">StickerSet</a> packs:<a href="type/StickerPack">Vector&lt;StickerPack&gt;</a> documents:<a href="type/Document">Vector&lt;Document&gt;</a> = <a href="type/messages.StickerSet">messages.StickerSet</a>;
+
+<a id="constructor-inputMessagesFilterAudioDocuments" href="constructor/inputMessagesFilterAudioDocuments">inputMessagesFilterAudioDocuments</a>#5afbf764 = <a href="type/MessagesFilter">MessagesFilter</a>;
+
+<a id="constructor-user" href="constructor/user">user</a>#d10d979a self:<a href="type/true">true</a> contact:<a href="type/true">true</a> mutual_contact:<a href="type/true">true</a> deleted:<a href="type/true">true</a> bot:<a href="type/true">true</a> bot_chat_history:<a href="type/true">true</a> bot_nochats:<a href="type/true">true</a> verified:<a href="type/true">true</a> restricted:<a href="type/true">true</a> id:<a href="type/int">int</a> access_hash:<a href="type/long">long</a> first_name:<a href="type/string">string</a> last_name:<a href="type/string">string</a> username:<a href="type/string">string</a> phone:<a href="type/string">string</a> photo:<a href="type/UserProfilePhoto">UserProfilePhoto</a> status:<a href="type/UserStatus">UserStatus</a> bot_info_version:<a href="type/int">int</a> restriction_reason:<a href="type/string">string</a> bot_inline_placeholder:<a href="type/string">string</a> = <a href="type/User">User</a>;
+
+<a id="constructor-botCommand" href="constructor/botCommand">botCommand</a>#c27ac8c7 command:<a href="type/string">string</a> description:<a href="type/string">string</a> = <a href="type/BotCommand">BotCommand</a>;
+
+<a id="constructor-botInfoEmpty" href="constructor/botInfoEmpty">botInfoEmpty</a>#bb2e37ce = <a href="type/BotInfo">BotInfo</a>;
+
+<a id="constructor-botInfo" href="constructor/botInfo">botInfo</a>#9cf585d user_id:<a href="type/int">int</a> version:<a href="type/int">int</a> share_text:<a href="type/string">string</a> description:<a href="type/string">string</a> commands:<a href="type/BotCommand">Vector&lt;BotCommand&gt;</a> = <a href="type/BotInfo">BotInfo</a>;
+
+<a id="constructor-keyboardButton" href="constructor/keyboardButton">keyboardButton</a>#a2fa4880 text:<a href="type/string">string</a> = <a href="type/KeyboardButton">KeyboardButton</a>;
+
+<a id="constructor-keyboardButtonRow" href="constructor/keyboardButtonRow">keyboardButtonRow</a>#77608b83 buttons:<a href="type/KeyboardButton">Vector&lt;KeyboardButton&gt;</a> = <a href="type/KeyboardButtonRow">KeyboardButtonRow</a>;
+
+<a id="constructor-replyKeyboardHide" href="constructor/replyKeyboardHide">replyKeyboardHide</a>#a03e5b85 selective:<a href="type/true">true</a> = <a href="type/ReplyMarkup">ReplyMarkup</a>;
+
+<a id="constructor-replyKeyboardForceReply" href="constructor/replyKeyboardForceReply">replyKeyboardForceReply</a>#f4108aa0 single_use:<a href="type/true">true</a> selective:<a href="type/true">true</a> = <a href="type/ReplyMarkup">ReplyMarkup</a>;
+
+<a id="constructor-replyKeyboardMarkup" href="constructor/replyKeyboardMarkup">replyKeyboardMarkup</a>#3502758c resize:<a href="type/true">true</a> single_use:<a href="type/true">true</a> selective:<a href="type/true">true</a> rows:<a href="type/KeyboardButtonRow">Vector&lt;KeyboardButtonRow&gt;</a> = <a href="type/ReplyMarkup">ReplyMarkup</a>;
+
+<a id="constructor-inputMessagesFilterUrl" href="constructor/inputMessagesFilterUrl">inputMessagesFilterUrl</a>#7ef0dd87 = <a href="type/MessagesFilter">MessagesFilter</a>;
+
+<a id="constructor-inputPeerUser" href="constructor/inputPeerUser">inputPeerUser</a>#7b8e7de6 user_id:<a href="type/int">int</a> access_hash:<a href="type/long">long</a> = <a href="type/InputPeer">InputPeer</a>;
+
+<a id="constructor-inputUser" href="constructor/inputUser">inputUser</a>#d8292816 user_id:<a href="type/int">int</a> access_hash:<a href="type/long">long</a> = <a href="type/InputUser">InputUser</a>;
+
+<a id="constructor-help.appChangelogEmpty" href="constructor/help.appChangelogEmpty">help.appChangelogEmpty</a>#af7e0394 = <a href="type/help.AppChangelog">help.AppChangelog</a>;
+
+<a id="constructor-help.appChangelog" href="constructor/help.appChangelog">help.appChangelog</a>#4668e6bd text:<a href="type/string">string</a> = <a href="type/help.AppChangelog">help.AppChangelog</a>;
+
+<a id="constructor-messageEntityUnknown" href="constructor/messageEntityUnknown">messageEntityUnknown</a>#bb92ba95 offset:<a href="type/int">int</a> length:<a href="type/int">int</a> = <a href="type/MessageEntity">MessageEntity</a>;
+
+<a id="constructor-messageEntityMention" href="constructor/messageEntityMention">messageEntityMention</a>#fa04579d offset:<a href="type/int">int</a> length:<a href="type/int">int</a> = <a href="type/MessageEntity">MessageEntity</a>;
+
+<a id="constructor-messageEntityHashtag" href="constructor/messageEntityHashtag">messageEntityHashtag</a>#6f635b0d offset:<a href="type/int">int</a> length:<a href="type/int">int</a> = <a href="type/MessageEntity">MessageEntity</a>;
+
+<a id="constructor-messageEntityBotCommand" href="constructor/messageEntityBotCommand">messageEntityBotCommand</a>#6cef8ac7 offset:<a href="type/int">int</a> length:<a href="type/int">int</a> = <a href="type/MessageEntity">MessageEntity</a>;
+
+<a id="constructor-messageEntityUrl" href="constructor/messageEntityUrl">messageEntityUrl</a>#6ed02538 offset:<a href="type/int">int</a> length:<a href="type/int">int</a> = <a href="type/MessageEntity">MessageEntity</a>;
+
+<a id="constructor-messageEntityEmail" href="constructor/messageEntityEmail">messageEntityEmail</a>#64e475c2 offset:<a href="type/int">int</a> length:<a href="type/int">int</a> = <a href="type/MessageEntity">MessageEntity</a>;
+
+<a id="constructor-messageEntityBold" href="constructor/messageEntityBold">messageEntityBold</a>#bd610bc9 offset:<a href="type/int">int</a> length:<a href="type/int">int</a> = <a href="type/MessageEntity">MessageEntity</a>;
+
+<a id="constructor-messageEntityItalic" href="constructor/messageEntityItalic">messageEntityItalic</a>#826f8b60 offset:<a href="type/int">int</a> length:<a href="type/int">int</a> = <a href="type/MessageEntity">MessageEntity</a>;
+
+<a id="constructor-messageEntityCode" href="constructor/messageEntityCode">messageEntityCode</a>#28a20571 offset:<a href="type/int">int</a> length:<a href="type/int">int</a> = <a href="type/MessageEntity">MessageEntity</a>;
+
+<a id="constructor-messageEntityPre" href="constructor/messageEntityPre">messageEntityPre</a>#73924be0 offset:<a href="type/int">int</a> length:<a href="type/int">int</a> language:<a href="type/string">string</a> = <a href="type/MessageEntity">MessageEntity</a>;
+
+<a id="constructor-messageEntityTextUrl" href="constructor/messageEntityTextUrl">messageEntityTextUrl</a>#76a6d327 offset:<a href="type/int">int</a> length:<a href="type/int">int</a> url:<a href="type/string">string</a> = <a href="type/MessageEntity">MessageEntity</a>;
+
+<a id="constructor-updateShortSentMessage" href="constructor/updateShortSentMessage">updateShortSentMessage</a>#11f1331c unread:<a href="type/true">true</a> out:<a href="type/true">true</a> id:<a href="type/int">int</a> pts:<a href="type/int">int</a> pts_count:<a href="type/int">int</a> date:<a href="type/int">int</a> media:<a href="type/MessageMedia">MessageMedia</a> entities:<a href="type/MessageEntity">Vector&lt;MessageEntity&gt;</a> = <a href="type/Updates">Updates</a>;
+
+<a id="constructor-inputPeerChannel" href="constructor/inputPeerChannel">inputPeerChannel</a>#20adaef8 channel_id:<a href="type/int">int</a> access_hash:<a href="type/long">long</a> = <a href="type/InputPeer">InputPeer</a>;
+
+<a id="constructor-peerChannel" href="constructor/peerChannel">peerChannel</a>#bddde532 channel_id:<a href="type/int">int</a> = <a href="type/Peer">Peer</a>;
+
+<a id="constructor-channel" href="constructor/channel">channel</a>#4b1b7506 creator:<a href="type/true">true</a> kicked:<a href="type/true">true</a> left:<a href="type/true">true</a> editor:<a href="type/true">true</a> moderator:<a href="type/true">true</a> broadcast:<a href="type/true">true</a> verified:<a href="type/true">true</a> megagroup:<a href="type/true">true</a> restricted:<a href="type/true">true</a> id:<a href="type/int">int</a> access_hash:<a href="type/long">long</a> title:<a href="type/string">string</a> username:<a href="type/string">string</a> photo:<a href="type/ChatPhoto">ChatPhoto</a> date:<a href="type/int">int</a> version:<a href="type/int">int</a> restriction_reason:<a href="type/string">string</a> = <a href="type/Chat">Chat</a>;
+
+<a id="constructor-channelForbidden" href="constructor/channelForbidden">channelForbidden</a>#2d85832c id:<a href="type/int">int</a> access_hash:<a href="type/long">long</a> title:<a href="type/string">string</a> = <a href="type/Chat">Chat</a>;
+
+<a id="constructor-channelFull" href="constructor/channelFull">channelFull</a>#9e341ddf can_view_participants:<a href="type/true">true</a> id:<a href="type/int">int</a> about:<a href="type/string">string</a> participants_count:<a href="type/int">int</a> admins_count:<a href="type/int">int</a> kicked_count:<a href="type/int">int</a> read_inbox_max_id:<a href="type/int">int</a> unread_count:<a href="type/int">int</a> unread_important_count:<a href="type/int">int</a> chat_photo:<a href="type/Photo">Photo</a> notify_settings:<a href="type/PeerNotifySettings">PeerNotifySettings</a> exported_invite:<a href="type/ExportedChatInvite">ExportedChatInvite</a> bot_info:<a href="type/BotInfo">Vector&lt;BotInfo&gt;</a> migrated_from_chat_id:<a href="type/int">int</a> migrated_from_max_id:<a href="type/int">int</a> = <a href="type/ChatFull">ChatFull</a>;
+
+<a id="constructor-messageActionChannelCreate" href="constructor/messageActionChannelCreate">messageActionChannelCreate</a>#95d2ac92 title:<a href="type/string">string</a> = <a href="type/MessageAction">MessageAction</a>;
+
+<a id="constructor-dialogChannel" href="constructor/dialogChannel">dialogChannel</a>#5b8496b2 peer:<a href="type/Peer">Peer</a> top_message:<a href="type/int">int</a> top_important_message:<a href="type/int">int</a> read_inbox_max_id:<a href="type/int">int</a> unread_count:<a href="type/int">int</a> unread_important_count:<a href="type/int">int</a> notify_settings:<a href="type/PeerNotifySettings">PeerNotifySettings</a> pts:<a href="type/int">int</a> = <a href="type/Dialog">Dialog</a>;
+
+<a id="constructor-messages.channelMessages" href="constructor/messages.channelMessages">messages.channelMessages</a>#bc0f17bc pts:<a href="type/int">int</a> count:<a href="type/int">int</a> messages:<a href="type/Message">Vector&lt;Message&gt;</a> collapsed:<a href="type/MessageGroup">Vector&lt;MessageGroup&gt;</a> chats:<a href="type/Chat">Vector&lt;Chat&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/messages.Messages">messages.Messages</a>;
+
+<a id="constructor-updateChannelTooLong" href="constructor/updateChannelTooLong">updateChannelTooLong</a>#60946422 channel_id:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateChannel" href="constructor/updateChannel">updateChannel</a>#b6d45656 channel_id:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateChannelGroup" href="constructor/updateChannelGroup">updateChannelGroup</a>#c36c1e3c channel_id:<a href="type/int">int</a> group:<a href="type/MessageGroup">MessageGroup</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateNewChannelMessage" href="constructor/updateNewChannelMessage">updateNewChannelMessage</a>#62ba04d9 message:<a href="type/Message">Message</a> pts:<a href="type/int">int</a> pts_count:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateReadChannelInbox" href="constructor/updateReadChannelInbox">updateReadChannelInbox</a>#4214f37f channel_id:<a href="type/int">int</a> max_id:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateDeleteChannelMessages" href="constructor/updateDeleteChannelMessages">updateDeleteChannelMessages</a>#c37521c9 channel_id:<a href="type/int">int</a> messages:<a href="type/int">Vector&lt;int&gt;</a> pts:<a href="type/int">int</a> pts_count:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateChannelMessageViews" href="constructor/updateChannelMessageViews">updateChannelMessageViews</a>#98a12b4b channel_id:<a href="type/int">int</a> id:<a href="type/int">int</a> views:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-inputChannelEmpty" href="constructor/inputChannelEmpty">inputChannelEmpty</a>#ee8c1e86 = <a href="type/InputChannel">InputChannel</a>;
+
+<a id="constructor-inputChannel" href="constructor/inputChannel">inputChannel</a>#afeb712e channel_id:<a href="type/int">int</a> access_hash:<a href="type/long">long</a> = <a href="type/InputChannel">InputChannel</a>;
+
+<a id="constructor-contacts.resolvedPeer" href="constructor/contacts.resolvedPeer">contacts.resolvedPeer</a>#7f077ad9 peer:<a href="type/Peer">Peer</a> chats:<a href="type/Chat">Vector&lt;Chat&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/contacts.ResolvedPeer">contacts.ResolvedPeer</a>;
+
+<a id="constructor-messageRange" href="constructor/messageRange">messageRange</a>#ae30253 min_id:<a href="type/int">int</a> max_id:<a href="type/int">int</a> = <a href="type/MessageRange">MessageRange</a>;
+
+<a id="constructor-messageGroup" href="constructor/messageGroup">messageGroup</a>#e8346f53 min_id:<a href="type/int">int</a> max_id:<a href="type/int">int</a> count:<a href="type/int">int</a> date:<a href="type/int">int</a> = <a href="type/MessageGroup">MessageGroup</a>;
+
+<a id="constructor-updates.channelDifferenceEmpty" href="constructor/updates.channelDifferenceEmpty">updates.channelDifferenceEmpty</a>#3e11affb final:<a href="type/true">true</a> pts:<a href="type/int">int</a> timeout:<a href="type/int">int</a> = <a href="type/updates.ChannelDifference">updates.ChannelDifference</a>;
+
+<a id="constructor-updates.channelDifferenceTooLong" href="constructor/updates.channelDifferenceTooLong">updates.channelDifferenceTooLong</a>#5e167646 final:<a href="type/true">true</a> pts:<a href="type/int">int</a> timeout:<a href="type/int">int</a> top_message:<a href="type/int">int</a> top_important_message:<a href="type/int">int</a> read_inbox_max_id:<a href="type/int">int</a> unread_count:<a href="type/int">int</a> unread_important_count:<a href="type/int">int</a> messages:<a href="type/Message">Vector&lt;Message&gt;</a> chats:<a href="type/Chat">Vector&lt;Chat&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/updates.ChannelDifference">updates.ChannelDifference</a>;
+
+<a id="constructor-updates.channelDifference" href="constructor/updates.channelDifference">updates.channelDifference</a>#2064674e final:<a href="type/true">true</a> pts:<a href="type/int">int</a> timeout:<a href="type/int">int</a> new_messages:<a href="type/Message">Vector&lt;Message&gt;</a> other_updates:<a href="type/Update">Vector&lt;Update&gt;</a> chats:<a href="type/Chat">Vector&lt;Chat&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/updates.ChannelDifference">updates.ChannelDifference</a>;
+
+<a id="constructor-channelMessagesFilterEmpty" href="constructor/channelMessagesFilterEmpty">channelMessagesFilterEmpty</a>#94d42ee7 = <a href="type/ChannelMessagesFilter">ChannelMessagesFilter</a>;
+
+<a id="constructor-channelMessagesFilter" href="constructor/channelMessagesFilter">channelMessagesFilter</a>#cd77d957 important_only:<a href="type/true">true</a> exclude_new_messages:<a href="type/true">true</a> ranges:<a href="type/MessageRange">Vector&lt;MessageRange&gt;</a> = <a href="type/ChannelMessagesFilter">ChannelMessagesFilter</a>;
+
+<a id="constructor-channelMessagesFilterCollapsed" href="constructor/channelMessagesFilterCollapsed">channelMessagesFilterCollapsed</a>#fa01232e = <a href="type/ChannelMessagesFilter">ChannelMessagesFilter</a>;
+
+<a id="constructor-channelParticipant" href="constructor/channelParticipant">channelParticipant</a>#15ebac1d user_id:<a href="type/int">int</a> date:<a href="type/int">int</a> = <a href="type/ChannelParticipant">ChannelParticipant</a>;
+
+<a id="constructor-channelParticipantSelf" href="constructor/channelParticipantSelf">channelParticipantSelf</a>#a3289a6d user_id:<a href="type/int">int</a> inviter_id:<a href="type/int">int</a> date:<a href="type/int">int</a> = <a href="type/ChannelParticipant">ChannelParticipant</a>;
+
+<a id="constructor-channelParticipantModerator" href="constructor/channelParticipantModerator">channelParticipantModerator</a>#91057fef user_id:<a href="type/int">int</a> inviter_id:<a href="type/int">int</a> date:<a href="type/int">int</a> = <a href="type/ChannelParticipant">ChannelParticipant</a>;
+
+<a id="constructor-channelParticipantEditor" href="constructor/channelParticipantEditor">channelParticipantEditor</a>#98192d61 user_id:<a href="type/int">int</a> inviter_id:<a href="type/int">int</a> date:<a href="type/int">int</a> = <a href="type/ChannelParticipant">ChannelParticipant</a>;
+
+<a id="constructor-channelParticipantKicked" href="constructor/channelParticipantKicked">channelParticipantKicked</a>#8cc5e69a user_id:<a href="type/int">int</a> kicked_by:<a href="type/int">int</a> date:<a href="type/int">int</a> = <a href="type/ChannelParticipant">ChannelParticipant</a>;
+
+<a id="constructor-channelParticipantCreator" href="constructor/channelParticipantCreator">channelParticipantCreator</a>#e3e2e1f9 user_id:<a href="type/int">int</a> = <a href="type/ChannelParticipant">ChannelParticipant</a>;
+
+<a id="constructor-channelParticipantsRecent" href="constructor/channelParticipantsRecent">channelParticipantsRecent</a>#de3f3c79 = <a href="type/ChannelParticipantsFilter">ChannelParticipantsFilter</a>;
+
+<a id="constructor-channelParticipantsAdmins" href="constructor/channelParticipantsAdmins">channelParticipantsAdmins</a>#b4608969 = <a href="type/ChannelParticipantsFilter">ChannelParticipantsFilter</a>;
+
+<a id="constructor-channelParticipantsKicked" href="constructor/channelParticipantsKicked">channelParticipantsKicked</a>#3c37bb7a = <a href="type/ChannelParticipantsFilter">ChannelParticipantsFilter</a>;
+
+<a id="constructor-channelRoleEmpty" href="constructor/channelRoleEmpty">channelRoleEmpty</a>#b285a0c6 = <a href="type/ChannelParticipantRole">ChannelParticipantRole</a>;
+
+<a id="constructor-channelRoleModerator" href="constructor/channelRoleModerator">channelRoleModerator</a>#9618d975 = <a href="type/ChannelParticipantRole">ChannelParticipantRole</a>;
+
+<a id="constructor-channelRoleEditor" href="constructor/channelRoleEditor">channelRoleEditor</a>#820bfe8c = <a href="type/ChannelParticipantRole">ChannelParticipantRole</a>;
+
+<a id="constructor-channels.channelParticipants" href="constructor/channels.channelParticipants">channels.channelParticipants</a>#f56ee2a8 count:<a href="type/int">int</a> participants:<a href="type/ChannelParticipant">Vector&lt;ChannelParticipant&gt;</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/channels.ChannelParticipants">channels.ChannelParticipants</a>;
+
+<a id="constructor-channels.channelParticipant" href="constructor/channels.channelParticipant">channels.channelParticipant</a>#d0d9b163 participant:<a href="type/ChannelParticipant">ChannelParticipant</a> users:<a href="type/User">Vector&lt;User&gt;</a> = <a href="type/channels.ChannelParticipant">channels.ChannelParticipant</a>;
+
+<a id="constructor-true" href="constructor/true">true</a>#3fedd339 = <a href="type/True">True</a>;
+
+<a id="constructor-chatParticipantCreator" href="constructor/chatParticipantCreator">chatParticipantCreator</a>#da13538a user_id:<a href="type/int">int</a> = <a href="type/ChatParticipant">ChatParticipant</a>;
+
+<a id="constructor-chatParticipantAdmin" href="constructor/chatParticipantAdmin">chatParticipantAdmin</a>#e2d6e436 user_id:<a href="type/int">int</a> inviter_id:<a href="type/int">int</a> date:<a href="type/int">int</a> = <a href="type/ChatParticipant">ChatParticipant</a>;
+
+<a id="constructor-updateChatAdmins" href="constructor/updateChatAdmins">updateChatAdmins</a>#6e947941 chat_id:<a href="type/int">int</a> enabled:<a href="type/Bool">Bool</a> version:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateChatParticipantAdmin" href="constructor/updateChatParticipantAdmin">updateChatParticipantAdmin</a>#b6901959 chat_id:<a href="type/int">int</a> user_id:<a href="type/int">int</a> is_admin:<a href="type/Bool">Bool</a> version:<a href="type/int">int</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-messageActionChatMigrateTo" href="constructor/messageActionChatMigrateTo">messageActionChatMigrateTo</a>#51bdb021 channel_id:<a href="type/int">int</a> = <a href="type/MessageAction">MessageAction</a>;
+
+<a id="constructor-messageActionChannelMigrateFrom" href="constructor/messageActionChannelMigrateFrom">messageActionChannelMigrateFrom</a>#b055eaee title:<a href="type/string">string</a> chat_id:<a href="type/int">int</a> = <a href="type/MessageAction">MessageAction</a>;
+
+<a id="constructor-channelParticipantsBots" href="constructor/channelParticipantsBots">channelParticipantsBots</a>#b0d1865b = <a href="type/ChannelParticipantsFilter">ChannelParticipantsFilter</a>;
+
+<a id="constructor-inputReportReasonSpam" href="constructor/inputReportReasonSpam">inputReportReasonSpam</a>#58dbcab8 = <a href="type/ReportReason">ReportReason</a>;
+
+<a id="constructor-inputReportReasonViolence" href="constructor/inputReportReasonViolence">inputReportReasonViolence</a>#1e22c78d = <a href="type/ReportReason">ReportReason</a>;
+
+<a id="constructor-inputReportReasonPornography" href="constructor/inputReportReasonPornography">inputReportReasonPornography</a>#2e59d922 = <a href="type/ReportReason">ReportReason</a>;
+
+<a id="constructor-inputReportReasonOther" href="constructor/inputReportReasonOther">inputReportReasonOther</a>#e1746d0a text:<a href="type/string">string</a> = <a href="type/ReportReason">ReportReason</a>;
+
+<a id="constructor-updateNewStickerSet" href="constructor/updateNewStickerSet">updateNewStickerSet</a>#688a30aa stickerset:<a href="type/messages.StickerSet">messages.StickerSet</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateStickerSetsOrder" href="constructor/updateStickerSetsOrder">updateStickerSetsOrder</a>#f0dfb451 order:<a href="type/long">Vector&lt;long&gt;</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateStickerSets" href="constructor/updateStickerSets">updateStickerSets</a>#43ae3dec = <a href="type/Update">Update</a>;
+
+<a id="constructor-help.termsOfService" href="constructor/help.termsOfService">help.termsOfService</a>#f1ee3e90 text:<a href="type/string">string</a> = <a href="type/help.TermsOfService">help.TermsOfService</a>;
+
+<a id="constructor-foundGif" href="constructor/foundGif">foundGif</a>#162ecc1f url:<a href="type/string">string</a> thumb_url:<a href="type/string">string</a> content_url:<a href="type/string">string</a> content_type:<a href="type/string">string</a> w:<a href="type/int">int</a> h:<a href="type/int">int</a> = <a href="type/FoundGif">FoundGif</a>;
+
+<a id="constructor-inputMediaGifExternal" href="constructor/inputMediaGifExternal">inputMediaGifExternal</a>#4843b0fd url:<a href="type/string">string</a> q:<a href="type/string">string</a> = <a href="type/InputMedia">InputMedia</a>;
+
+<a id="constructor-messages.foundGifs" href="constructor/messages.foundGifs">messages.foundGifs</a>#450a1c0a next_offset:<a href="type/int">int</a> results:<a href="type/FoundGif">Vector&lt;FoundGif&gt;</a> = <a href="type/messages.FoundGifs">messages.FoundGifs</a>;
+
+<a id="constructor-inputMessagesFilterGif" href="constructor/inputMessagesFilterGif">inputMessagesFilterGif</a>#ffc86587 = <a href="type/MessagesFilter">MessagesFilter</a>;
+
+<a id="constructor-updateSavedGifs" href="constructor/updateSavedGifs">updateSavedGifs</a>#9375341e = <a href="type/Update">Update</a>;
+
+<a id="constructor-updateBotInlineQuery" href="constructor/updateBotInlineQuery">updateBotInlineQuery</a>#c01eea08 query_id:<a href="type/long">long</a> user_id:<a href="type/int">int</a> query:<a href="type/string">string</a> offset:<a href="type/string">string</a> = <a href="type/Update">Update</a>;
+
+<a id="constructor-foundGifCached" href="constructor/foundGifCached">foundGifCached</a>#9c750409 url:<a href="type/string">string</a> photo:<a href="type/Photo">Photo</a> document:<a href="type/Document">Document</a> = <a href="type/FoundGif">FoundGif</a>;
+
+<a id="constructor-messages.savedGifsNotModified" href="constructor/messages.savedGifsNotModified">messages.savedGifsNotModified</a>#e8025ca2 = <a href="type/messages.SavedGifs">messages.SavedGifs</a>;
+
+<a id="constructor-messages.savedGifs" href="constructor/messages.savedGifs">messages.savedGifs</a>#2e0709a5 hash:<a href="type/int">int</a> gifs:<a href="type/Document">Vector&lt;Document&gt;</a> = <a href="type/messages.SavedGifs">messages.SavedGifs</a>;
+
+<a id="constructor-inputBotInlineMessageMediaAuto" href="constructor/inputBotInlineMessageMediaAuto">inputBotInlineMessageMediaAuto</a>#2e43e587 caption:<a href="type/string">string</a> = <a href="type/InputBotInlineMessage">InputBotInlineMessage</a>;
+
+<a id="constructor-inputBotInlineMessageText" href="constructor/inputBotInlineMessageText">inputBotInlineMessageText</a>#adf0df71 no_webpage:<a href="type/true">true</a> message:<a href="type/string">string</a> entities:<a href="type/MessageEntity">Vector&lt;MessageEntity&gt;</a> = <a href="type/InputBotInlineMessage">InputBotInlineMessage</a>;
+
+<a id="constructor-inputBotInlineResult" href="constructor/inputBotInlineResult">inputBotInlineResult</a>#2cbbe15a id:<a href="type/string">string</a> type:<a href="type/string">string</a> title:<a href="type/string">string</a> description:<a href="type/string">string</a> url:<a href="type/string">string</a> thumb_url:<a href="type/string">string</a> content_url:<a href="type/string">string</a> content_type:<a href="type/string">string</a> w:<a href="type/int">int</a> h:<a href="type/int">int</a> duration:<a href="type/int">int</a> send_message:<a href="type/InputBotInlineMessage">InputBotInlineMessage</a> = <a href="type/InputBotInlineResult">InputBotInlineResult</a>;
+
+<a id="constructor-botInlineMessageMediaAuto" href="constructor/botInlineMessageMediaAuto">botInlineMessageMediaAuto</a>#fc56e87d caption:<a href="type/string">string</a> = <a href="type/BotInlineMessage">BotInlineMessage</a>;
+
+<a id="constructor-botInlineMessageText" href="constructor/botInlineMessageText">botInlineMessageText</a>#a56197a9 no_webpage:<a href="type/true">true</a> message:<a href="type/string">string</a> entities:<a href="type/MessageEntity">Vector&lt;MessageEntity&gt;</a> = <a href="type/BotInlineMessage">BotInlineMessage</a>;
+
+<a id="constructor-botInlineMediaResultDocument" href="constructor/botInlineMediaResultDocument">botInlineMediaResultDocument</a>#f897d33e id:<a href="type/string">string</a> type:<a href="type/string">string</a> document:<a href="type/Document">Document</a> send_message:<a href="type/BotInlineMessage">BotInlineMessage</a> = <a href="type/BotInlineResult">BotInlineResult</a>;
+
+<a id="constructor-botInlineMediaResultPhoto" href="constructor/botInlineMediaResultPhoto">botInlineMediaResultPhoto</a>#c5528587 id:<a href="type/string">string</a> type:<a href="type/string">string</a> photo:<a href="type/Photo">Photo</a> send_message:<a href="type/BotInlineMessage">BotInlineMessage</a> = <a href="type/BotInlineResult">BotInlineResult</a>;
+
+<a id="constructor-botInlineResult" href="constructor/botInlineResult">botInlineResult</a>#9bebaeb9 id:<a href="type/string">string</a> type:<a href="type/string">string</a> title:<a href="type/string">string</a> description:<a href="type/string">string</a> url:<a href="type/string">string</a> thumb_url:<a href="type/string">string</a> content_url:<a href="type/string">string</a> content_type:<a href="type/string">string</a> w:<a href="type/int">int</a> h:<a href="type/int">int</a> duration:<a href="type/int">int</a> send_message:<a href="type/BotInlineMessage">BotInlineMessage</a> = <a href="type/BotInlineResult">BotInlineResult</a>;
+
+<a id="constructor-messages.botResults" href="constructor/messages.botResults">messages.botResults</a>#1170b0a3 gallery:<a href="type/true">true</a> query_id:<a href="type/long">long</a> next_offset:<a href="type/string">string</a> results:<a href="type/BotInlineResult">Vector&lt;BotInlineResult&gt;</a> = <a href="type/messages.BotResults">messages.BotResults</a>;
+
+
+<span id="functions">---functions---</span>
+
+<a id="method-invokeAfterMsg" href="method/invokeAfterMsg">invokeAfterMsg</a>#cb9f372d msg_id:<a href="type/long">long</a> query:<a href="type/!X">!X</a> = <a href="type/">X</a>;
+
+<a id="method-invokeAfterMsgs" href="method/invokeAfterMsgs">invokeAfterMsgs</a>#3dc4b4f0 msg_ids:<a href="type/long">Vector&lt;long&gt;</a> query:<a href="type/!X">!X</a> = <a href="type/">X</a>;
+
+<a id="method-auth.checkPhone" href="method/auth.checkPhone">auth.checkPhone</a>#6fe51dfb phone_number:<a href="type/string">string</a> = <a href="type/">auth.CheckedPhone</a>;
+
+<a id="method-auth.sendCode" href="method/auth.sendCode">auth.sendCode</a>#768d5f4d phone_number:<a href="type/string">string</a> sms_type:<a href="type/int">int</a> api_id:<a href="type/int">int</a> api_hash:<a href="type/string">string</a> lang_code:<a href="type/string">string</a> = <a href="type/">auth.SentCode</a>;
+
+<a id="method-auth.sendCall" href="method/auth.sendCall">auth.sendCall</a>#3c51564 phone_number:<a href="type/string">string</a> phone_code_hash:<a href="type/string">string</a> = <a href="type/">Bool</a>;
+
+<a id="method-auth.signUp" href="method/auth.signUp">auth.signUp</a>#1b067634 phone_number:<a href="type/string">string</a> phone_code_hash:<a href="type/string">string</a> phone_code:<a href="type/string">string</a> first_name:<a href="type/string">string</a> last_name:<a href="type/string">string</a> = <a href="type/">auth.Authorization</a>;
+
+<a id="method-auth.signIn" href="method/auth.signIn">auth.signIn</a>#bcd51581 phone_number:<a href="type/string">string</a> phone_code_hash:<a href="type/string">string</a> phone_code:<a href="type/string">string</a> = <a href="type/">auth.Authorization</a>;
+
+<a id="method-auth.logOut" href="method/auth.logOut">auth.logOut</a>#5717da40 = <a href="type/">Bool</a>;
+
+<a id="method-auth.resetAuthorizations" href="method/auth.resetAuthorizations">auth.resetAuthorizations</a>#9fab0d1a = <a href="type/">Bool</a>;
+
+<a id="method-auth.sendInvites" href="method/auth.sendInvites">auth.sendInvites</a>#771c1d97 phone_numbers:<a href="type/string">Vector&lt;string&gt;</a> message:<a href="type/string">string</a> = <a href="type/">Bool</a>;
+
+<a id="method-auth.exportAuthorization" href="method/auth.exportAuthorization">auth.exportAuthorization</a>#e5bfffcd dc_id:<a href="type/int">int</a> = <a href="type/">auth.ExportedAuthorization</a>;
+
+<a id="method-auth.importAuthorization" href="method/auth.importAuthorization">auth.importAuthorization</a>#e3ef9613 id:<a href="type/int">int</a> bytes:<a href="type/bytes">bytes</a> = <a href="type/">auth.Authorization</a>;
+
+<a id="method-account.registerDevice" href="method/account.registerDevice">account.registerDevice</a>#446c712c token_type:<a href="type/int">int</a> token:<a href="type/string">string</a> device_model:<a href="type/string">string</a> system_version:<a href="type/string">string</a> app_version:<a href="type/string">string</a> app_sandbox:<a href="type/Bool">Bool</a> lang_code:<a href="type/string">string</a> = <a href="type/">Bool</a>;
+
+<a id="method-account.unregisterDevice" href="method/account.unregisterDevice">account.unregisterDevice</a>#65c55b40 token_type:<a href="type/int">int</a> token:<a href="type/string">string</a> = <a href="type/">Bool</a>;
+
+<a id="method-account.updateNotifySettings" href="method/account.updateNotifySettings">account.updateNotifySettings</a>#84be5b93 peer:<a href="type/InputNotifyPeer">InputNotifyPeer</a> settings:<a href="type/InputPeerNotifySettings">InputPeerNotifySettings</a> = <a href="type/">Bool</a>;
+
+<a id="method-account.getNotifySettings" href="method/account.getNotifySettings">account.getNotifySettings</a>#12b3ad31 peer:<a href="type/InputNotifyPeer">InputNotifyPeer</a> = <a href="type/">PeerNotifySettings</a>;
+
+<a id="method-account.resetNotifySettings" href="method/account.resetNotifySettings">account.resetNotifySettings</a>#db7e1747 = <a href="type/">Bool</a>;
+
+<a id="method-account.updateProfile" href="method/account.updateProfile">account.updateProfile</a>#f0888d68 first_name:<a href="type/string">string</a> last_name:<a href="type/string">string</a> = <a href="type/">User</a>;
+
+<a id="method-account.updateStatus" href="method/account.updateStatus">account.updateStatus</a>#6628562c offline:<a href="type/Bool">Bool</a> = <a href="type/">Bool</a>;
+
+<a id="method-account.getWallPapers" href="method/account.getWallPapers">account.getWallPapers</a>#c04cfac2 = <a href="type/">Vector&lt;WallPaper&gt;</a>;
+
+<a id="method-users.getUsers" href="method/users.getUsers">users.getUsers</a>#d91a548 id:<a href="type/InputUser">Vector&lt;InputUser&gt;</a> = <a href="type/">Vector&lt;User&gt;</a>;
+
+<a id="method-users.getFullUser" href="method/users.getFullUser">users.getFullUser</a>#ca30a5b1 id:<a href="type/InputUser">InputUser</a> = <a href="type/">UserFull</a>;
+
+<a id="method-contacts.getStatuses" href="method/contacts.getStatuses">contacts.getStatuses</a>#c4a353ee = <a href="type/">Vector&lt;ContactStatus&gt;</a>;
+
+<a id="method-contacts.getContacts" href="method/contacts.getContacts">contacts.getContacts</a>#22c6aa08 hash:<a href="type/string">string</a> = <a href="type/">contacts.Contacts</a>;
+
+<a id="method-contacts.importContacts" href="method/contacts.importContacts">contacts.importContacts</a>#da30b32d contacts:<a href="type/InputContact">Vector&lt;InputContact&gt;</a> replace:<a href="type/Bool">Bool</a> = <a href="type/">contacts.ImportedContacts</a>;
+
+<a id="method-contacts.search" href="method/contacts.search">contacts.search</a>#11f812d8 q:<a href="type/string">string</a> limit:<a href="type/int">int</a> = <a href="type/">contacts.Found</a>;
+
+<a id="method-contacts.deleteContact" href="method/contacts.deleteContact">contacts.deleteContact</a>#8e953744 id:<a href="type/InputUser">InputUser</a> = <a href="type/">contacts.Link</a>;
+
+<a id="method-contacts.deleteContacts" href="method/contacts.deleteContacts">contacts.deleteContacts</a>#59ab389e id:<a href="type/InputUser">Vector&lt;InputUser&gt;</a> = <a href="type/">Bool</a>;
+
+<a id="method-contacts.block" href="method/contacts.block">contacts.block</a>#332b49fc id:<a href="type/InputUser">InputUser</a> = <a href="type/">Bool</a>;
+
+<a id="method-contacts.unblock" href="method/contacts.unblock">contacts.unblock</a>#e54100bd id:<a href="type/InputUser">InputUser</a> = <a href="type/">Bool</a>;
+
+<a id="method-contacts.getBlocked" href="method/contacts.getBlocked">contacts.getBlocked</a>#f57c350f offset:<a href="type/int">int</a> limit:<a href="type/int">int</a> = <a href="type/">contacts.Blocked</a>;
+
+<a id="method-messages.getMessages" href="method/messages.getMessages">messages.getMessages</a>#4222fa74 id:<a href="type/int">Vector&lt;int&gt;</a> = <a href="type/">messages.Messages</a>;
+
+<a id="method-messages.getDialogs" href="method/messages.getDialogs">messages.getDialogs</a>#6b47f94d offset_date:<a href="type/int">int</a> offset_id:<a href="type/int">int</a> offset_peer:<a href="type/InputPeer">InputPeer</a> limit:<a href="type/int">int</a> = <a href="type/">messages.Dialogs</a>;
+
+<a id="method-messages.getHistory" href="method/messages.getHistory">messages.getHistory</a>#8a8ec2da peer:<a href="type/InputPeer">InputPeer</a> offset_id:<a href="type/int">int</a> add_offset:<a href="type/int">int</a> limit:<a href="type/int">int</a> max_id:<a href="type/int">int</a> min_id:<a href="type/int">int</a> = <a href="type/">messages.Messages</a>;
+
+<a id="method-messages.search" href="method/messages.search">messages.search</a>#d4569248 important_only:<a href="type/true">true</a> peer:<a href="type/InputPeer">InputPeer</a> q:<a href="type/string">string</a> filter:<a href="type/MessagesFilter">MessagesFilter</a> min_date:<a href="type/int">int</a> max_date:<a href="type/int">int</a> offset:<a href="type/int">int</a> max_id:<a href="type/int">int</a> limit:<a href="type/int">int</a> = <a href="type/">messages.Messages</a>;
+
+<a id="method-messages.readHistory" href="method/messages.readHistory">messages.readHistory</a>#e306d3a peer:<a href="type/InputPeer">InputPeer</a> max_id:<a href="type/int">int</a> = <a href="type/">messages.AffectedMessages</a>;
+
+<a id="method-messages.deleteHistory" href="method/messages.deleteHistory">messages.deleteHistory</a>#b7c13bd9 peer:<a href="type/InputPeer">InputPeer</a> max_id:<a href="type/int">int</a> = <a href="type/">messages.AffectedHistory</a>;
+
+<a id="method-messages.deleteMessages" href="method/messages.deleteMessages">messages.deleteMessages</a>#a5f18925 id:<a href="type/int">Vector&lt;int&gt;</a> = <a href="type/">messages.AffectedMessages</a>;
+
+<a id="method-messages.receivedMessages" href="method/messages.receivedMessages">messages.receivedMessages</a>#5a954c0 max_id:<a href="type/int">int</a> = <a href="type/">Vector&lt;ReceivedNotifyMessage&gt;</a>;
+
+<a id="method-messages.setTyping" href="method/messages.setTyping">messages.setTyping</a>#a3825e50 peer:<a href="type/InputPeer">InputPeer</a> action:<a href="type/SendMessageAction">SendMessageAction</a> = <a href="type/">Bool</a>;
+
+<a id="method-messages.sendMessage" href="method/messages.sendMessage">messages.sendMessage</a>#fa88427a no_webpage:<a href="type/true">true</a> broadcast:<a href="type/true">true</a> peer:<a href="type/InputPeer">InputPeer</a> reply_to_msg_id:<a href="type/int">int</a> message:<a href="type/string">string</a> random_id:<a href="type/long">long</a> reply_markup:<a href="type/ReplyMarkup">ReplyMarkup</a> entities:<a href="type/MessageEntity">Vector&lt;MessageEntity&gt;</a> = <a href="type/">Updates</a>;
+
+<a id="method-messages.sendMedia" href="method/messages.sendMedia">messages.sendMedia</a>#c8f16791 broadcast:<a href="type/true">true</a> peer:<a href="type/InputPeer">InputPeer</a> reply_to_msg_id:<a href="type/int">int</a> media:<a href="type/InputMedia">InputMedia</a> random_id:<a href="type/long">long</a> reply_markup:<a href="type/ReplyMarkup">ReplyMarkup</a> = <a href="type/">Updates</a>;
+
+<a id="method-messages.forwardMessages" href="method/messages.forwardMessages">messages.forwardMessages</a>#708e0195 broadcast:<a href="type/true">true</a> from_peer:<a href="type/InputPeer">InputPeer</a> id:<a href="type/int">Vector&lt;int&gt;</a> random_id:<a href="type/long">Vector&lt;long&gt;</a> to_peer:<a href="type/InputPeer">InputPeer</a> = <a href="type/">Updates</a>;
+
+<a id="method-messages.getChats" href="method/messages.getChats">messages.getChats</a>#3c6aa187 id:<a href="type/int">Vector&lt;int&gt;</a> = <a href="type/">messages.Chats</a>;
+
+<a id="method-messages.getFullChat" href="method/messages.getFullChat">messages.getFullChat</a>#3b831c66 chat_id:<a href="type/int">int</a> = <a href="type/">messages.ChatFull</a>;
+
+<a id="method-messages.editChatTitle" href="method/messages.editChatTitle">messages.editChatTitle</a>#dc452855 chat_id:<a href="type/int">int</a> title:<a href="type/string">string</a> = <a href="type/">Updates</a>;
+
+<a id="method-messages.editChatPhoto" href="method/messages.editChatPhoto">messages.editChatPhoto</a>#ca4c79d8 chat_id:<a href="type/int">int</a> photo:<a href="type/InputChatPhoto">InputChatPhoto</a> = <a href="type/">Updates</a>;
+
+<a id="method-messages.addChatUser" href="method/messages.addChatUser">messages.addChatUser</a>#f9a0aa09 chat_id:<a href="type/int">int</a> user_id:<a href="type/InputUser">InputUser</a> fwd_limit:<a href="type/int">int</a> = <a href="type/">Updates</a>;
+
+<a id="method-messages.deleteChatUser" href="method/messages.deleteChatUser">messages.deleteChatUser</a>#e0611f16 chat_id:<a href="type/int">int</a> user_id:<a href="type/InputUser">InputUser</a> = <a href="type/">Updates</a>;
+
+<a id="method-messages.createChat" href="method/messages.createChat">messages.createChat</a>#9cb126e users:<a href="type/InputUser">Vector&lt;InputUser&gt;</a> title:<a href="type/string">string</a> = <a href="type/">Updates</a>;
+
+<a id="method-updates.getState" href="method/updates.getState">updates.getState</a>#edd4882a = <a href="type/">updates.State</a>;
+
+<a id="method-updates.getDifference" href="method/updates.getDifference">updates.getDifference</a>#a041495 pts:<a href="type/int">int</a> date:<a href="type/int">int</a> qts:<a href="type/int">int</a> = <a href="type/">updates.Difference</a>;
+
+<a id="method-photos.updateProfilePhoto" href="method/photos.updateProfilePhoto">photos.updateProfilePhoto</a>#eef579a0 id:<a href="type/InputPhoto">InputPhoto</a> crop:<a href="type/InputPhotoCrop">InputPhotoCrop</a> = <a href="type/">UserProfilePhoto</a>;
+
+<a id="method-photos.uploadProfilePhoto" href="method/photos.uploadProfilePhoto">photos.uploadProfilePhoto</a>#d50f9c88 file:<a href="type/InputFile">InputFile</a> caption:<a href="type/string">string</a> geo_point:<a href="type/InputGeoPoint">InputGeoPoint</a> crop:<a href="type/InputPhotoCrop">InputPhotoCrop</a> = <a href="type/">photos.Photo</a>;
+
+<a id="method-upload.saveFilePart" href="method/upload.saveFilePart">upload.saveFilePart</a>#b304a621 file_id:<a href="type/long">long</a> file_part:<a href="type/int">int</a> bytes:<a href="type/bytes">bytes</a> = <a href="type/">Bool</a>;
+
+<a id="method-upload.getFile" href="method/upload.getFile">upload.getFile</a>#e3a6cfb5 location:<a href="type/InputFileLocation">InputFileLocation</a> offset:<a href="type/int">int</a> limit:<a href="type/int">int</a> = <a href="type/">upload.File</a>;
+
+<a id="method-help.getConfig" href="method/help.getConfig">help.getConfig</a>#c4f9186b = <a href="type/">Config</a>;
+
+<a id="method-help.getNearestDc" href="method/help.getNearestDc">help.getNearestDc</a>#1fb33026 = <a href="type/">NearestDc</a>;
+
+<a id="method-help.getAppUpdate" href="method/help.getAppUpdate">help.getAppUpdate</a>#c812ac7e device_model:<a href="type/string">string</a> system_version:<a href="type/string">string</a> app_version:<a href="type/string">string</a> lang_code:<a href="type/string">string</a> = <a href="type/">help.AppUpdate</a>;
+
+<a id="method-help.saveAppLog" href="method/help.saveAppLog">help.saveAppLog</a>#6f02f748 events:<a href="type/InputAppEvent">Vector&lt;InputAppEvent&gt;</a> = <a href="type/">Bool</a>;
+
+<a id="method-help.getInviteText" href="method/help.getInviteText">help.getInviteText</a>#a4a95186 lang_code:<a href="type/string">string</a> = <a href="type/">help.InviteText</a>;
+
+<a id="method-photos.deletePhotos" href="method/photos.deletePhotos">photos.deletePhotos</a>#87cf7f2f id:<a href="type/InputPhoto">Vector&lt;InputPhoto&gt;</a> = <a href="type/">Vector&lt;long&gt;</a>;
+
+<a id="method-photos.getUserPhotos" href="method/photos.getUserPhotos">photos.getUserPhotos</a>#91cd32a8 user_id:<a href="type/InputUser">InputUser</a> offset:<a href="type/int">int</a> max_id:<a href="type/long">long</a> limit:<a href="type/int">int</a> = <a href="type/">photos.Photos</a>;
+
+<a id="method-messages.forwardMessage" href="method/messages.forwardMessage">messages.forwardMessage</a>#33963bf9 peer:<a href="type/InputPeer">InputPeer</a> id:<a href="type/int">int</a> random_id:<a href="type/long">long</a> = <a href="type/">Updates</a>;
+
+<a id="method-messages.getDhConfig" href="method/messages.getDhConfig">messages.getDhConfig</a>#26cf8950 version:<a href="type/int">int</a> random_length:<a href="type/int">int</a> = <a href="type/">messages.DhConfig</a>;
+
+<a id="method-messages.requestEncryption" href="method/messages.requestEncryption">messages.requestEncryption</a>#f64daf43 user_id:<a href="type/InputUser">InputUser</a> random_id:<a href="type/int">int</a> g_a:<a href="type/bytes">bytes</a> = <a href="type/">EncryptedChat</a>;
+
+<a id="method-messages.acceptEncryption" href="method/messages.acceptEncryption">messages.acceptEncryption</a>#3dbc0415 peer:<a href="type/InputEncryptedChat">InputEncryptedChat</a> g_b:<a href="type/bytes">bytes</a> key_fingerprint:<a href="type/long">long</a> = <a href="type/">EncryptedChat</a>;
+
+<a id="method-messages.discardEncryption" href="method/messages.discardEncryption">messages.discardEncryption</a>#edd923c5 chat_id:<a href="type/int">int</a> = <a href="type/">Bool</a>;
+
+<a id="method-messages.setEncryptedTyping" href="method/messages.setEncryptedTyping">messages.setEncryptedTyping</a>#791451ed peer:<a href="type/InputEncryptedChat">InputEncryptedChat</a> typing:<a href="type/Bool">Bool</a> = <a href="type/">Bool</a>;
+
+<a id="method-messages.readEncryptedHistory" href="method/messages.readEncryptedHistory">messages.readEncryptedHistory</a>#7f4b690a peer:<a href="type/InputEncryptedChat">InputEncryptedChat</a> max_date:<a href="type/int">int</a> = <a href="type/">Bool</a>;
+
+<a id="method-messages.sendEncrypted" href="method/messages.sendEncrypted">messages.sendEncrypted</a>#a9776773 peer:<a href="type/InputEncryptedChat">InputEncryptedChat</a> random_id:<a href="type/long">long</a> data:<a href="type/bytes">bytes</a> = <a href="type/">messages.SentEncryptedMessage</a>;
+
+<a id="method-messages.sendEncryptedFile" href="method/messages.sendEncryptedFile">messages.sendEncryptedFile</a>#9a901b66 peer:<a href="type/InputEncryptedChat">InputEncryptedChat</a> random_id:<a href="type/long">long</a> data:<a href="type/bytes">bytes</a> file:<a href="type/InputEncryptedFile">InputEncryptedFile</a> = <a href="type/">messages.SentEncryptedMessage</a>;
+
+<a id="method-messages.sendEncryptedService" href="method/messages.sendEncryptedService">messages.sendEncryptedService</a>#32d439a4 peer:<a href="type/InputEncryptedChat">InputEncryptedChat</a> random_id:<a href="type/long">long</a> data:<a href="type/bytes">bytes</a> = <a href="type/">messages.SentEncryptedMessage</a>;
+
+<a id="method-messages.receivedQueue" href="method/messages.receivedQueue">messages.receivedQueue</a>#55a5bb66 max_qts:<a href="type/int">int</a> = <a href="type/">Vector&lt;long&gt;</a>;
+
+<a id="method-upload.saveBigFilePart" href="method/upload.saveBigFilePart">upload.saveBigFilePart</a>#de7b673d file_id:<a href="type/long">long</a> file_part:<a href="type/int">int</a> file_total_parts:<a href="type/int">int</a> bytes:<a href="type/bytes">bytes</a> = <a href="type/">Bool</a>;
+
+<a id="method-initConnection" href="method/initConnection">initConnection</a>#69796de9 api_id:<a href="type/int">int</a> device_model:<a href="type/string">string</a> system_version:<a href="type/string">string</a> app_version:<a href="type/string">string</a> lang_code:<a href="type/string">string</a> query:<a href="type/!X">!X</a> = <a href="type/">X</a>;
+
+<a id="method-help.getSupport" href="method/help.getSupport">help.getSupport</a>#9cdf08cd = <a href="type/">help.Support</a>;
+
+<a id="method-auth.bindTempAuthKey" href="method/auth.bindTempAuthKey">auth.bindTempAuthKey</a>#cdd42a05 perm_auth_key_id:<a href="type/long">long</a> nonce:<a href="type/long">long</a> expires_at:<a href="type/int">int</a> encrypted_message:<a href="type/bytes">bytes</a> = <a href="type/">Bool</a>;
+
+<a id="method-contacts.exportCard" href="method/contacts.exportCard">contacts.exportCard</a>#84e53737 = <a href="type/">Vector&lt;int&gt;</a>;
+
+<a id="method-contacts.importCard" href="method/contacts.importCard">contacts.importCard</a>#4fe196fe export_card:<a href="type/int">Vector&lt;int&gt;</a> = <a href="type/">User</a>;
+
+<a id="method-auth.sendSms" href="method/auth.sendSms">auth.sendSms</a>#da9f3e8 phone_number:<a href="type/string">string</a> phone_code_hash:<a href="type/string">string</a> = <a href="type/">Bool</a>;
+
+<a id="method-messages.readMessageContents" href="method/messages.readMessageContents">messages.readMessageContents</a>#36a73f77 id:<a href="type/int">Vector&lt;int&gt;</a> = <a href="type/">messages.AffectedMessages</a>;
+
+<a id="method-account.checkUsername" href="method/account.checkUsername">account.checkUsername</a>#2714d86c username:<a href="type/string">string</a> = <a href="type/">Bool</a>;
+
+<a id="method-account.updateUsername" href="method/account.updateUsername">account.updateUsername</a>#3e0bdd7c username:<a href="type/string">string</a> = <a href="type/">User</a>;
+
+<a id="method-account.getPrivacy" href="method/account.getPrivacy">account.getPrivacy</a>#dadbc950 key:<a href="type/InputPrivacyKey">InputPrivacyKey</a> = <a href="type/">account.PrivacyRules</a>;
+
+<a id="method-account.setPrivacy" href="method/account.setPrivacy">account.setPrivacy</a>#c9f81ce8 key:<a href="type/InputPrivacyKey">InputPrivacyKey</a> rules:<a href="type/InputPrivacyRule">Vector&lt;InputPrivacyRule&gt;</a> = <a href="type/">account.PrivacyRules</a>;
+
+<a id="method-account.deleteAccount" href="method/account.deleteAccount">account.deleteAccount</a>#418d4e0b reason:<a href="type/string">string</a> = <a href="type/">Bool</a>;
+
+<a id="method-account.getAccountTTL" href="method/account.getAccountTTL">account.getAccountTTL</a>#8fc711d = <a href="type/">AccountDaysTTL</a>;
+
+<a id="method-account.setAccountTTL" href="method/account.setAccountTTL">account.setAccountTTL</a>#2442485e ttl:<a href="type/AccountDaysTTL">AccountDaysTTL</a> = <a href="type/">Bool</a>;
+
+<a id="method-invokeWithLayer" href="method/invokeWithLayer">invokeWithLayer</a>#da9b0d0d layer:<a href="type/int">int</a> query:<a href="type/!X">!X</a> = <a href="type/">X</a>;
+
+<a id="method-contacts.resolveUsername" href="method/contacts.resolveUsername">contacts.resolveUsername</a>#f93ccba3 username:<a href="type/string">string</a> = <a href="type/">contacts.ResolvedPeer</a>;
+
+<a id="method-account.sendChangePhoneCode" href="method/account.sendChangePhoneCode">account.sendChangePhoneCode</a>#a407a8f4 phone_number:<a href="type/string">string</a> = <a href="type/">account.SentChangePhoneCode</a>;
+
+<a id="method-account.changePhone" href="method/account.changePhone">account.changePhone</a>#70c32edb phone_number:<a href="type/string">string</a> phone_code_hash:<a href="type/string">string</a> phone_code:<a href="type/string">string</a> = <a href="type/">User</a>;
+
+<a id="method-messages.getStickers" href="method/messages.getStickers">messages.getStickers</a>#ae22e045 emoticon:<a href="type/string">string</a> hash:<a href="type/string">string</a> = <a href="type/">messages.Stickers</a>;
+
+<a id="method-messages.getAllStickers" href="method/messages.getAllStickers">messages.getAllStickers</a>#1c9618b1 hash:<a href="type/int">int</a> = <a href="type/">messages.AllStickers</a>;
+
+<a id="method-account.updateDeviceLocked" href="method/account.updateDeviceLocked">account.updateDeviceLocked</a>#38df3532 period:<a href="type/int">int</a> = <a href="type/">Bool</a>;
+
+<a id="method-account.getPassword" href="method/account.getPassword">account.getPassword</a>#548a30f5 = <a href="type/">account.Password</a>;
+
+<a id="method-auth.checkPassword" href="method/auth.checkPassword">auth.checkPassword</a>#a63011e password_hash:<a href="type/bytes">bytes</a> = <a href="type/">auth.Authorization</a>;
+
+<a id="method-contacts.getSuggested" href="method/contacts.getSuggested">contacts.getSuggested</a>#cd773428 limit:<a href="type/int">int</a> = <a href="type/">contacts.Suggested</a>;
+
+<a id="method-messages.sendBroadcast" href="method/messages.sendBroadcast">messages.sendBroadcast</a>#bf73f4da contacts:<a href="type/InputUser">Vector&lt;InputUser&gt;</a> random_id:<a href="type/long">Vector&lt;long&gt;</a> message:<a href="type/string">string</a> media:<a href="type/InputMedia">InputMedia</a> = <a href="type/">Updates</a>;
+
+<a id="method-messages.getWebPagePreview" href="method/messages.getWebPagePreview">messages.getWebPagePreview</a>#25223e24 message:<a href="type/string">string</a> = <a href="type/">MessageMedia</a>;
+
+<a id="method-account.getAuthorizations" href="method/account.getAuthorizations">account.getAuthorizations</a>#e320c158 = <a href="type/">account.Authorizations</a>;
+
+<a id="method-account.resetAuthorization" href="method/account.resetAuthorization">account.resetAuthorization</a>#df77f3bc hash:<a href="type/long">long</a> = <a href="type/">Bool</a>;
+
+<a id="method-account.getPasswordSettings" href="method/account.getPasswordSettings">account.getPasswordSettings</a>#bc8d11bb current_password_hash:<a href="type/bytes">bytes</a> = <a href="type/">account.PasswordSettings</a>;
+
+<a id="method-account.updatePasswordSettings" href="method/account.updatePasswordSettings">account.updatePasswordSettings</a>#fa7c4b86 current_password_hash:<a href="type/bytes">bytes</a> new_settings:<a href="type/account.PasswordInputSettings">account.PasswordInputSettings</a> = <a href="type/">Bool</a>;
+
+<a id="method-auth.requestPasswordRecovery" href="method/auth.requestPasswordRecovery">auth.requestPasswordRecovery</a>#d897bc66 = <a href="type/">auth.PasswordRecovery</a>;
+
+<a id="method-auth.recoverPassword" href="method/auth.recoverPassword">auth.recoverPassword</a>#4ea56e92 code:<a href="type/string">string</a> = <a href="type/">auth.Authorization</a>;
+
+<a id="method-invokeWithoutUpdates" href="method/invokeWithoutUpdates">invokeWithoutUpdates</a>#bf9459b7 query:<a href="type/!X">!X</a> = <a href="type/">X</a>;
+
+<a id="method-messages.exportChatInvite" href="method/messages.exportChatInvite">messages.exportChatInvite</a>#7d885289 chat_id:<a href="type/int">int</a> = <a href="type/">ExportedChatInvite</a>;
+
+<a id="method-messages.checkChatInvite" href="method/messages.checkChatInvite">messages.checkChatInvite</a>#3eadb1bb hash:<a href="type/string">string</a> = <a href="type/">ChatInvite</a>;
+
+<a id="method-messages.importChatInvite" href="method/messages.importChatInvite">messages.importChatInvite</a>#6c50051c hash:<a href="type/string">string</a> = <a href="type/">Updates</a>;
+
+<a id="method-messages.getStickerSet" href="method/messages.getStickerSet">messages.getStickerSet</a>#2619a90e stickerset:<a href="type/InputStickerSet">InputStickerSet</a> = <a href="type/">messages.StickerSet</a>;
+
+<a id="method-messages.installStickerSet" href="method/messages.installStickerSet">messages.installStickerSet</a>#7b30c3a6 stickerset:<a href="type/InputStickerSet">InputStickerSet</a> disabled:<a href="type/Bool">Bool</a> = <a href="type/">Bool</a>;
+
+<a id="method-messages.uninstallStickerSet" href="method/messages.uninstallStickerSet">messages.uninstallStickerSet</a>#f96e55de stickerset:<a href="type/InputStickerSet">InputStickerSet</a> = <a href="type/">Bool</a>;
+
+<a id="method-auth.importBotAuthorization" href="method/auth.importBotAuthorization">auth.importBotAuthorization</a>#67a3ff2c api_id:<a href="type/int">int</a> api_hash:<a href="type/string">string</a> bot_auth_token:<a href="type/string">string</a> = <a href="type/">auth.Authorization</a>;
+
+<a id="method-messages.startBot" href="method/messages.startBot">messages.startBot</a>#e6df7378 bot:<a href="type/InputUser">InputUser</a> peer:<a href="type/InputPeer">InputPeer</a> random_id:<a href="type/long">long</a> start_param:<a href="type/string">string</a> = <a href="type/">Updates</a>;
+
+<a id="method-help.getAppChangelog" href="method/help.getAppChangelog">help.getAppChangelog</a>#5bab7fb2 device_model:<a href="type/string">string</a> system_version:<a href="type/string">string</a> app_version:<a href="type/string">string</a> lang_code:<a href="type/string">string</a> = <a href="type/">help.AppChangelog</a>;
+
+<a id="method-messages.reportSpam" href="method/messages.reportSpam">messages.reportSpam</a>#cf1592db peer:<a href="type/InputPeer">InputPeer</a> = <a href="type/">Bool</a>;
+
+<a id="method-messages.getMessagesViews" href="method/messages.getMessagesViews">messages.getMessagesViews</a>#c4c8a55d peer:<a href="type/InputPeer">InputPeer</a> id:<a href="type/int">Vector&lt;int&gt;</a> increment:<a href="type/Bool">Bool</a> = <a href="type/">Vector&lt;int&gt;</a>;
+
+<a id="method-updates.getChannelDifference" href="method/updates.getChannelDifference">updates.getChannelDifference</a>#bb32d7c0 channel:<a href="type/InputChannel">InputChannel</a> filter:<a href="type/ChannelMessagesFilter">ChannelMessagesFilter</a> pts:<a href="type/int">int</a> limit:<a href="type/int">int</a> = <a href="type/">updates.ChannelDifference</a>;
+
+<a id="method-channels.getDialogs" href="method/channels.getDialogs">channels.getDialogs</a>#a9d3d249 offset:<a href="type/int">int</a> limit:<a href="type/int">int</a> = <a href="type/">messages.Dialogs</a>;
+
+<a id="method-channels.getImportantHistory" href="method/channels.getImportantHistory">channels.getImportantHistory</a>#ddb929cb channel:<a href="type/InputChannel">InputChannel</a> offset_id:<a href="type/int">int</a> add_offset:<a href="type/int">int</a> limit:<a href="type/int">int</a> max_id:<a href="type/int">int</a> min_id:<a href="type/int">int</a> = <a href="type/">messages.Messages</a>;
+
+<a id="method-channels.readHistory" href="method/channels.readHistory">channels.readHistory</a>#cc104937 channel:<a href="type/InputChannel">InputChannel</a> max_id:<a href="type/int">int</a> = <a href="type/">Bool</a>;
+
+<a id="method-channels.deleteMessages" href="method/channels.deleteMessages">channels.deleteMessages</a>#84c1fd4e channel:<a href="type/InputChannel">InputChannel</a> id:<a href="type/int">Vector&lt;int&gt;</a> = <a href="type/">messages.AffectedMessages</a>;
+
+<a id="method-channels.deleteUserHistory" href="method/channels.deleteUserHistory">channels.deleteUserHistory</a>#d10dd71b channel:<a href="type/InputChannel">InputChannel</a> user_id:<a href="type/InputUser">InputUser</a> = <a href="type/">messages.AffectedHistory</a>;
+
+<a id="method-channels.reportSpam" href="method/channels.reportSpam">channels.reportSpam</a>#fe087810 channel:<a href="type/InputChannel">InputChannel</a> user_id:<a href="type/InputUser">InputUser</a> id:<a href="type/int">Vector&lt;int&gt;</a> = <a href="type/">Bool</a>;
+
+<a id="method-channels.getMessages" href="method/channels.getMessages">channels.getMessages</a>#93d7b347 channel:<a href="type/InputChannel">InputChannel</a> id:<a href="type/int">Vector&lt;int&gt;</a> = <a href="type/">messages.Messages</a>;
+
+<a id="method-channels.getParticipants" href="method/channels.getParticipants">channels.getParticipants</a>#24d98f92 channel:<a href="type/InputChannel">InputChannel</a> filter:<a href="type/ChannelParticipantsFilter">ChannelParticipantsFilter</a> offset:<a href="type/int">int</a> limit:<a href="type/int">int</a> = <a href="type/">channels.ChannelParticipants</a>;
+
+<a id="method-channels.getParticipant" href="method/channels.getParticipant">channels.getParticipant</a>#546dd7a6 channel:<a href="type/InputChannel">InputChannel</a> user_id:<a href="type/InputUser">InputUser</a> = <a href="type/">channels.ChannelParticipant</a>;
+
+<a id="method-channels.getChannels" href="method/channels.getChannels">channels.getChannels</a>#a7f6bbb id:<a href="type/InputChannel">Vector&lt;InputChannel&gt;</a> = <a href="type/">messages.Chats</a>;
+
+<a id="method-channels.getFullChannel" href="method/channels.getFullChannel">channels.getFullChannel</a>#8736a09 channel:<a href="type/InputChannel">InputChannel</a> = <a href="type/">messages.ChatFull</a>;
+
+<a id="method-channels.createChannel" href="method/channels.createChannel">channels.createChannel</a>#f4893d7f broadcast:<a href="type/true">true</a> megagroup:<a href="type/true">true</a> title:<a href="type/string">string</a> about:<a href="type/string">string</a> = <a href="type/">Updates</a>;
+
+<a id="method-channels.editAbout" href="method/channels.editAbout">channels.editAbout</a>#13e27f1e channel:<a href="type/InputChannel">InputChannel</a> about:<a href="type/string">string</a> = <a href="type/">Bool</a>;
+
+<a id="method-channels.editAdmin" href="method/channels.editAdmin">channels.editAdmin</a>#eb7611d0 channel:<a href="type/InputChannel">InputChannel</a> user_id:<a href="type/InputUser">InputUser</a> role:<a href="type/ChannelParticipantRole">ChannelParticipantRole</a> = <a href="type/">Updates</a>;
+
+<a id="method-channels.editTitle" href="method/channels.editTitle">channels.editTitle</a>#566decd0 channel:<a href="type/InputChannel">InputChannel</a> title:<a href="type/string">string</a> = <a href="type/">Updates</a>;
+
+<a id="method-channels.editPhoto" href="method/channels.editPhoto">channels.editPhoto</a>#f12e57c9 channel:<a href="type/InputChannel">InputChannel</a> photo:<a href="type/InputChatPhoto">InputChatPhoto</a> = <a href="type/">Updates</a>;
+
+<a id="method-channels.toggleComments" href="method/channels.toggleComments">channels.toggleComments</a>#aaa29e88 channel:<a href="type/InputChannel">InputChannel</a> enabled:<a href="type/Bool">Bool</a> = <a href="type/">Updates</a>;
+
+<a id="method-channels.checkUsername" href="method/channels.checkUsername">channels.checkUsername</a>#10e6bd2c channel:<a href="type/InputChannel">InputChannel</a> username:<a href="type/string">string</a> = <a href="type/">Bool</a>;
+
+<a id="method-channels.updateUsername" href="method/channels.updateUsername">channels.updateUsername</a>#3514b3de channel:<a href="type/InputChannel">InputChannel</a> username:<a href="type/string">string</a> = <a href="type/">Bool</a>;
+
+<a id="method-channels.joinChannel" href="method/channels.joinChannel">channels.joinChannel</a>#24b524c5 channel:<a href="type/InputChannel">InputChannel</a> = <a href="type/">Updates</a>;
+
+<a id="method-channels.leaveChannel" href="method/channels.leaveChannel">channels.leaveChannel</a>#f836aa95 channel:<a href="type/InputChannel">InputChannel</a> = <a href="type/">Updates</a>;
+
+<a id="method-channels.inviteToChannel" href="method/channels.inviteToChannel">channels.inviteToChannel</a>#199f3a6c channel:<a href="type/InputChannel">InputChannel</a> users:<a href="type/InputUser">Vector&lt;InputUser&gt;</a> = <a href="type/">Updates</a>;
+
+<a id="method-channels.kickFromChannel" href="method/channels.kickFromChannel">channels.kickFromChannel</a>#a672de14 channel:<a href="type/InputChannel">InputChannel</a> user_id:<a href="type/InputUser">InputUser</a> kicked:<a href="type/Bool">Bool</a> = <a href="type/">Updates</a>;
+
+<a id="method-channels.exportInvite" href="method/channels.exportInvite">channels.exportInvite</a>#c7560885 channel:<a href="type/InputChannel">InputChannel</a> = <a href="type/">ExportedChatInvite</a>;
+
+<a id="method-channels.deleteChannel" href="method/channels.deleteChannel">channels.deleteChannel</a>#c0111fe3 channel:<a href="type/InputChannel">InputChannel</a> = <a href="type/">Updates</a>;
+
+<a id="method-messages.toggleChatAdmins" href="method/messages.toggleChatAdmins">messages.toggleChatAdmins</a>#ec8bd9e1 chat_id:<a href="type/int">int</a> enabled:<a href="type/Bool">Bool</a> = <a href="type/">Updates</a>;
+
+<a id="method-messages.editChatAdmin" href="method/messages.editChatAdmin">messages.editChatAdmin</a>#a9e69f2e chat_id:<a href="type/int">int</a> user_id:<a href="type/InputUser">InputUser</a> is_admin:<a href="type/Bool">Bool</a> = <a href="type/">Bool</a>;
+
+<a id="method-messages.migrateChat" href="method/messages.migrateChat">messages.migrateChat</a>#15a3b8e3 chat_id:<a href="type/int">int</a> = <a href="type/">Updates</a>;
+
+<a id="method-messages.searchGlobal" href="method/messages.searchGlobal">messages.searchGlobal</a>#9e3cacb0 q:<a href="type/string">string</a> offset_date:<a href="type/int">int</a> offset_peer:<a href="type/InputPeer">InputPeer</a> offset_id:<a href="type/int">int</a> limit:<a href="type/int">int</a> = <a href="type/">messages.Messages</a>;
+
+<a id="method-account.reportPeer" href="method/account.reportPeer">account.reportPeer</a>#ae189d5f peer:<a href="type/InputPeer">InputPeer</a> reason:<a href="type/ReportReason">ReportReason</a> = <a href="type/">Bool</a>;
+
+<a id="method-messages.reorderStickerSets" href="method/messages.reorderStickerSets">messages.reorderStickerSets</a>#9fcfbc30 order:<a href="type/long">Vector&lt;long&gt;</a> = <a href="type/">Bool</a>;
+
+<a id="method-help.getTermsOfService" href="method/help.getTermsOfService">help.getTermsOfService</a>#37d78f83 lang_code:<a href="type/string">string</a> = <a href="type/">help.TermsOfService</a>;
+
+<a id="method-messages.getDocumentByHash" href="method/messages.getDocumentByHash">messages.getDocumentByHash</a>#338e2464 sha256:<a href="type/bytes">bytes</a> size:<a href="type/int">int</a> mime_type:<a href="type/string">string</a> = <a href="type/">Document</a>;
+
+<a id="method-messages.searchGifs" href="method/messages.searchGifs">messages.searchGifs</a>#bf9a776b q:<a href="type/string">string</a> offset:<a href="type/int">int</a> = <a href="type/">messages.FoundGifs</a>;
+
+<a id="method-messages.getSavedGifs" href="method/messages.getSavedGifs">messages.getSavedGifs</a>#83bf3d52 hash:<a href="type/int">int</a> = <a href="type/">messages.SavedGifs</a>;
+
+<a id="method-messages.saveGif" href="method/messages.saveGif">messages.saveGif</a>#327a30cb id:<a href="type/InputDocument">InputDocument</a> unsave:<a href="type/Bool">Bool</a> = <a href="type/">Bool</a>;
+
+<a id="method-messages.getInlineBotResults" href="method/messages.getInlineBotResults">messages.getInlineBotResults</a>#9324600d bot:<a href="type/InputUser">InputUser</a> query:<a href="type/string">string</a> offset:<a href="type/string">string</a> = <a href="type/">messages.BotResults</a>;
+
+<a id="method-messages.setInlineBotResults" href="method/messages.setInlineBotResults">messages.setInlineBotResults</a>#3f23ec12 gallery:<a href="type/true">true</a> private:<a href="type/true">true</a> query_id:<a href="type/long">long</a> results:<a href="type/InputBotInlineResult">Vector&lt;InputBotInlineResult&gt;</a> cache_time:<a href="type/int">int</a> next_offset:<a href="type/string">string</a> = <a href="type/">Bool</a>;
+
+<a id="method-messages.sendInlineBotResult" href="method/messages.sendInlineBotResult">messages.sendInlineBotResult</a>#b16e06fe broadcast:<a href="type/true">true</a> peer:<a href="type/InputPeer">InputPeer</a> reply_to_msg_id:<a href="type/int">int</a> random_id:<a href="type/long">long</a> query_id:<a href="type/long">long</a> id:<a href="type/string">string</a> = <a href="type/">Updates</a>;
+
+</pre>
+    </div>
+  </body>
+</html>
