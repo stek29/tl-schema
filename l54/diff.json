@@ -1,0 +1,536 @@
+{
+  "constructors": [
+    {
+      "id": "1125058340",
+      "predicate": "inputDocumentFileLocation",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        }
+      ],
+      "type": "InputFileLocation"
+    },
+    {
+      "id": "1461528386",
+      "predicate": "updateReadFeaturedStickers",
+      "params": [],
+      "type": "Update"
+    },
+    {
+      "id": "-1706939360",
+      "predicate": "updateRecentStickers",
+      "params": [],
+      "type": "Update"
+    },
+    {
+      "id": "-201218881",
+      "predicate": "config",
+      "params": [
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "expires",
+          "type": "int"
+        },
+        {
+          "name": "test_mode",
+          "type": "Bool"
+        },
+        {
+          "name": "this_dc",
+          "type": "int"
+        },
+        {
+          "name": "dc_options",
+          "type": "Vector<DcOption>"
+        },
+        {
+          "name": "chat_size_max",
+          "type": "int"
+        },
+        {
+          "name": "megagroup_size_max",
+          "type": "int"
+        },
+        {
+          "name": "forwarded_count_max",
+          "type": "int"
+        },
+        {
+          "name": "online_update_period_ms",
+          "type": "int"
+        },
+        {
+          "name": "offline_blur_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "offline_idle_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "online_cloud_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "notify_cloud_delay_ms",
+          "type": "int"
+        },
+        {
+          "name": "notify_default_delay_ms",
+          "type": "int"
+        },
+        {
+          "name": "chat_big_size",
+          "type": "int"
+        },
+        {
+          "name": "push_chat_period_ms",
+          "type": "int"
+        },
+        {
+          "name": "push_chat_limit",
+          "type": "int"
+        },
+        {
+          "name": "saved_gifs_limit",
+          "type": "int"
+        },
+        {
+          "name": "edit_time_limit",
+          "type": "int"
+        },
+        {
+          "name": "rating_e_decay",
+          "type": "int"
+        },
+        {
+          "name": "stickers_recent_limit",
+          "type": "int"
+        },
+        {
+          "name": "disabled_features",
+          "type": "Vector<DisabledFeature>"
+        }
+      ],
+      "type": "Config"
+    },
+    {
+      "id": "-2027738169",
+      "predicate": "document",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        },
+        {
+          "name": "thumb",
+          "type": "PhotoSize"
+        },
+        {
+          "name": "dc_id",
+          "type": "int"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        },
+        {
+          "name": "attributes",
+          "type": "Vector<DocumentAttribute>"
+        }
+      ],
+      "type": "Document"
+    },
+    {
+      "id": "-613092008",
+      "predicate": "chatInvite",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "channel",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "broadcast",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "public",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "megagroup",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "photo",
+          "type": "ChatPhoto"
+        },
+        {
+          "name": "participants_count",
+          "type": "int"
+        },
+        {
+          "name": "participants",
+          "type": "flags.4?Vector<User>"
+        }
+      ],
+      "type": "ChatInvite"
+    },
+    {
+      "id": "-852477119",
+      "predicate": "stickerSet",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "installed",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "archived",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "official",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "short_name",
+          "type": "string"
+        },
+        {
+          "name": "count",
+          "type": "int"
+        },
+        {
+          "name": "hash",
+          "type": "int"
+        }
+      ],
+      "type": "StickerSet"
+    },
+    {
+      "id": "-1324486149",
+      "predicate": "messages.botCallbackAnswer",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "alert",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "message",
+          "type": "flags.0?string"
+        },
+        {
+          "name": "url",
+          "type": "flags.2?string"
+        }
+      ],
+      "type": "messages.BotCallbackAnswer"
+    },
+    {
+      "id": "82699215",
+      "predicate": "messages.featuredStickersNotModified",
+      "params": [],
+      "type": "messages.FeaturedStickers"
+    },
+    {
+      "id": "-123893531",
+      "predicate": "messages.featuredStickers",
+      "params": [
+        {
+          "name": "hash",
+          "type": "int"
+        },
+        {
+          "name": "sets",
+          "type": "Vector<StickerSetCovered>"
+        },
+        {
+          "name": "unread",
+          "type": "Vector<long>"
+        }
+      ],
+      "type": "messages.FeaturedStickers"
+    },
+    {
+      "id": "186120336",
+      "predicate": "messages.recentStickersNotModified",
+      "params": [],
+      "type": "messages.RecentStickers"
+    },
+    {
+      "id": "1558317424",
+      "predicate": "messages.recentStickers",
+      "params": [
+        {
+          "name": "hash",
+          "type": "int"
+        },
+        {
+          "name": "stickers",
+          "type": "Vector<Document>"
+        }
+      ],
+      "type": "messages.RecentStickers"
+    },
+    {
+      "id": "1338747336",
+      "predicate": "messages.archivedStickers",
+      "params": [
+        {
+          "name": "count",
+          "type": "int"
+        },
+        {
+          "name": "sets",
+          "type": "Vector<StickerSetCovered>"
+        }
+      ],
+      "type": "messages.ArchivedStickers"
+    },
+    {
+      "id": "946083368",
+      "predicate": "messages.stickerSetInstallResultSuccess",
+      "params": [],
+      "type": "messages.StickerSetInstallResult"
+    },
+    {
+      "id": "904138920",
+      "predicate": "messages.stickerSetInstallResultArchive",
+      "params": [
+        {
+          "name": "sets",
+          "type": "Vector<StickerSetCovered>"
+        }
+      ],
+      "type": "messages.StickerSetInstallResult"
+    },
+    {
+      "id": "1678812626",
+      "predicate": "stickerSetCovered",
+      "params": [
+        {
+          "name": "set",
+          "type": "StickerSet"
+        },
+        {
+          "name": "cover",
+          "type": "Document"
+        }
+      ],
+      "type": "StickerSetCovered"
+    }
+  ],
+  "methods": [
+    {
+      "id": "353818557",
+      "method": "account.sendConfirmPhoneCode",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "allow_flashcall",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "hash",
+          "type": "string"
+        },
+        {
+          "name": "current_number",
+          "type": "flags.0?Bool"
+        }
+      ],
+      "type": "auth.SentCode"
+    },
+    {
+      "id": "1596029123",
+      "method": "account.confirmPhone",
+      "params": [
+        {
+          "name": "phone_code_hash",
+          "type": "string"
+        },
+        {
+          "name": "phone_code",
+          "type": "string"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-946871200",
+      "method": "messages.installStickerSet",
+      "params": [
+        {
+          "name": "stickerset",
+          "type": "InputStickerSet"
+        },
+        {
+          "name": "archived",
+          "type": "Bool"
+        }
+      ],
+      "type": "messages.StickerSetInstallResult"
+    },
+    {
+      "id": "-920136629",
+      "method": "messages.setBotCallbackAnswer",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "alert",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "query_id",
+          "type": "long"
+        },
+        {
+          "name": "message",
+          "type": "flags.0?string"
+        },
+        {
+          "name": "url",
+          "type": "flags.2?string"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "766298703",
+      "method": "messages.getFeaturedStickers",
+      "params": [
+        {
+          "name": "hash",
+          "type": "int"
+        }
+      ],
+      "type": "messages.FeaturedStickers"
+    },
+    {
+      "id": "14818491",
+      "method": "messages.readFeaturedStickers",
+      "params": [],
+      "type": "Bool"
+    },
+    {
+      "id": "-1726383060",
+      "method": "messages.getRecentStickers",
+      "params": [
+        {
+          "name": "hash",
+          "type": "int"
+        }
+      ],
+      "type": "messages.RecentStickers"
+    },
+    {
+      "id": "881736127",
+      "method": "messages.saveRecentSticker",
+      "params": [
+        {
+          "name": "id",
+          "type": "InputDocument"
+        },
+        {
+          "name": "unsave",
+          "type": "Bool"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-1425873454",
+      "method": "messages.clearRecentStickers",
+      "params": [],
+      "type": "Bool"
+    },
+    {
+      "id": "1124718171",
+      "method": "messages.getUnusedStickers",
+      "params": [
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "Vector<StickerSetCovered>"
+    },
+    {
+      "id": "-1871829985",
+      "method": "messages.getArchivedStickers",
+      "params": [
+        {
+          "name": "offset_id",
+          "type": "long"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "messages.ArchivedStickers"
+    }
+  ]
+}

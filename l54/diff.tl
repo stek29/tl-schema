@@ -1,0 +1,37 @@
+---types---
+// config#c9411388 date:int expires:int test_mode:Bool this_dc:int dc_options:Vector<DcOption> chat_size_max:int megagroup_size_max:int forwarded_count_max:int online_update_period_ms:int offline_blur_timeout_ms:int offline_idle_timeout_ms:int online_cloud_timeout_ms:int notify_cloud_delay_ms:int notify_default_delay_ms:int chat_big_size:int push_chat_period_ms:int push_chat_limit:int saved_gifs_limit:int edit_time_limit:int rating_e_decay:int disabled_features:Vector<DisabledFeature> = Config;
+// inputDocumentFileLocation#4e45abe9 id:long access_hash:long = InputFileLocation;
+// document#f9a39f4f id:long access_hash:long date:int mime_type:string size:int thumb:PhotoSize dc_id:int attributes:Vector<DocumentAttribute> = Document;
+// chatInvite#93e99b60 flags:# channel:flags.0?true broadcast:flags.1?true public:flags.2?true megagroup:flags.3?true title:string = ChatInvite;
+// stickerSet#cd303b41 flags:# installed:flags.0?true disabled:flags.1?true official:flags.2?true id:long access_hash:long title:string short_name:string count:int hash:int = StickerSet;
+// messages.botCallbackAnswer#1264f1c6 flags:# alert:flags.1?true message:flags.0?string = messages.BotCallbackAnswer;
+inputDocumentFileLocation#430f0724 id:long access_hash:long version:int = InputFileLocation;
+updateReadFeaturedStickers#571d2742 = Update;
+updateRecentStickers#9a422c20 = Update;
+config#f401a4bf date:int expires:int test_mode:Bool this_dc:int dc_options:Vector<DcOption> chat_size_max:int megagroup_size_max:int forwarded_count_max:int online_update_period_ms:int offline_blur_timeout_ms:int offline_idle_timeout_ms:int online_cloud_timeout_ms:int notify_cloud_delay_ms:int notify_default_delay_ms:int chat_big_size:int push_chat_period_ms:int push_chat_limit:int saved_gifs_limit:int edit_time_limit:int rating_e_decay:int stickers_recent_limit:int disabled_features:Vector<DisabledFeature> = Config;
+document#87232bc7 id:long access_hash:long date:int mime_type:string size:int thumb:PhotoSize dc_id:int version:int attributes:Vector<DocumentAttribute> = Document;
+chatInvite#db74f558 flags:# channel:flags.0?true broadcast:flags.1?true public:flags.2?true megagroup:flags.3?true title:string photo:ChatPhoto participants_count:int participants:flags.4?Vector<User> = ChatInvite;
+stickerSet#cd303b41 flags:# installed:flags.0?true archived:flags.1?true official:flags.2?true id:long access_hash:long title:string short_name:string count:int hash:int = StickerSet;
+messages.botCallbackAnswer#b10df1fb flags:# alert:flags.1?true message:flags.0?string url:flags.2?string = messages.BotCallbackAnswer;
+messages.featuredStickersNotModified#4ede3cf = messages.FeaturedStickers;
+messages.featuredStickers#f89d88e5 hash:int sets:Vector<StickerSetCovered> unread:Vector<long> = messages.FeaturedStickers;
+messages.recentStickersNotModified#b17f890 = messages.RecentStickers;
+messages.recentStickers#5ce20970 hash:int stickers:Vector<Document> = messages.RecentStickers;
+messages.archivedStickers#4fcba9c8 count:int sets:Vector<StickerSetCovered> = messages.ArchivedStickers;
+messages.stickerSetInstallResultSuccess#38641628 = messages.StickerSetInstallResult;
+messages.stickerSetInstallResultArchive#35e410a8 sets:Vector<StickerSetCovered> = messages.StickerSetInstallResult;
+stickerSetCovered#6410a5d2 set:StickerSet cover:Document = StickerSetCovered;
+---functions---
+// messages.installStickerSet#7b30c3a6 stickerset:InputStickerSet disabled:Bool = Bool;
+// messages.setBotCallbackAnswer#481c591a flags:# alert:flags.1?true query_id:long message:flags.0?string = Bool;
+account.sendConfirmPhoneCode#1516d7bd flags:# allow_flashcall:flags.0?true hash:string current_number:flags.0?Bool = auth.SentCode;
+account.confirmPhone#5f2178c3 phone_code_hash:string phone_code:string = Bool;
+messages.installStickerSet#c78fe460 stickerset:InputStickerSet archived:Bool = messages.StickerSetInstallResult;
+messages.setBotCallbackAnswer#c927d44b flags:# alert:flags.1?true query_id:long message:flags.0?string url:flags.2?string = Bool;
+messages.getFeaturedStickers#2dacca4f hash:int = messages.FeaturedStickers;
+messages.readFeaturedStickers#e21cbb = Bool;
+messages.getRecentStickers#99197c2c hash:int = messages.RecentStickers;
+messages.saveRecentSticker#348e39bf id:InputDocument unsave:Bool = Bool;
+messages.clearRecentStickers#ab02e5d2 = Bool;
+messages.getUnusedStickers#4309d65b limit:int = Vector<StickerSetCovered>;
+messages.getArchivedStickers#906e241f offset_id:long limit:int = messages.ArchivedStickers;
