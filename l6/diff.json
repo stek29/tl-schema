@@ -1,0 +1,91 @@
+{
+  "constructors": [
+    {
+      "id": "1978329690",
+      "predicate": "geoChat",
+      "params": [
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "address",
+          "type": "string"
+        },
+        {
+          "name": "venue",
+          "type": "string"
+        },
+        {
+          "name": "geo",
+          "type": "GeoPoint"
+        },
+        {
+          "name": "photo",
+          "type": "ChatPhoto"
+        },
+        {
+          "name": "participants_count",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "checked_in",
+          "type": "Bool"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        }
+      ],
+      "type": "Chat"
+    }
+  ],
+  "methods": [
+    {
+      "id": "235482646",
+      "method": "geochats.createGeoChat",
+      "params": [
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "geo_point",
+          "type": "InputGeoPoint"
+        },
+        {
+          "name": "address",
+          "type": "string"
+        },
+        {
+          "name": "venue",
+          "type": "string"
+        }
+      ],
+      "type": "geochats.StatedMessage"
+    },
+    {
+      "id": "979686733",
+      "method": "invokeWithLayer6",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    }
+  ]
+}
