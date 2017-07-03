@@ -1,0 +1,310 @@
+{
+  "constructors": [
+    {
+      "id": "773059779",
+      "predicate": "user",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "self",
+          "type": "flags.10?true"
+        },
+        {
+          "name": "contact",
+          "type": "flags.11?true"
+        },
+        {
+          "name": "mutual_contact",
+          "type": "flags.12?true"
+        },
+        {
+          "name": "deleted",
+          "type": "flags.13?true"
+        },
+        {
+          "name": "bot",
+          "type": "flags.14?true"
+        },
+        {
+          "name": "bot_chat_history",
+          "type": "flags.15?true"
+        },
+        {
+          "name": "bot_nochats",
+          "type": "flags.16?true"
+        },
+        {
+          "name": "verified",
+          "type": "flags.17?true"
+        },
+        {
+          "name": "restricted",
+          "type": "flags.18?true"
+        },
+        {
+          "name": "min",
+          "type": "flags.20?true"
+        },
+        {
+          "name": "bot_inline_geo",
+          "type": "flags.21?true"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "flags.0?long"
+        },
+        {
+          "name": "first_name",
+          "type": "flags.1?string"
+        },
+        {
+          "name": "last_name",
+          "type": "flags.2?string"
+        },
+        {
+          "name": "username",
+          "type": "flags.3?string"
+        },
+        {
+          "name": "phone",
+          "type": "flags.4?string"
+        },
+        {
+          "name": "photo",
+          "type": "flags.5?UserProfilePhoto"
+        },
+        {
+          "name": "status",
+          "type": "flags.6?UserStatus"
+        },
+        {
+          "name": "bot_info_version",
+          "type": "flags.14?int"
+        },
+        {
+          "name": "restriction_reason",
+          "type": "flags.18?string"
+        },
+        {
+          "name": "bot_inline_placeholder",
+          "type": "flags.19?string"
+        },
+        {
+          "name": "lang_code",
+          "type": "flags.22?string"
+        }
+      ],
+      "type": "User"
+    },
+    {
+      "id": "2054952868",
+      "predicate": "inputMessagesFilterRoundVoice",
+      "params": [],
+      "type": "MessagesFilter"
+    },
+    {
+      "id": "-1253451181",
+      "predicate": "inputMessagesFilterRoundVideo",
+      "params": [],
+      "type": "MessagesFilter"
+    },
+    {
+      "id": "352864346",
+      "predicate": "upload.fileCdnRedirect",
+      "params": [
+        {
+          "name": "dc_id",
+          "type": "int"
+        },
+        {
+          "name": "file_token",
+          "type": "bytes"
+        },
+        {
+          "name": "encryption_key",
+          "type": "bytes"
+        },
+        {
+          "name": "encryption_iv",
+          "type": "bytes"
+        }
+      ],
+      "type": "upload.File"
+    },
+    {
+      "id": "98092748",
+      "predicate": "dcOption",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "ipv6",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "media_only",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "tcpo_only",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "cdn",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "ip_address",
+          "type": "string"
+        },
+        {
+          "name": "port",
+          "type": "int"
+        }
+      ],
+      "type": "DcOption"
+    },
+    {
+      "id": "-1997373508",
+      "predicate": "sendMessageRecordRoundAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "-1150187996",
+      "predicate": "sendMessageUploadRoundAction",
+      "params": [],
+      "type": "SendMessageAction"
+    },
+    {
+      "id": "250621158",
+      "predicate": "documentAttributeVideo",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "round_message",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "duration",
+          "type": "int"
+        },
+        {
+          "name": "w",
+          "type": "int"
+        },
+        {
+          "name": "h",
+          "type": "int"
+        }
+      ],
+      "type": "DocumentAttribute"
+    },
+    {
+      "id": "-290921362",
+      "predicate": "upload.cdnFileReuploadNeeded",
+      "params": [
+        {
+          "name": "request_token",
+          "type": "bytes"
+        }
+      ],
+      "type": "upload.CdnFile"
+    },
+    {
+      "id": "-1449145777",
+      "predicate": "upload.cdnFile",
+      "params": [
+        {
+          "name": "bytes",
+          "type": "bytes"
+        }
+      ],
+      "type": "upload.CdnFile"
+    },
+    {
+      "id": "-914167110",
+      "predicate": "cdnPublicKey",
+      "params": [
+        {
+          "name": "dc_id",
+          "type": "int"
+        },
+        {
+          "name": "public_key",
+          "type": "string"
+        }
+      ],
+      "type": "CdnPublicKey"
+    },
+    {
+      "id": "1462101002",
+      "predicate": "cdnConfig",
+      "params": [
+        {
+          "name": "public_keys",
+          "type": "Vector<CdnPublicKey>"
+        }
+      ],
+      "type": "CdnConfig"
+    }
+  ],
+  "methods": [
+    {
+      "id": "536919235",
+      "method": "upload.getCdnFile",
+      "params": [
+        {
+          "name": "file_token",
+          "type": "bytes"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "upload.CdnFile"
+    },
+    {
+      "id": "779755552",
+      "method": "upload.reuploadCdnFile",
+      "params": [
+        {
+          "name": "file_token",
+          "type": "bytes"
+        },
+        {
+          "name": "request_token",
+          "type": "bytes"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "1375900482",
+      "method": "help.getCdnConfig",
+      "params": [],
+      "type": "CdnConfig"
+    }
+  ]
+}
