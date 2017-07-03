@@ -1,0 +1,151 @@
+{
+  "constructors": [
+    {
+      "id": "978674434",
+      "predicate": "documentAttributeSticker",
+      "params": [
+        {
+          "name": "alt",
+          "type": "string"
+        },
+        {
+          "name": "stickerset",
+          "type": "InputStickerSet"
+        }
+      ],
+      "type": "DocumentAttribute"
+    },
+    {
+      "id": "1558401772",
+      "predicate": "messages.allStickers",
+      "params": [
+        {
+          "name": "hash",
+          "type": "string"
+        },
+        {
+          "name": "packs",
+          "type": "Vector<StickerPack>"
+        },
+        {
+          "name": "sets",
+          "type": "Vector<StickerSet>"
+        },
+        {
+          "name": "documents",
+          "type": "Vector<Document>"
+        }
+      ],
+      "type": "messages.AllStickers"
+    },
+    {
+      "id": "-4838507",
+      "predicate": "inputStickerSetEmpty",
+      "params": [],
+      "type": "InputStickerSet"
+    },
+    {
+      "id": "-1645763991",
+      "predicate": "inputStickerSetID",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        }
+      ],
+      "type": "InputStickerSet"
+    },
+    {
+      "id": "-2044933984",
+      "predicate": "inputStickerSetShortName",
+      "params": [
+        {
+          "name": "short_name",
+          "type": "string"
+        }
+      ],
+      "type": "InputStickerSet"
+    },
+    {
+      "id": "-1482409193",
+      "predicate": "stickerSet",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "short_name",
+          "type": "string"
+        }
+      ],
+      "type": "StickerSet"
+    },
+    {
+      "id": "-1240849242",
+      "predicate": "messages.stickerSet",
+      "params": [
+        {
+          "name": "set",
+          "type": "StickerSet"
+        },
+        {
+          "name": "packs",
+          "type": "Vector<StickerPack>"
+        },
+        {
+          "name": "documents",
+          "type": "Vector<Document>"
+        }
+      ],
+      "type": "messages.StickerSet"
+    }
+  ],
+  "methods": [
+    {
+      "id": "639215886",
+      "method": "messages.getStickerSet",
+      "params": [
+        {
+          "name": "stickerset",
+          "type": "InputStickerSet"
+        }
+      ],
+      "type": "messages.StickerSet"
+    },
+    {
+      "id": "-272893207",
+      "method": "messages.installStickerSet",
+      "params": [
+        {
+          "name": "stickerset",
+          "type": "InputStickerSet"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-110209570",
+      "method": "messages.uninstallStickerSet",
+      "params": [
+        {
+          "name": "stickerset",
+          "type": "InputStickerSet"
+        }
+      ],
+      "type": "Bool"
+    }
+  ]
+}
