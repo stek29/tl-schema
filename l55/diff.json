@@ -1,0 +1,226 @@
+{
+  "constructors": [
+    {
+      "id": "-1252045032",
+      "predicate": "inputMediaPhotoExternal",
+      "params": [
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "caption",
+          "type": "string"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "-437690244",
+      "predicate": "inputMediaDocumentExternal",
+      "params": [
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "caption",
+          "type": "string"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "-855308010",
+      "predicate": "auth.authorization",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "tmp_sessions",
+          "type": "flags.0?int"
+        },
+        {
+          "name": "user",
+          "type": "User"
+        }
+      ],
+      "type": "auth.Authorization"
+    },
+    {
+      "id": "-1574314746",
+      "predicate": "updateConfig",
+      "params": [],
+      "type": "Update"
+    },
+    {
+      "id": "861169551",
+      "predicate": "updatePtsChanged",
+      "params": [],
+      "type": "Update"
+    },
+    {
+      "id": "-1704251862",
+      "predicate": "config",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "expires",
+          "type": "int"
+        },
+        {
+          "name": "test_mode",
+          "type": "Bool"
+        },
+        {
+          "name": "this_dc",
+          "type": "int"
+        },
+        {
+          "name": "dc_options",
+          "type": "Vector<DcOption>"
+        },
+        {
+          "name": "chat_size_max",
+          "type": "int"
+        },
+        {
+          "name": "megagroup_size_max",
+          "type": "int"
+        },
+        {
+          "name": "forwarded_count_max",
+          "type": "int"
+        },
+        {
+          "name": "online_update_period_ms",
+          "type": "int"
+        },
+        {
+          "name": "offline_blur_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "offline_idle_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "online_cloud_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "notify_cloud_delay_ms",
+          "type": "int"
+        },
+        {
+          "name": "notify_default_delay_ms",
+          "type": "int"
+        },
+        {
+          "name": "chat_big_size",
+          "type": "int"
+        },
+        {
+          "name": "push_chat_period_ms",
+          "type": "int"
+        },
+        {
+          "name": "push_chat_limit",
+          "type": "int"
+        },
+        {
+          "name": "saved_gifs_limit",
+          "type": "int"
+        },
+        {
+          "name": "edit_time_limit",
+          "type": "int"
+        },
+        {
+          "name": "rating_e_decay",
+          "type": "int"
+        },
+        {
+          "name": "stickers_recent_limit",
+          "type": "int"
+        },
+        {
+          "name": "tmp_sessions",
+          "type": "flags.0?int"
+        },
+        {
+          "name": "disabled_features",
+          "type": "Vector<DisabledFeature>"
+        }
+      ],
+      "type": "Config"
+    },
+    {
+      "id": "90744648",
+      "predicate": "keyboardButtonSwitchInline",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "same_peer",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "text",
+          "type": "string"
+        },
+        {
+          "name": "query",
+          "type": "string"
+        }
+      ],
+      "type": "KeyboardButton"
+    },
+    {
+      "id": "-1324486149",
+      "predicate": "messages.botCallbackAnswer",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "alert",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "has_url",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "message",
+          "type": "flags.0?string"
+        },
+        {
+          "name": "url",
+          "type": "flags.2?string"
+        }
+      ],
+      "type": "messages.BotCallbackAnswer"
+    }
+  ],
+  "methods": [
+    {
+      "id": "-1920105769",
+      "method": "channels.getAdminedPublicChannels",
+      "params": [],
+      "type": "messages.Chats"
+    }
+  ]
+}
