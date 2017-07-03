@@ -1,0 +1,69 @@
+{
+  "constructors": [
+    {
+      "id": "-1618676578",
+      "predicate": "messageMediaUnsupported",
+      "params": [],
+      "type": "MessageMedia"
+    },
+    {
+      "id": "2108568544",
+      "predicate": "config",
+      "params": [
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "expires",
+          "type": "int"
+        },
+        {
+          "name": "test_mode",
+          "type": "Bool"
+        },
+        {
+          "name": "this_dc",
+          "type": "int"
+        },
+        {
+          "name": "dc_options",
+          "type": "Vector<DcOption>"
+        },
+        {
+          "name": "chat_big_size",
+          "type": "int"
+        },
+        {
+          "name": "chat_size_max",
+          "type": "int"
+        },
+        {
+          "name": "broadcast_size_max",
+          "type": "int"
+        },
+        {
+          "name": "disabled_features",
+          "type": "Vector<DisabledFeature>"
+        }
+      ],
+      "type": "Config"
+    },
+    {
+      "id": "-1369215196",
+      "predicate": "disabledFeature",
+      "params": [
+        {
+          "name": "feature",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        }
+      ],
+      "type": "DisabledFeature"
+    }
+  ],
+  "methods": []
+}
