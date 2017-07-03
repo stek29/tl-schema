@@ -258,6 +258,7 @@ notifyPeer#9fd40bd8 peer:Peer = NotifyPeer;
 notifyUsers#b4c83b4c = NotifyPeer;
 updateUserBlocked#80ece81a user_id:int blocked:Bool = Update;
 updateNotifySettings#bec268ef peer:NotifyPeer notify_settings:PeerNotifySettings = Update;
+auth.sentAppCode#e325edcf phone_registered:Bool phone_code_hash:string send_call_timeout:int is_password:Bool = auth.SentCode;
 ---functions---
 invokeAfterMsg#cb9f372d msg_id:long query:!X = X;
 invokeAfterMsgs#3dc4b4f0 msg_ids:Vector<long> query:!X = X;
@@ -366,3 +367,8 @@ invokeWithLayer12#dda60d3c query:!X = X;
 invokeWithLayer13#427c8ea2 query:!X = X;
 invokeWithLayer14#2b9b08fa query:!X = X;
 invokeWithLayer15#b4418b64 query:!X = X;
+auth.bindTempAuthKey#cdd42a05 perm_auth_key_id:long nonce:long expires_at:int encrypted_message:bytes = Bool;
+contacts.exportCard#84e53737 = Vector<int>;
+contacts.importCard#4fe196fe export_card:Vector<int> = User;
+auth.sendSms#da9f3e8 phone_number:string phone_code_hash:string = Bool;
+invokeWithLayer16#cf5f0987 query:!X = X;

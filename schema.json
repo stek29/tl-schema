@@ -4167,6 +4167,29 @@
         }
       ],
       "type": "Update"
+    },
+    {
+      "id": "-484053553",
+      "predicate": "auth.sentAppCode",
+      "params": [
+        {
+          "name": "phone_registered",
+          "type": "Bool"
+        },
+        {
+          "name": "phone_code_hash",
+          "type": "string"
+        },
+        {
+          "name": "send_call_timeout",
+          "type": "int"
+        },
+        {
+          "name": "is_password",
+          "type": "Bool"
+        }
+      ],
+      "type": "auth.SentCode"
     }
   ],
   "methods": [
@@ -5774,6 +5797,72 @@
     {
       "id": "-1270772892",
       "method": "invokeWithLayer15",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    },
+    {
+      "id": "-841733627",
+      "method": "auth.bindTempAuthKey",
+      "params": [
+        {
+          "name": "perm_auth_key_id",
+          "type": "long"
+        },
+        {
+          "name": "nonce",
+          "type": "long"
+        },
+        {
+          "name": "expires_at",
+          "type": "int"
+        },
+        {
+          "name": "encrypted_message",
+          "type": "bytes"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-2065352905",
+      "method": "contacts.exportCard",
+      "params": [],
+      "type": "Vector<int>"
+    },
+    {
+      "id": "1340184318",
+      "method": "contacts.importCard",
+      "params": [
+        {
+          "name": "export_card",
+          "type": "Vector<int>"
+        }
+      ],
+      "type": "User"
+    },
+    {
+      "id": "229241832",
+      "method": "auth.sendSms",
+      "params": [
+        {
+          "name": "phone_number",
+          "type": "string"
+        },
+        {
+          "name": "phone_code_hash",
+          "type": "string"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-815855225",
+      "method": "invokeWithLayer16",
       "params": [
         {
           "name": "query",
