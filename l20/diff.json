@@ -1,0 +1,77 @@
+{
+  "constructors": [
+    {
+      "id": "-1527411636",
+      "predicate": "account.sentChangePhoneCode",
+      "params": [
+        {
+          "name": "phone_code_hash",
+          "type": "string"
+        },
+        {
+          "name": "send_call_timeout",
+          "type": "int"
+        }
+      ],
+      "type": "account.SentChangePhoneCode"
+    },
+    {
+      "id": "314130811",
+      "predicate": "updateUserPhone",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "phone",
+          "type": "string"
+        }
+      ],
+      "type": "Update"
+    }
+  ],
+  "methods": [
+    {
+      "id": "200282908",
+      "method": "contacts.resolveUsername",
+      "params": [
+        {
+          "name": "username",
+          "type": "string"
+        }
+      ],
+      "type": "User"
+    },
+    {
+      "id": "-1543001868",
+      "method": "account.sendChangePhoneCode",
+      "params": [
+        {
+          "name": "phone_number",
+          "type": "string"
+        }
+      ],
+      "type": "account.SentChangePhoneCode"
+    },
+    {
+      "id": "1891839707",
+      "method": "account.changePhone",
+      "params": [
+        {
+          "name": "phone_number",
+          "type": "string"
+        },
+        {
+          "name": "phone_code_hash",
+          "type": "string"
+        },
+        {
+          "name": "phone_code",
+          "type": "string"
+        }
+      ],
+      "type": "User"
+    }
+  ]
+}
