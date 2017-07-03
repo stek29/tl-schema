@@ -1,0 +1,549 @@
+{
+  "constructors": [
+    {
+      "id": "909233996",
+      "predicate": "chatLocated",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "distance",
+          "type": "int"
+        }
+      ],
+      "type": "ChatLocated"
+    },
+    {
+      "id": "534882570",
+      "predicate": "updates.state",
+      "params": [
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "seq",
+          "type": "int"
+        },
+        {
+          "name": "unread_count",
+          "type": "int"
+        },
+        {
+          "name": "friends_unread_count",
+          "type": "int"
+        }
+      ],
+      "type": "updates.State"
+    },
+    {
+      "id": "1960072954",
+      "predicate": "inputGeoChat",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        }
+      ],
+      "type": "InputGeoChat"
+    },
+    {
+      "id": "1301143240",
+      "predicate": "inputNotifyGeoChatPeer",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputGeoChat"
+        }
+      ],
+      "type": "InputNotifyPeer"
+    },
+    {
+      "id": "-498854411",
+      "predicate": "geoChat",
+      "params": [
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "address",
+          "type": "string"
+        },
+        {
+          "name": "geo",
+          "type": "GeoPoint"
+        },
+        {
+          "name": "photo",
+          "type": "ChatPhoto"
+        },
+        {
+          "name": "participants_count",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "checked_in",
+          "type": "Bool"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        }
+      ],
+      "type": "Chat"
+    },
+    {
+      "id": "1613830811",
+      "predicate": "geoChatMessageEmpty",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        }
+      ],
+      "type": "GeoChatMessage"
+    },
+    {
+      "id": "1158019297",
+      "predicate": "geoChatMessage",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "from_id",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "media",
+          "type": "MessageMedia"
+        }
+      ],
+      "type": "GeoChatMessage"
+    },
+    {
+      "id": "-749755826",
+      "predicate": "geoChatMessageService",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "from_id",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "action",
+          "type": "MessageAction"
+        }
+      ],
+      "type": "GeoChatMessage"
+    },
+    {
+      "id": "397498251",
+      "predicate": "geochats.statedMessage",
+      "params": [
+        {
+          "name": "message",
+          "type": "GeoChatMessage"
+        },
+        {
+          "name": "chats",
+          "type": "Vector<Chat>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        },
+        {
+          "name": "seq",
+          "type": "int"
+        }
+      ],
+      "type": "geochats.StatedMessage"
+    },
+    {
+      "id": "1224651367",
+      "predicate": "geochats.located",
+      "params": [
+        {
+          "name": "results",
+          "type": "Vector<ChatLocated>"
+        },
+        {
+          "name": "messages",
+          "type": "Vector<GeoChatMessage>"
+        },
+        {
+          "name": "chats",
+          "type": "Vector<Chat>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "geochats.Located"
+    },
+    {
+      "id": "-783127119",
+      "predicate": "geochats.messages",
+      "params": [
+        {
+          "name": "messages",
+          "type": "Vector<GeoChatMessage>"
+        },
+        {
+          "name": "chats",
+          "type": "Vector<Chat>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "geochats.Messages"
+    },
+    {
+      "id": "-1135057944",
+      "predicate": "geochats.messagesSlice",
+      "params": [
+        {
+          "name": "count",
+          "type": "int"
+        },
+        {
+          "name": "messages",
+          "type": "Vector<GeoChatMessage>"
+        },
+        {
+          "name": "chats",
+          "type": "Vector<Chat>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "geochats.Messages"
+    },
+    {
+      "id": "1862504124",
+      "predicate": "messageActionGeoChatCreate",
+      "params": [
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "address",
+          "type": "string"
+        }
+      ],
+      "type": "MessageAction"
+    },
+    {
+      "id": "209540062",
+      "predicate": "messageActionGeoChatCheckin",
+      "params": [],
+      "type": "MessageAction"
+    },
+    {
+      "id": "1516823543",
+      "predicate": "updateNewGeoChatMessage",
+      "params": [
+        {
+          "name": "message",
+          "type": "GeoChatMessage"
+        }
+      ],
+      "type": "Update"
+    }
+  ],
+  "methods": [
+    {
+      "id": "2132356495",
+      "method": "geochats.getLocated",
+      "params": [
+        {
+          "name": "geo_point",
+          "type": "InputGeoPoint"
+        },
+        {
+          "name": "radius",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "geochats.Located"
+    },
+    {
+      "id": "-515735953",
+      "method": "geochats.getRecents",
+      "params": [
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "geochats.Messages"
+    },
+    {
+      "id": "1437853947",
+      "method": "geochats.checkin",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputGeoChat"
+        }
+      ],
+      "type": "geochats.StatedMessage"
+    },
+    {
+      "id": "1730338159",
+      "method": "geochats.getFullChat",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputGeoChat"
+        }
+      ],
+      "type": "messages.ChatFull"
+    },
+    {
+      "id": "1284383347",
+      "method": "geochats.editChatTitle",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputGeoChat"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "address",
+          "type": "string"
+        }
+      ],
+      "type": "geochats.StatedMessage"
+    },
+    {
+      "id": "903355029",
+      "method": "geochats.editChatPhoto",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputGeoChat"
+        },
+        {
+          "name": "photo",
+          "type": "InputChatPhoto"
+        }
+      ],
+      "type": "geochats.StatedMessage"
+    },
+    {
+      "id": "-808598451",
+      "method": "geochats.search",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputGeoChat"
+        },
+        {
+          "name": "q",
+          "type": "string"
+        },
+        {
+          "name": "filter",
+          "type": "MessagesFilter"
+        },
+        {
+          "name": "min_date",
+          "type": "int"
+        },
+        {
+          "name": "max_date",
+          "type": "int"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "geochats.Messages"
+    },
+    {
+      "id": "-1254131096",
+      "method": "geochats.getHistory",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputGeoChat"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "geochats.Messages"
+    },
+    {
+      "id": "146319145",
+      "method": "geochats.setTyping",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputGeoChat"
+        },
+        {
+          "name": "typing",
+          "type": "Bool"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "102432836",
+      "method": "geochats.sendMessage",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputGeoChat"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "random_id",
+          "type": "long"
+        }
+      ],
+      "type": "geochats.StatedMessage"
+    },
+    {
+      "id": "-1192173825",
+      "method": "geochats.sendMedia",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputGeoChat"
+        },
+        {
+          "name": "media",
+          "type": "InputMedia"
+        },
+        {
+          "name": "random_id",
+          "type": "long"
+        }
+      ],
+      "type": "geochats.StatedMessage"
+    },
+    {
+      "id": "1952391883",
+      "method": "geochats.createGeoChat",
+      "params": [
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "geo_point",
+          "type": "InputGeoPoint"
+        },
+        {
+          "name": "address",
+          "type": "string"
+        }
+      ],
+      "type": "geochats.StatedMessage"
+    },
+    {
+      "id": "-559885264",
+      "method": "invokeWithLayer4",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    }
+  ]
+}

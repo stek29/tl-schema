@@ -1,0 +1,31 @@
+---types---
+// updates.state#a0d9c0c pts:int date:int seq:int unread_count:int = updates.State;
+chatLocated#3631cf4c chat_id:int distance:int = ChatLocated;
+updates.state#1fe1a90a pts:int date:int seq:int unread_count:int friends_unread_count:int = updates.State;
+inputGeoChat#74d456fa chat_id:int access_hash:long = InputGeoChat;
+inputNotifyGeoChatPeer#4d8ddec8 peer:InputGeoChat = InputNotifyPeer;
+geoChat#e24415f5 id:int access_hash:long title:string address:string geo:GeoPoint photo:ChatPhoto participants_count:int date:int checked_in:Bool version:int = Chat;
+geoChatMessageEmpty#60311a9b chat_id:int id:int = GeoChatMessage;
+geoChatMessage#4505f8e1 chat_id:int id:int from_id:int date:int message:string media:MessageMedia = GeoChatMessage;
+geoChatMessageService#d34fa24e chat_id:int id:int from_id:int date:int action:MessageAction = GeoChatMessage;
+geochats.statedMessage#17b1578b message:GeoChatMessage chats:Vector<Chat> users:Vector<User> seq:int = geochats.StatedMessage;
+geochats.located#48feb267 results:Vector<ChatLocated> messages:Vector<GeoChatMessage> chats:Vector<Chat> users:Vector<User> = geochats.Located;
+geochats.messages#d1526db1 messages:Vector<GeoChatMessage> chats:Vector<Chat> users:Vector<User> = geochats.Messages;
+geochats.messagesSlice#bc5863e8 count:int messages:Vector<GeoChatMessage> chats:Vector<Chat> users:Vector<User> = geochats.Messages;
+messageActionGeoChatCreate#6f038ebc title:string address:string = MessageAction;
+messageActionGeoChatCheckin#c7d53de = MessageAction;
+updateNewGeoChatMessage#5a68e3f7 message:GeoChatMessage = Update;
+---functions---
+geochats.getLocated#7f192d8f geo_point:InputGeoPoint radius:int limit:int = geochats.Located;
+geochats.getRecents#e1427e6f offset:int limit:int = geochats.Messages;
+geochats.checkin#55b3e8fb peer:InputGeoChat = geochats.StatedMessage;
+geochats.getFullChat#6722dd6f peer:InputGeoChat = messages.ChatFull;
+geochats.editChatTitle#4c8e2273 peer:InputGeoChat title:string address:string = geochats.StatedMessage;
+geochats.editChatPhoto#35d81a95 peer:InputGeoChat photo:InputChatPhoto = geochats.StatedMessage;
+geochats.search#cfcdc44d peer:InputGeoChat q:string filter:MessagesFilter min_date:int max_date:int offset:int max_id:int limit:int = geochats.Messages;
+geochats.getHistory#b53f7a68 peer:InputGeoChat offset:int max_id:int limit:int = geochats.Messages;
+geochats.setTyping#8b8a729 peer:InputGeoChat typing:Bool = Bool;
+geochats.sendMessage#61b0044 peer:InputGeoChat message:string random_id:long = geochats.StatedMessage;
+geochats.sendMedia#b8f0deff peer:InputGeoChat media:InputMedia random_id:long = geochats.StatedMessage;
+geochats.createGeoChat#745f22cb title:string geo_point:InputGeoPoint address:string = geochats.StatedMessage;
+invokeWithLayer4#dea0d430 query:!X = X;
