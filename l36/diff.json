@@ -1,0 +1,268 @@
+{
+  "constructors": [
+    {
+      "id": "-2106507297",
+      "predicate": "inputMediaUploadedVideo",
+      "params": [
+        {
+          "name": "file",
+          "type": "InputFile"
+        },
+        {
+          "name": "duration",
+          "type": "int"
+        },
+        {
+          "name": "w",
+          "type": "int"
+        },
+        {
+          "name": "h",
+          "type": "int"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
+        },
+        {
+          "name": "caption",
+          "type": "string"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "2004934137",
+      "predicate": "inputMediaUploadedThumbVideo",
+      "params": [
+        {
+          "name": "file",
+          "type": "InputFile"
+        },
+        {
+          "name": "thumb",
+          "type": "InputFile"
+        },
+        {
+          "name": "duration",
+          "type": "int"
+        },
+        {
+          "name": "w",
+          "type": "int"
+        },
+        {
+          "name": "h",
+          "type": "int"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
+        },
+        {
+          "name": "caption",
+          "type": "string"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "736885382",
+      "predicate": "message",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "from_id",
+          "type": "int"
+        },
+        {
+          "name": "to_id",
+          "type": "Peer"
+        },
+        {
+          "name": "fwd_from_id",
+          "type": "flags.2?int"
+        },
+        {
+          "name": "fwd_date",
+          "type": "flags.2?int"
+        },
+        {
+          "name": "reply_to_msg_id",
+          "type": "flags.3?int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "media",
+          "type": "flags.9?MessageMedia"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.6?ReplyMarkup"
+        },
+        {
+          "name": "entities",
+          "type": "flags.7?Vector<MessageEntity>"
+        }
+      ],
+      "type": "Message"
+    },
+    {
+      "id": "-897446185",
+      "predicate": "webPage",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "display_url",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "type": "flags.0?string"
+        },
+        {
+          "name": "site_name",
+          "type": "flags.1?string"
+        },
+        {
+          "name": "title",
+          "type": "flags.2?string"
+        },
+        {
+          "name": "description",
+          "type": "flags.3?string"
+        },
+        {
+          "name": "photo",
+          "type": "flags.4?Photo"
+        },
+        {
+          "name": "embed_url",
+          "type": "flags.5?string"
+        },
+        {
+          "name": "embed_type",
+          "type": "flags.5?string"
+        },
+        {
+          "name": "embed_width",
+          "type": "flags.6?int"
+        },
+        {
+          "name": "embed_height",
+          "type": "flags.6?int"
+        },
+        {
+          "name": "duration",
+          "type": "flags.7?int"
+        },
+        {
+          "name": "author",
+          "type": "flags.8?string"
+        },
+        {
+          "name": "document",
+          "type": "flags.9?Document"
+        }
+      ],
+      "type": "WebPage"
+    },
+    {
+      "id": "301019932",
+      "predicate": "updateShortSentMessage",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "media",
+          "type": "flags.9?MessageMedia"
+        },
+        {
+          "name": "entities",
+          "type": "flags.7?Vector<MessageEntity>"
+        }
+      ],
+      "type": "Updates"
+    }
+  ],
+  "methods": [
+    {
+      "id": "-91733382",
+      "method": "messages.sendMessage",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "reply_to_msg_id",
+          "type": "flags.0?int"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "random_id",
+          "type": "long"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.2?ReplyMarkup"
+        },
+        {
+          "name": "entities",
+          "type": "flags.3?Vector<MessageEntity>"
+        }
+      ],
+      "type": "Updates"
+    }
+  ]
+}
