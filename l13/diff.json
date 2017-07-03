@@ -1,0 +1,207 @@
+{
+  "constructors": [
+    {
+      "id": "322623222",
+      "predicate": "inputMediaUploadedVideo",
+      "params": [
+        {
+          "name": "file",
+          "type": "InputFile"
+        },
+        {
+          "name": "duration",
+          "type": "int"
+        },
+        {
+          "name": "w",
+          "type": "int"
+        },
+        {
+          "name": "h",
+          "type": "int"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "-1726817601",
+      "predicate": "inputMediaUploadedThumbVideo",
+      "params": [
+        {
+          "name": "file",
+          "type": "InputFile"
+        },
+        {
+          "name": "thumb",
+          "type": "InputFile"
+        },
+        {
+          "name": "duration",
+          "type": "int"
+        },
+        {
+          "name": "w",
+          "type": "int"
+        },
+        {
+          "name": "h",
+          "type": "int"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "948937617",
+      "predicate": "video",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "caption",
+          "type": "string"
+        },
+        {
+          "name": "duration",
+          "type": "int"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        },
+        {
+          "name": "thumb",
+          "type": "PhotoSize"
+        },
+        {
+          "name": "dc_id",
+          "type": "int"
+        },
+        {
+          "name": "w",
+          "type": "int"
+        },
+        {
+          "name": "h",
+          "type": "int"
+        }
+      ],
+      "type": "Video"
+    },
+    {
+      "id": "-1387117803",
+      "predicate": "contacts.importedContacts",
+      "params": [
+        {
+          "name": "imported",
+          "type": "Vector<ImportedContact>"
+        },
+        {
+          "name": "retry_contacts",
+          "type": "Vector<long>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "contacts.ImportedContacts"
+    },
+    {
+      "id": "1313442987",
+      "predicate": "inputMediaUploadedAudio",
+      "params": [
+        {
+          "name": "file",
+          "type": "InputFile"
+        },
+        {
+          "name": "duration",
+          "type": "int"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "-945003370",
+      "predicate": "audio",
+      "params": [
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "duration",
+          "type": "int"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        },
+        {
+          "name": "dc_id",
+          "type": "int"
+        }
+      ],
+      "type": "Audio"
+    }
+  ],
+  "methods": [
+    {
+      "id": "1115459234",
+      "method": "invokeWithLayer13",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    }
+  ]
+}
