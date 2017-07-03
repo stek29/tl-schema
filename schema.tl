@@ -283,6 +283,8 @@ messages.stickers#8a8ecd32 hash:string stickers:Vector<Document> = messages.Stic
 stickerPack#12b299d4 emoticon:string documents:Vector<long> = StickerPack;
 messages.allStickersNotModified#e86602c3 = messages.AllStickers;
 messages.allStickers#dcef3102 hash:string packs:Vector<StickerPack> documents:Vector<Document> = messages.AllStickers;
+account.noPassword#5770e7a9 new_salt:bytes = account.Password;
+account.password#739e5f72 current_salt:bytes new_salt:bytes hint:string = account.Password;
 ---functions---
 invokeAfterMsg#cb9f372d msg_id:long query:!X = X;
 invokeAfterMsgs#3dc4b4f0 msg_ids:Vector<long> query:!X = X;
@@ -379,3 +381,7 @@ account.sendChangePhoneCode#a407a8f4 phone_number:string = account.SentChangePho
 account.changePhone#70c32edb phone_number:string phone_code_hash:string phone_code:string = User;
 messages.getStickers#ae22e045 emoticon:string hash:string = messages.Stickers;
 messages.getAllStickers#aa3bc868 hash:string = messages.AllStickers;
+account.updateDeviceLocked#38df3532 period:int = Bool;
+account.getPassword#548a30f5 = account.Password;
+account.setPassword#dd2a4d8f current_password_hash:bytes new_salt:bytes new_password_hash:bytes hint:string = Bool;
+auth.checkPassword#a63011e password_hash:bytes = auth.Authorization;
