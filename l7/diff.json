@@ -1,0 +1,40 @@
+{
+  "constructors": [
+    {
+      "id": "1662091044",
+      "predicate": "wallPaperSolid",
+      "params": [
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "bg_color",
+          "type": "int"
+        },
+        {
+          "name": "color",
+          "type": "int"
+        }
+      ],
+      "type": "WallPaper"
+    }
+  ],
+  "methods": [
+    {
+      "id": "-1514252589",
+      "method": "invokeWithLayer7",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    }
+  ]
+}
