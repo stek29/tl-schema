@@ -1,0 +1,71 @@
+{
+  "constructors": [
+    {
+      "id": "-847783593",
+      "predicate": "channelMessagesFilter",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "important_only",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "exclude_new_messages",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "ranges",
+          "type": "Vector<MessageRange>"
+        }
+      ],
+      "type": "ChannelMessagesFilter"
+    }
+  ],
+  "methods": [
+    {
+      "id": "1799878989",
+      "method": "messages.getDialogs",
+      "params": [
+        {
+          "name": "offset_date",
+          "type": "int"
+        },
+        {
+          "name": "offset_id",
+          "type": "int"
+        },
+        {
+          "name": "offset_peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "messages.Dialogs"
+    },
+    {
+      "id": "-344583728",
+      "method": "channels.editAdmin",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        },
+        {
+          "name": "role",
+          "type": "ChannelParticipantRole"
+        }
+      ],
+      "type": "Updates"
+    }
+  ]
+}
