@@ -1,0 +1,74 @@
+{
+  "constructors": [
+    {
+      "id": "-2134272152",
+      "predicate": "inputMessagesFilterPhoneCalls",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "missed",
+          "type": "flags.0?true"
+        }
+      ],
+      "type": "MessagesFilter"
+    },
+    {
+      "id": "-2132731265",
+      "predicate": "messageActionPhoneCall",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "call_id",
+          "type": "long"
+        },
+        {
+          "name": "reason",
+          "type": "flags.0?PhoneCallDiscardReason"
+        },
+        {
+          "name": "duration",
+          "type": "flags.1?int"
+        }
+      ],
+      "type": "MessageAction"
+    }
+  ],
+  "methods": [
+    {
+      "id": "-443640366",
+      "method": "messages.deleteMessages",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "revoke",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "id",
+          "type": "Vector<int>"
+        }
+      ],
+      "type": "messages.AffectedMessages"
+    },
+    {
+      "id": "1259113487",
+      "method": "messages.reportEncryptedSpam",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputEncryptedChat"
+        }
+      ],
+      "type": "Bool"
+    }
+  ]
+}
