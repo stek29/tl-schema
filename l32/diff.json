@@ -1,0 +1,90 @@
+{
+  "constructors": [
+    {
+      "id": "-556656416",
+      "predicate": "documentAttributeAudio",
+      "params": [
+        {
+          "name": "duration",
+          "type": "int"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "performer",
+          "type": "string"
+        }
+      ],
+      "type": "DocumentAttribute"
+    },
+    {
+      "id": "-719474725",
+      "predicate": "messages.allStickers",
+      "params": [
+        {
+          "name": "hash",
+          "type": "string"
+        },
+        {
+          "name": "sets",
+          "type": "Vector<StickerSet>"
+        }
+      ],
+      "type": "messages.AllStickers"
+    },
+    {
+      "id": "-852477119",
+      "predicate": "stickerSet",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "long"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "short_name",
+          "type": "string"
+        },
+        {
+          "name": "count",
+          "type": "int"
+        },
+        {
+          "name": "hash",
+          "type": "int"
+        }
+      ],
+      "type": "StickerSet"
+    }
+  ],
+  "methods": [
+    {
+      "id": "2066793382",
+      "method": "messages.installStickerSet",
+      "params": [
+        {
+          "name": "stickerset",
+          "type": "InputStickerSet"
+        },
+        {
+          "name": "disabled",
+          "type": "Bool"
+        }
+      ],
+      "type": "Bool"
+    }
+  ]
+}
