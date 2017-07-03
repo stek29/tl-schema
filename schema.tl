@@ -185,6 +185,9 @@ inputPeerNotifyEventsEmpty#f03064d8 = InputPeerNotifyEvents;
 inputPeerNotifyEventsAll#e86a2c74 = InputPeerNotifyEvents;
 photos.photos#8dca6aa5 photos:Vector<Photo> users:Vector<User> = photos.Photos;
 photos.photosSlice#15051f54 count:int photos:Vector<Photo> users:Vector<User> = photos.Photos;
+messages.statedMessagesLinks#3e74f5c6 messages:Vector<Message> chats:Vector<Chat> users:Vector<User> links:Vector<contacts.Link> pts:int seq:int = messages.StatedMessages;
+messages.statedMessageLink#a9af2881 message:Message chats:Vector<Chat> users:Vector<User> links:Vector<contacts.Link> pts:int seq:int = messages.StatedMessage;
+messages.sentMessageLink#e9db4a3f id:int date:int pts:int seq:int links:Vector<contacts.Link> = messages.SentMessage;
 ---functions---
 invokeAfterMsg#cb9f372d msg_id:long query:!X = X;
 invokeAfterMsgs#3dc4b4f0 msg_ids:Vector<long> query:!X = X;
@@ -253,3 +256,6 @@ help.getInviteText#a4a95186 lang_code:string = help.InviteText;
 photos.deletePhotos#87cf7f2f id:Vector<InputPhoto> = Vector<long>;
 photos.getUserPhotos#b7ee553c user_id:InputUser offset:int max_id:int limit:int = photos.Photos;
 invokeWithLayer2#289dd1f6 query:!X = X;
+messages.forwardMessage#3f3f4f2 peer:InputPeer id:int random_id:long = messages.StatedMessage;
+messages.sendBroadcast#41bb0972 contacts:Vector<InputUser> message:string media:InputMedia = messages.StatedMessages;
+invokeWithLayer3#b7475268 query:!X = X;

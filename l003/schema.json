@@ -1,0 +1,144 @@
+{
+  "constructors": [
+    {
+      "id": "1047852486",
+      "predicate": "messages.statedMessagesLinks",
+      "params": [
+        {
+          "name": "messages",
+          "type": "Vector<Message>"
+        },
+        {
+          "name": "chats",
+          "type": "Vector<Chat>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        },
+        {
+          "name": "links",
+          "type": "Vector<contacts.Link>"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "seq",
+          "type": "int"
+        }
+      ],
+      "type": "messages.StatedMessages"
+    },
+    {
+      "id": "-1448138623",
+      "predicate": "messages.statedMessageLink",
+      "params": [
+        {
+          "name": "message",
+          "type": "Message"
+        },
+        {
+          "name": "chats",
+          "type": "Vector<Chat>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        },
+        {
+          "name": "links",
+          "type": "Vector<contacts.Link>"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "seq",
+          "type": "int"
+        }
+      ],
+      "type": "messages.StatedMessage"
+    },
+    {
+      "id": "-371504577",
+      "predicate": "messages.sentMessageLink",
+      "params": [
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "seq",
+          "type": "int"
+        },
+        {
+          "name": "links",
+          "type": "Vector<contacts.Link>"
+        }
+      ],
+      "type": "messages.SentMessage"
+    }
+  ],
+  "methods": [
+    {
+      "id": "66319602",
+      "method": "messages.forwardMessage",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "random_id",
+          "type": "long"
+        }
+      ],
+      "type": "messages.StatedMessage"
+    },
+    {
+      "id": "1102776690",
+      "method": "messages.sendBroadcast",
+      "params": [
+        {
+          "name": "contacts",
+          "type": "Vector<InputUser>"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "media",
+          "type": "InputMedia"
+        }
+      ],
+      "type": "messages.StatedMessages"
+    },
+    {
+      "id": "-1220062616",
+      "method": "invokeWithLayer3",
+      "params": [
+        {
+          "name": "query",
+          "type": "!X"
+        }
+      ],
+      "type": "X"
+    }
+  ]
+}
