@@ -1,0 +1,416 @@
+{
+  "constructors": [
+    {
+      "id": "-1588737454",
+      "predicate": "channel",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "creator",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "kicked",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "left",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "editor",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "moderator",
+          "type": "flags.4?true"
+        },
+        {
+          "name": "broadcast",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "verified",
+          "type": "flags.7?true"
+        },
+        {
+          "name": "megagroup",
+          "type": "flags.8?true"
+        },
+        {
+          "name": "restricted",
+          "type": "flags.9?true"
+        },
+        {
+          "name": "democracy",
+          "type": "flags.10?true"
+        },
+        {
+          "name": "signatures",
+          "type": "flags.11?true"
+        },
+        {
+          "name": "min",
+          "type": "flags.12?true"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "flags.13?long"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "username",
+          "type": "flags.6?string"
+        },
+        {
+          "name": "photo",
+          "type": "ChatPhoto"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        },
+        {
+          "name": "restriction_reason",
+          "type": "flags.9?string"
+        }
+      ],
+      "type": "Chat"
+    },
+    {
+      "id": "-1749097118",
+      "predicate": "channelFull",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "can_view_participants",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "can_set_username",
+          "type": "flags.6?true"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "about",
+          "type": "string"
+        },
+        {
+          "name": "participants_count",
+          "type": "flags.0?int"
+        },
+        {
+          "name": "admins_count",
+          "type": "flags.1?int"
+        },
+        {
+          "name": "kicked_count",
+          "type": "flags.2?int"
+        },
+        {
+          "name": "read_inbox_max_id",
+          "type": "int"
+        },
+        {
+          "name": "unread_count",
+          "type": "int"
+        },
+        {
+          "name": "unread_important_count",
+          "type": "int"
+        },
+        {
+          "name": "chat_photo",
+          "type": "Photo"
+        },
+        {
+          "name": "notify_settings",
+          "type": "PeerNotifySettings"
+        },
+        {
+          "name": "exported_invite",
+          "type": "ExportedChatInvite"
+        },
+        {
+          "name": "bot_info",
+          "type": "Vector<BotInfo>"
+        },
+        {
+          "name": "migrated_from_chat_id",
+          "type": "flags.4?int"
+        },
+        {
+          "name": "migrated_from_max_id",
+          "type": "flags.4?int"
+        },
+        {
+          "name": "pinned_msg_id",
+          "type": "flags.5?int"
+        }
+      ],
+      "type": "ChatFull"
+    },
+    {
+      "id": "-1642487306",
+      "predicate": "messageService",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "unread",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "out",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "mentioned",
+          "type": "flags.4?true"
+        },
+        {
+          "name": "media_unread",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "silent",
+          "type": "flags.13?true"
+        },
+        {
+          "name": "post",
+          "type": "flags.14?true"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "from_id",
+          "type": "flags.8?int"
+        },
+        {
+          "name": "to_id",
+          "type": "Peer"
+        },
+        {
+          "name": "reply_to_msg_id",
+          "type": "flags.3?int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "action",
+          "type": "MessageAction"
+        }
+      ],
+      "type": "Message"
+    },
+    {
+      "id": "-1799538451",
+      "predicate": "messageActionPinMessage",
+      "params": [],
+      "type": "MessageAction"
+    },
+    {
+      "id": "-2122045747",
+      "predicate": "peerSettings",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "report_spam",
+          "type": "flags.0?true"
+        }
+      ],
+      "type": "PeerSettings"
+    },
+    {
+      "id": "1496513539",
+      "predicate": "userFull",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "blocked",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "user",
+          "type": "User"
+        },
+        {
+          "name": "about",
+          "type": "flags.1?string"
+        },
+        {
+          "name": "link",
+          "type": "contacts.Link"
+        },
+        {
+          "name": "profile_photo",
+          "type": "flags.2?Photo"
+        },
+        {
+          "name": "notify_settings",
+          "type": "PeerNotifySettings"
+        },
+        {
+          "name": "bot_info",
+          "type": "flags.3?BotInfo"
+        }
+      ],
+      "type": "UserFull"
+    },
+    {
+      "id": "-352032773",
+      "predicate": "updateChannelTooLong",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "channel_id",
+          "type": "int"
+        },
+        {
+          "name": "pts",
+          "type": "flags.0?int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-1738988427",
+      "predicate": "updateChannelPinnedMessage",
+      "params": [
+        {
+          "name": "channel_id",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-1729618630",
+      "predicate": "botInfo",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "name": "commands",
+          "type": "Vector<BotCommand>"
+        }
+      ],
+      "type": "BotInfo"
+    }
+  ],
+  "methods": [
+    {
+      "id": "2018596725",
+      "method": "account.updateProfile",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "first_name",
+          "type": "flags.0?string"
+        },
+        {
+          "name": "last_name",
+          "type": "flags.1?string"
+        },
+        {
+          "name": "about",
+          "type": "flags.2?string"
+        }
+      ],
+      "type": "User"
+    },
+    {
+      "id": "-1460572005",
+      "method": "messages.hideReportSpam",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "913498268",
+      "method": "messages.getPeerSettings",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        }
+      ],
+      "type": "PeerSettings"
+    },
+    {
+      "id": "-1490162350",
+      "method": "channels.updatePinnedMessage",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "silent",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        }
+      ],
+      "type": "Updates"
+    }
+  ]
+}
