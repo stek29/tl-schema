@@ -3490,7 +3490,7 @@
       "type": "InputMedia"
     },
     {
-      "id": "887592125",
+      "id": "-1610888",
       "predicate": "inputMediaUploadedDocument",
       "params": [
         {
@@ -3498,18 +3498,18 @@
           "type": "InputFile"
         },
         {
-          "name": "file_name",
+          "name": "mime_type",
           "type": "string"
         },
         {
-          "name": "mime_type",
-          "type": "string"
+          "name": "attributes",
+          "type": "Vector<DocumentAttribute>"
         }
       ],
       "type": "InputMedia"
     },
     {
-      "id": "1044831837",
+      "id": "1095242886",
       "predicate": "inputMediaUploadedThumbDocument",
       "params": [
         {
@@ -3521,12 +3521,12 @@
           "type": "InputFile"
         },
         {
-          "name": "file_name",
+          "name": "mime_type",
           "type": "string"
         },
         {
-          "name": "mime_type",
-          "type": "string"
+          "name": "attributes",
+          "type": "Vector<DocumentAttribute>"
         }
       ],
       "type": "InputMedia"
@@ -3698,7 +3698,7 @@
       "type": "Document"
     },
     {
-      "id": "-1627626714",
+      "id": "-106717361",
       "predicate": "document",
       "params": [
         {
@@ -3710,16 +3710,8 @@
           "type": "long"
         },
         {
-          "name": "user_id",
-          "type": "int"
-        },
-        {
           "name": "date",
           "type": "int"
-        },
-        {
-          "name": "file_name",
-          "type": "string"
         },
         {
           "name": "mime_type",
@@ -3736,6 +3728,10 @@
         {
           "name": "dc_id",
           "type": "int"
+        },
+        {
+          "name": "attributes",
+          "type": "Vector<DocumentAttribute>"
         }
       ],
       "type": "Document"
@@ -4127,6 +4123,135 @@
         }
       ],
       "type": "DisabledFeature"
+    },
+    {
+      "id": "1815593308",
+      "predicate": "documentAttributeImageSize",
+      "params": [
+        {
+          "name": "w",
+          "type": "int"
+        },
+        {
+          "name": "h",
+          "type": "int"
+        }
+      ],
+      "type": "DocumentAttribute"
+    },
+    {
+      "id": "297109817",
+      "predicate": "documentAttributeAnimated",
+      "params": [],
+      "type": "DocumentAttribute"
+    },
+    {
+      "id": "-83208409",
+      "predicate": "documentAttributeSticker",
+      "params": [],
+      "type": "DocumentAttribute"
+    },
+    {
+      "id": "1494273227",
+      "predicate": "documentAttributeVideo",
+      "params": [
+        {
+          "name": "duration",
+          "type": "int"
+        },
+        {
+          "name": "w",
+          "type": "int"
+        },
+        {
+          "name": "h",
+          "type": "int"
+        }
+      ],
+      "type": "DocumentAttribute"
+    },
+    {
+      "id": "85215461",
+      "predicate": "documentAttributeAudio",
+      "params": [
+        {
+          "name": "duration",
+          "type": "int"
+        }
+      ],
+      "type": "DocumentAttribute"
+    },
+    {
+      "id": "358154344",
+      "predicate": "documentAttributeFilename",
+      "params": [
+        {
+          "name": "file_name",
+          "type": "string"
+        }
+      ],
+      "type": "DocumentAttribute"
+    },
+    {
+      "id": "-244016606",
+      "predicate": "messages.stickersNotModified",
+      "params": [],
+      "type": "messages.Stickers"
+    },
+    {
+      "id": "-1970352846",
+      "predicate": "messages.stickers",
+      "params": [
+        {
+          "name": "hash",
+          "type": "string"
+        },
+        {
+          "name": "stickers",
+          "type": "Vector<Document>"
+        }
+      ],
+      "type": "messages.Stickers"
+    },
+    {
+      "id": "313694676",
+      "predicate": "stickerPack",
+      "params": [
+        {
+          "name": "emoticon",
+          "type": "string"
+        },
+        {
+          "name": "documents",
+          "type": "Vector<long>"
+        }
+      ],
+      "type": "StickerPack"
+    },
+    {
+      "id": "-395967805",
+      "predicate": "messages.allStickersNotModified",
+      "params": [],
+      "type": "messages.AllStickers"
+    },
+    {
+      "id": "-588304126",
+      "predicate": "messages.allStickers",
+      "params": [
+        {
+          "name": "hash",
+          "type": "string"
+        },
+        {
+          "name": "packs",
+          "type": "Vector<StickerPack>"
+        },
+        {
+          "name": "documents",
+          "type": "Vector<Document>"
+        }
+      ],
+      "type": "messages.AllStickers"
     }
   ],
   "methods": [
@@ -5509,6 +5634,32 @@
         }
       ],
       "type": "User"
+    },
+    {
+      "id": "-1373446075",
+      "method": "messages.getStickers",
+      "params": [
+        {
+          "name": "emoticon",
+          "type": "string"
+        },
+        {
+          "name": "hash",
+          "type": "string"
+        }
+      ],
+      "type": "messages.Stickers"
+    },
+    {
+      "id": "-1438922648",
+      "method": "messages.getAllStickers",
+      "params": [
+        {
+          "name": "hash",
+          "type": "string"
+        }
+      ],
+      "type": "messages.AllStickers"
     }
   ]
 }
