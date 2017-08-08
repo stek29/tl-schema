@@ -231,6 +231,8 @@ class TLFile:
             if not l:
                 # empty
                 continue
+            elif l.startswith('///'):
+                continue # comment in diff
             elif l.startswith('//'):
                 if diff_removed_file is None:
                     # comment
@@ -269,14 +271,52 @@ class TLFile:
                 print('RECURSION ERROR: ')
                 print(tl_type, end='\n\n')
 
-    def diff(self, old, just_added=False):
-        ret = dict()
-        ret['added'] = TLFile()
-        ret['added'].methods = [m for m in self.methods if m not in old.methods]
-        ret['added'].constructors = [c for c in self.constructors if c not in old.constructors]
-
+    def diff(self, old, just_added=False, no_changed=False):
+        ret = { 'added': TLFile() }
         if not just_added:
-            ret['removed'] = old.diff(self, True)['added']
+            ret['removed'] = TLFile()
+            if not no_changed:
+                ret['changed'] = TLFile()
+
+        def getdiff(old, new):
+            ret = { 'added': list() }
+            if not just_added:
+                ret['removed'] = list()
+                if not no_changed:
+                    ret['changed'] = list()
+
+            old_names = {m.name: m for m in old}
+            for m in new:
+                if m not in old:
+                    if m.name not in old_names or just_added or no_changed:
+                        ret['added'].append(m)
+                    else:
+                        ret['changed'].append({
+                            'new': m,
+                            'old': old_names[m.name]
+                        })
+                        old.remove(old_names[m.name])
+                else:
+                    old.remove(m)
+
+            if not just_added:
+                ret['removed'] = old
+
+            return ret
+
+        methods = getdiff(old.methods, self.methods)
+        ret['added'].methods = methods['added']
+        if not just_added:
+            ret['removed'].methods = methods['removed']
+            if not no_changed:
+                ret['changed'].methods = methods['changed']
+
+        constructors = getdiff(old.constructors, self.constructors)
+        ret['added'].constructors = constructors['added']
+        if not just_added:
+            ret['removed'].constructors = constructors['removed']
+            if not no_changed:
+                ret['changed'].constructors = constructors['changed']
 
         return ret
 
@@ -298,6 +338,12 @@ class TLFile:
             file.write('// ')
             file.write(repr(token))
             file.write('\n')
+        for token in diff['changed'].constructors:
+            file.write('// ')
+            file.write(repr(token['old']))
+            file.write('\n')
+            file.write(repr(token['new']))
+            file.write('\n')
         for token in diff['added'].constructors:
             file.write(repr(token))
             file.write('\n')
@@ -306,6 +352,12 @@ class TLFile:
         for token in diff['removed'].methods:
             file.write('// ')
             file.write(repr(token))
+            file.write('\n')
+        for token in diff['changed'].methods:
+            file.write('// ')
+            file.write(repr(token['old']))
+            file.write('\n')
+            file.write(repr(token['new']))
             file.write('\n')
         for token in diff['added'].methods:
             file.write(repr(token))
@@ -379,7 +431,7 @@ if __name__ == '__main__':
             TLFile.writediff(tl_diff, stdout)
         elif argv[1] == 'update':
             # get diff
-            tl_diff = TLFile.from_filename(argv[2]).diff(TLFile.from_filename(argv[3]))
+            tl_diff = TLFile.from_filename(argv[2]).diff(TLFile.from_filename(argv[3]), no_changed=True)
             # and apply it
             TLFile.applydiff(tl_diff, argv[2])
         elif argv[1] == 'apply':
