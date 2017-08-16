@@ -1,0 +1,1586 @@
+{
+  "constructors": [
+    {
+      "id": "1930607688",
+      "predicate": "chat",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "photo",
+          "type": "ChatPhoto"
+        },
+        {
+          "name": "participants_count",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        }
+      ],
+      "type": "Chat"
+    },
+    {
+      "id": "120753115",
+      "predicate": "chatForbidden",
+      "params": [
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        }
+      ],
+      "type": "Chat"
+    },
+    {
+      "id": "-57668565",
+      "predicate": "chatParticipantsForbidden",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "self_participant",
+          "type": "flags.0?ChatParticipant"
+        }
+      ],
+      "type": "ChatParticipants"
+    },
+    {
+      "id": "-1066691065",
+      "predicate": "messageService",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "from_id",
+          "type": "flags.8?int"
+        },
+        {
+          "name": "to_id",
+          "type": "Peer"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "action",
+          "type": "MessageAction"
+        }
+      ],
+      "type": "Message"
+    },
+    {
+      "id": "446822276",
+      "predicate": "contacts.found",
+      "params": [
+        {
+          "name": "results",
+          "type": "Vector<Peer>"
+        },
+        {
+          "name": "chats",
+          "type": "Vector<Chat>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "contacts.Found"
+    },
+    {
+      "id": "-136766906",
+      "predicate": "updateShortMessage",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "fwd_from_id",
+          "type": "flags.2?Peer"
+        },
+        {
+          "name": "fwd_date",
+          "type": "flags.2?int"
+        },
+        {
+          "name": "reply_to_msg_id",
+          "type": "flags.3?int"
+        },
+        {
+          "name": "entities",
+          "type": "flags.7?Vector<MessageEntity>"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-892863022",
+      "predicate": "updateShortChatMessage",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "from_id",
+          "type": "int"
+        },
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "fwd_from_id",
+          "type": "flags.2?Peer"
+        },
+        {
+          "name": "fwd_date",
+          "type": "flags.2?int"
+        },
+        {
+          "name": "reply_to_msg_id",
+          "type": "flags.3?int"
+        },
+        {
+          "name": "entities",
+          "type": "flags.7?Vector<MessageEntity>"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-364179876",
+      "predicate": "updateChatParticipantAdd",
+      "params": [
+        {
+          "name": "chat_id",
+          "type": "int"
+        },
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "inviter_id",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "2139689491",
+      "predicate": "updateWebPage",
+      "params": [
+        {
+          "name": "webpage",
+          "type": "WebPage"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-1813406880",
+      "predicate": "chatInvite",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        }
+      ],
+      "type": "ChatInvite"
+    },
+    {
+      "id": "548253432",
+      "predicate": "inputPeerChannel",
+      "params": [
+        {
+          "name": "channel_id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        }
+      ],
+      "type": "InputPeer"
+    },
+    {
+      "id": "-1109531342",
+      "predicate": "peerChannel",
+      "params": [
+        {
+          "name": "channel_id",
+          "type": "int"
+        }
+      ],
+      "type": "Peer"
+    },
+    {
+      "id": "1737397639",
+      "predicate": "channel",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "username",
+          "type": "flags.6?string"
+        },
+        {
+          "name": "photo",
+          "type": "ChatPhoto"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        }
+      ],
+      "type": "Chat"
+    },
+    {
+      "id": "763724588",
+      "predicate": "channelForbidden",
+      "params": [
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        }
+      ],
+      "type": "Chat"
+    },
+    {
+      "id": "-88925533",
+      "predicate": "channelFull",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "about",
+          "type": "string"
+        },
+        {
+          "name": "participants_count",
+          "type": "flags.0?int"
+        },
+        {
+          "name": "admins_count",
+          "type": "flags.1?int"
+        },
+        {
+          "name": "kicked_count",
+          "type": "flags.2?int"
+        },
+        {
+          "name": "read_inbox_max_id",
+          "type": "int"
+        },
+        {
+          "name": "unread_count",
+          "type": "int"
+        },
+        {
+          "name": "unread_important_count",
+          "type": "int"
+        },
+        {
+          "name": "chat_photo",
+          "type": "Photo"
+        },
+        {
+          "name": "notify_settings",
+          "type": "PeerNotifySettings"
+        },
+        {
+          "name": "exported_invite",
+          "type": "ExportedChatInvite"
+        }
+      ],
+      "type": "ChatFull"
+    },
+    {
+      "id": "-1781355374",
+      "predicate": "messageActionChannelCreate",
+      "params": [
+        {
+          "name": "title",
+          "type": "string"
+        }
+      ],
+      "type": "MessageAction"
+    },
+    {
+      "id": "1535415986",
+      "predicate": "dialogChannel",
+      "params": [
+        {
+          "name": "peer",
+          "type": "Peer"
+        },
+        {
+          "name": "top_message",
+          "type": "int"
+        },
+        {
+          "name": "top_important_message",
+          "type": "int"
+        },
+        {
+          "name": "read_inbox_max_id",
+          "type": "int"
+        },
+        {
+          "name": "unread_count",
+          "type": "int"
+        },
+        {
+          "name": "unread_important_count",
+          "type": "int"
+        },
+        {
+          "name": "notify_settings",
+          "type": "PeerNotifySettings"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        }
+      ],
+      "type": "Dialog"
+    },
+    {
+      "id": "-1139861572",
+      "predicate": "messages.channelMessages",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "count",
+          "type": "int"
+        },
+        {
+          "name": "messages",
+          "type": "Vector<Message>"
+        },
+        {
+          "name": "collapsed",
+          "type": "flags.0?Vector<MessageGroup>"
+        },
+        {
+          "name": "chats",
+          "type": "Vector<Chat>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "messages.Messages"
+    },
+    {
+      "id": "1620337698",
+      "predicate": "updateChannelTooLong",
+      "params": [
+        {
+          "name": "channel_id",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-1227598250",
+      "predicate": "updateChannel",
+      "params": [
+        {
+          "name": "channel_id",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-1016324548",
+      "predicate": "updateChannelGroup",
+      "params": [
+        {
+          "name": "channel_id",
+          "type": "int"
+        },
+        {
+          "name": "group",
+          "type": "MessageGroup"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "1656358105",
+      "predicate": "updateNewChannelMessage",
+      "params": [
+        {
+          "name": "message",
+          "type": "Message"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "1108669311",
+      "predicate": "updateReadChannelInbox",
+      "params": [
+        {
+          "name": "channel_id",
+          "type": "int"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-1015733815",
+      "predicate": "updateDeleteChannelMessages",
+      "params": [
+        {
+          "name": "channel_id",
+          "type": "int"
+        },
+        {
+          "name": "messages",
+          "type": "Vector<int>"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-1734268085",
+      "predicate": "updateChannelMessageViews",
+      "params": [
+        {
+          "name": "channel_id",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "views",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-292807034",
+      "predicate": "inputChannelEmpty",
+      "params": [],
+      "type": "InputChannel"
+    },
+    {
+      "id": "-1343524562",
+      "predicate": "inputChannel",
+      "params": [
+        {
+          "name": "channel_id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "long"
+        }
+      ],
+      "type": "InputChannel"
+    },
+    {
+      "id": "2131196633",
+      "predicate": "contacts.resolvedPeer",
+      "params": [
+        {
+          "name": "peer",
+          "type": "Peer"
+        },
+        {
+          "name": "chats",
+          "type": "Vector<Chat>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "contacts.ResolvedPeer"
+    },
+    {
+      "id": "182649427",
+      "predicate": "messageRange",
+      "params": [
+        {
+          "name": "min_id",
+          "type": "int"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        }
+      ],
+      "type": "MessageRange"
+    },
+    {
+      "id": "-399216813",
+      "predicate": "messageGroup",
+      "params": [
+        {
+          "name": "min_id",
+          "type": "int"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        },
+        {
+          "name": "count",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        }
+      ],
+      "type": "MessageGroup"
+    },
+    {
+      "id": "1041346555",
+      "predicate": "updates.channelDifferenceEmpty",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "timeout",
+          "type": "flags.1?int"
+        }
+      ],
+      "type": "updates.ChannelDifference"
+    },
+    {
+      "id": "1578530374",
+      "predicate": "updates.channelDifferenceTooLong",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "timeout",
+          "type": "flags.1?int"
+        },
+        {
+          "name": "top_message",
+          "type": "int"
+        },
+        {
+          "name": "top_important_message",
+          "type": "int"
+        },
+        {
+          "name": "read_inbox_max_id",
+          "type": "int"
+        },
+        {
+          "name": "unread_count",
+          "type": "int"
+        },
+        {
+          "name": "unread_important_count",
+          "type": "int"
+        },
+        {
+          "name": "messages",
+          "type": "Vector<Message>"
+        },
+        {
+          "name": "chats",
+          "type": "Vector<Chat>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "updates.ChannelDifference"
+    },
+    {
+      "id": "543450958",
+      "predicate": "updates.channelDifference",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "timeout",
+          "type": "flags.1?int"
+        },
+        {
+          "name": "new_messages",
+          "type": "Vector<Message>"
+        },
+        {
+          "name": "other_updates",
+          "type": "Vector<Update>"
+        },
+        {
+          "name": "chats",
+          "type": "Vector<Chat>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "updates.ChannelDifference"
+    },
+    {
+      "id": "-1798033689",
+      "predicate": "channelMessagesFilterEmpty",
+      "params": [],
+      "type": "ChannelMessagesFilter"
+    },
+    {
+      "id": "-847783593",
+      "predicate": "channelMessagesFilter",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "ranges",
+          "type": "Vector<MessageRange>"
+        }
+      ],
+      "type": "ChannelMessagesFilter"
+    },
+    {
+      "id": "-100588754",
+      "predicate": "channelMessagesFilterCollapsed",
+      "params": [],
+      "type": "ChannelMessagesFilter"
+    },
+    {
+      "id": "367766557",
+      "predicate": "channelParticipant",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        }
+      ],
+      "type": "ChannelParticipant"
+    },
+    {
+      "id": "-1557620115",
+      "predicate": "channelParticipantSelf",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "inviter_id",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        }
+      ],
+      "type": "ChannelParticipant"
+    },
+    {
+      "id": "-1861910545",
+      "predicate": "channelParticipantModerator",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "inviter_id",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        }
+      ],
+      "type": "ChannelParticipant"
+    },
+    {
+      "id": "-1743180447",
+      "predicate": "channelParticipantEditor",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "inviter_id",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        }
+      ],
+      "type": "ChannelParticipant"
+    },
+    {
+      "id": "-1933187430",
+      "predicate": "channelParticipantKicked",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        },
+        {
+          "name": "kicked_by",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        }
+      ],
+      "type": "ChannelParticipant"
+    },
+    {
+      "id": "-471670279",
+      "predicate": "channelParticipantCreator",
+      "params": [
+        {
+          "name": "user_id",
+          "type": "int"
+        }
+      ],
+      "type": "ChannelParticipant"
+    },
+    {
+      "id": "-566281095",
+      "predicate": "channelParticipantsRecent",
+      "params": [],
+      "type": "ChannelParticipantsFilter"
+    },
+    {
+      "id": "-1268741783",
+      "predicate": "channelParticipantsAdmins",
+      "params": [],
+      "type": "ChannelParticipantsFilter"
+    },
+    {
+      "id": "1010285434",
+      "predicate": "channelParticipantsKicked",
+      "params": [],
+      "type": "ChannelParticipantsFilter"
+    },
+    {
+      "id": "-1299865402",
+      "predicate": "channelRoleEmpty",
+      "params": [],
+      "type": "ChannelParticipantRole"
+    },
+    {
+      "id": "-1776756363",
+      "predicate": "channelRoleModerator",
+      "params": [],
+      "type": "ChannelParticipantRole"
+    },
+    {
+      "id": "-2113143156",
+      "predicate": "channelRoleEditor",
+      "params": [],
+      "type": "ChannelParticipantRole"
+    },
+    {
+      "id": "-177282392",
+      "predicate": "channels.channelParticipants",
+      "params": [
+        {
+          "name": "count",
+          "type": "int"
+        },
+        {
+          "name": "participants",
+          "type": "Vector<ChannelParticipant>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "channels.ChannelParticipants"
+    },
+    {
+      "id": "-791039645",
+      "predicate": "channels.channelParticipant",
+      "params": [
+        {
+          "name": "participant",
+          "type": "ChannelParticipant"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "channels.ChannelParticipant"
+    }
+  ],
+  "methods": [
+    {
+      "id": "-2053423812",
+      "method": "messages.getDialogs",
+      "params": [
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "messages.Dialogs"
+    },
+    {
+      "id": "-1970355494",
+      "method": "messages.getHistory",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "offset_id",
+          "type": "int"
+        },
+        {
+          "name": "add_offset",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        },
+        {
+          "name": "min_id",
+          "type": "int"
+        }
+      ],
+      "type": "messages.Messages"
+    },
+    {
+      "id": "-732523960",
+      "method": "messages.search",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "q",
+          "type": "string"
+        },
+        {
+          "name": "filter",
+          "type": "MessagesFilter"
+        },
+        {
+          "name": "min_date",
+          "type": "int"
+        },
+        {
+          "name": "max_date",
+          "type": "int"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "messages.Messages"
+    },
+    {
+      "id": "1888354709",
+      "method": "messages.forwardMessages",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "from_peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "id",
+          "type": "Vector<int>"
+        },
+        {
+          "name": "random_id",
+          "type": "Vector<long>"
+        },
+        {
+          "name": "to_peer",
+          "type": "InputPeer"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-113456221",
+      "method": "contacts.resolveUsername",
+      "params": [
+        {
+          "name": "username",
+          "type": "string"
+        }
+      ],
+      "type": "contacts.ResolvedPeer"
+    },
+    {
+      "id": "-820669733",
+      "method": "messages.reportSpam",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-993483427",
+      "method": "messages.getMessagesViews",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "id",
+          "type": "Vector<int>"
+        },
+        {
+          "name": "increment",
+          "type": "Bool"
+        }
+      ],
+      "type": "Vector<int>"
+    },
+    {
+      "id": "-1154295872",
+      "method": "updates.getChannelDifference",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "filter",
+          "type": "ChannelMessagesFilter"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "updates.ChannelDifference"
+    },
+    {
+      "id": "-1445735863",
+      "method": "channels.getDialogs",
+      "params": [
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "messages.Dialogs"
+    },
+    {
+      "id": "-575067701",
+      "method": "channels.getImportantHistory",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "offset_id",
+          "type": "int"
+        },
+        {
+          "name": "add_offset",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        },
+        {
+          "name": "min_id",
+          "type": "int"
+        }
+      ],
+      "type": "messages.Messages"
+    },
+    {
+      "id": "-871347913",
+      "method": "channels.readHistory",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-2067661490",
+      "method": "channels.deleteMessages",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "id",
+          "type": "Vector<int>"
+        }
+      ],
+      "type": "messages.AffectedMessages"
+    },
+    {
+      "id": "-787622117",
+      "method": "channels.deleteUserHistory",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        }
+      ],
+      "type": "messages.AffectedHistory"
+    },
+    {
+      "id": "-32999408",
+      "method": "channels.reportSpam",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        },
+        {
+          "name": "id",
+          "type": "Vector<int>"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-1814580409",
+      "method": "channels.getMessages",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "id",
+          "type": "Vector<int>"
+        }
+      ],
+      "type": "messages.Messages"
+    },
+    {
+      "id": "618237842",
+      "method": "channels.getParticipants",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "filter",
+          "type": "ChannelParticipantsFilter"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "channels.ChannelParticipants"
+    },
+    {
+      "id": "1416484774",
+      "method": "channels.getParticipant",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        }
+      ],
+      "type": "channels.ChannelParticipant"
+    },
+    {
+      "id": "176122811",
+      "method": "channels.getChannels",
+      "params": [
+        {
+          "name": "id",
+          "type": "Vector<InputChannel>"
+        }
+      ],
+      "type": "messages.Chats"
+    },
+    {
+      "id": "141781513",
+      "method": "channels.getFullChannel",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        }
+      ],
+      "type": "messages.ChatFull"
+    },
+    {
+      "id": "1428281412",
+      "method": "channels.createChannel",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "about",
+          "type": "string"
+        },
+        {
+          "name": "users",
+          "type": "Vector<InputUser>"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "333610782",
+      "method": "channels.editAbout",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "about",
+          "type": "string"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "1387358562",
+      "method": "channels.editAdmin",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        },
+        {
+          "name": "role",
+          "type": "ChannelParticipantRole"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "1450044624",
+      "method": "channels.editTitle",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-248621111",
+      "method": "channels.editPhoto",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "photo",
+          "type": "InputChatPhoto"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-1432183160",
+      "method": "channels.toggleComments",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "enabled",
+          "type": "Bool"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "283557164",
+      "method": "channels.checkUsername",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "username",
+          "type": "string"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "890549214",
+      "method": "channels.updateUsername",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "username",
+          "type": "string"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "615851205",
+      "method": "channels.joinChannel",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-130635115",
+      "method": "channels.leaveChannel",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "429865580",
+      "method": "channels.inviteToChannel",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "users",
+          "type": "Vector<InputUser>"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-1502421484",
+      "method": "channels.kickFromChannel",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "user_id",
+          "type": "InputUser"
+        },
+        {
+          "name": "kicked",
+          "type": "Bool"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-950663035",
+      "method": "channels.exportInvite",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        }
+      ],
+      "type": "ExportedChatInvite"
+    },
+    {
+      "id": "-1072619549",
+      "method": "channels.deleteChannel",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        }
+      ],
+      "type": "Updates"
+    }
+  ]
+}
