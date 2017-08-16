@@ -271,6 +271,12 @@ class TLFile:
                 print('RECURSION ERROR: ')
                 print(tl_type, end='\n\n')
 
+        for dupe_method in (x for n, x in enumerate(self.methods) if x in self.methods[:n]):
+            print('ERR: DUPE METHOD -- {}#{}'.format(dupe_method.name, dupe_method.crc2hex(dupe_method.crc)))
+
+        for dupe_constructor in (x for n, x in enumerate(self.constructors) if x in self.constructors[:n]):
+            print('ERR: DUPE CONSTR -- {}#{}'.format(dupe_constructor.name, dupe_constructor.crc2hex(dupe_constructor.crc)))
+
     def diff(self, old, just_added=False, no_changed=False):
         ret = { 'added': TLFile() }
         if not just_added:
