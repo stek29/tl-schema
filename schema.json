@@ -181,7 +181,7 @@
       "type": "InputMedia"
     },
     {
-      "id": "-515910468",
+      "id": "-2106507297",
       "predicate": "inputMediaUploadedVideo",
       "params": [
         {
@@ -201,6 +201,10 @@
           "type": "int"
         },
         {
+          "name": "mime_type",
+          "type": "string"
+        },
+        {
           "name": "caption",
           "type": "string"
         }
@@ -208,7 +212,7 @@
       "type": "InputMedia"
     },
     {
-      "id": "-1761896484",
+      "id": "2004934137",
       "predicate": "inputMediaUploadedThumbVideo",
       "params": [
         {
@@ -230,6 +234,10 @@
         {
           "name": "h",
           "type": "int"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
         },
         {
           "name": "caption",
@@ -798,7 +806,7 @@
       "type": "Message"
     },
     {
-      "id": "-260565816",
+      "id": "736885382",
       "predicate": "message",
       "params": [
         {
@@ -839,7 +847,7 @@
         },
         {
           "name": "media",
-          "type": "MessageMedia"
+          "type": "flags.9?MessageMedia"
         },
         {
           "name": "reply_markup",
@@ -1714,37 +1722,6 @@
       "type": "messages.Messages"
     },
     {
-      "id": "-1969628960",
-      "predicate": "messages.sentMessage",
-      "params": [
-        {
-          "name": "id",
-          "type": "int"
-        },
-        {
-          "name": "date",
-          "type": "int"
-        },
-        {
-          "name": "media",
-          "type": "MessageMedia"
-        },
-        {
-          "name": "entities",
-          "type": "Vector<MessageEntity>"
-        },
-        {
-          "name": "pts",
-          "type": "int"
-        },
-        {
-          "name": "pts_count",
-          "type": "int"
-        }
-      ],
-      "type": "messages.SentMessage"
-    },
-    {
       "id": "1694474197",
       "predicate": "messages.chats",
       "params": [
@@ -2562,41 +2539,6 @@
         }
       ],
       "type": "photos.Photos"
-    },
-    {
-      "id": "899786339",
-      "predicate": "messages.sentMessageLink",
-      "params": [
-        {
-          "name": "id",
-          "type": "int"
-        },
-        {
-          "name": "date",
-          "type": "int"
-        },
-        {
-          "name": "media",
-          "type": "MessageMedia"
-        },
-        {
-          "name": "pts",
-          "type": "int"
-        },
-        {
-          "name": "pts_count",
-          "type": "int"
-        },
-        {
-          "name": "links",
-          "type": "Vector<contacts.Link>"
-        },
-        {
-          "name": "seq",
-          "type": "int"
-        }
-      ],
-      "type": "messages.SentMessage"
     },
     {
       "id": "1662091044",
@@ -4146,7 +4088,7 @@
       "type": "WebPage"
     },
     {
-      "id": "-1558273867",
+      "id": "-897446185",
       "predicate": "webPage",
       "params": [
         {
@@ -4208,6 +4150,10 @@
         {
           "name": "author",
           "type": "flags.8?string"
+        },
+        {
+          "name": "document",
+          "type": "flags.9?Document"
         }
       ],
       "type": "WebPage"
@@ -4951,6 +4897,41 @@
         }
       ],
       "type": "MessageEntity"
+    },
+    {
+      "id": "301019932",
+      "predicate": "updateShortSentMessage",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "pts",
+          "type": "int"
+        },
+        {
+          "name": "pts_count",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "media",
+          "type": "flags.9?MessageMedia"
+        },
+        {
+          "name": "entities",
+          "type": "flags.7?Vector<MessageEntity>"
+        }
+      ],
+      "type": "Updates"
     }
   ],
   "methods": [
@@ -5542,7 +5523,7 @@
       "type": "Bool"
     },
     {
-      "id": "233907088",
+      "id": "-91733382",
       "method": "messages.sendMessage",
       "params": [
         {
@@ -5574,7 +5555,7 @@
           "type": "flags.3?Vector<MessageEntity>"
         }
       ],
-      "type": "messages.SentMessage"
+      "type": "Updates"
     },
     {
       "id": "-923703407",
