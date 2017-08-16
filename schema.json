@@ -121,7 +121,7 @@
       "type": "InputMedia"
     },
     {
-      "id": "1661770481",
+      "id": "792191537",
       "predicate": "inputMediaUploadedPhoto",
       "params": [
         {
@@ -139,14 +139,22 @@
         {
           "name": "stickers",
           "type": "flags.0?Vector<InputDocument>"
+        },
+        {
+          "name": "ttl_seconds",
+          "type": "flags.1?int"
         }
       ],
       "type": "InputMedia"
     },
     {
-      "id": "-373312269",
+      "id": "-2114308294",
       "predicate": "inputMediaPhoto",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
         {
           "name": "id",
           "type": "InputPhoto"
@@ -154,6 +162,10 @@
         {
           "name": "caption",
           "type": "string"
+        },
+        {
+          "name": "ttl_seconds",
+          "type": "flags.0?int"
         }
       ],
       "type": "InputMedia"
@@ -692,7 +704,7 @@
       "type": "Message"
     },
     {
-      "id": "-1063525281",
+      "id": "-1864508399",
       "predicate": "message",
       "params": [
         {
@@ -770,6 +782,10 @@
         {
           "name": "edit_date",
           "type": "flags.15?int"
+        },
+        {
+          "name": "post_author",
+          "type": "flags.16?string"
         }
       ],
       "type": "Message"
@@ -836,16 +852,24 @@
       "type": "MessageMedia"
     },
     {
-      "id": "1032643901",
+      "id": "-1256047857",
       "predicate": "messageMediaPhoto",
       "params": [
         {
+          "name": "flags",
+          "type": "#"
+        },
+        {
           "name": "photo",
-          "type": "Photo"
+          "type": "flags.0?Photo"
         },
         {
           "name": "caption",
-          "type": "string"
+          "type": "flags.1?string"
+        },
+        {
+          "name": "ttl_seconds",
+          "type": "flags.2?int"
         }
       ],
       "type": "MessageMedia"
@@ -1488,12 +1512,16 @@
       "type": "contacts.Contacts"
     },
     {
-      "id": "-1387117803",
+      "id": "2010127419",
       "predicate": "contacts.importedContacts",
       "params": [
         {
           "name": "imported",
           "type": "Vector<ImportedContact>"
+        },
+        {
+          "name": "popular_invites",
+          "type": "Vector<PopularContact>"
         },
         {
           "name": "retry_contacts",
@@ -3088,7 +3116,7 @@
       "type": "Update"
     },
     {
-      "id": "-797904407",
+      "id": "-476700163",
       "predicate": "inputMediaUploadedDocument",
       "params": [
         {
@@ -3100,6 +3128,10 @@
           "type": "InputFile"
         },
         {
+          "name": "thumb",
+          "type": "flags.2?InputFile"
+        },
+        {
           "name": "mime_type",
           "type": "string"
         },
@@ -3114,49 +3146,22 @@
         {
           "name": "stickers",
           "type": "flags.0?Vector<InputDocument>"
+        },
+        {
+          "name": "ttl_seconds",
+          "type": "flags.1?int"
         }
       ],
       "type": "InputMedia"
     },
     {
-      "id": "1356369070",
-      "predicate": "inputMediaUploadedThumbDocument",
+      "id": "1523279502",
+      "predicate": "inputMediaDocument",
       "params": [
         {
           "name": "flags",
           "type": "#"
         },
-        {
-          "name": "file",
-          "type": "InputFile"
-        },
-        {
-          "name": "thumb",
-          "type": "InputFile"
-        },
-        {
-          "name": "mime_type",
-          "type": "string"
-        },
-        {
-          "name": "attributes",
-          "type": "Vector<DocumentAttribute>"
-        },
-        {
-          "name": "caption",
-          "type": "string"
-        },
-        {
-          "name": "stickers",
-          "type": "flags.0?Vector<InputDocument>"
-        }
-      ],
-      "type": "InputMedia"
-    },
-    {
-      "id": "444068508",
-      "predicate": "inputMediaDocument",
-      "params": [
         {
           "name": "id",
           "type": "InputDocument"
@@ -3164,21 +3169,33 @@
         {
           "name": "caption",
           "type": "string"
+        },
+        {
+          "name": "ttl_seconds",
+          "type": "flags.0?int"
         }
       ],
       "type": "InputMedia"
     },
     {
-      "id": "-203411800",
+      "id": "2084836563",
       "predicate": "messageMediaDocument",
       "params": [
         {
+          "name": "flags",
+          "type": "#"
+        },
+        {
           "name": "document",
-          "type": "Document"
+          "type": "flags.0?Document"
         },
         {
           "name": "caption",
-          "type": "string"
+          "type": "flags.1?string"
+        },
+        {
+          "name": "ttl_seconds",
+          "type": "flags.2?int"
         }
       ],
       "type": "MessageMedia"
@@ -4997,6 +5014,10 @@
           "type": "flags.2?true"
         },
         {
+          "name": "editor",
+          "type": "flags.3?true"
+        },
+        {
           "name": "broadcast",
           "type": "flags.5?true"
         },
@@ -6289,7 +6310,7 @@
       "type": "ExportedMessageLink"
     },
     {
-      "id": "-947462709",
+      "id": "-85986132",
       "predicate": "messageFwdHeader",
       "params": [
         {
@@ -6311,6 +6332,10 @@
         {
           "name": "channel_post",
           "type": "flags.2?int"
+        },
+        {
+          "name": "post_author",
+          "type": "flags.3?string"
         }
       ],
       "type": "MessageFwdHeader"
@@ -7270,9 +7295,13 @@
       "type": "StickerSetCovered"
     },
     {
-      "id": "-1252045032",
+      "id": "153267905",
       "predicate": "inputMediaPhotoExternal",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
         {
           "name": "url",
           "type": "string"
@@ -7280,14 +7309,22 @@
         {
           "name": "caption",
           "type": "string"
+        },
+        {
+          "name": "ttl_seconds",
+          "type": "flags.0?int"
         }
       ],
       "type": "InputMedia"
     },
     {
-      "id": "-437690244",
+      "id": "-1225309387",
       "predicate": "inputMediaDocumentExternal",
       "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
         {
           "name": "url",
           "type": "string"
@@ -7295,6 +7332,10 @@
         {
           "name": "caption",
           "type": "string"
+        },
+        {
+          "name": "ttl_seconds",
+          "type": "flags.0?int"
         }
       ],
       "type": "InputMedia"
@@ -9247,7 +9288,7 @@
       "type": "MessagesFilter"
     },
     {
-      "id": "352864346",
+      "id": "-363659686",
       "predicate": "upload.fileCdnRedirect",
       "params": [
         {
@@ -9265,6 +9306,10 @@
         {
           "name": "encryption_iv",
           "type": "bytes"
+        },
+        {
+          "name": "cdn_file_hashes",
+          "type": "Vector<CdnFileHash>"
         }
       ],
       "type": "upload.File"
@@ -9975,6 +10020,46 @@
         }
       ],
       "type": "ChannelAdminLogEventsFilter"
+    },
+    {
+      "id": "1200788123",
+      "predicate": "messageActionScreenshotTaken",
+      "params": [],
+      "type": "MessageAction"
+    },
+    {
+      "id": "1558266229",
+      "predicate": "popularContact",
+      "params": [
+        {
+          "name": "client_id",
+          "type": "long"
+        },
+        {
+          "name": "importers",
+          "type": "int"
+        }
+      ],
+      "type": "PopularContact"
+    },
+    {
+      "id": "2012136335",
+      "predicate": "cdnFileHash",
+      "params": [
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        },
+        {
+          "name": "hash",
+          "type": "bytes"
+        }
+      ],
+      "type": "CdnFileHash"
     }
   ],
   "methods": [
@@ -13472,7 +13557,7 @@
       "type": "upload.CdnFile"
     },
     {
-      "id": "779755552",
+      "id": "452533257",
       "method": "upload.reuploadCdnFile",
       "params": [
         {
@@ -13484,7 +13569,7 @@
           "type": "bytes"
         }
       ],
-      "type": "Bool"
+      "type": "Vector<CdnFileHash>"
     },
     {
       "id": "1375900482",
@@ -13640,7 +13725,7 @@
       "type": "channels.AdminLogResults"
     },
     {
-      "id": "69556532",
+      "id": "-143257775",
       "method": "stickers.removeStickerFromSet",
       "params": [
         {
@@ -13648,10 +13733,10 @@
           "type": "InputDocument"
         }
       ],
-      "type": "Bool"
+      "type": "messages.StickerSet"
     },
     {
-      "id": "1322714570",
+      "id": "-4795190",
       "method": "stickers.changeStickerPosition",
       "params": [
         {
@@ -13663,7 +13748,7 @@
           "type": "int"
         }
       ],
-      "type": "Bool"
+      "type": "messages.StickerSet"
     },
     {
       "id": "-2041315650",
@@ -13679,6 +13764,40 @@
         }
       ],
       "type": "messages.StickerSet"
+    },
+    {
+      "id": "-914493408",
+      "method": "messages.sendScreenshotNotification",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "reply_to_msg_id",
+          "type": "int"
+        },
+        {
+          "name": "random_id",
+          "type": "long"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-149567365",
+      "method": "upload.getCdnFileHashes",
+      "params": [
+        {
+          "name": "file_token",
+          "type": "bytes"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        }
+      ],
+      "type": "Vector<CdnFileHash>"
     }
   ]
 }

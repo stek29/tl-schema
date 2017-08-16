@@ -1,0 +1,584 @@
+{
+  "constructors": [
+    {
+      "id": "792191537",
+      "predicate": "inputMediaUploadedPhoto",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "file",
+          "type": "InputFile"
+        },
+        {
+          "name": "caption",
+          "type": "string"
+        },
+        {
+          "name": "stickers",
+          "type": "flags.0?Vector<InputDocument>"
+        },
+        {
+          "name": "ttl_seconds",
+          "type": "flags.1?int"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "-2114308294",
+      "predicate": "inputMediaPhoto",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "InputPhoto"
+        },
+        {
+          "name": "caption",
+          "type": "string"
+        },
+        {
+          "name": "ttl_seconds",
+          "type": "flags.0?int"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "-476700163",
+      "predicate": "inputMediaUploadedDocument",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "file",
+          "type": "InputFile"
+        },
+        {
+          "name": "thumb",
+          "type": "flags.2?InputFile"
+        },
+        {
+          "name": "mime_type",
+          "type": "string"
+        },
+        {
+          "name": "attributes",
+          "type": "Vector<DocumentAttribute>"
+        },
+        {
+          "name": "caption",
+          "type": "string"
+        },
+        {
+          "name": "stickers",
+          "type": "flags.0?Vector<InputDocument>"
+        },
+        {
+          "name": "ttl_seconds",
+          "type": "flags.1?int"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "1523279502",
+      "predicate": "inputMediaDocument",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "id",
+          "type": "InputDocument"
+        },
+        {
+          "name": "caption",
+          "type": "string"
+        },
+        {
+          "name": "ttl_seconds",
+          "type": "flags.0?int"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "153267905",
+      "predicate": "inputMediaPhotoExternal",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "caption",
+          "type": "string"
+        },
+        {
+          "name": "ttl_seconds",
+          "type": "flags.0?int"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "-1225309387",
+      "predicate": "inputMediaDocumentExternal",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "caption",
+          "type": "string"
+        },
+        {
+          "name": "ttl_seconds",
+          "type": "flags.0?int"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "213142300",
+      "predicate": "channel",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "creator",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "left",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "editor",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "broadcast",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "verified",
+          "type": "flags.7?true"
+        },
+        {
+          "name": "megagroup",
+          "type": "flags.8?true"
+        },
+        {
+          "name": "restricted",
+          "type": "flags.9?true"
+        },
+        {
+          "name": "democracy",
+          "type": "flags.10?true"
+        },
+        {
+          "name": "signatures",
+          "type": "flags.11?true"
+        },
+        {
+          "name": "min",
+          "type": "flags.12?true"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "flags.13?long"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "username",
+          "type": "flags.6?string"
+        },
+        {
+          "name": "photo",
+          "type": "ChatPhoto"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        },
+        {
+          "name": "restriction_reason",
+          "type": "flags.9?string"
+        },
+        {
+          "name": "admin_rights",
+          "type": "flags.14?ChannelAdminRights"
+        },
+        {
+          "name": "banned_rights",
+          "type": "flags.15?ChannelBannedRights"
+        }
+      ],
+      "type": "Chat"
+    },
+    {
+      "id": "-1864508399",
+      "predicate": "message",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "out",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "mentioned",
+          "type": "flags.4?true"
+        },
+        {
+          "name": "media_unread",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "silent",
+          "type": "flags.13?true"
+        },
+        {
+          "name": "post",
+          "type": "flags.14?true"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "from_id",
+          "type": "flags.8?int"
+        },
+        {
+          "name": "to_id",
+          "type": "Peer"
+        },
+        {
+          "name": "fwd_from",
+          "type": "flags.2?MessageFwdHeader"
+        },
+        {
+          "name": "via_bot_id",
+          "type": "flags.11?int"
+        },
+        {
+          "name": "reply_to_msg_id",
+          "type": "flags.3?int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "media",
+          "type": "flags.9?MessageMedia"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.6?ReplyMarkup"
+        },
+        {
+          "name": "entities",
+          "type": "flags.7?Vector<MessageEntity>"
+        },
+        {
+          "name": "views",
+          "type": "flags.10?int"
+        },
+        {
+          "name": "edit_date",
+          "type": "flags.15?int"
+        },
+        {
+          "name": "post_author",
+          "type": "flags.16?string"
+        }
+      ],
+      "type": "Message"
+    },
+    {
+      "id": "-1256047857",
+      "predicate": "messageMediaPhoto",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "photo",
+          "type": "flags.0?Photo"
+        },
+        {
+          "name": "caption",
+          "type": "flags.1?string"
+        },
+        {
+          "name": "ttl_seconds",
+          "type": "flags.2?int"
+        }
+      ],
+      "type": "MessageMedia"
+    },
+    {
+      "id": "2084836563",
+      "predicate": "messageMediaDocument",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "document",
+          "type": "flags.0?Document"
+        },
+        {
+          "name": "caption",
+          "type": "flags.1?string"
+        },
+        {
+          "name": "ttl_seconds",
+          "type": "flags.2?int"
+        }
+      ],
+      "type": "MessageMedia"
+    },
+    {
+      "id": "2010127419",
+      "predicate": "contacts.importedContacts",
+      "params": [
+        {
+          "name": "imported",
+          "type": "Vector<ImportedContact>"
+        },
+        {
+          "name": "popular_invites",
+          "type": "Vector<PopularContact>"
+        },
+        {
+          "name": "retry_contacts",
+          "type": "Vector<long>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "contacts.ImportedContacts"
+    },
+    {
+      "id": "-363659686",
+      "predicate": "upload.fileCdnRedirect",
+      "params": [
+        {
+          "name": "dc_id",
+          "type": "int"
+        },
+        {
+          "name": "file_token",
+          "type": "bytes"
+        },
+        {
+          "name": "encryption_key",
+          "type": "bytes"
+        },
+        {
+          "name": "encryption_iv",
+          "type": "bytes"
+        },
+        {
+          "name": "cdn_file_hashes",
+          "type": "Vector<CdnFileHash>"
+        }
+      ],
+      "type": "upload.File"
+    },
+    {
+      "id": "-85986132",
+      "predicate": "messageFwdHeader",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "from_id",
+          "type": "flags.0?int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "channel_id",
+          "type": "flags.1?int"
+        },
+        {
+          "name": "channel_post",
+          "type": "flags.2?int"
+        },
+        {
+          "name": "post_author",
+          "type": "flags.3?string"
+        }
+      ],
+      "type": "MessageFwdHeader"
+    },
+    {
+      "id": "1200788123",
+      "predicate": "messageActionScreenshotTaken",
+      "params": [],
+      "type": "MessageAction"
+    },
+    {
+      "id": "1558266229",
+      "predicate": "popularContact",
+      "params": [
+        {
+          "name": "client_id",
+          "type": "long"
+        },
+        {
+          "name": "importers",
+          "type": "int"
+        }
+      ],
+      "type": "PopularContact"
+    },
+    {
+      "id": "2012136335",
+      "predicate": "cdnFileHash",
+      "params": [
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        },
+        {
+          "name": "hash",
+          "type": "bytes"
+        }
+      ],
+      "type": "CdnFileHash"
+    }
+  ],
+  "methods": [
+    {
+      "id": "452533257",
+      "method": "upload.reuploadCdnFile",
+      "params": [
+        {
+          "name": "file_token",
+          "type": "bytes"
+        },
+        {
+          "name": "request_token",
+          "type": "bytes"
+        }
+      ],
+      "type": "Vector<CdnFileHash>"
+    },
+    {
+      "id": "-143257775",
+      "method": "stickers.removeStickerFromSet",
+      "params": [
+        {
+          "name": "sticker",
+          "type": "InputDocument"
+        }
+      ],
+      "type": "messages.StickerSet"
+    },
+    {
+      "id": "-4795190",
+      "method": "stickers.changeStickerPosition",
+      "params": [
+        {
+          "name": "sticker",
+          "type": "InputDocument"
+        },
+        {
+          "name": "position",
+          "type": "int"
+        }
+      ],
+      "type": "messages.StickerSet"
+    },
+    {
+      "id": "-914493408",
+      "method": "messages.sendScreenshotNotification",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "reply_to_msg_id",
+          "type": "int"
+        },
+        {
+          "name": "random_id",
+          "type": "long"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-149567365",
+      "method": "upload.getCdnFileHashes",
+      "params": [
+        {
+          "name": "file_token",
+          "type": "bytes"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        }
+      ],
+      "type": "Vector<CdnFileHash>"
+    }
+  ]
+}
