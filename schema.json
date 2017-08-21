@@ -986,7 +986,7 @@
       "type": "MessageAction"
     },
     {
-      "id": "1728035348",
+      "id": "-455150117",
       "predicate": "dialog",
       "params": [
         {
@@ -1015,6 +1015,10 @@
         },
         {
           "name": "unread_count",
+          "type": "int"
+        },
+        {
+          "name": "unread_mentions_count",
           "type": "int"
         },
         {
@@ -1491,12 +1495,16 @@
       "type": "contacts.Link"
     },
     {
-      "id": "1871416498",
+      "id": "-353862078",
       "predicate": "contacts.contacts",
       "params": [
         {
           "name": "contacts",
           "type": "Vector<Contact>"
+        },
+        {
+          "name": "saved_count",
+          "type": "int"
         },
         {
           "name": "users",
@@ -2344,7 +2352,7 @@
       "type": "DcOption"
     },
     {
-      "id": "2146355336",
+      "id": "-1913424220",
       "predicate": "config",
       "params": [
         {
@@ -2437,6 +2445,10 @@
         },
         {
           "name": "stickers_recent_limit",
+          "type": "int"
+        },
+        {
+          "name": "stickers_faved_limit",
           "type": "int"
         },
         {
@@ -5124,7 +5136,7 @@
       "type": "Chat"
     },
     {
-      "id": "-1781833897",
+      "id": "401891279",
       "predicate": "channelFull",
       "params": [
         {
@@ -5138,6 +5150,10 @@
         {
           "name": "can_set_username",
           "type": "flags.6?true"
+        },
+        {
+          "name": "can_set_stickers",
+          "type": "flags.7?true"
         },
         {
           "name": "id",
@@ -5202,6 +5218,10 @@
         {
           "name": "pinned_msg_id",
           "type": "flags.5?int"
+        },
+        {
+          "name": "stickerset",
+          "type": "flags.8?StickerSet"
         }
       ],
       "type": "ChatFull"
@@ -5433,7 +5453,7 @@
       "type": "updates.ChannelDifference"
     },
     {
-      "id": "1091431943",
+      "id": "1788705589",
       "predicate": "updates.channelDifferenceTooLong",
       "params": [
         {
@@ -5466,6 +5486,10 @@
         },
         {
           "name": "unread_count",
+          "type": "int"
+        },
+        {
+          "name": "unread_mentions_count",
           "type": "int"
         },
         {
@@ -10060,6 +10084,85 @@
         }
       ],
       "type": "CdnFileHash"
+    },
+    {
+      "id": "-1040652646",
+      "predicate": "inputMessagesFilterMyMentions",
+      "params": [],
+      "type": "MessagesFilter"
+    },
+    {
+      "id": "1187706024",
+      "predicate": "inputMessagesFilterMyMentionsUnread",
+      "params": [],
+      "type": "MessagesFilter"
+    },
+    {
+      "id": "1887741886",
+      "predicate": "updateContactsReset",
+      "params": [],
+      "type": "Update"
+    },
+    {
+      "id": "-1312568665",
+      "predicate": "channelAdminLogEventActionChangeStickerSet",
+      "params": [
+        {
+          "name": "prev_stickerset",
+          "type": "InputStickerSet"
+        },
+        {
+          "name": "new_stickerset",
+          "type": "InputStickerSet"
+        }
+      ],
+      "type": "ChannelAdminLogEventAction"
+    },
+    {
+      "id": "-451831443",
+      "predicate": "updateFavedStickers",
+      "params": [],
+      "type": "Update"
+    },
+    {
+      "id": "-209768682",
+      "predicate": "messages.favedStickers",
+      "params": [
+        {
+          "name": "hash",
+          "type": "int"
+        },
+        {
+          "name": "packs",
+          "type": "Vector<StickerPack>"
+        },
+        {
+          "name": "stickers",
+          "type": "Vector<Document>"
+        }
+      ],
+      "type": "messages.FavedStickers"
+    },
+    {
+      "id": "-1634752813",
+      "predicate": "messages.favedStickersNotModified",
+      "params": [],
+      "type": "messages.FavedStickers"
+    },
+    {
+      "id": "-1987495099",
+      "predicate": "updateChannelReadMessagesContents",
+      "params": [
+        {
+          "name": "channel_id",
+          "type": "int"
+        },
+        {
+          "name": "messages",
+          "type": "Vector<int>"
+        }
+      ],
+      "type": "Update"
     }
   ],
   "methods": [
@@ -10365,27 +10468,23 @@
       "type": "Vector<ContactStatus>"
     },
     {
-      "id": "583445000",
+      "id": "-1071414113",
       "method": "contacts.getContacts",
       "params": [
         {
           "name": "hash",
-          "type": "string"
+          "type": "int"
         }
       ],
       "type": "contacts.Contacts"
     },
     {
-      "id": "-634342611",
+      "id": "746589157",
       "method": "contacts.importContacts",
       "params": [
         {
           "name": "contacts",
           "type": "Vector<InputContact>"
-        },
-        {
-          "name": "replace",
-          "type": "Bool"
         }
       ],
       "type": "contacts.ImportedContacts"
@@ -10542,7 +10641,7 @@
       "type": "messages.Messages"
     },
     {
-      "id": "-225926539",
+      "id": "60726944",
       "method": "messages.search",
       "params": [
         {
@@ -10574,7 +10673,15 @@
           "type": "int"
         },
         {
-          "name": "offset",
+          "name": "offset_id",
+          "type": "int"
+        },
+        {
+          "name": "add_offset",
+          "type": "int"
+        },
+        {
+          "name": "limit",
           "type": "int"
         },
         {
@@ -10582,7 +10689,7 @@
           "type": "int"
         },
         {
-          "name": "limit",
+          "name": "min_id",
           "type": "int"
         }
       ],
@@ -13798,6 +13905,99 @@
         }
       ],
       "type": "Vector<CdnFileHash>"
+    },
+    {
+      "id": "1180140658",
+      "method": "messages.getUnreadMentions",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "offset_id",
+          "type": "int"
+        },
+        {
+          "name": "add_offset",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        },
+        {
+          "name": "min_id",
+          "type": "int"
+        }
+      ],
+      "type": "messages.Messages"
+    },
+    {
+      "id": "-1174420133",
+      "method": "messages.faveSticker",
+      "params": [
+        {
+          "name": "id",
+          "type": "InputDocument"
+        },
+        {
+          "name": "unfave",
+          "type": "Bool"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-359881479",
+      "method": "channels.setStickers",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "stickerset",
+          "type": "InputStickerSet"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-2020263951",
+      "method": "contacts.resetSaved",
+      "params": [],
+      "type": "Bool"
+    },
+    {
+      "id": "567151374",
+      "method": "messages.getFavedStickers",
+      "params": [
+        {
+          "name": "hash",
+          "type": "int"
+        }
+      ],
+      "type": "messages.FavedStickers"
+    },
+    {
+      "id": "-357180360",
+      "method": "channels.readMessageContents",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "id",
+          "type": "Vector<int>"
+        }
+      ],
+      "type": "Bool"
     }
   ]
 }
