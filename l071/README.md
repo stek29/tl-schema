@@ -1,5 +1,10 @@
 ### Version info
-None, yet.
+App|Version/Hash|Date
+---|---|---
+TDesktop|b0cc61c621c1643c1180921a83540c59be9642a3|01.08.17
+Android/iOS|4.3|03.09.17
+
+[Blog post](https://telegram.org/blog/replies-mentions-stickers)
 
 ### Notes
 [First published by Unigram](https://github.com/UnigramDev/Unigram/commit/ee2863cbb6c677382f4c023f336b30b24ca313f9)
@@ -14,9 +19,9 @@ This update introduces:
 
 Speaking of that, messages with mentions now should be marked as read explicitly using `channels.readMessageContents` in channels. Typically it's called when mention is showed to user, and `updateChannelReadMessagesContents` is issued.
 
-New `MessageFilters` were added: `inputMessagesFilterMyMentions` and `inputMessagesFilterMyMentionsUnread` to find messages where user was mentioned.
+New `MessageFilters` were added: `inputMessagesFilterMyMentions` to find messages where user was mentioned.
 
-`messages.getUnreadMentions` is more efficient. It can be used to let user cycle through unread mentions.
+`messages.getUnreadMentions` can be used to let user cycle through unread mentions.
 
 #### Saved Contacts
 You can now get number of contacts stored on server side (but not yet registered in Telegram) -- `contacts.contacts` has `saved_count`.
@@ -25,7 +30,7 @@ You can remove those contacts by calling `contacts.resetSaved`, which would caus
 
 Probably because of that `contact.importContacts` now lacks `replace`.
 
-Also, `contacts.contacts` hash is now `int` and not `string`. However, that hash still can't be passed to server.
+Also, `contacts.contacts` hash is now `int` and not `string`. ~~However, that hash still can't be passed to server.~~ A slightly modified `20261 hash` is used.
 
 #### Favorite stickers and group sets
 User can now have up to `config->stickers_faved_limit` stickers "pinned" without saving their sticker pack.
@@ -34,5 +39,6 @@ The system is very similar to recents, but these should not be modified without 
 Sticker is added to favorites with `messages.faveSticker`. Then `updateFavedStickers` is issued, and applications should use `messages.getFavedStickers` to get new list.
 
 Also, "channels" (supergroups only) now have `stickerset`.
-It can be set if `can_set_stickers` is true.
+It can be set if `can_set_stickers` is true. (100+ members, admin should have the permissions)
+
 `channels.setStickers` is used for that. Setting it adds `channelAdminLogEventActionChangeStickerSet` to "admin log" aka "recent actions". There seems to be no way to know about that change for user, except re-fetching `channel`.

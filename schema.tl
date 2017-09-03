@@ -577,7 +577,6 @@ messageActionScreenshotTaken#4792929b = MessageAction;
 popularContact#5ce14175 client_id:long importers:int = PopularContact;
 cdnFileHash#77eec38f offset:int limit:int hash:bytes = CdnFileHash;
 inputMessagesFilterMyMentions#c1f8e69a = MessagesFilter;
-inputMessagesFilterMyMentionsUnread#46caf4a8 = MessagesFilter;
 updateContactsReset#7084a7be = Update;
 channelAdminLogEventActionChangeStickerSet#b1c3caa7 prev_stickerset:InputStickerSet new_stickerset:InputStickerSet = ChannelAdminLogEventAction;
 updateFavedStickers#e511996d = Update;

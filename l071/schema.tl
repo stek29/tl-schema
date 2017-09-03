@@ -10,7 +10,6 @@ channelFull#17f45fcf flags:# can_view_participants:flags.3?true can_set_username
 // updates.channelDifferenceTooLong#410dee07 flags:# final:flags.0?true pts:int timeout:flags.1?int top_message:int read_inbox_max_id:int read_outbox_max_id:int unread_count:int messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = updates.ChannelDifference;
 updates.channelDifferenceTooLong#6a9d7b35 flags:# final:flags.0?true pts:int timeout:flags.1?int top_message:int read_inbox_max_id:int read_outbox_max_id:int unread_count:int unread_mentions_count:int messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = updates.ChannelDifference;
 inputMessagesFilterMyMentions#c1f8e69a = MessagesFilter;
-inputMessagesFilterMyMentionsUnread#46caf4a8 = MessagesFilter;
 updateContactsReset#7084a7be = Update;
 channelAdminLogEventActionChangeStickerSet#b1c3caa7 prev_stickerset:InputStickerSet new_stickerset:InputStickerSet = ChannelAdminLogEventAction;
 updateFavedStickers#e511996d = Update;

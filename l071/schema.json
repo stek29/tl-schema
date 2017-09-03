@@ -366,12 +366,6 @@
       "type": "MessagesFilter"
     },
     {
-      "id": "1187706024",
-      "predicate": "inputMessagesFilterMyMentionsUnread",
-      "params": [],
-      "type": "MessagesFilter"
-    },
-    {
       "id": "1887741886",
       "predicate": "updateContactsReset",
       "params": [],
