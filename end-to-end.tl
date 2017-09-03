@@ -1,4 +1,4 @@
-// ===8===
+===8===
 decryptedMessage#1f814f1f random_id:long random_bytes:bytes message:string media:DecryptedMessageMedia = DecryptedMessage;
 decryptedMessageService#aa48327d random_id:long random_bytes:bytes action:DecryptedMessageAction = DecryptedMessage;
 decryptedMessageMediaEmpty#89f5c4a = DecryptedMessageMedia;
@@ -14,7 +14,7 @@ decryptedMessageActionDeleteMessages#65614304 random_ids:Vector<long> = Decrypte
 decryptedMessageActionScreenshotMessages#8ac1f475 random_ids:Vector<long> = DecryptedMessageAction;
 decryptedMessageActionFlushHistory#6719e45c = DecryptedMessageAction;
 
-// ===17===
+===17===
 decryptedMessage#204d3878 random_id:long ttl:int message:string media:DecryptedMessageMedia = DecryptedMessage;
 decryptedMessageService#73164160 random_id:long action:DecryptedMessageAction = DecryptedMessage;
 decryptedMessageMediaVideo#524a415d thumb:bytes thumb_w:int thumb_h:int duration:int mime_type:string w:int h:int size:int key:bytes iv:bytes = DecryptedMessageMedia;
@@ -34,14 +34,14 @@ decryptedMessageActionResend#511110b0 start_seq_no:int end_seq_no:int = Decrypte
 decryptedMessageActionNotifyLayer#f3048883 layer:int = DecryptedMessageAction;
 decryptedMessageActionTyping#ccb27641 action:SendMessageAction = DecryptedMessageAction;
 
-// ===20===
+===20===
 decryptedMessageActionRequestKey#f3c9611b exchange_id:long g_a:bytes = DecryptedMessageAction;
 decryptedMessageActionAcceptKey#6fe1735b exchange_id:long g_b:bytes key_fingerprint:long = DecryptedMessageAction;
 decryptedMessageActionAbortKey#dd05ec6b exchange_id:long = DecryptedMessageAction;
 decryptedMessageActionCommitKey#ec2e0b9b exchange_id:long key_fingerprint:long = DecryptedMessageAction;
 decryptedMessageActionNoop#a82fdd63 = DecryptedMessageAction;
 
-// ===23===
+===23===
 documentAttributeImageSize#6c37c15c w:int h:int = DocumentAttribute;
 documentAttributeAnimated#11b58939 = DocumentAttribute;
 documentAttributeSticker#fb0a5727 = DocumentAttribute;
@@ -55,10 +55,17 @@ fileLocationUnavailable#7c596b46 volume_id:long local_id:int secret:long = FileL
 fileLocation#53d69076 dc_id:int volume_id:long local_id:int secret:long = FileLocation;
 decryptedMessageMediaExternalDocument#fa95b0dd id:long access_hash:long date:int mime_type:string size:int thumb:PhotoSize dc_id:int attributes:Vector<DocumentAttribute> = DecryptedMessageMedia;
 
-// ===46===
+===46===
 decryptedMessage#36b091de flags:# random_id:long ttl:int message:string media:flags.9?DecryptedMessageMedia entities:flags.7?Vector<MessageEntity> via_bot_name:flags.11?string reply_to_random_id:flags.3?long = DecryptedMessage;
 decryptedMessageMediaDocument#fee613da thumb:bytes thumb_w:int thumb_h:int mime_type:string size:int key:bytes iv:bytes attributes:Vector<DocumentAttribute> = DecryptedMessageMedia;
 documentAttributeSticker#3a556302 alt:string stickerset:InputStickerSet = DocumentAttribute;
 documentAttributeAudio#ded218e0 duration:int title:string performer:string = DocumentAttribute;
 inputStickerSetShortName#861cc8a0 short_name:string = InputStickerSet;
 inputStickerSetEmpty#ffb62b95 = InputStickerSet;
+
+
+===55===
+documentAttributeSticker#3a556302 alt:string stickerset:InputStickerSet = DocumentAttribute;
+
+===66===
+documentAttributeVideo#ef02ce6 flags:# round_message:flags.0?true duration:int w:int h:int = DocumentAttribute;
