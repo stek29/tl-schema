@@ -27,7 +27,7 @@ messageEncryptedAction#555555f7 encryptedAction:DecryptedMessageAction = Message
 // Video
 videoEncrypted#55555553 id:long access_hash:long user_id:int date:int caption:string duration:int size:int thumb:PhotoSize dc_id:int w:int h:int key:bytes iv:bytes = Video;
 
---types---
+---types---
 ===8===
 decryptedMessage#1f814f1f random_id:long random_bytes:bytes message:string media:DecryptedMessageMedia = DecryptedMessage;
 decryptedMessageService#aa48327d random_id:long random_bytes:bytes action:DecryptedMessageAction = DecryptedMessage;
