@@ -1,0 +1,55 @@
+{
+  "constructors": [
+    {
+      "id": "-650782469",
+      "predicate": "pageBlockEmbed",
+      "params": [
+        {
+          "name": "full_width",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "allow_scrolling",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "url",
+          "type": "flags.1?string"
+        },
+        {
+          "name": "html",
+          "type": "flags.2?string"
+        },
+        {
+          "name": "w",
+          "type": "int"
+        },
+        {
+          "name": "h",
+          "type": "int"
+        },
+        {
+          "name": "caption",
+          "type": "RichText"
+        }
+      ],
+      "type": "PageBlock"
+    },
+    {
+      "id": "-736472729",
+      "predicate": "webPageUrlPending",
+      "params": [
+        {
+          "name": "url",
+          "type": "string"
+        }
+      ],
+      "type": "WebPage"
+    }
+  ],
+  "methods": []
+}
