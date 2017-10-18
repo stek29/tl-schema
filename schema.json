@@ -2352,7 +2352,7 @@
       "type": "DcOption"
     },
     {
-      "id": "-1913424220",
+      "id": "-1669068444",
       "predicate": "config",
       "params": [
         {
@@ -2449,6 +2449,10 @@
         },
         {
           "name": "stickers_faved_limit",
+          "type": "int"
+        },
+        {
+          "name": "channels_read_media_period",
           "type": "int"
         },
         {
@@ -4244,7 +4248,7 @@
       "type": "auth.PasswordRecovery"
     },
     {
-      "id": "673687578",
+      "id": "-1052959727",
       "predicate": "inputMediaVenue",
       "params": [
         {
@@ -4266,12 +4270,16 @@
         {
           "name": "venue_id",
           "type": "string"
+        },
+        {
+          "name": "venue_type",
+          "type": "string"
         }
       ],
       "type": "InputMedia"
     },
     {
-      "id": "2031269663",
+      "id": "784356159",
       "predicate": "messageMediaVenue",
       "params": [
         {
@@ -4292,6 +4300,10 @@
         },
         {
           "name": "venue_id",
+          "type": "string"
+        },
+        {
+          "name": "venue_type",
           "type": "string"
         }
       ],
@@ -5136,7 +5148,7 @@
       "type": "Chat"
     },
     {
-      "id": "401891279",
+      "id": "1991201921",
       "predicate": "channelFull",
       "params": [
         {
@@ -5154,6 +5166,10 @@
         {
           "name": "can_set_stickers",
           "type": "flags.7?true"
+        },
+        {
+          "name": "hidden_prehistory",
+          "type": "flags.10?true"
         },
         {
           "name": "id",
@@ -5222,6 +5238,10 @@
         {
           "name": "stickerset",
           "type": "flags.8?StickerSet"
+        },
+        {
+          "name": "available_min_id",
+          "type": "flags.9?int"
         }
       ],
       "type": "ChatFull"
@@ -6214,7 +6234,7 @@
       "type": "BotInlineResult"
     },
     {
-      "id": "-858565059",
+      "id": "-1803769784",
       "predicate": "messages.botResults",
       "params": [
         {
@@ -6244,6 +6264,10 @@
         {
           "name": "cache_time",
           "type": "int"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
         }
       ],
       "type": "messages.BotResults"
@@ -6653,7 +6677,7 @@
       "type": "Update"
     },
     {
-      "id": "-190472735",
+      "id": "-1045340827",
       "predicate": "inputBotInlineMessageMediaGeo",
       "params": [
         {
@@ -6663,6 +6687,10 @@
         {
           "name": "geo_point",
           "type": "InputGeoPoint"
+        },
+        {
+          "name": "period",
+          "type": "int"
         },
         {
           "name": "reply_markup",
@@ -6734,7 +6762,7 @@
       "type": "InputBotInlineMessage"
     },
     {
-      "id": "982505656",
+      "id": "-1222451611",
       "predicate": "botInlineMessageMediaGeo",
       "params": [
         {
@@ -6744,6 +6772,10 @@
         {
           "name": "geo",
           "type": "GeoPoint"
+        },
+        {
+          "name": "period",
+          "type": "int"
         },
         {
           "name": "reply_markup",
@@ -10157,6 +10189,181 @@
         }
       ],
       "type": "Update"
+    },
+    {
+      "id": "2065305999",
+      "predicate": "inputMediaGeoLive",
+      "params": [
+        {
+          "name": "geo_point",
+          "type": "InputGeoPoint"
+        },
+        {
+          "name": "period",
+          "type": "int"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "2084316681",
+      "predicate": "messageMediaGeoLive",
+      "params": [
+        {
+          "name": "geo",
+          "type": "GeoPoint"
+        },
+        {
+          "name": "period",
+          "type": "int"
+        }
+      ],
+      "type": "MessageMedia"
+    },
+    {
+      "id": "-85549226",
+      "predicate": "messageActionCustomAction",
+      "params": [
+        {
+          "name": "message",
+          "type": "string"
+        }
+      ],
+      "type": "MessageAction"
+    },
+    {
+      "id": "-530392189",
+      "predicate": "inputMessagesFilterContacts",
+      "params": [],
+      "type": "MessagesFilter"
+    },
+    {
+      "id": "-419271411",
+      "predicate": "inputMessagesFilterGeo",
+      "params": [],
+      "type": "MessagesFilter"
+    },
+    {
+      "id": "1893427255",
+      "predicate": "updateChannelAvailableMessages",
+      "params": [
+        {
+          "name": "channel_id",
+          "type": "int"
+        },
+        {
+          "name": "available_min_id",
+          "type": "int"
+        }
+      ],
+      "type": "Update"
+    },
+    {
+      "id": "-266911767",
+      "predicate": "channels.channelParticipantsNotModified",
+      "params": [],
+      "type": "channels.ChannelParticipants"
+    },
+    {
+      "id": "1599903217",
+      "predicate": "channelAdminLogEventActionTogglePreHistoryHidden",
+      "params": [
+        {
+          "name": "new_value",
+          "type": "Bool"
+        }
+      ],
+      "type": "ChannelAdminLogEventAction"
+    },
+    {
+      "id": "235081943",
+      "predicate": "help.recentMeUrls",
+      "params": [
+        {
+          "name": "urls",
+          "type": "Vector<RecentMeUrl>"
+        },
+        {
+          "name": "chats",
+          "type": "Vector<Chat>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "help.RecentMeUrls"
+    },
+    {
+      "id": "-1917045962",
+      "predicate": "recentMeUrlUser",
+      "params": [
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "user_id",
+          "type": "int"
+        }
+      ],
+      "type": "RecentMeUrl"
+    },
+    {
+      "id": "-1608834311",
+      "predicate": "recentMeUrlChat",
+      "params": [
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "chat_id",
+          "type": "int"
+        }
+      ],
+      "type": "RecentMeUrl"
+    },
+    {
+      "id": "-1140172836",
+      "predicate": "recentMeUrlStickerSet",
+      "params": [
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "set",
+          "type": "StickerSetCovered"
+        }
+      ],
+      "type": "RecentMeUrl"
+    },
+    {
+      "id": "-347535331",
+      "predicate": "recentMeUrlChatInvite",
+      "params": [
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "chat_invite",
+          "type": "ChatInvite"
+        }
+      ],
+      "type": "RecentMeUrl"
+    },
+    {
+      "id": "1189204285",
+      "predicate": "recentMeUrlUnknown",
+      "params": [
+        {
+          "name": "url",
+          "type": "string"
+        }
+      ],
+      "type": "RecentMeUrl"
     }
   ],
   "methods": [
@@ -12005,7 +12212,7 @@
       "type": "messages.Messages"
     },
     {
-      "id": "618237842",
+      "id": "306054633",
       "method": "channels.getParticipants",
       "params": [
         {
@@ -12022,6 +12229,10 @@
         },
         {
           "name": "limit",
+          "type": "int"
+        },
+        {
+          "name": "hash",
           "type": "int"
         }
       ],
@@ -12665,7 +12876,7 @@
       "type": "messages.MessageEditData"
     },
     {
-      "id": "-829299510",
+      "id": "97630429",
       "method": "messages.editMessage",
       "params": [
         {
@@ -12675,6 +12886,10 @@
         {
           "name": "no_webpage",
           "type": "flags.1?true"
+        },
+        {
+          "name": "stop_geo_live",
+          "type": "flags.12?true"
         },
         {
           "name": "peer",
@@ -12695,6 +12910,10 @@
         {
           "name": "entities",
           "type": "flags.3?Vector<MessageEntity>"
+        },
+        {
+          "name": "geo_point",
+          "type": "flags.13?InputGeoPoint"
         }
       ],
       "type": "Updates"
@@ -13992,6 +14211,73 @@
         }
       ],
       "type": "Bool"
+    },
+    {
+      "id": "613691874",
+      "method": "messages.getRecentLocations",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        }
+      ],
+      "type": "messages.Messages"
+    },
+    {
+      "id": "251759059",
+      "method": "messages.readMentions",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        }
+      ],
+      "type": "messages.AffectedHistory"
+    },
+    {
+      "id": "1036054804",
+      "method": "help.getRecentMeUrls",
+      "params": [
+        {
+          "name": "referer",
+          "type": "string"
+        }
+      ],
+      "type": "help.RecentMeUrls"
+    },
+    {
+      "id": "-1355375294",
+      "method": "channels.deleteHistory",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-356796084",
+      "method": "channels.togglePreHistoryHidden",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "enabled",
+          "type": "Bool"
+        }
+      ],
+      "type": "Updates"
     }
   ]
 }
