@@ -224,37 +224,54 @@
         }
       ],
       "type": "Chat"
-    }
-  ],
-  "methods": [
+    },
     {
-      "id": "1638162893",
-      "method": "messages.sendMedia",
+      "id": "-476700163",
+      "predicate": "inputMediaUploadedDocument",
       "params": [
         {
           "name": "flags",
           "type": "#"
         },
         {
-          "name": "silent",
-          "type": "flags.5?true"
+          "name": "file",
+          "type": "InputFile"
         },
         {
-          "name": "background",
-          "type": "flags.6?true"
+          "name": "thumb",
+          "type": "flags.2?InputFile"
         },
         {
-          "name": "clear_draft",
-          "type": "flags.7?true"
+          "name": "mime_type",
+          "type": "string"
         },
         {
-          "name": "peer",
-          "type": "InputPeer"
+          "name": "attributes",
+          "type": "Vector<DocumentAttribute>"
         },
         {
-          "name": "reply_to_msg_id",
-          "type": "flags.0?int"
+          "name": "caption",
+          "type": "string"
         },
+        {
+          "name": "stickers",
+          "type": "flags.0?Vector<InputDocument>"
+        },
+        {
+          "name": "ttl_seconds",
+          "type": "flags.1?int"
+        },
+        {
+          "name": "nosound_video",
+          "type": "flags.3?true"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "1588230153",
+      "predicate": "inputSingleMedia",
+      "params": [
         {
           "name": "media",
           "type": "InputMedia"
@@ -262,20 +279,14 @@
         {
           "name": "random_id",
           "type": "long"
-        },
-        {
-          "name": "reply_markup",
-          "type": "flags.2?ReplyMarkup"
-        },
-        {
-          "name": "grouped_id",
-          "type": "flags.8?long"
         }
       ],
-      "type": "Updates"
-    },
+      "type": "InputSingleMedia"
+    }
+  ],
+  "methods": [
     {
-      "id": "513202340",
+      "id": "1888354709",
       "method": "messages.forwardMessages",
       "params": [
         {
@@ -311,8 +322,43 @@
           "type": "InputPeer"
         },
         {
-          "name": "grouped_id",
-          "type": "flags.8?long"
+          "name": "grouped",
+          "type": "flags.9?true"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "546656559",
+      "method": "messages.sendMultiMedia",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "silent",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "background",
+          "type": "flags.6?true"
+        },
+        {
+          "name": "clear_draft",
+          "type": "flags.7?true"
+        },
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "reply_to_msg_id",
+          "type": "flags.0?int"
+        },
+        {
+          "name": "multi_media",
+          "type": "Vector<InputSingleMedia>"
         }
       ],
       "type": "Updates"
