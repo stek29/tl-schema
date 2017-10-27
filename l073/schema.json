@@ -1,0 +1,321 @@
+{
+  "constructors": [
+    {
+      "id": "1157215293",
+      "predicate": "message",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "out",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "mentioned",
+          "type": "flags.4?true"
+        },
+        {
+          "name": "media_unread",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "silent",
+          "type": "flags.13?true"
+        },
+        {
+          "name": "post",
+          "type": "flags.14?true"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "from_id",
+          "type": "flags.8?int"
+        },
+        {
+          "name": "to_id",
+          "type": "Peer"
+        },
+        {
+          "name": "fwd_from",
+          "type": "flags.2?MessageFwdHeader"
+        },
+        {
+          "name": "via_bot_id",
+          "type": "flags.11?int"
+        },
+        {
+          "name": "reply_to_msg_id",
+          "type": "flags.3?int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "media",
+          "type": "flags.9?MessageMedia"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.6?ReplyMarkup"
+        },
+        {
+          "name": "entities",
+          "type": "flags.7?Vector<MessageEntity>"
+        },
+        {
+          "name": "views",
+          "type": "flags.10?int"
+        },
+        {
+          "name": "edit_date",
+          "type": "flags.15?int"
+        },
+        {
+          "name": "post_author",
+          "type": "flags.16?string"
+        },
+        {
+          "name": "grouped_id",
+          "type": "flags.17?long"
+        }
+      ],
+      "type": "Message"
+    },
+    {
+      "id": "1436466797",
+      "predicate": "messageFwdHeader",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "from_id",
+          "type": "flags.0?int"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "channel_id",
+          "type": "flags.1?int"
+        },
+        {
+          "name": "channel_post",
+          "type": "flags.2?int"
+        },
+        {
+          "name": "post_author",
+          "type": "flags.3?string"
+        },
+        {
+          "name": "saved_from_peer",
+          "type": "flags.4?Peer"
+        },
+        {
+          "name": "saved_from_msg_id",
+          "type": "flags.4?int"
+        }
+      ],
+      "type": "MessageFwdHeader"
+    },
+    {
+      "id": "1158377749",
+      "predicate": "channel",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "creator",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "left",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "editor",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "broadcast",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "verified",
+          "type": "flags.7?true"
+        },
+        {
+          "name": "megagroup",
+          "type": "flags.8?true"
+        },
+        {
+          "name": "restricted",
+          "type": "flags.9?true"
+        },
+        {
+          "name": "democracy",
+          "type": "flags.10?true"
+        },
+        {
+          "name": "signatures",
+          "type": "flags.11?true"
+        },
+        {
+          "name": "min",
+          "type": "flags.12?true"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "access_hash",
+          "type": "flags.13?long"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "username",
+          "type": "flags.6?string"
+        },
+        {
+          "name": "photo",
+          "type": "ChatPhoto"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        },
+        {
+          "name": "restriction_reason",
+          "type": "flags.9?string"
+        },
+        {
+          "name": "admin_rights",
+          "type": "flags.14?ChannelAdminRights"
+        },
+        {
+          "name": "banned_rights",
+          "type": "flags.15?ChannelBannedRights"
+        },
+        {
+          "name": "participants_count",
+          "type": "flags.17?int"
+        }
+      ],
+      "type": "Chat"
+    }
+  ],
+  "methods": [
+    {
+      "id": "1638162893",
+      "method": "messages.sendMedia",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "silent",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "background",
+          "type": "flags.6?true"
+        },
+        {
+          "name": "clear_draft",
+          "type": "flags.7?true"
+        },
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "reply_to_msg_id",
+          "type": "flags.0?int"
+        },
+        {
+          "name": "media",
+          "type": "InputMedia"
+        },
+        {
+          "name": "random_id",
+          "type": "long"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.2?ReplyMarkup"
+        },
+        {
+          "name": "grouped_id",
+          "type": "flags.8?long"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "513202340",
+      "method": "messages.forwardMessages",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "silent",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "background",
+          "type": "flags.6?true"
+        },
+        {
+          "name": "with_my_score",
+          "type": "flags.8?true"
+        },
+        {
+          "name": "from_peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "id",
+          "type": "Vector<int>"
+        },
+        {
+          "name": "random_id",
+          "type": "Vector<long>"
+        },
+        {
+          "name": "to_peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "grouped_id",
+          "type": "flags.8?long"
+        }
+      ],
+      "type": "Updates"
+    }
+  ]
+}
