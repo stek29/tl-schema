@@ -40,3 +40,10 @@ From danog's TL\_calls.tl
 ### end-to-end.tl
 Latest end-to-end aka secret chat schema
 Thx Mike and danog
+
+### discord.tl
+Reversed from TG Android betas
+Everything related to group calls
+Used on latest "development" layer
+Will be merged into main schema one day I guess
+
