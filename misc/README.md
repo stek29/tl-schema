@@ -36,3 +36,7 @@ From [here](https://vk.com/topic-55882680_31509731?post=10641)
 
 ### calls.tl
 From danog's TL\_calls.tl
+
+### end-to-end.tl
+Latest end-to-end aka secret chat schema
+Thx Mike and danog
