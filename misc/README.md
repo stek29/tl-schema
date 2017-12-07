@@ -1,18 +1,18 @@
 ### Notes
-Most files here are submited by @danog
+Most files here are submited by [**@danog**](https://github.com/danog/).
 
 
 ### l060.tl
 I don't want to rewrite whole history since this isn't so important.
 Neither I will change l061 diff, to avoid breaking stuff.
-So I decieded to put this here. Was in #6.
+So I decided to put this here. Was in [#6](https://github.com/stek29/tl-schema/pull/6).
 
 This may be interesting tho:
 `webPageUrlPending#d41a5167 url:string = WebPage;`
 
 ### android.tl
-From #6 too.
-Explaination form Daniil:
+From [#6](https://github.com/stek29/tl-schema/pull/6) too.
+Explanation form Daniil:
 
 > TL scheme used internally only by the android app
 > it's a scheme used to translate secret chat messages to constructors of type Message
