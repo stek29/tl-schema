@@ -1581,9 +1581,13 @@
       "type": "contacts.Blocked"
     },
     {
-      "id": "446822276",
+      "id": "-1290580579",
       "predicate": "contacts.found",
       "params": [
+        {
+          "name": "my_results",
+          "type": "Vector<Peer>"
+        },
         {
           "name": "results",
           "type": "Vector<Peer>"
@@ -2368,6 +2372,10 @@
           "type": "flags.1?true"
         },
         {
+          "name": "default_p2p_contacts",
+          "type": "flags.3?true"
+        },
+        {
           "name": "date",
           "type": "int"
         },
@@ -3069,12 +3077,6 @@
     {
       "id": "-1629621880",
       "predicate": "inputMessagesFilterDocument",
-      "params": [],
-      "type": "MessagesFilter"
-    },
-    {
-      "id": "-648121413",
-      "predicate": "inputMessagesFilterPhotoVideoDocuments",
       "params": [],
       "type": "MessagesFilter"
     },
@@ -6609,6 +6611,10 @@
           "type": "flags.3?true"
         },
         {
+          "name": "native_ui",
+          "type": "flags.4?true"
+        },
+        {
           "name": "message",
           "type": "flags.0?string"
         },
@@ -8623,6 +8629,14 @@
           "type": "flags.5?true"
         },
         {
+          "name": "phone_to_provider",
+          "type": "flags.6?true"
+        },
+        {
+          "name": "email_to_provider",
+          "type": "flags.7?true"
+        },
+        {
           "name": "currency",
           "type": "string"
         },
@@ -8634,7 +8648,7 @@
       "type": "Invoice"
     },
     {
-      "id": "-1844103547",
+      "id": "-186607933",
       "predicate": "inputMediaInvoice",
       "params": [
         {
@@ -8664,6 +8678,10 @@
         {
           "name": "provider",
           "type": "string"
+        },
+        {
+          "name": "provider_data",
+          "type": "DataJSON"
         },
         {
           "name": "start_param",
@@ -10399,6 +10417,43 @@
         }
       ],
       "type": "InputSingleMedia"
+    },
+    {
+      "id": "1951620897",
+      "predicate": "messages.messagesNotModified",
+      "params": [
+        {
+          "name": "count",
+          "type": "int"
+        }
+      ],
+      "type": "messages.Messages"
+    },
+    {
+      "id": "178373535",
+      "predicate": "inputPaymentCredentialsApplePay",
+      "params": [
+        {
+          "name": "payment_data",
+          "type": "DataJSON"
+        }
+      ],
+      "type": "InputPaymentCredentials"
+    },
+    {
+      "id": "-905587442",
+      "predicate": "inputPaymentCredentialsAndroidPay",
+      "params": [
+        {
+          "name": "payment_token",
+          "type": "DataJSON"
+        },
+        {
+          "name": "google_transaction_id",
+          "type": "string"
+        }
+      ],
+      "type": "InputPaymentCredentials"
     }
   ],
   "methods": [
@@ -10574,7 +10629,7 @@
       "type": "auth.Authorization"
     },
     {
-      "id": "1669245048",
+      "id": "-145197871",
       "method": "account.registerDevice",
       "params": [
         {
@@ -10584,12 +10639,16 @@
         {
           "name": "token",
           "type": "string"
+        },
+        {
+          "name": "other_uids",
+          "type": "Vector<int>"
         }
       ],
       "type": "Bool"
     },
     {
-      "id": "1707432768",
+      "id": "813089983",
       "method": "account.unregisterDevice",
       "params": [
         {
@@ -10599,6 +10658,10 @@
         {
           "name": "token",
           "type": "string"
+        },
+        {
+          "name": "other_uids",
+          "type": "Vector<int>"
         }
       ],
       "type": "Bool"
@@ -10842,7 +10905,7 @@
       "type": "messages.Dialogs"
     },
     {
-      "id": "-1347868602",
+      "id": "-591691168",
       "method": "messages.getHistory",
       "params": [
         {
@@ -10871,6 +10934,10 @@
         },
         {
           "name": "min_id",
+          "type": "int"
+        },
+        {
+          "name": "hash",
           "type": "int"
         }
       ],
@@ -12795,7 +12862,7 @@
       "type": "Updates"
     },
     {
-      "id": "-934882771",
+      "id": "-826838685",
       "method": "channels.exportMessageLink",
       "params": [
         {
@@ -12805,6 +12872,10 @@
         {
           "name": "id",
           "type": "int"
+        },
+        {
+          "name": "grouped",
+          "type": "Bool"
         }
       ],
       "type": "ExportedMessageLink"
@@ -12958,7 +13029,7 @@
       "type": "Updates"
     },
     {
-      "id": "319564933",
+      "id": "-1327463869",
       "method": "messages.editInlineBotMessage",
       "params": [
         {
@@ -12968,6 +13039,10 @@
         {
           "name": "no_webpage",
           "type": "flags.1?true"
+        },
+        {
+          "name": "stop_geo_live",
+          "type": "flags.12?true"
         },
         {
           "name": "id",
@@ -12984,6 +13059,10 @@
         {
           "name": "entities",
           "type": "flags.3?Vector<MessageEntity>"
+        },
+        {
+          "name": "geo_point",
+          "type": "flags.13?InputGeoPoint"
         }
       ],
       "type": "Bool"
@@ -14352,6 +14431,21 @@
         }
       ],
       "type": "Updates"
+    },
+    {
+      "id": "1347929239",
+      "method": "messages.uploadEncryptedFile",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputEncryptedChat"
+        },
+        {
+          "name": "file",
+          "type": "InputEncryptedFile"
+        }
+      ],
+      "type": "EncryptedFile"
     }
   ]
 }

@@ -1,0 +1,539 @@
+{
+  "constructors": [
+    {
+      "id": "-186607933",
+      "predicate": "inputMediaInvoice",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "name": "photo",
+          "type": "flags.0?InputWebDocument"
+        },
+        {
+          "name": "invoice",
+          "type": "Invoice"
+        },
+        {
+          "name": "payload",
+          "type": "bytes"
+        },
+        {
+          "name": "provider",
+          "type": "string"
+        },
+        {
+          "name": "provider_data",
+          "type": "DataJSON"
+        },
+        {
+          "name": "start_param",
+          "type": "string"
+        }
+      ],
+      "type": "InputMedia"
+    },
+    {
+      "id": "-1669068444",
+      "predicate": "config",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "phonecalls_enabled",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "default_p2p_contacts",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "date",
+          "type": "int"
+        },
+        {
+          "name": "expires",
+          "type": "int"
+        },
+        {
+          "name": "test_mode",
+          "type": "Bool"
+        },
+        {
+          "name": "this_dc",
+          "type": "int"
+        },
+        {
+          "name": "dc_options",
+          "type": "Vector<DcOption>"
+        },
+        {
+          "name": "chat_size_max",
+          "type": "int"
+        },
+        {
+          "name": "megagroup_size_max",
+          "type": "int"
+        },
+        {
+          "name": "forwarded_count_max",
+          "type": "int"
+        },
+        {
+          "name": "online_update_period_ms",
+          "type": "int"
+        },
+        {
+          "name": "offline_blur_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "offline_idle_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "online_cloud_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "notify_cloud_delay_ms",
+          "type": "int"
+        },
+        {
+          "name": "notify_default_delay_ms",
+          "type": "int"
+        },
+        {
+          "name": "chat_big_size",
+          "type": "int"
+        },
+        {
+          "name": "push_chat_period_ms",
+          "type": "int"
+        },
+        {
+          "name": "push_chat_limit",
+          "type": "int"
+        },
+        {
+          "name": "saved_gifs_limit",
+          "type": "int"
+        },
+        {
+          "name": "edit_time_limit",
+          "type": "int"
+        },
+        {
+          "name": "rating_e_decay",
+          "type": "int"
+        },
+        {
+          "name": "stickers_recent_limit",
+          "type": "int"
+        },
+        {
+          "name": "stickers_faved_limit",
+          "type": "int"
+        },
+        {
+          "name": "channels_read_media_period",
+          "type": "int"
+        },
+        {
+          "name": "tmp_sessions",
+          "type": "flags.0?int"
+        },
+        {
+          "name": "pinned_dialogs_count_max",
+          "type": "int"
+        },
+        {
+          "name": "call_receive_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "call_ring_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "call_connect_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "call_packet_timeout_ms",
+          "type": "int"
+        },
+        {
+          "name": "me_url_prefix",
+          "type": "string"
+        },
+        {
+          "name": "suggested_lang_code",
+          "type": "flags.2?string"
+        },
+        {
+          "name": "lang_pack_version",
+          "type": "flags.2?int"
+        },
+        {
+          "name": "disabled_features",
+          "type": "Vector<DisabledFeature>"
+        }
+      ],
+      "type": "Config"
+    },
+    {
+      "id": "-1290580579",
+      "predicate": "contacts.found",
+      "params": [
+        {
+          "name": "my_results",
+          "type": "Vector<Peer>"
+        },
+        {
+          "name": "results",
+          "type": "Vector<Peer>"
+        },
+        {
+          "name": "chats",
+          "type": "Vector<Chat>"
+        },
+        {
+          "name": "users",
+          "type": "Vector<User>"
+        }
+      ],
+      "type": "contacts.Found"
+    },
+    {
+      "id": "911761060",
+      "predicate": "messages.botCallbackAnswer",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "alert",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "has_url",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "native_ui",
+          "type": "flags.4?true"
+        },
+        {
+          "name": "message",
+          "type": "flags.0?string"
+        },
+        {
+          "name": "url",
+          "type": "flags.2?string"
+        },
+        {
+          "name": "cache_time",
+          "type": "int"
+        }
+      ],
+      "type": "messages.BotCallbackAnswer"
+    },
+    {
+      "id": "-1022713000",
+      "predicate": "invoice",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "test",
+          "type": "flags.0?true"
+        },
+        {
+          "name": "name_requested",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "phone_requested",
+          "type": "flags.2?true"
+        },
+        {
+          "name": "email_requested",
+          "type": "flags.3?true"
+        },
+        {
+          "name": "shipping_address_requested",
+          "type": "flags.4?true"
+        },
+        {
+          "name": "flexible",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "phone_to_provider",
+          "type": "flags.6?true"
+        },
+        {
+          "name": "email_to_provider",
+          "type": "flags.7?true"
+        },
+        {
+          "name": "currency",
+          "type": "string"
+        },
+        {
+          "name": "prices",
+          "type": "Vector<LabeledPrice>"
+        }
+      ],
+      "type": "Invoice"
+    },
+    {
+      "id": "1951620897",
+      "predicate": "messages.messagesNotModified",
+      "params": [
+        {
+          "name": "count",
+          "type": "int"
+        }
+      ],
+      "type": "messages.Messages"
+    },
+    {
+      "id": "178373535",
+      "predicate": "inputPaymentCredentialsApplePay",
+      "params": [
+        {
+          "name": "payment_data",
+          "type": "DataJSON"
+        }
+      ],
+      "type": "InputPaymentCredentials"
+    },
+    {
+      "id": "-905587442",
+      "predicate": "inputPaymentCredentialsAndroidPay",
+      "params": [
+        {
+          "name": "payment_token",
+          "type": "DataJSON"
+        },
+        {
+          "name": "google_transaction_id",
+          "type": "string"
+        }
+      ],
+      "type": "InputPaymentCredentials"
+    }
+  ],
+  "methods": [
+    {
+      "id": "-145197871",
+      "method": "account.registerDevice",
+      "params": [
+        {
+          "name": "token_type",
+          "type": "int"
+        },
+        {
+          "name": "token",
+          "type": "string"
+        },
+        {
+          "name": "other_uids",
+          "type": "Vector<int>"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "813089983",
+      "method": "account.unregisterDevice",
+      "params": [
+        {
+          "name": "token_type",
+          "type": "int"
+        },
+        {
+          "name": "token",
+          "type": "string"
+        },
+        {
+          "name": "other_uids",
+          "type": "Vector<int>"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-591691168",
+      "method": "messages.getHistory",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "offset_id",
+          "type": "int"
+        },
+        {
+          "name": "offset_date",
+          "type": "int"
+        },
+        {
+          "name": "add_offset",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        },
+        {
+          "name": "max_id",
+          "type": "int"
+        },
+        {
+          "name": "min_id",
+          "type": "int"
+        },
+        {
+          "name": "hash",
+          "type": "int"
+        }
+      ],
+      "type": "messages.Messages"
+    },
+    {
+      "id": "1888354709",
+      "method": "messages.forwardMessages",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "silent",
+          "type": "flags.5?true"
+        },
+        {
+          "name": "background",
+          "type": "flags.6?true"
+        },
+        {
+          "name": "with_my_score",
+          "type": "flags.8?true"
+        },
+        {
+          "name": "grouped",
+          "type": "flags.9?true"
+        },
+        {
+          "name": "from_peer",
+          "type": "InputPeer"
+        },
+        {
+          "name": "id",
+          "type": "Vector<int>"
+        },
+        {
+          "name": "random_id",
+          "type": "Vector<long>"
+        },
+        {
+          "name": "to_peer",
+          "type": "InputPeer"
+        }
+      ],
+      "type": "Updates"
+    },
+    {
+      "id": "-1327463869",
+      "method": "messages.editInlineBotMessage",
+      "params": [
+        {
+          "name": "flags",
+          "type": "#"
+        },
+        {
+          "name": "no_webpage",
+          "type": "flags.1?true"
+        },
+        {
+          "name": "stop_geo_live",
+          "type": "flags.12?true"
+        },
+        {
+          "name": "id",
+          "type": "InputBotInlineMessageID"
+        },
+        {
+          "name": "message",
+          "type": "flags.11?string"
+        },
+        {
+          "name": "reply_markup",
+          "type": "flags.2?ReplyMarkup"
+        },
+        {
+          "name": "entities",
+          "type": "flags.3?Vector<MessageEntity>"
+        },
+        {
+          "name": "geo_point",
+          "type": "flags.13?InputGeoPoint"
+        }
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "-826838685",
+      "method": "channels.exportMessageLink",
+      "params": [
+        {
+          "name": "channel",
+          "type": "InputChannel"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "grouped",
+          "type": "Bool"
+        }
+      ],
+      "type": "ExportedMessageLink"
+    },
+    {
+      "id": "1347929239",
+      "method": "messages.uploadEncryptedFile",
+      "params": [
+        {
+          "name": "peer",
+          "type": "InputEncryptedChat"
+        },
+        {
+          "name": "file",
+          "type": "InputEncryptedFile"
+        }
+      ],
+      "type": "EncryptedFile"
+    }
+  ]
+}
